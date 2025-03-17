@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Fixel Text";
+  src: url("/fonts/FixelText/FixelText-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fixel Text Semibold";
+  src: url("/fonts/FixelText/FixelText-SemiBold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fixel Display";
+  src: url("/fonts/FixelDisplay/FixelDisplay-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fixel Display Semibold";
+  src: url("/fonts/FixelDisplay/FixelDisplay-SemiBold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fixel Display Bold";
+  src: url("/fonts/FixelDisplay/FixelDisplay-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fixel Display Medium";
+  src: url("/fonts/FixelDisplay/FixelDisplay-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ermilov";
+  src: url("/fonts/Ermilov/Ermilov.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --color-header: rgba(177, 43, 44, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-main-dark: rgba(24, 25, 28, 1);
+  --color-block-dark: rgba(41, 41, 46, 1);
+  --color-block-grey: rgba(61, 61, 63, 1);
+  --color-light: rgba(238, 238, 238, 1);
+  --color-black-text: rgba(17, 17, 17, 1);
+
+  --color-start: rgba(224, 224, 224, 1);
+  --color-end: rgba(189, 189, 189, 1);
+
+  --color-button: rgba(203, 45, 45, 1);
+  --color-button-hover: rgba(225, 33, 33, 1);
+  --color-button-press: rgba(168, 31, 23, 1);
+  --color-button-disable: rgba(175, 175, 175, 1);
+
+  --breakpoint-sm: 375px;
+  --breakpoint-md: 720px;
+  --breakpoint-lg: 1440px;
+
+  --font-text: "Fixel Text", "sans-serif";
+  --font-textSemibold: "Fixel Text Semibold", "sans-serif";
+  --font-display: "Fixel Display", "sans-serif";
+  --font-displayBold: "Fixel Display Bold", "sans-serif";
+  --font-displaySemibold: "Fixel Display Semibold", "sans-serif";
+  --font-displayMedium: "Fixel Display Medium", "sans-serif";
+  --font-ermilov: "Ermilov", "sans-serif";
+}
+
+@layer base {
+  body {
+    @apply m-0 bg-main-dark text-light text-base font-text font-normal leading-none tracking-normal;
+  }
+}
+
+@layer components {
+  .container {
+    @apply py-0 px-[15px];
+  }
+}
+
+.bg-nav-gradient {
+  @apply bg-gradient-to-b from-start to-end;
+}
+
+.mobile-nav {
+  @apply bg-block-grey rounded-sm;
+}
+
+.mobile-nav-title {
+  @apply px-[12px] py-[9px];
+}
+
+.page-title {
+  @apply mb-[12px] font-displayBold text-2xl font-bold;
+}
