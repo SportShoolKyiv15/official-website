@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
 					<div className='flex items-start'>
 						<Image
 							className="mr-[6px]"
-							src="/svg/locationIcon.svg"
+							src="/svg/iconLocation.svg"
 							alt="icon location"
 							width={24}
 							height={24}
@@ -28,8 +28,7 @@ const Footer: React.FC = () => {
 					</div>
 					<Link href={'/'}>
 						<Image
-							className=""
-							src="/svg/footerLogo.svg"
+							src="/svg/logoFooter.svg"
 							alt="logo"
 							width={107}
 							height={93}
@@ -40,17 +39,17 @@ const Footer: React.FC = () => {
 						<p>Залишились питання?</p>
 						<ContactButton />
 					</div>
-					<div className='flex gap-3'>
+					<div className='flex gap-[10px]'>
 						<Image
 							className=""
-							src="/svg/instagramIcon.svg"
+							src="/svg/iconInstagram.svg"
 							alt="logo"
 							width={26}
 							height={26}
 						/>
 						<Image
 							className=""
-							src="/svg/facebookIcon.svg"
+							src="/svg/iconFacebook.svg"
 							alt="logo"
 							width={26}
 							height={26}
