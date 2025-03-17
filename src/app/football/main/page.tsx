@@ -1,4 +1,8 @@
-const MainFootballPage: React.FC = () => {
+'use client';
+
+import React from 'react';
+
+const FootballMainPage: React.FC = () => {
 	return (
 		<main>
 			<section>
@@ -8,4 +12,4 @@ const MainFootballPage: React.FC = () => {
 	);
 };
 
-export default MainFootballPage;
+export default FootballMainPage;
