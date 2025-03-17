@@ -91,7 +91,7 @@
 
 @layer components {
   .container {
-    @apply py-0 px-[15px];
+    @apply py-0 px-[15px] md:px-[20px];
   }
 }
 

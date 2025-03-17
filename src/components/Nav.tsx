@@ -30,71 +30,71 @@ const Nav: React.FC = () => {
 
 	return (
 		<nav className='bg-nav-gradient'>
-			<div className='container m-auto pt-[10px]  relative'>
-				<div className='flex justify-center pb-1 gap-10'>
+			<div className='container m-auto pt-[10px] pb-1 relative'>
+				<div className='flex justify-center gap-10'>
 					{isToggled ?
 						<button onClick={onSwitch} className='w-5 h-5 absolute top-[2px] left-4'>
 							<Image
 								src="/svg/double-arrow-left.svg"
-								alt="icon football"
-								width={39}
-								height={29}
+								alt="icon arrow"
+								width={20}
+								height={20}
 							/>
 						</button> :
 						<button onClick={onSwitch} className='w-5 h-5 absolute top-[2px] right-4'>
 							<Image
 								src="/svg/double-arrow-right.svg"
-								alt="icon football"
-								width={39}
-								height={29}
+								alt="icon arrow"
+								width={20}
+								height={20}
 							/>
 						</button>}
 					{!isToggled ?
 						<>	<Link href={'/football/main'} className='flex items-center'>
-							<div className='flex h-9 w-9 items-center  justify-center'>
+							<div className='flex w-9 items-center  justify-center'>
 								<Image
 									className='mr-[9px]'
-									src="/svg/footballIcon.svg"
+									src="/svg/iconFootball.svg"
 									alt="icon football"
-									width={27}
-									height={28}
+									width={36}
+									height={36}
 								/>
 							</div>
 							<p className={`${sport === 'football' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Футбол</p>
 						</Link>
 							<Link href={'/biatlon/main'} className='flex items-center'>
-								<div className='flex h-9 w-9 items-center  justify-center'>
+								<div className='flex w-9 items-center  justify-center'>
 									<Image
 										className='mr-[9px]'
-										src="/svg/biatlonIcon.svg"
+										src="/svg/iconBiatlon.svg"
 										alt="icon football"
-										width={30}
-										height={30}
+										width={36}
+										height={36}
 									/>
 								</div>
 								<p className={`${sport === 'biatlon' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Біатлон</p>
 							</Link>
 						</> : <>
 							<Link href={'/sky_racing/main'} className='flex items-center'>
-								<div className='flex h-9 w-10 items-center  justify-center'>
+								<div className='flex w-10 items-center  justify-center'>
 									<Image
 										className='mr-[9px]'
-										src="/svg/skyRacingIcon.svg"
+										src="/svg/iconSkyRacing.svg"
 										alt="icon football"
-										width={39}
-										height={29}
+										width={40}
+										height={36}
 									/>
 								</div>
 								<p className={`${sport === 'sky_racing' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Лижні гонки</p>
 							</Link>
 							<Link href={'/alpine_skiing/main'} className='flex items-center'>
-								<div className='flex h-9 w-9 items-center  justify-center'>
+								<div className='flex w-9 items-center  justify-center'>
 									<Image
 										className='mr-[9px]'
-										src="/svg/alpineSkiingIcon.svg"
+										src="/svg/iconAlpineSkiing.svg"
 										alt="icon football"
-										width={30}
-										height={32}
+										width={36}
+										height={36}
 									/>
 								</div>
 								<p className={`${sport === 'alpine_skiing' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Гірські лижі</p>
