@@ -1,4 +1,4 @@
-const ChampionshipsFootballPage: React.FC = () => {
+const FootballChampionshipsPage: React.FC = () => {
 	return (
 		<main>
 			<section>
@@ -8,4 +8,4 @@ const ChampionshipsFootballPage: React.FC = () => {
 	);
 };
 
-export default ChampionshipsFootballPage;
+export default FootballChampionshipsPage;

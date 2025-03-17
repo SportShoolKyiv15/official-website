@@ -1,4 +1,4 @@
-const ChampionshipsAlpineSkiingPage: React.FC = () => {
+const AlpineSkiingChampionshipsPage: React.FC = () => {
 	return (
 		<main>
 			<section>
@@ -8,4 +8,4 @@ const ChampionshipsAlpineSkiingPage: React.FC = () => {
 	);
 };
 
-export default ChampionshipsAlpineSkiingPage;
+export default AlpineSkiingChampionshipsPage;

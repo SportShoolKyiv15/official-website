@@ -1,4 +1,4 @@
-const AlpineSkiingPage: React.FC = () => {
+const AlpineSkiingMainPage: React.FC = () => {
 	return (
 		<main>
 			<section>
@@ -8,4 +8,4 @@ const AlpineSkiingPage: React.FC = () => {
 	);
 };
 
-export default AlpineSkiingPage;
+export default AlpineSkiingMainPage;

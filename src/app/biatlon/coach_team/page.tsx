@@ -1,4 +1,4 @@
-const CoachTeamBiatlonPage: React.FC = () => {
+const BiatlonCoachTeamPage: React.FC = () => {
 	return (
 		<main>
 			<section>
@@ -8,4 +8,4 @@ const CoachTeamBiatlonPage: React.FC = () => {
 	);
 };
 
-export default CoachTeamBiatlonPage;
+export default BiatlonCoachTeamPage;

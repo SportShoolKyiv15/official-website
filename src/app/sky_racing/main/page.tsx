@@ -1,4 +1,4 @@
-const SkyRacingPage: React.FC = () => {
+const SkyRacingMainPage: React.FC = () => {
 	return (
 		<main>
 			<section>
@@ -8,4 +8,4 @@ const SkyRacingPage: React.FC = () => {
 	);
 };
 
-export default SkyRacingPage;
+export default SkyRacingMainPage;

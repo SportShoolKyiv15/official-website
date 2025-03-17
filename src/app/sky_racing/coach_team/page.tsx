@@ -1,4 +1,4 @@
-const CoachTeamSkyRacingPage: React.FC = () => {
+const SkyRacingCoachTeamPage: React.FC = () => {
 	return (
 		<main>
 			<section>
@@ -8,4 +8,4 @@ const CoachTeamSkyRacingPage: React.FC = () => {
 	);
 };
 
-export default CoachTeamSkyRacingPage;
+export default SkyRacingCoachTeamPage;

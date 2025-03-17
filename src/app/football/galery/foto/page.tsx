@@ -1,4 +1,4 @@
-const GaleryFotoFootballPage: React.FC = () => {
+const FootballGaleryFotoPage: React.FC = () => {
 	return (
 		<main>
 			<section>
@@ -8,4 +8,4 @@ const GaleryFotoFootballPage: React.FC = () => {
 	);
 };
 
-export default GaleryFotoFootballPage;
+export default FootballGaleryFotoPage;

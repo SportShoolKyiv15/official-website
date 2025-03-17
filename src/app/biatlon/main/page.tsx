@@ -1,4 +1,4 @@
-const BiatlonPage: React.FC = () => {
+const BiatlonMainPage: React.FC = () => {
 	return (
 		<main>
 			<section>
@@ -8,4 +8,4 @@ const BiatlonPage: React.FC = () => {
 	);
 };
 
-export default BiatlonPage
+export default BiatlonMainPage;

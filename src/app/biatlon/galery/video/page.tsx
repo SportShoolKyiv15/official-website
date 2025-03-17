@@ -1,4 +1,4 @@
-const GaleryVideoBiatlonPage: React.FC = () => {
+const BiatlonGaleryVideoPage: React.FC = () => {
 	return (
 		<main>
 			<section>
@@ -8,4 +8,4 @@ const GaleryVideoBiatlonPage: React.FC = () => {
 	);
 };
 
-export default GaleryVideoBiatlonPage;
+export default BiatlonGaleryVideoPage;
