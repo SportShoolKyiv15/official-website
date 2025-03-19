@@ -7,16 +7,23 @@ import ContactButton from './buttons/ContactButton';
 const Footer: React.FC = () => {
 	return (
 		<footer className='bg-black flex justify-center'>
-			<div className='container pt-5 md:pt-10 pb-2 md:pb-[17px]'>
-				<div className='md:flex md:items-center md:mb-[7px] justify-between'>
+			<div className='container pt-5 md:pt-10 pb-2 md:pb-[17px] lg:pb-5'>
+				<div className='md:flex md:items-center md:mb-[12px] justify-between lg:mb-[19px]'>
 					<div className='flex justify-between items-center mb-[58px] md:mb-0'>
 						<div className='flex items-start'>
 							<Image
-								className="mr-[6px]"
+								className="lg:hidden mr-[6px]"
 								src="/svg/iconLocation.svg"
 								alt="icon location"
 								width={24}
 								height={24}
+							/>
+							<Image
+								className="hidden lg:block mr-[10px]"
+								src="/svg/iconLocation.svg"
+								alt="icon location"
+								width={26}
+								height={26}
 							/>
 							<div className='flex flex-col gap-[6px] font-display text-sm'>
 								<p>
@@ -36,7 +43,7 @@ const Footer: React.FC = () => {
 							/>
 						</Link>
 					</div>
-					<Link href={'/'} className='hidden md:block'>
+					<Link href={'/'} className='hidden md:block lg:hidden'>
 						<Image
 							src="/svg/logoFooter.svg"
 							alt="logo"
@@ -44,21 +51,27 @@ const Footer: React.FC = () => {
 							height={83}
 						/>
 					</Link>
-					<div className='flex md:block justify-between mb-8'>
-						<div className='flex flex-col gap-2 font-display text-sm'>
+					<Link href={'/'} className='hidden lg:block'>
+						<Image
+							src="/svg/logoFooter.svg"
+							alt="logo"
+							width={156}
+							height={134}
+						/>
+					</Link>
+					<div className='flex md:block justify-between lg:mt-[10px] mb-8 md:mb-0'>
+						<div className='flex flex-col gap-2 lg:gap-4 lg:mb-[34px] font-display text-sm'>
 							<p>Залишились питання?</p>
 							<ContactButton />
 						</div>
-						<div className='flex md:justify-end gap-[10px]'>
+						<div className='md:hidden flex lg:flex md:justify-end gap-[10px] lg:gap-[14px]'>
 							<Image
-								className="md:hidden"
 								src="/svg/iconInstagram.svg"
 								alt="logo"
 								width={32}
 								height={32}
 							/>
 							<Image
-								className="md:hidden"
 								src="/svg/iconFacebook.svg"
 								alt="logo"
 								width={32}
@@ -66,9 +79,8 @@ const Footer: React.FC = () => {
 							/>
 						</div>
 					</div>
-
 				</div>
-				<div className='flex md:justify-end md:mb-8 gap-[10px]'>
+				<div className='hiddden md:flex lg:hidden md:justify-end md:mb-8 gap-[10px]'>
 					<Image
 						className="hidden md:block"
 						src="/svg/iconInstagram.svg"
@@ -84,7 +96,7 @@ const Footer: React.FC = () => {
 						height={28}
 					/>
 				</div>
-				<div className='flex flex-col items-center gap-1 text-xs'>
+				<div className='flex flex-col lg:flex-row items-center lg:justify-center gap-1 lg:gap-3 text-xs'>
 					<p>© 2024, Всі права захищенні</p>
 					<p>Договір оферти і Політика конфіденційності</p>
 				</div>

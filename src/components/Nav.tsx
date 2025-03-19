@@ -101,7 +101,7 @@ const Nav: React.FC = () => {
 							</Link>
 						</>}
 				</div>
-				<div className='hidden md:flex justify-between gap-10 px-[14px]'>
+				<div className='hidden md:flex justify-between lg:justify-center gap-10 lg:gap-[38px] md:px-[14px] lg:px-0'>
 					<Link href={'/football/main'} className='flex items-center'>
 						<div className='flex w-9 items-center  justify-center'>
 							<Image
