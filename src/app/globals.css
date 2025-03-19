@@ -110,3 +110,7 @@
 .page-title {
   @apply mb-[12px] font-displayBold text-2xl font-bold;
 }
+
+.button {
+  @apply flex flex-col items-center justify-center text-base font-display bg-button hover:bg-button-hover active:bg-button-press rounded-sm;
+}
