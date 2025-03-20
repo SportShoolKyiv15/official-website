@@ -24,14 +24,15 @@ const PageNav: React.FC = () => {
 
 	useEffect(() => {
 		if (pathname && determineSportPage(pathname)?.partPathName) {
+			// Get subpage name in pathname
 			setSport(determineSportPage(pathname)?.partPathName);
+			// Get last element of pathname
 			setSubPage(pathnameArrow[pathnameArrow.length - 1]);
-			console.log('Page', subpage);
-			console.log('Item', pathnameArrow)
 		};
 	}, [pathname, pathnameArrow, subpage]);
 	return (
 		<>
+			{/* Mobile submenu */}
 			<div className='md:hidden container'>
 				{isMenuOpened && <div className='md:hidden modal-overlay'></div>}
 				<nav className='pt-[28px] z-1000'>
@@ -74,7 +75,7 @@ const PageNav: React.FC = () => {
 					}
 				</nav>
 			</div>
-
+			{/* Desktop and tablet submenu */}
 			<nav className='hidden md:block container pt-15 pb-[18px]'>
 				<Title type='page-title'>{determineSportPage(sport)?.pageName}</Title>
 				<ul className='flex gap-[38px] lg:gap-9'>

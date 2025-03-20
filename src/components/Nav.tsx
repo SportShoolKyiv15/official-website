@@ -20,8 +20,15 @@ const Nav: React.FC = () => {
 
 	useEffect(() => {
 		if (pathname && determineSportPage(pathname)?.partPathName) {
-			if (determineSportPage(pathname)?.partPathName === 'football' || "biatlon") { setIsToggled(false) };
-			if (determineSportPage(pathname)?.partPathName === 'sky_racing' || "aloine_skiing") { setIsToggled(true) };
+			const ourPath = determineSportPage(pathname)?.partPathName;
+			// Switch navigation items
+			if (ourPath === 'football' || ourPath === "biatlon") {
+				setIsToggled(false)
+			};
+			if (ourPath === 'sky_racing' || ourPath === "alpine_skiing") {
+				setIsToggled(true)
+			};
+			// We find sport page
 			setSport(determineSportPage(pathname)?.partPathName);
 		}
 	}, [pathname]);
@@ -29,6 +36,7 @@ const Nav: React.FC = () => {
 	return (
 		<nav className='bg-nav-gradient'>
 			<div className='container m-auto pt-[10px] md:pt-[6px] pb-1 md:pb-[6px] relative'>
+				{/* Mobile navigathion */}
 				<div className='md:hidden flex justify-center gap-10'>
 					{isToggled ?
 						<button onClick={onSwitch} className='w-5 h-5 absolute top-[2px] left-4'>
@@ -99,6 +107,7 @@ const Nav: React.FC = () => {
 							</Link>
 						</>}
 				</div>
+				{/* Desktop and tablet navigation */}
 				<div className='hidden md:flex justify-between lg:justify-center gap-10 lg:gap-[38px] md:px-[14px] lg:px-0'>
 					<Link href={'/football/main'} className='flex items-center'>
 						<div className='flex w-9 items-center  justify-center'>
