@@ -5,7 +5,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-type Sports = "football" | "biatlon" | "sky_racing" | "alpine_skiing" | undefined;
+import { determineSportPage } from '@/helpers/determineSportPege';
+
+import { Sports } from '@/globaltypes/types';
 
 const Nav: React.FC = () => {
 	const pathname = usePathname();
@@ -16,15 +18,11 @@ const Nav: React.FC = () => {
 		setIsToggled(!isToggled);
 	};
 
-	const determineSportPage = (queryString: string): Sports => {
-		if (queryString.includes('football')) return 'football';
-		if (queryString.includes('biatlon')) return 'biatlon';
-		if (queryString.includes('sky_racing')) return 'sky_racing';
-		if (queryString.includes('alpine_skiing')) return 'alpine_skiing';
-	}
 	useEffect(() => {
-		if (pathname && determineSportPage(pathname)) {
-			setSport(determineSportPage(pathname));
+		if (pathname && determineSportPage(pathname)?.partPathName) {
+			if (determineSportPage(pathname)?.partPathName === 'football' || "biatlon") { setIsToggled(false) };
+			if (determineSportPage(pathname)?.partPathName === 'sky_racing' || "aloine_skiing") { setIsToggled(true) };
+			setSport(determineSportPage(pathname)?.partPathName);
 		}
 	}, [pathname]);
 
