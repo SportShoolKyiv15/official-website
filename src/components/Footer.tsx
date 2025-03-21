@@ -1,10 +1,16 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { useNav } from './NavContext';
 import ContactButton from './buttons/ContactButton';
 
 const Footer: React.FC = () => {
+	// Reload neighbor component Nav for reset active menu item when we go to MainPage
+	const { toggleUpdate } = useNav();
+
 	return (
 		<footer className='bg-black flex justify-center'>
 			<div className='container pt-5 md:pt-10 pb-2 md:pb-[17px] lg:pb-5'>
@@ -34,7 +40,7 @@ const Footer: React.FC = () => {
 								<p>Тел.:<span>(044) 250-10-33</span></p>
 							</div>
 						</div>
-						<Link href={'/'} className='md:hidden'>
+						<Link href={'/'} onKeyDown={toggleUpdate} className='md:hidden'>
 							<Image
 								src="/svg/logoFooter.svg"
 								alt="logo"
@@ -43,20 +49,20 @@ const Footer: React.FC = () => {
 							/>
 						</Link>
 					</div>
-					<Link href={'/'} className='hidden md:block lg:hidden'>
+					<Link href={'/'} onClick={toggleUpdate}>
 						<Image
 							src="/svg/logoFooter.svg"
 							alt="logo"
 							width={97}
 							height={83}
+							className='hidden md:block lg:hidden'
 						/>
-					</Link>
-					<Link href={'/'} className='hidden lg:block'>
 						<Image
 							src="/svg/logoFooter.svg"
 							alt="logo"
 							width={156}
 							height={134}
+							className='hidden lg:block'
 						/>
 					</Link>
 					<div className='flex md:block justify-between lg:mt-[10px] mb-8 md:mb-0'>

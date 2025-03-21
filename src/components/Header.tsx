@@ -1,12 +1,20 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { useNav } from './NavContext';
+
 const Header: React.FC = () => {
+
+	// Reload neighbor component Nav for reset active menu item when we go to MainPage
+	const { toggleUpdate } = useNav();
+
 	return (
-		<header className='flex justify-center bg-header text-white'>
+		<header className='flex-col justify-center bg-header text-white'>
 			<div className='container flex justify-between items-center pt-[6px] md:pt-[11px] lg:pt-[19px] pb-[7px] md:pb-[11px] lg:pb-[18px]'>
-				<Link href={'/'} className='flex items-center'>
+				<Link href={'/'} onClick={toggleUpdate} className='flex items-center'>
 					<Image src='/svg/logoHeader.svg' alt='Logo' width={60} height={51} className='md:hidden mr-[5px]' />
 					<Image src='/svg/logoHeader.svg' alt='Logo' width={82} height={70} className='hidden md:block lg:hidden mr-[10px]' />
 					<Image src='/svg/logoHeader.svg' alt='Logo' width={106} height={89} className='hidden lg:block mr-[10px]' />

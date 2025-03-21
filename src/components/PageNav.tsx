@@ -81,7 +81,7 @@ const PageNav: React.FC = () => {
 				<ul className='flex gap-[38px] lg:gap-9'>
 					{sport && ITEMS[sport].map((item, index) => (
 						<li key={index} className='lg:py-[6px]'>
-							<Link href={`/${sport}/${item[1]}`} className={`${item[1].includes(subpage) && 'text-button-hover'}`} onClick={onClick}>{item[0]}</Link>
+							<Link href={`/${sport}/${item[1]}`} className={`${item[1].includes(subpage) && 'text-button-hover'} hover:text-button-hover`}>{item[0]}</Link>
 						</li>
 					))}
 				</ul>

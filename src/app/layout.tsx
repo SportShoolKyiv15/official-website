@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ReactNode, FC } from 'react';
 import "./globals.css";
 
+import { NavProvider } from "@/components/NavContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
@@ -20,10 +21,12 @@ const RootLayout: FC<Props> = ({ children }) => {
 	return (
 		<html lang="en">
 			<body>
-				<Header />
-				<Nav />
-				{children}
-				<Footer />
+				<NavProvider>
+					<Header />
+					<Nav />
+					{children}
+					<Footer />
+				</NavProvider>
 			</body>
 		</html>
 	);

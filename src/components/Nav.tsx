@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import { determineSportPage } from '@/helpers/determineSportPege';
+import { useNav } from './NavContext';
 
 import { Sports } from '@/globaltypes/types';
 
@@ -13,9 +14,18 @@ const Nav: React.FC = () => {
 	const pathname = usePathname();
 	const [isToggled, setIsToggled] = useState(false);
 	const [sport, setSport] = useState<Sports>();
+	const { isUpdated, toggleUpdate } = useNav();
 
+	// Switch menu items in mobile
 	const onSwitch = () => {
 		setIsToggled(!isToggled);
+	};
+
+	// Reset isUpdate for switch on active color for menu items
+	const onClick = () => {
+		if (isUpdated) {
+			toggleUpdate();
+		}
 	};
 
 	useEffect(() => {
@@ -30,8 +40,9 @@ const Nav: React.FC = () => {
 			};
 			// We find sport page
 			setSport(determineSportPage(pathname)?.partPathName);
+			console.log('Sport', sport)
 		}
-	}, [pathname]);
+	}, [pathname, sport]);
 
 	return (
 		<nav className='bg-nav-gradient'>
@@ -56,20 +67,21 @@ const Nav: React.FC = () => {
 							/>
 						</button>}
 					{!isToggled ?
-						<>	<Link href={'/football/main'} className='flex items-center'>
-							<div className='flex w-9 items-center  justify-center'>
-								<Image
-									className='mr-[9px]'
-									src="/svg/iconFootball.svg"
-									alt="icon football"
-									width={36}
-									height={36}
-								/>
-							</div>
-							<p className={`${sport === 'football' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Футбол</p>
-						</Link>
-							<Link href={'/biatlon/main'} className='flex items-center'>
-								<div className='flex w-9 items-center  justify-center'>
+						<>
+							<Link href={'/football/main'} onClick={onClick} className='flex items-center'>
+								<div className='flex w-9 items-center justify-center'>
+									<Image
+										className='mr-[9px]'
+										src="/svg/iconFootball.svg"
+										alt="icon football"
+										width={36}
+										height={36}
+									/>
+								</div>
+								<p className={`${sport === 'football' && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Футбол</p>
+							</Link>
+							<Link href={'/biatlon/main'} onClick={onClick} className='flex items-center'>
+								<div className='flex w-9 items-center justify-center'>
 									<Image
 										className='mr-[9px]'
 										src="/svg/iconBiatlon.svg"
@@ -78,11 +90,11 @@ const Nav: React.FC = () => {
 										height={36}
 									/>
 								</div>
-								<p className={`${sport === 'biatlon' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Біатлон</p>
+								<p className={`${sport === 'biatlon' && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Біатлон</p>
 							</Link>
 						</> : <>
-							<Link href={'/sky_racing/main'} className='flex items-center'>
-								<div className='flex w-10 items-center  justify-center'>
+							<Link href={'/sky_racing/main'} onClick={onClick} className='flex items-center'>
+								<div className='flex w-10 items-center justify-center'>
 									<Image
 										className='mr-[9px]'
 										src="/svg/iconSkyRacing.svg"
@@ -91,10 +103,10 @@ const Nav: React.FC = () => {
 										height={36}
 									/>
 								</div>
-								<p className={`${sport === 'sky_racing' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Лижні гонки</p>
+								<p className={`${sport === 'sky_racing' && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Лижні гонки</p>
 							</Link>
-							<Link href={'/alpine_skiing/main'} className='flex items-center'>
-								<div className='flex w-9 items-center  justify-center'>
+							<Link href={'/alpine_skiing/main'} onClick={onClick} className='flex items-center'>
+								<div className='flex w-9 items-center justify-center'>
 									<Image
 										className='mr-[9px]'
 										src="/svg/iconAlpineSkiing.svg"
@@ -103,14 +115,14 @@ const Nav: React.FC = () => {
 										height={36}
 									/>
 								</div>
-								<p className={`${sport === 'alpine_skiing' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Гірські лижі</p>
+								<p className={`${sport === 'alpine_skiing' && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Гірські лижі</p>
 							</Link>
 						</>}
 				</div>
 				{/* Desktop and tablet navigation */}
 				<div className='hidden md:flex justify-between lg:justify-center gap-10 lg:gap-[38px] md:px-[14px] lg:px-0'>
-					<Link href={'/football/main'} className='flex items-center'>
-						<div className='flex w-9 items-center  justify-center'>
+					<Link href={'/football/main'} onClick={onClick} className='flex items-center'>
+						<div className='flex w-9 items-center justify-center'>
 							<Image
 								className='mr-[6px]'
 								src="/svg/iconFootball.svg"
@@ -119,10 +131,10 @@ const Nav: React.FC = () => {
 								height={40}
 							/>
 						</div>
-						<p className={`${sport === 'football' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Футбол</p>
+						<p className={`${sport === 'football' && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Футбол</p>
 					</Link>
-					<Link href={'/biatlon/main'} className='flex items-center'>
-						<div className='flex w-9 items-center  justify-center'>
+					<Link href={'/biatlon/main'} onClick={onClick} className='flex items-center'>
+						<div className='flex w-9 items-center justify-center'>
 							<Image
 								className='mr-[6px]'
 								src="/svg/iconBiatlon.svg"
@@ -131,10 +143,10 @@ const Nav: React.FC = () => {
 								height={49}
 							/>
 						</div>
-						<p className={`${sport === 'biatlon' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Біатлон</p>
+						<p className={`${sport === 'biatlon' && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Біатлон</p>
 					</Link>
-					<Link href={'/sky_racing/main'} className='flex items-center'>
-						<div className='flex w-10 items-center  justify-center'>
+					<Link href={'/sky_racing/main'} onClick={onClick} className='flex items-center'>
+						<div className='flex w-10 items-center justify-center'>
 							<Image
 								className='mr-[6px]'
 								src="/svg/iconSkyRacing.svg"
@@ -143,10 +155,10 @@ const Nav: React.FC = () => {
 								height={40}
 							/>
 						</div>
-						<p className={`${sport === 'sky_racing' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Лижні гонки</p>
+						<p className={`${sport === 'sky_racing'! && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Лижні гонки</p>
 					</Link>
-					<Link href={'/alpine_skiing/main'} className='flex items-center'>
-						<div className='flex w-9 items-center  justify-center'>
+					<Link href={'/alpine_skiing/main'} onClick={onClick} className='flex items-center'>
+						<div className='flex w-9 items-center justify-center'>
 							<Image
 								className='mr-[6px]'
 								src="/svg/iconAlpineSkiing.svg"
@@ -155,7 +167,7 @@ const Nav: React.FC = () => {
 								height={40}
 							/>
 						</div>
-						<p className={`${sport === 'alpine_skiing' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Гірські лижі</p>
+						<p className={`${sport === 'alpine_skiing' && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Гірські лижі</p>
 					</Link>
 				</div>
 			</div>
