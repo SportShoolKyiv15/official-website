@@ -42,6 +42,8 @@ export const BURGER_MENU_ITEMS = {
 			['Галерея', '/alpine_skiing/galery/foto'],
 		]
 	},
+	'Платні послуги': { path: '/services', subItems: [] },
+	'Контакти': { path: '/contacts', subItems: [] },
 };
 
 
