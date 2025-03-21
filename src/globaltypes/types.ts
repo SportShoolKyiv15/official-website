@@ -22,4 +22,3 @@ export type BurgerMenu = {
 };
 
 type MenuItem = [string, string];
-// export type BurgerMenu = Map<MenuItem, MenuItem[]>;

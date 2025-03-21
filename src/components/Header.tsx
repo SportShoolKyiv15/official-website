@@ -102,18 +102,6 @@ const Header: React.FC = () => {
 						<p className='hidden md:block md:w-[285px] lg:w-[377px] text-lg lg:text-xl font-ermilov font-bold leading-[110%]'>Комплексна дитяча юнацька спортивна школа 15</p>
 					</div>
 					<BurgerMenu closeModal={closeModal} />
-					{/* <ul className='flex flex-col gap-10 pt-[90px] md:pt-[62px] pl-9 md:pl-[68px]'>
-						{Object.keys(BURGER_ITEMS).length > 0 && Object.keys(BURGER_ITEMS).map((item, index) => (
-							<li key={index} className='text-lg'>
-								{item}
-								{Object.values(BURGER_ITEMS)[index].length > 0 && <ul className='flex flex-col gap-[18px] md:gap-5 pt-[30px] pl-[14px] md:pl-5'>
-									{Object.values(BURGER_ITEMS)[index].map((item, index) => (
-										<li key={index} className='text-base'>{item}</li>
-									))}
-								</ul>}
-							</li>
-						))}
-					</ul> */}
 				</div>
 				{!isOpen && (
 					<button
