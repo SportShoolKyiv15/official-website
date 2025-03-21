@@ -1,15 +1,15 @@
 export type Sports = "football" | "biatlon" | "sky_racing" | "alpine_skiing" | undefined;
 
 export type SportAndPageName = {
-	partPathName: "football",
+	sportPathName: "football",
 	pageName: "Футбол"
 } | {
-	partPathName: "biatlon",
+	sportPathName: "biatlon",
 	pageName: "Біатлон"
 } | {
-	partPathName: "sky_racing",
+	sportPathName: "sky_racing",
 	pageName: "Лижні гонки"
 } | {
-	partPathName: "alpine_skiing",
+	sportPathName: "alpine_skiing",
 	pageName: "Гірські лижі"
 } | undefined;

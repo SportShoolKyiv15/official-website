@@ -29,8 +29,8 @@ const Nav: React.FC = () => {
 	};
 
 	useEffect(() => {
-		if (pathname && determineSportPage(pathname)?.partPathName) {
-			const ourPath = determineSportPage(pathname)?.partPathName;
+		if (pathname && determineSportPage(pathname)?.sportPathName) {
+			const ourPath = determineSportPage(pathname)?.sportPathName;
 			// Switch navigation items
 			if (ourPath === 'football' || ourPath === "biatlon") {
 				setIsToggled(false)
@@ -39,10 +39,10 @@ const Nav: React.FC = () => {
 				setIsToggled(true)
 			};
 			// We find sport page
-			setSport(determineSportPage(pathname)?.partPathName);
-			console.log('Sport', sport)
+			setSport(determineSportPage(pathname)?.sportPathName);
+
 		}
-	}, [pathname, sport]);
+	}, [pathname]);
 
 	return (
 		<nav className='bg-nav-gradient'>
@@ -172,7 +172,7 @@ const Nav: React.FC = () => {
 				</div>
 			</div>
 		</nav>
-	)
-}
+	);
+};
 
 export default Nav;

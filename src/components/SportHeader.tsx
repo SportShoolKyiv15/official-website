@@ -3,40 +3,40 @@
 import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import Link from 'next/link';
 
 import Title from './Title';
+import SportNavListItems from './SportNavListItems';
 import { determineSportPage } from '@/helpers/determineSportPege';
-import { ITEMS } from '@/data/constants';
 
 import { Sports } from '@/globaltypes/types';
 
-const PageNav: React.FC = () => {
+const SportHeader: React.FC = () => {
 	const pathname = usePathname();
 	const pathnameArrow = pathname.split('/');
 	const [sport, setSport] = useState<Sports>();
 	const [subpage, setSubPage] = useState('');
 	const [isMenuOpened, setIsMenuOpened] = useState(false);
+	const titleText = determineSportPage(pathname)?.pageName;
 
 	const onClick = () => {
 		setIsMenuOpened(!isMenuOpened);
 	};
 
 	useEffect(() => {
-		if (pathname && determineSportPage(pathname)?.partPathName) {
+		if (pathname && determineSportPage(pathname)?.sportPathName) {
 			// Get subpage name in pathname
-			setSport(determineSportPage(pathname)?.partPathName);
+			setSport(determineSportPage(pathname)?.sportPathName);
 			// Get last element of pathname
 			setSubPage(pathnameArrow[pathnameArrow.length - 1]);
 		};
 	}, [pathname, pathnameArrow, subpage]);
 	return (
 		<>
-			{/* Mobile submenu */}
+			{/* Mobile sport header */}
 			<div className='md:hidden container'>
 				{isMenuOpened && <div className='md:hidden modal-overlay'></div>}
-				<nav className='pt-[28px] z-1000'>
-					<Title type='page-title'>{determineSportPage(sport)?.pageName}</Title>
+				<div className='pt-[28px] z-1000'>
+					<Title type='page-title'>{titleText}</Title>
 					{!isMenuOpened ?
 						<div className='flex justify-between items-center w-full page-nav bg-block-grey rounded-sm'>
 							<p>Розділи</p>
@@ -62,32 +62,22 @@ const PageNav: React.FC = () => {
 									/></button>
 							</div>
 							<div className='w-full h-[1px] bg-line-drop-menu'></div>
-							<div className='w-[345px] absolute top-[100%] pt-3 pb-5 bg-drop-menu rounded-b-sm'>
-								<ul className='flex flex-col gap-4 pl-10'>
-									{sport && ITEMS[sport].map((item, index) => (
-										<li key={index}>
-											<Link href={`/${sport}/${item[1]}`} onClick={onClick}>{item[0]}</Link>
-										</li>
-									))}
-								</ul>
-							</div>
+							<nav className='w-[345px] absolute top-[100%] pt-3 pb-5 bg-drop-menu rounded-b-sm'>
+								<SportNavListItems sport={sport} subpage={subpage} onClick={onClick} />
+							</nav>
 						</div>
 					}
+				</div>
+			</div>
+			{/* Desktop and tablet sport header */}
+			<div className='hidden md:block container pt-15 pb-[18px]'>
+				<Title type='page-title'>{titleText}</Title>
+				<nav>
+					<SportNavListItems sport={sport} subpage={subpage} />
 				</nav>
 			</div>
-			{/* Desktop and tablet submenu */}
-			<nav className='hidden md:block container pt-15 pb-[18px]'>
-				<Title type='page-title'>{determineSportPage(sport)?.pageName}</Title>
-				<ul className='flex gap-[38px] lg:gap-9'>
-					{sport && ITEMS[sport].map((item, index) => (
-						<li key={index} className='lg:py-[6px]'>
-							<Link href={`/${sport}/${item[1]}`} className={`${item[1].includes(subpage) && 'text-button-hover'} hover:text-button-hover`}>{item[0]}</Link>
-						</li>
-					))}
-				</ul>
-			</nav>
 		</>
 	)
 };
 
-export default PageNav;
+export default SportHeader;
