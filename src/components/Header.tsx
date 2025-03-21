@@ -12,7 +12,7 @@ const Header: React.FC = () => {
 	const { toggleUpdate } = useNav();
 
 	return (
-		<header className='flex-col justify-center bg-header text-white'>
+		<header className='flex justify-center bg-header text-white'>
 			<div className='container flex justify-between items-center pt-[6px] md:pt-[11px] lg:pt-[19px] pb-[7px] md:pb-[11px] lg:pb-[18px]'>
 				<Link href={'/'} onClick={toggleUpdate} className='flex items-center'>
 					<Image src='/svg/logoHeader.svg' alt='Logo' width={60} height={51} className='md:hidden mr-[5px]' />
