@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ReactNode, FC } from 'react';
 import "./globals.css";
 
-import { NavProvider } from "@/components/NavContext";
+import { NavProvider } from "@/contexts/NavContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";

@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { useNav } from './NavContext';
+import { useNav } from '../contexts/NavContext';
 import ContactButton from './buttons/ContactButton';
 
 const Footer: React.FC = () => {

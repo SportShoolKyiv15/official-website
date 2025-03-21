@@ -13,3 +13,13 @@ export type SportAndPageName = {
 	sportPathName: "alpine_skiing",
 	pageName: "Гірські лижі"
 } | undefined;
+
+export type BurgerMenu = {
+	[key: string]: {
+		path: string;
+		subItems: MenuItem[];
+	};
+};
+
+type MenuItem = [string, string];
+// export type BurgerMenu = Map<MenuItem, MenuItem[]>;

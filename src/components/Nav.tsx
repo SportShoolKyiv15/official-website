@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import { determineSportPage } from '@/helpers/determineSportPege';
-import { useNav } from './NavContext';
+import { useNav } from '../contexts/NavContext';
 
 import { Sports } from '@/globaltypes/types';
 

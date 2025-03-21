@@ -5,3 +5,74 @@ export const ITEMS = {
 	sky_racing: [['Головна', 'main'], ['Тренерський склад', 'coach_team'], ['Чемпіонати', 'championships'], ['Галерея', 'galery/foto']],
 	alpine_skiing: [['Головна', 'main'], ['Тренерський склад', 'coach_team'], ['Чемпіонати', 'championships'], ['Галерея', 'galery/foto']],
 };
+
+export const BURGER_ITEMS = {
+	'Головна': [],
+	'Про нас': [],
+	'Футбол': ['Головна', 'Тренерський склад', 'Клубні команди', 'Чемпіонати', 'Галерея'],
+	'Біатлон': ['Головна', 'Тренерський склад', 'Чемпіонати', 'Галерея'],
+	'Лижні гонки': ['Головна', 'Тренерський склад', 'Чемпіонати', 'Галерея'],
+	'Гірські лижі': ['Головна', 'Тренерський склад', 'Чемпіонати', 'Галерея'],
+	'Платні послуги': [],
+	'Контакти': [],
+}
+
+
+export const BURGER_ITEMS1 = {
+	'Головна': [],
+	'Про нас': [],
+	'Футбол': ['Головна', 'Тренерський склад', 'Клубні команди', 'Галерея'],
+	'Біатлон': ['Головна', 'Тренерський склад', 'Чемпіонати', 'Галерея'],
+	'Лижні гонки': ['Головна', 'Тренерський склад', 'Чемпіонати', 'Галерея'],
+	'Гірські лижі': ['Головна', 'Тренерський склад', 'Чемпіонати', 'Галерея'],
+	'Платні послуги': [],
+	'Контакти': [],
+}
+
+export const BURGER_MENU_ITEMS = {
+	'Головна': { path: '/', subItems: [] },
+	'Про нас': { path: '/about', subItems: [] },
+	'Футбол': {
+		path: '/football/main', subItems: [
+			['Головна', '/football/main'],
+			['Тренерський склад', '/football/coach_team'],
+			['Клубні команди', '/football/club_team'],
+			['Чемпіонати', '/football/championships'],
+			['Галерея', '/football/galery/foto'],
+		]
+	},
+	'Біатлон': {
+		path: '/biatlon/main', subItems: [
+			['Головна', '/biatlon/main'],
+			['Тренерський склад', '/biatlon/coach_team'],
+			['Чемпіонати', '/biatlon/championships'],
+			['Галерея', '/biatlon/galery/foto'],
+		]
+	},
+	'Лижні гонки': {
+		path: '/sky_racing/main', subItems: [
+			['Головна', '/bisky_racingatlon/main'],
+			['Тренерський склад', '/sky_racing/coach_team'],
+			['Чемпіонати', '/sky_racing/championships'],
+			['Галерея', '/sky_racing/galery/foto'],
+		]
+	},
+	'Гірські лижі': {
+		path: '/alpine_skiing/main', subItems: [
+			['Головна', '/alpine_skiing/main'],
+			['Тренерський склад', '/alpine_skiing/coach_team'],
+			['Чемпіонати', '/alpine_skiing/championships'],
+			['Галерея', '/alpine_skiing/galery/foto'],
+		]
+	},
+};
+
+
+// export const BURGER_MENU_ITEMS = new Map();
+// BURGER_MENU_ITEMS.set(['Головна', '/'], []);
+// BURGER_MENU_ITEMS.set(['Про нас', '/about'], []);
+// BURGER_MENU_ITEMS.set(['Футбол', '/football/main'], [['Головна', '/football/main'], ['Тренерський склад', '/football/coach_team'], ['Клубні команди', '/football/club_team'], ['Чемпіонати', '/football/championships'], ['Галерея', '/football/galery/foto']]);
+// BURGER_MENU_ITEMS.set(['Біатлон', '/biatlon/main'], [['Головна', '/biatlon/main'], ['Тренерський склад', '/biatlon/coach_team'], ['Чемпіонати', '/biatlon/championships'], ['Галерея', '/biatlon/galery/foto']]);
+// BURGER_MENU_ITEMS.set(['Лижні гонки', '/sky_racing/main'], [['Головна', '/sky_racing/main'], ['Тренерський склад', '/sky_racing/coach_team'], ['Чемпіонати', '/sky_racing/championships'], ['Галерея', '/sky_racing/galery/foto']]);
+// BURGER_MENU_ITEMS.set(['Гірські лижі', '/alpine_skiing/main'], [['Головна', '/alpine_skiing/main'], ['Тренерський склад', '/alpine_skiing/coach_team'], ['Чемпіонати', '/alpine_skiing/championships'], ['Галерея', '/alpine_skiing/galery/foto']]);
+

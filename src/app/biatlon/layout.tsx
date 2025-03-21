@@ -1,12 +1,12 @@
-import { ReactNode, FC } from 'react';
+import { ReactNode } from 'react';
 
 import SportHeader from '@/components/SportHeader';
 
 type Props = {
-	children: ReactNode
+	children: ReactNode;
 };
 
-const BiatlonLayout: FC<Props> = ({ children }) => {
+const BiatlonLayout: React.FC<Props> = ({ children }) => {
 	return (
 		<main className='w-full flex flex-col items-center bg-main-dark'>
 			<SportHeader />
