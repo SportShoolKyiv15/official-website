@@ -1,10 +1,10 @@
+import GalleryNav from "@/components/GalleryNav";
+
 const AlpineSkiingGaleryFotoPage: React.FC = () => {
 	return (
-		<main>
-			<section>
-				<h1>Galery foto</h1>
-			</section>
-		</main>
+		<section>
+			<GalleryNav />
+		</section>
 	);
 };
 

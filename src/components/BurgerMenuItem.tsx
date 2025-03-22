@@ -45,10 +45,10 @@ const BurgerMenuItem: React.FC<Props> = ({ index, item, closeModal }) => {
 						/></button>}
 			</div>
 			{isOpened && Object.values(BURGER_MENU_ITEMS)[index].subItems.length > 0 && <ul className='flex flex-col gap-[18px] md:gap-5 pt-[30px] pl-[14px] md:pl-5'>
-				{Object.values(BURGER_MENU_ITEMS)[index].subItems.map((item, index) => (
-					<li key={index} className='text-base'>
-						<Link href={item[1]} onClick={closeModal}>
-							{item[0]}
+				{Object.values(BURGER_MENU_ITEMS)[index].subItems.map((subItem, subIndex) => (
+					<li key={subIndex} className='text-base'>
+						<Link href={subItem[1]} onClick={closeModal}>
+							{subItem[0]}
 						</Link>
 					</li>
 				))}

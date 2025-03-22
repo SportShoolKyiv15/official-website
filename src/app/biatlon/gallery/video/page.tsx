@@ -1,10 +1,10 @@
+import GalleryNav from "@/components/GalleryNav";
+
 const BiatlonGaleryVideoPage: React.FC = () => {
 	return (
-		<main>
-			<section>
-				<h1>Galery video</h1>
-			</section>
-		</main>
+		<section>
+			<GalleryNav />
+		</section>
 	);
 };
 

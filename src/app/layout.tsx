@@ -22,10 +22,12 @@ const RootLayout: FC<Props> = ({ children }) => {
 		<html lang="en">
 			<body>
 				<NavProvider>
-					<Header />
-					<Nav />
-					{children}
-					<Footer />
+					<div className="flex flex-col min-h-screen">
+						<Header />
+						<Nav />
+						<main className="flex-1">{children}</main>
+						<Footer />
+					</div>
 				</NavProvider>
 			</body>
 		</html>

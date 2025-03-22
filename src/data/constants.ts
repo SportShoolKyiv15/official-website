@@ -1,9 +1,9 @@
 // Name of submenu items and corresponding last part of pathname for sport pages
 export const ITEMS = {
-	football: [['Головна', 'main'], ['Тренерський склад', 'coach_team'], ['Клубні команди', 'club_teams'], ['Галерея', 'galery/foto']],
-	biatlon: [['Головна', 'main'], ['Тренерський склад', 'coach_team'], ['Чемпіонати', 'championships'], ['Галерея', 'galery/foto']],
-	sky_racing: [['Головна', 'main'], ['Тренерський склад', 'coach_team'], ['Чемпіонати', 'championships'], ['Галерея', 'galery/foto']],
-	alpine_skiing: [['Головна', 'main'], ['Тренерський склад', 'coach_team'], ['Чемпіонати', 'championships'], ['Галерея', 'galery/foto']],
+	football: [['Головна', 'main'], ['Тренерський склад', 'coach_team'], ['Клубні команди', 'club_teams'], ['Галерея', 'gallery/foto']],
+	biatlon: [['Головна', 'main'], ['Тренерський склад', 'coach_team'], ['Чемпіонати', 'championships'], ['Галерея', 'gallery/foto']],
+	sky_racing: [['Головна', 'main'], ['Тренерський склад', 'coach_team'], ['Чемпіонати', 'championships'], ['Галерея', 'gallery/foto']],
+	alpine_skiing: [['Головна', 'main'], ['Тренерський склад', 'coach_team'], ['Чемпіонати', 'championships'], ['Галерея', 'gallery/foto']],
 };
 
 export const BURGER_MENU_ITEMS = {
@@ -15,7 +15,7 @@ export const BURGER_MENU_ITEMS = {
 			['Тренерський склад', '/football/coach_team'],
 			['Клубні команди', '/football/club_team'],
 			['Чемпіонати', '/football/championships'],
-			['Галерея', '/football/galery/foto'],
+			['Галерея', '/football/gallery/foto'],
 		]
 	},
 	'Біатлон': {
@@ -23,7 +23,7 @@ export const BURGER_MENU_ITEMS = {
 			['Головна', '/biatlon/main'],
 			['Тренерський склад', '/biatlon/coach_team'],
 			['Чемпіонати', '/biatlon/championships'],
-			['Галерея', '/biatlon/galery/foto'],
+			['Галерея', '/biatlon/gallery/foto'],
 		]
 	},
 	'Лижні гонки': {
@@ -31,7 +31,7 @@ export const BURGER_MENU_ITEMS = {
 			['Головна', '/bisky_racingatlon/main'],
 			['Тренерський склад', '/sky_racing/coach_team'],
 			['Чемпіонати', '/sky_racing/championships'],
-			['Галерея', '/sky_racing/galery/foto'],
+			['Галерея', '/sky_racing/gallery/foto'],
 		]
 	},
 	'Гірські лижі': {
@@ -39,7 +39,7 @@ export const BURGER_MENU_ITEMS = {
 			['Головна', '/alpine_skiing/main'],
 			['Тренерський склад', '/alpine_skiing/coach_team'],
 			['Чемпіонати', '/alpine_skiing/championships'],
-			['Галерея', '/alpine_skiing/galery/foto'],
+			['Галерея', '/alpine_skiing/gallery/foto'],
 		]
 	},
 	'Платні послуги': { path: '/services', subItems: [] },
