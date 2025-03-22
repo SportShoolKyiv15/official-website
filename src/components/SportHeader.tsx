@@ -62,7 +62,7 @@ const SportHeader: React.FC = () => {
 									/></button>
 							</div>
 							<div className='w-full h-[1px] bg-line-drop-menu'></div>
-							<nav className='w-[345px] absolute top-[100%] pt-3 pb-5 bg-drop-menu rounded-b-sm'>
+							<nav className='w-[345px] absolute top-[100%] pt-3 pb-5 bg-drop-menu rounded-b-sm' aria-label='Навігація по сторінці'>
 								<SportNavListItems sport={sport} subpage={subpage} onClick={onClick} />
 							</nav>
 						</div>
