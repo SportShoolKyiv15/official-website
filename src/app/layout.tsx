@@ -5,7 +5,7 @@ import "./globals.css";
 import { NavProvider } from "@/contexts/NavContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Nav from "@/components/Nav";
+// import Nav from "@/components/Nav";
 
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ const RootLayout: FC<Props> = ({ children }) => {
 				<NavProvider>
 					<div className="flex flex-col min-h-screen">
 						<Header />
-						<Nav />
+						{/* <Nav /> */}
 						<main className="flex-1">{children}</main>
 						<Footer />
 					</div>

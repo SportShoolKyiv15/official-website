@@ -34,7 +34,7 @@ const SportHeader: React.FC = () => {
 		<>
 			{/* Mobile sport header */}
 			<div className='md:hidden container'>
-				{isMenuOpened && <div className='md:hidden modal-overlay'></div>}
+				{isMenuOpened && <div className='md:hidden drop-menu-overlay'></div>}
 				<div className='pt-[28px] z-1000'>
 					<Title type='page-title'>{titleText}</Title>
 					{!isMenuOpened ?

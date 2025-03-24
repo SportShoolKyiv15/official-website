@@ -45,7 +45,7 @@ const Nav: React.FC = () => {
 	}, [pathname]);
 
 	return (
-		<nav className='bg-nav-gradient' aria-label='Основна навігація'>
+		<nav className='w-full bg-nav-gradient' aria-label='Основна навігація'>
 			<div className='container m-auto pt-[10px] md:pt-[6px] pb-1 md:pb-[6px] relative'>
 				{/* Mobile navigathion */}
 				<div className='md:hidden flex justify-center gap-10'>
