@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 
 import { setSliderDisplacement } from "@/utils/setSliderDisplacement";
@@ -114,7 +115,7 @@ const NewsSwiper: React.FC = () => {
 	return (
 		<>
 			<div className="container lg:w-[998px] xl:w-full relative mx-auto">
-				<div className="flex gap-3 absolute right-[15px] top-[-50px]">
+				<div className="flex gap-3 absolute right-0 top-[-30px]">
 					<button
 						type="button"
 						className={`hidden lg:block cursor-pointer`}
@@ -122,9 +123,6 @@ const NewsSwiper: React.FC = () => {
 						disabled={!isActive}
 					>
 						<ArrowIconLeft color={`${!isActive ? 'arrow-active' : 'arrow'}`} />
-						{/* <svg className={`${!isActive ? 'text-arrow-active' : 'text-arrow'}`} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M16.125 9L1.875 9M1.875 9L7.125 14.25M1.875 9L7.125 3.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-						</svg> */}
 					</button>
 					<button
 						type="button"
@@ -142,9 +140,6 @@ const NewsSwiper: React.FC = () => {
 						disabled={isActiveLeft}
 					>
 						<ArrowIconLeft color={`${!isActiveLeft ? 'arrow-active' : 'arrow'}`} />
-						{/* <svg className={`${!isActiveLeft ? 'text-arrow-active' : 'text-arrow'}`} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M16.125 9L1.875 9M1.875 9L7.125 14.25M1.875 9L7.125 3.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-						</svg> */}
 					</button>
 
 					<button

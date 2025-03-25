@@ -91,11 +91,13 @@ export default function Home(): React.JSX.Element {
 					</div>
 				</div>
 			</div>
-			<div className="container flex justify-start">
-				<Title type='section-title'>Новини</Title>
-			</div>
-			<div className="container pb-[50px]">
-				<NewsSwiper />
+			<div>
+				<div className="container flex justify-start pb-[22px]">
+					<Title type='section-title'>Новини</Title>
+				</div>
+				<div className="container pb-[50px]">
+					<NewsSwiper />
+				</div>
 			</div>
 		</section>
 	);
