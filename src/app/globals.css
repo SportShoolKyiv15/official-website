@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --displacement: 0;
+}
+
 @font-face {
   font-family: "Fixel Text";
   src: url("/fonts/FixelText/FixelText-Regular.woff2") format("woff2");
@@ -74,6 +78,9 @@
   --color-button-press: rgba(168, 31, 23, 1);
   --color-button-disable: rgba(175, 175, 175, 1);
 
+  --color-arrow-active: rgba(211, 47, 47, 1);
+  --color-arrow: rgba(90, 90, 93, 1);
+
   --breakpoint-sm: 375px;
   --breakpoint-md: 720px;
   --breakpoint-lg: 1440px;
@@ -95,7 +102,7 @@
 
 @layer components {
   .container {
-    @apply py-0 px-[15px] md:px-[20px] lg:px-18;
+    @apply w-[375] py-0 px-[15px] md:px-[20px] lg:px-18;
   }
 }
 
@@ -109,6 +116,10 @@
 
 .page-title {
   @apply mb-3 md:mb-8 md:mb-[51px] font-displayBold md:font-display text-2xl md:text-[26px] lg:text-[34px] font-semibold;
+}
+
+.section-title {
+  @apply text-start text-[22px] font-display font-semibold tracking-[0.11px];
 }
 
 .button {
@@ -181,7 +192,37 @@
   );
 }
 
+.news-bg-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 7.11%,
+    rgba(0, 0, 0, 0.85) 69.14%
+  );
+}
+
 .sport-movement {
   background: url("../../public/img/sportMovement.png") rgb(211, 211, 211) 0px
     0px / 100% 109.562% no-repeat;
+}
+
+.swiperCardContent {
+  @apply absolute left-0 bottom-2 w-[343px] px-2;
+}
+
+.swiperCardText {
+  @apply h-[36px] text-xs leading-[150%] line-clamp-2;
+}
+
+.swiperOnMove {
+  @apply lg:translate-x-[-990px] xl:translate-x-[-655px];
+}
+
+.swiperOnMoveMobile {
+  @apply translate-x-[var(--displacement)] md:translate-x-[0px];
+}
+
+.swiperTransition {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 800ms;
 }

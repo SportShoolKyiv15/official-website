@@ -1,7 +1,8 @@
 import Link from "next/link";
-// import Image from "next/image";
 
 import EnrollButton from "@/components/buttons/EnrollButton";
+import Title from "@/components/Title";
+import NewsSwiper from "@/components/NewsSwiper";
 
 export default function Home(): React.JSX.Element {
 	return (
@@ -47,7 +48,7 @@ export default function Home(): React.JSX.Element {
 					<EnrollButton />
 				</div>
 			</div>
-			<div className="flex flex-col items-center w-full mb-[50px] font-display">
+			<div className="flex flex-col items-center w-full font-display">
 				<div className="flex flex-col items-center justify-center py-5">
 					<p className="text-center py-3 font-semibold text-[64px]">
 						90%
@@ -89,6 +90,12 @@ export default function Home(): React.JSX.Element {
 						<p>перемога в житті!</p>
 					</div>
 				</div>
+			</div>
+			<div className="container flex justify-start">
+				<Title type='section-title'>Новини</Title>
+			</div>
+			<div className="container pb-[50px]">
+				<NewsSwiper />
 			</div>
 		</section>
 	);
