@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { BURGER_MENU_ITEMS } from '@/data/constants';
-import Link from 'next/link';
 
 type Props = {
 	index: number;

@@ -1,7 +1,7 @@
+import React from 'react';
 import { useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
-import React from 'react';
 import useWindowWidth from '@/helpers/windowsSize';
 import BurgerMenu from '../BurgerMenu';
 
@@ -45,7 +45,6 @@ const ModalBurgerMenu: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisi
 			document.removeEventListener('keydown', memoizedhandleKeyDown);
 		};
 	}, [isModalOpen, memoizedhandleKeyDown]);
-
 
 	return (
 		<div className={`${isModalOpen && 'modal-overlay-burger relative'}`} onClick={handleOverlayClick}>
