@@ -49,7 +49,7 @@ const ModalBurgerMenu: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisi
 	return (
 		<div className={`${isModalOpen && 'modal-overlay-burger relative'}`} onClick={handleOverlayClick}>
 			{isModalOpen &&
-				<div ref={modalRef} className={`absolute top-0 left-0 z-10 w-[313px] md:w-[586px]  min-h-screen text-white bg-block-dark ${IsVisible && `burger-menu-visible`}  ${!IsVisible && `burger-menu-hidden`}`}>
+				<div ref={modalRef} className={`absolute top-0 left-0 w-[313px] md:w-[586px]  min-h-screen text-white bg-block-dark ${IsVisible && `burger-menu-visible`}  ${!IsVisible && `burger-menu-hidden`}`}>
 					<div className='flex gap-1 md:gap-[10px] items-center pl-4 md:pl-5 py-[6px] md:py-[11px] bg-header text-white'>
 						<Image
 							src='/svg/logoHeader.svg'

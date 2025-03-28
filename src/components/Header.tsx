@@ -87,7 +87,9 @@ const Header: React.FC = () => {
 				</nav>
 			</div>
 			<Nav />
-			<ModalBurgerMenu isModalOpen={isModalOpen} closeModal={closeModal} IsVisible={IsVisible} />
+			<div className='absolute top-0 left-0 z-10'>
+				<ModalBurgerMenu isModalOpen={isModalOpen} closeModal={closeModal} IsVisible={IsVisible} />
+			</div>
 		</header>
 	);
 };

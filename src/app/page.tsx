@@ -15,7 +15,7 @@ export default function Home(): React.JSX.Element {
 					<div className="absolute inset-0  bg-lightgray"></div>
 					<div className=" absolute inset-0 bg-[url('/img/footballHeroImg.jpg')] bg-cover bg-center bg-no-repeat"></div>
 					<div className="absolute inset-0 hero-background-gadient"></div>
-					<div className="absolute left-4 bottom-[28px] z-10 text-white font-display font-bold text-[26px]">Футбол</div>
+					<div className="absolute left-4 bottom-[28px] text-white font-display font-bold text-[26px]">Футбол</div>
 				</Link>
 				<Link
 					href={'/biatlon/main'}
@@ -24,7 +24,7 @@ export default function Home(): React.JSX.Element {
 					<div className="absolute inset-0  bg-lightgray"></div>
 					<div className=" absolute inset-0 bg-[url('/img/biatlonHeroImg.jpg')] bg-cover bg-center bg-no-repeat"></div>
 					<div className="absolute inset-0 hero-background-gadient"></div>
-					<div className="absolute left-4 bottom-[28px] z-10 text-white font-display font-bold text-[26px]">Біатлон</div>
+					<div className="absolute left-4 bottom-[28px] text-white font-display font-bold text-[26px]">Біатлон</div>
 				</Link>
 				<Link
 					href={'/sky_racing/main'}
@@ -33,7 +33,7 @@ export default function Home(): React.JSX.Element {
 					<div className="absolute inset-0  bg-lightgray"></div>
 					<div className=" absolute inset-0 bg-[url('/img/skyRacingHeroImg.jpg')] bg-cover bg-center bg-no-repeat"></div>
 					<div className="absolute inset-0  hero-background-gadient"></div>
-					<div className="absolute left-4 bottom-[28px] z-10 text-white font-display font-bold text-[26px]">Лижні гонки</div>
+					<div className="absolute left-4 bottom-[28px] text-white font-display font-bold text-[26px]">Лижні гонки</div>
 				</Link>
 				<Link
 					href={'/alpine_skiing/main'}
@@ -42,7 +42,7 @@ export default function Home(): React.JSX.Element {
 					<div className="absolute inset-0  bg-lightgray"></div>
 					<div className=" absolute inset-0 bg-[url('/img/alpineSkiingHeroImg.jpg')] bg-cover bg-center bg-no-repeat"></div>
 					<div className="absolute inset-0  hero-background-gadient"></div>
-					<div className="absolute left-4 bottom-[28px] z-10 text-white font-display font-bold text-[26px]">Гірські лижі</div>
+					<div className="absolute left-4 bottom-[28px] text-white font-display font-bold text-[26px]">Гірські лижі</div>
 				</Link>
 				<div className="mt-4">
 					<EnrollButton />
