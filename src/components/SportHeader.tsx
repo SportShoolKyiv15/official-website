@@ -33,7 +33,7 @@ const SportHeader: React.FC = () => {
 	return (
 		<>
 			{/* Mobile sport header */}
-			<div className='md:hidden container'>
+			<div className='md:hidden my-container'>
 				{isMenuOpened && <div className='md:hidden drop-menu-overlay'></div>}
 				<div className='pt-[28px] z-1000'>
 					<Title type='page-title'>{titleText}</Title>
@@ -70,7 +70,7 @@ const SportHeader: React.FC = () => {
 				</div>
 			</div>
 			{/* Desktop and tablet sport header */}
-			<div className='hidden md:block container pt-15 pb-[18px]'>
+			<div className='hidden md:block my-container pt-15 pb-[18px]'>
 				<Title type='page-title'>{titleText}</Title>
 				<nav>
 					<SportNavListItems sport={sport} subpage={subpage} />
