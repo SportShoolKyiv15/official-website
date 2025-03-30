@@ -1,0 +1,260 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --displacement: 0;
+}
+
+@font-face {
+  font-family: "Fixel Text";
+  src: url("/fonts/FixelText/FixelText-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fixel Text Semibold";
+  src: url("/fonts/FixelText/FixelText-SemiBold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fixel Display";
+  src: url("/fonts/FixelDisplay/FixelDisplay-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fixel Display Semibold";
+  src: url("/fonts/FixelDisplay/FixelDisplay-SemiBold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fixel Display Bold";
+  src: url("/fonts/FixelDisplay/FixelDisplay-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fixel Display Medium";
+  src: url("/fonts/FixelDisplay/FixelDisplay-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ermilov";
+  src: url("/fonts/Ermilov/Ermilov.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --color-header: rgba(177, 43, 44, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-main-dark: rgba(24, 25, 28, 1);
+  --color-block-dark: rgba(41, 41, 46, 1);
+  --color-drop-menu: rgba(48, 48, 54, 1);
+  --color-block-grey: rgba(61, 61, 63, 1);
+  --color-light: rgba(238, 238, 238, 1);
+  --color-black-text: rgba(17, 17, 17, 1);
+  --color-line-drop-menu: rgba(90, 90, 93, 1);
+  --color-active-gallery-nav: rgba(229, 57, 53, 1);
+  --color-lightgray: rgba(211, 211, 211, 1);
+
+  --color-start: rgba(224, 224, 224, 1);
+  --color-end: rgba(189, 189, 189, 1);
+
+  --color-button: rgba(203, 45, 45, 1);
+  --color-button-hover: rgba(225, 33, 33, 1);
+  --color-button-press: rgba(168, 31, 23, 1);
+  --color-button-disable: rgba(175, 175, 175, 1);
+  --color-button-swipe-card: rgba(254, 76, 76, 1);
+
+  --color-arrow-active: rgba(211, 47, 47, 1);
+  --color-arrow: rgba(90, 90, 93, 1);
+
+  --breakpoint-sm: 375px;
+  --breakpoint-md: 720px;
+  --breakpoint-lg: 1440px;
+
+  --font-text: "Fixel Text", "sans-serif";
+  --font-textSemibold: "Fixel Text Semibold", "sans-serif";
+  --font-display: "Fixel Display", "sans-serif";
+  --font-displayBold: "Fixel Display Bold", "sans-serif";
+  --font-displaySemibold: "Fixel Display Semibold", "sans-serif";
+  --font-displayMedium: "Fixel Display Medium", "sans-serif";
+  --font-ermilov: "Ermilov", "sans-serif";
+}
+
+@layer base {
+  body {
+    @apply m-0 bg-main-dark text-light text-base font-text font-normal leading-none tracking-normal;
+  }
+}
+
+@layer components {
+  .my-container {
+    @apply w-[375px] md:w-[720px] lg:w-[1440px] px-[15px] md:px-[20px] lg:px-18;
+  }
+}
+
+.bg-nav-gradient {
+  @apply bg-gradient-to-b from-start to-end;
+}
+
+.page-nav {
+  @apply pl-3 pr-2 py-[9px];
+}
+
+.hero-nav-item {
+  @apply flex w-full h-[220px] md:h-[332px] md:w-[225px] lg:w-[425px] lg:h-[562px] relative md:shrink-2 md:hover:shrink-1 md:hover:w-[275px] lg:hover:w-[500px];
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.start-form {
+  @apply md:-mr-[28px] lg:-mr-[52px];
+  @media screen and (min-width: 720px) {
+    clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+  }
+}
+
+.form {
+  @apply md:-mx-[28px] lg:-mx-[52px];
+  @media screen and (min-width: 720px) {
+    clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+  }
+}
+
+.end-form {
+  @apply md:w-[225px] lg:w-[425px] md:-ml-[28px] lg:-ml-[52px];
+  @media screen and (min-width: 720px) {
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+.page-title {
+  @apply mb-3 md:mb-8 md:mb-[51px] font-displayBold md:font-display text-2xl md:text-[26px] lg:text-[34px] font-semibold;
+}
+
+.section-title {
+  @apply text-start text-[22px] md:text-[26px] lg:text-[32px] font-display font-semibold tracking-[0.11px];
+}
+
+.button {
+  @apply flex flex-col items-center justify-center text-base font-display bg-button hover:bg-button-hover cursor-pointer active:bg-button-press rounded-sm;
+}
+
+.drop-menu-overlay {
+  position: fixed;
+  top: 114px;
+  left: 0;
+  width: 100vh;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.modal-burger {
+  color: black;
+  border-radius: 8px;
+  overflow-y: scroll;
+}
+
+.modal-overlay-burger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.burger-menu-visible {
+  animation: slideInLeft 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.burger-menu-hidden {
+  animation: slideInRight 0.3s ease-out;
+}
+
+.hero-background-gadient {
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 32.55%,
+    rgba(0, 0, 0, 0.85) 89.06%
+  );
+}
+
+.news-bg-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 7.11%,
+    rgba(0, 0, 0, 0.85) 69.14%
+  );
+}
+
+.sport-movement {
+  background: url("../../public/img/sportMovement.png") rgb(211, 211, 211) 0px
+    0px / 100% 109.562% no-repeat;
+}
+
+.swiperCardContent {
+  @apply absolute left-0 bottom-2 w-[343px] px-2;
+}
+
+.swiperCardTitle {
+  @apply w-full mb-2 text-center text-lg font-display font-semibold;
+}
+
+.swiperCardText {
+  @apply h-[36px] mb-4 text-xs leading-[150%] line-clamp-2;
+}
+
+/* .swiperOnMove {
+  @apply lg:translate-x-[-990px] xl:translate-x-[-655px];
+} */
+
+.swiperOnMoveMobile {
+  @apply translate-x-[var(--displacement)] lg:translate-x-[0px];
+}
+
+.swiperTransition {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 800ms;
+}
