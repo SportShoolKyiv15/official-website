@@ -46,7 +46,7 @@ const Nav: React.FC = () => {
 
 	return (
 		<nav className='w-full bg-nav-gradient' aria-label='Основна навігація'>
-			<div className='w-[375px] md:w-[720px] lg:w-[1440px] m-auto pt-[10px] md:pt-[6px] pb-1 md:pb-[6px] relative'>
+			<div className='my-container m-auto pt-[10px] md:pt-[6px] pb-1 md:pb-[6px] relative'>
 				{/* Mobile navigathion */}
 				<div className='md:hidden flex justify-center gap-10'>
 					{isToggled ?

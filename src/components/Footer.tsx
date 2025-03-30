@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
 
 	return (
 		<footer className='bg-black flex justify-center'>
-			<div className='w-[375px] md:w-[720px] lg:w-[1440px] pt-5 md:pt-10 pb-2 md:pb-[17px] lg:pb-5'>
+			<div className='my-container pt-5 md:pt-10 pb-2 md:pb-[17px] lg:pb-5'>
 				<div className='md:flex md:items-center md:mb-[12px] justify-between lg:mb-[19px]'>
 					<div className='flex justify-between items-center mb-[58px] md:mb-0'>
 						<div className='flex items-start'>

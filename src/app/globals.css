@@ -102,8 +102,8 @@
 }
 
 @layer components {
-  .container {
-    @apply w-[375] py-0 px-[15px] md:px-[20px] lg:px-18;
+  .my-container {
+    @apply w-[375px] md:w-[720px] lg:w-[1440px] px-[15px] md:px-[20px] lg:px-18;
   }
 }
 
@@ -136,7 +136,7 @@
 }
 
 .end-form {
-  @apply md:-ml-[28px] lg:-ml-[52px];
+  @apply md:w-[225px] lg:w-[425px] md:-ml-[28px] lg:-ml-[52px];
   @media screen and (min-width: 720px) {
     clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
