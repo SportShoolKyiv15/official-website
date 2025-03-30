@@ -236,7 +236,7 @@ const NewsSwiper: FC = () => {
 			</div>
 
 			<div className="overflow-hidden mx-auto  ">
-				<ul onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} id='sliderAdvantages' className={`flex lg:flex-wrap gap-6 ${extra} swiperTransition`}>
+				<ul onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} id='sliderAdvantages' className={`flex lg:flex-wrap lg:items-center lg:justify-center gap-6 ${extra} swiperTransition`}>
 					<div className="hidden md:block lg:hidden" >
 
 					</div>

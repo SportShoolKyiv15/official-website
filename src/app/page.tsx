@@ -15,7 +15,7 @@ export default function Home(): React.JSX.Element {
 					>
 						<div className="absolute inset-0  bg-lightgray"></div>
 						<div className=" absolute inset-0 bg-[url('/img/footballHeroImg.jpg')] bg-cover bg-center bg-no-repeat"></div>
-						<div className="absolute inset-0 hero-background-gadient"></div>
+						<div className="absolute inset-0 hero-background-gadient opacity-100"></div>
 						<div className="absolute left-4 lg:left-[38px] bottom-[28px] text-white font-display font-bold text-[26px]] md:text-[20px] lg:text-[28px]">Футбол</div>
 					</Link>
 					<Link
@@ -94,10 +94,10 @@ export default function Home(): React.JSX.Element {
 				</div>
 			</div>
 			<div>
-				<div className="flex justify-start mx-auto w-[345px] md:w-[680px] lg:w-[1296px] mb-[22px]">
+				<div className="flex justify-start md:mx-auto w-[345px] md:w-[680px] lg:w-[1296px] mb-[22px]">
 					<Title type='section-title'>Новини</Title>
 				</div>
-				<div className="my-container mb-[50px]">
+				<div className="w-[375px] md:w-[720px] lg:w-[1440] mb-[50px]">
 					<NewsSwiper />
 				</div>
 			</div>
