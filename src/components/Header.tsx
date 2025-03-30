@@ -38,7 +38,7 @@ const Header: React.FC = () => {
 
 	return (
 		<header className='flex flex-col items-center bg-header text-white'>
-			<div className='container flex justify-between items-center pt-[6px] md:pt-[11px] lg:pt-[19px] pb-[7px] md:pb-[11px] lg:pb-[18px]'>
+			<div className='w-[375px] md:w-[720px] lg:w-[1440px] flex justify-between items-center pt-[6px] md:pt-[11px] lg:pt-[19px] pb-[7px] md:pb-[11px] lg:pb-[18px]'>
 				<div className='flex items-center'>
 					<Link href={'/'} onClick={toggleUpdate}>
 						<Image
@@ -63,23 +63,25 @@ const Header: React.FC = () => {
 					<p className='md:hidden text-lg font-ermilov font-bold leading-[110%]'>КДЮСШ</p>
 					<p className='hidden md:block md:w-[285px] lg:w-[377px] text-lg lg:text-xl font-ermilov font-bold leading-[110%]'>Комплексна дитяча юнацька спортивна школа 15</p>
 				</div>
-				{!isModalOpen &&
-					<button onClick={toggleModal} className='lg:hidden md:self-start'>
-						<Image
-							className="md:hidden"
-							src="/svg/burger.svg"
-							alt="icon burger"
-							width={36}
-							height={36}
-						/>
-						<Image
-							className="hidden md:block"
-							src="/svg/burger.svg"
-							alt="icon burger"
-							width={40}
-							height={40}
-						/>
-					</button>}
+				<div className='lg:hidden'>
+					{!isModalOpen &&
+						<button onClick={toggleModal} className='md:self-start'>
+							<Image
+								className="md:hidden"
+								src="/svg/burger.svg"
+								alt="icon burger"
+								width={36}
+								height={36}
+							/>
+							<Image
+								className="hidden md:block"
+								src="/svg/burger.svg"
+								alt="icon burger"
+								width={40}
+								height={40}
+							/>
+						</button>}
+				</div>
 				<nav className='hidden lg:flex gap-11  md:self-start'>
 					<Link href={'/about'} className='font-ermilov font-bold'>Про нас</Link>
 					<Link href={'/services'} className='font-ermilov font-bold'>Платні послуги</Link>

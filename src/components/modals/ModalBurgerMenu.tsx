@@ -30,7 +30,7 @@ const ModalBurgerMenu: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisi
 	const memoizedhandleKeyDown = useCallback(handleKeyDown, [isModalOpen, closeModal])
 
 	useEffect(() => {
-		if (withWindow !== undefined && withWindow > 1440 && isModalOpen) {
+		if (withWindow !== undefined && withWindow >= 1440 && isModalOpen) {
 			closeModal();
 		}
 	}, [withWindow, isModalOpen, closeModal]);

@@ -1,11 +1,11 @@
 import { ReactNode, FC } from "react";
 
-type ITitleProps = {
+type Props = {
 	type: "page-title" | "section-title";
 	children: ReactNode;
 };
 
-const Title: FC<ITitleProps> = ({ type, children }) => {
+const Title: FC<Props> = ({ type, children }) => {
 
 	switch (type) {
 
