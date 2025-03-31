@@ -18,7 +18,7 @@ const GalLeryNav: React.FC = () => {
 		} else {
 			setIsFoto(false);
 		};
-		setSport(determineSportPage(pathname)?.sportPathName);
+		setSport(determineSportPage(pathname)?.sportName);
 	}, [pathname]);
 
 	return (

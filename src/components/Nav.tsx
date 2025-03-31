@@ -29,8 +29,8 @@ const Nav: React.FC = () => {
 	};
 
 	useEffect(() => {
-		if (pathname && determineSportPage(pathname)?.sportPathName) {
-			const ourPath = determineSportPage(pathname)?.sportPathName;
+		if (pathname && determineSportPage(pathname)?.sportName) {
+			const ourPath = determineSportPage(pathname)?.sportName;
 			// Switch navigation items
 			if (ourPath === 'football' || ourPath === "biatlon") {
 				setIsToggled(false)
@@ -39,7 +39,7 @@ const Nav: React.FC = () => {
 				setIsToggled(true)
 			};
 			// We find sport page
-			setSport(determineSportPage(pathname)?.sportPathName);
+			setSport(determineSportPage(pathname)?.sportName);
 
 		}
 	}, [pathname]);

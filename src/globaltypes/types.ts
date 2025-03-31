@@ -1,17 +1,17 @@
 export type Sports = "football" | "biatlon" | "sky_racing" | "alpine_skiing" | undefined;
 
 export type SportAndPageName = {
-	sportPathName: "football",
-	pageName: "Футбол"
+	sportName: "football",
+	pageTitle: "Футбол"
 } | {
-	sportPathName: "biatlon",
-	pageName: "Біатлон"
+	sportName: "biatlon",
+	pageTitle: "Біатлон"
 } | {
-	sportPathName: "sky_racing",
-	pageName: "Лижні гонки"
+	sportName: "sky_racing",
+	pageTitle: "Лижні гонки"
 } | {
-	sportPathName: "alpine_skiing",
-	pageName: "Гірські лижі"
+	sportName: "alpine_skiing",
+	pageTitle: "Гірські лижі"
 } | undefined;
 
 export type BurgerMenu = {

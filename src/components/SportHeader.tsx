@@ -16,16 +16,16 @@ const SportHeader: React.FC = () => {
 	const [sport, setSport] = useState<Sports>();
 	const [subpage, setSubPage] = useState('');
 	const [isMenuOpened, setIsMenuOpened] = useState(false);
-	const titleText = determineSportPage(pathname)?.pageName;
+	const titleText = determineSportPage(pathname)?.pageTitle;
 
 	const onClick = () => {
 		setIsMenuOpened(!isMenuOpened);
 	};
 
 	useEffect(() => {
-		if (pathname && determineSportPage(pathname)?.sportPathName) {
+		if (pathname && determineSportPage(pathname)?.sportName) {
 			// Get subpage name in pathname
-			setSport(determineSportPage(pathname)?.sportPathName);
+			setSport(determineSportPage(pathname)?.sportName);
 			// Get last element of pathname
 			if (pathnameArrow[pathnameArrow.length - 1] === 'foto' || pathnameArrow[pathnameArrow.length - 1] === 'video') {
 				setSubPage(pathnameArrow[pathnameArrow.length - 2]);
