@@ -27,7 +27,12 @@ const SportHeader: React.FC = () => {
 			// Get subpage name in pathname
 			setSport(determineSportPage(pathname)?.sportPathName);
 			// Get last element of pathname
-			setSubPage(pathnameArrow[pathnameArrow.length - 1]);
+			if (pathnameArrow[pathnameArrow.length - 1] === 'foto' || pathnameArrow[pathnameArrow.length - 1] === 'video') {
+				setSubPage(pathnameArrow[pathnameArrow.length - 2]);
+				// setSubPage('gallery');
+			} else {
+				setSubPage(pathnameArrow[pathnameArrow.length - 1]);
+			}
 		};
 	}, [pathname, pathnameArrow, subpage]);
 	return (

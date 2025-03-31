@@ -1,6 +1,6 @@
 // Name of submenu items and corresponding last part of pathname for sport pages
 export const ITEMS = {
-	football: [['Головна', 'main'], ['Тренерський склад', 'coach_team'], ['Клубні команди', 'club_teams'], ['Галерея', 'gallery/foto']],
+	football: [['Головна', 'main'], ['Тренерський склад', 'coach_team'], ['Клубні команди', 'club_teams'], ['Чемпіонати', 'championships'], ['Галерея', 'gallery/foto']],
 	biatlon: [['Головна', 'main'], ['Тренерський склад', 'coach_team'], ['Чемпіонати', 'championships'], ['Галерея', 'gallery/foto']],
 	sky_racing: [['Головна', 'main'], ['Тренерський склад', 'coach_team'], ['Чемпіонати', 'championships'], ['Галерея', 'gallery/foto']],
 	alpine_skiing: [['Головна', 'main'], ['Тренерський склад', 'coach_team'], ['Чемпіонати', 'championships'], ['Галерея', 'gallery/foto']],
