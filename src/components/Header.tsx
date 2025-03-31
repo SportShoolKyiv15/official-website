@@ -40,7 +40,9 @@ const Header: React.FC = () => {
 		<header className='flex flex-col items-center bg-header text-white'>
 			<div className='my-container flex justify-between items-center pt-[6px] md:pt-[11px] lg:pt-[19px] pb-[7px] md:pb-[11px] lg:pb-[18px]'>
 				<div className='flex items-center'>
-					<Link href={'/'} onClick={toggleUpdate}>
+					<Link href={'/'}
+						onClick={toggleUpdate}
+						className='transform transition-transform duration-200 hover:scale-102 hover:cursor-pointer'>
 						<Image
 							src='/svg/logoHeader.svg'
 							alt='Logo'
@@ -83,9 +85,15 @@ const Header: React.FC = () => {
 						</button>}
 				</div>
 				<nav className='hidden lg:flex gap-11  md:self-start'>
-					<Link href={'/about'} className='font-ermilov font-bold'>Про нас</Link>
-					<Link href={'/services'} className='font-ermilov font-bold'>Платні послуги</Link>
-					<Link href={'/contacts'} className='font-ermilov font-bold'>Контакти</Link>
+					<Link
+						href={'/about'}
+						className='font-ermilov font-bold hover:opacity-80'>Про нас</Link>
+					<Link
+						href={'/services'}
+						className='font-ermilov font-bold hover:opacity-80'>Платні послуги</Link>
+					<Link
+						href={'/contacts'}
+						className='font-ermilov font-bold hover:opacity-80'>Контакти</Link>
 				</nav>
 			</div>
 			<Nav />

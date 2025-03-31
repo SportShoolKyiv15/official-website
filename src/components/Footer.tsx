@@ -49,7 +49,9 @@ const Footer: React.FC = () => {
 							/>
 						</Link>
 					</div>
-					<Link href={'/'} onClick={toggleUpdate}>
+					<Link href={'/'}
+						onClick={toggleUpdate}
+						className='transform transition-transform duration-200 hover:scale-102 hover:cursor-pointer'>
 						<Image
 							src="/svg/logoFooter.svg"
 							alt="logo"
@@ -76,26 +78,28 @@ const Footer: React.FC = () => {
 								alt="logo"
 								width={32}
 								height={32}
+								className='transform transition-transform duration-200 hover:scale-105 hover:cursor-pointer'
 							/>
 							<Image
 								src="/svg/iconFacebook.svg"
 								alt="logo"
 								width={32}
 								height={32}
+								className='transform transition-transform duration-200 hover:scale-105 hover:cursor-pointer'
 							/>
 						</div>
 					</div>
 				</div>
 				<div className='hiddden md:flex lg:hidden md:justify-end md:mb-8 gap-[10px]'>
 					<Image
-						className="hidden md:block"
+						className="hidden md:block transform transition-transform duration-200 hover:scale-105 hover:cursor-pointer"
 						src="/svg/iconInstagram.svg"
 						alt="logo"
 						width={28}
 						height={28}
 					/>
 					<Image
-						className="hidden md:block"
+						className="hidden md:block transform transition-transform duration-200 hover:scale-105 hover:cursor-pointer"
 						src="/svg/iconFacebook.svg"
 						alt="logo"
 						width={28}
