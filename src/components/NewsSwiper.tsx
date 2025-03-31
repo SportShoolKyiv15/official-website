@@ -184,7 +184,7 @@ const NewsSwiper: FC = () => {
 
 	return (
 		<>
-			<div className="container lg:w-[998px] xl:w-full relative mx-auto">
+			<div className="container lg:w-full relative mx-auto">
 				<div className="flex gap-3 absolute right-0 md:right-[22px] top-[-30px]">
 					{/* <button
 						type="button"
@@ -235,8 +235,8 @@ const NewsSwiper: FC = () => {
 				</div>
 			</div>
 
-			<div className="overflow-hidden mx-auto  ">
-				<ul onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} id='sliderAdvantages' className={`flex lg:flex-wrap lg:items-center lg:justify-center gap-6 ${extra} swiperTransition`}>
+			<div className="overflow-hidden mx-auto overflow-hidden">
+				<ul onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} id='sliderAdvantages' className={`flex lg:flex-wrap lg:items-center lg:justify-center gap-6 pl-[15px] md:pl-0 ${extra} swiperTransition`}>
 					<div className="hidden md:block lg:hidden" >
 
 					</div>
@@ -277,7 +277,7 @@ const NewsSwiper: FC = () => {
 					</div>
 					<SwiperCard idx="3">
 						<div className="absolute inset-0  bg-lightgray"></div>
-						<div className=" absolute inset-0 bg-[url('/img/newsImg3.jpg')] bg-cover bg-center bg-no-repeat"></div>
+						<div className=" absolute inset-0 bg-[url('/img/newsImg4.jpg')] bg-cover bg-center bg-no-repeat"></div>
 						<div className="absolute inset-0 news-bg-gradient"></div>
 						<div className="swiperCardContent">
 							<p className="swiperCardTitle">Стартує набір у секцію футболу</p>
@@ -310,7 +310,7 @@ const NewsSwiper: FC = () => {
 					</div>
 					<SwiperCard idx="5">
 						<div className="absolute inset-0  bg-lightgray"></div>
-						<div className=" absolute inset-0 bg-[url('/img/newsImg3.jpg')] bg-cover bg-center bg-no-repeat"></div>
+						<div className=" absolute inset-0 bg-[url('/img/newsImg4.jpg')] bg-cover bg-center bg-no-repeat"></div>
 						<div className="absolute inset-0 news-bg-gradient"></div>
 						<div className="swiperCardContent">
 							<p className="swiperCardTitle">Стартує набір у секцію футболу</p>
