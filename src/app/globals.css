@@ -82,7 +82,7 @@
   --color-arrow-active: rgba(211, 47, 47, 1);
   --color-arrow: rgba(90, 90, 93, 1);
 
-  --breakpoint-xs: 320px;
+  --breakpoint-xs: 356px;
   --breakpoint-sm: 375px;
   --breakpoint-md: 720px;
   --breakpoint-lg: 1440px;
@@ -104,7 +104,7 @@
 
 @layer components {
   .my-container {
-    @apply xs:w-[320px] sm:w-[375px] md:w-[720px] lg:w-[1440px] xs:px-[10px] sm:px-[15px] md:px-[20px] lg:px-18;
+    @apply xs:w-[356px] sm:w-[375px] md:w-[720px] lg:w-[1440px] xs:px-[10px] sm:px-[15px] md:px-[20px] lg:px-18;
   }
 }
 
