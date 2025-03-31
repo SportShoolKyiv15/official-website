@@ -132,6 +132,12 @@
 .form {
   @apply md:-mx-[28px] lg:-mx-[82px];
   @media screen and (min-width: 720px) {
+    clip-path: polygon(50px 0%, 100% 0%, 80% 100%, 0% 100%);
+  }
+}
+
+.form {
+  @media screen and (min-width: 1440px) {
     clip-path: polygon(100px 0%, 100% 0%, 80% 100%, 0% 100%);
   }
 }
@@ -146,6 +152,12 @@
 .end-form {
   @apply md:w-[225px] lg:w-[425px] md:-ml-[28px] lg:-ml-[52px];
   @media screen and (min-width: 720px) {
+    clip-path: polygon(50px 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+.end-form {
+  @media screen and (min-width: 1440px) {
     clip-path: polygon(100px 0%, 100% 0%, 100% 100%, 0% 100%);
   }
 }
