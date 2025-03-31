@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { BURGER_MENU_ITEMS } from '@/data/constants';
+import { MENU_ITEMS } from '@/data/constants';
 
 type Props = {
 	index: number;
@@ -21,7 +21,7 @@ const BurgerMenuItem: React.FC<Props> = ({ index, item, closeModal }) => {
 	return (
 		<>
 			<div className='flex justify-between'>
-				<Link href={Object.values(BURGER_MENU_ITEMS)[index].path} onClick={closeModal}>
+				<Link href={Object.values(MENU_ITEMS)[index].path} onClick={closeModal}>
 					{item}
 				</Link>
 				{isOpened &&
@@ -34,7 +34,7 @@ const BurgerMenuItem: React.FC<Props> = ({ index, item, closeModal }) => {
 							onClick={onClick}
 						/>
 					</button>}
-				{!isOpened && Object.values(BURGER_MENU_ITEMS)[index].subItems.length > 0 &&
+				{!isOpened && Object.values(MENU_ITEMS)[index].subItems.length > 0 &&
 					<button>
 						<Image
 							src='/svg/iconDownArrow.svg'
@@ -44,8 +44,8 @@ const BurgerMenuItem: React.FC<Props> = ({ index, item, closeModal }) => {
 							onClick={onClick}
 						/></button>}
 			</div>
-			{isOpened && Object.values(BURGER_MENU_ITEMS)[index].subItems.length > 0 && <ul className='flex flex-col gap-[18px] md:gap-5 pt-[30px] pl-[14px] md:pl-5'>
-				{Object.values(BURGER_MENU_ITEMS)[index].subItems.map((subItem, subIndex) => (
+			{isOpened && Object.values(MENU_ITEMS)[index].subItems.length > 0 && <ul className='flex flex-col gap-[18px] md:gap-5 pt-[30px] pl-[14px] md:pl-5'>
+				{Object.values(MENU_ITEMS)[index].subItems.map((subItem, subIndex) => (
 					<li key={subIndex} className='text-base'>
 						<Link href={subItem[1]} onClick={closeModal}>
 							{subItem[0]}

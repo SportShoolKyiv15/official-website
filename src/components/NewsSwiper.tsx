@@ -208,19 +208,17 @@ const NewsSwiper: FC = () => {
 
 					</div>
 					<SwiperCard idx="1">
-						<div>
-							<div className="absolute inset-0  bg-lightgray"></div>
-							<div className=" absolute inset-0 bg-[url('/img/newsImg1.jpg')] bg-cover bg-center bg-no-repeat"></div>
-							<div className="absolute inset-0 news-bg-gradient"></div>
-							<div className="swiperCardContent">
-								<p className="swiperCardTitle">Стартує набір у секцію біатлону</p>
-								<p className="swiperCardText">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur commodi nemo corrupti dolorum est! Architecto, quod odio? Maxime unde iure at illo rem, asperiores velit a. Assumenda soluta molestiae alias velit fugit iure rerum, a in itaque. Unde, doloribus magnam voluptatem nisi, eius, sit quaerat modi omnis iure ipsa maiores.
-								</p>
-								<div className="flex justify-between">
-									<SwipeCardButton>Читати далі</SwipeCardButton>
-									<p className="text-sm font-display">02.02.2024</p>
-								</div>
+						<div className="absolute inset-0  bg-lightgray"></div>
+						<div className="absolute inset-0 bg-[url('/img/newsImg1.jpg')] bg-cover bg-center bg-no-repeat"></div>
+						<div className="absolute inset-0 news-bg-gradient"></div>
+						<div className="swiperCardContent">
+							<p className="swiperCardTitle">Стартує набір у секцію біатлону</p>
+							<p className="swiperCardText">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur commodi nemo corrupti dolorum est! Architecto, quod odio? Maxime unde iure at illo rem, asperiores velit a. Assumenda soluta molestiae alias velit fugit iure rerum, a in itaque. Unde, doloribus magnam voluptatem nisi, eius, sit quaerat modi omnis iure ipsa maiores.
+							</p>
+							<div className="flex justify-between">
+								<SwipeCardButton>Читати далі</SwipeCardButton>
+								<p className="text-sm font-display">02.02.2024</p>
 							</div>
 						</div>
 					</SwiperCard>

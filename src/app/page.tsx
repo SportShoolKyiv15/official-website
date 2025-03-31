@@ -8,14 +8,14 @@ export default function Home(): React.JSX.Element {
 	return (
 		<section className="flex flex-col gap-[50px] md:gap-20 items-center pt-[28px] md:pt-6">
 			<div className="w-full sm:w-[375px] md:w-[680px] lg:w-[1296px]">
-				<div className="flex flex-col md:flex-row items-center w-full pb-[13px] md:pb-0">
+				<div className="flex flex-col md:flex-row items-center w-full pb-[13px] md:pb-0 overflow-hidden">
 					<Link
 						href={'/football/main'}
 						className="hero-nav-item start-form"
 					>
 						<div className="absolute inset-0  bg-lightgray"></div>
-						<div className=" absolute inset-0 bg-[url('/img/alpineSkiingHeroImg.jpg')] bg-cover bg-center bg-no-repeat"></div>
-						<div className="absolute inset-0 hero-background-gadient opacity-100"></div>
+						<div className="absolute inset-0 bg-[url('/img/alpineSkiingHeroImg.jpg')] bg-cover bg-left-top bg-no-repeat"></div>
+						<div className="absolute inset-0 hero-background-gadient"></div>
 						<div className="absolute left-4 lg:left-[38px] bottom-[28px] text-white font-display font-bold text-[26px] md:text-[20px] lg:text-[28px]">Футбол</div>
 					</Link>
 					<Link
