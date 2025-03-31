@@ -38,7 +38,7 @@ const Header: React.FC = () => {
 
 	return (
 		<header className='flex flex-col w-full items-center bg-header text-white'>
-			<div className='my-container flex justify-between items-center pt-[6px] md:pt-[11px] lg:pt-[19px] pb-[7px] md:pb-[11px] lg:pb-[18px]'>
+			<div className='my-container flex justify-between items-center pt-[6px] md:pt-[11px] lg:pt-[19px] pb-[7px] md:pb-[11px] lg:pb-[18px] relative'>
 				<div className='flex items-center'>
 					<Link href={'/'}
 						onClick={toggleUpdate}
@@ -84,17 +84,55 @@ const Header: React.FC = () => {
 							/>
 						</button>}
 				</div>
-				<nav className='hidden lg:flex gap-11  md:self-start'>
-					<Link
-						href={'/about'}
-						className='font-ermilov font-bold hover:opacity-80'>Про нас</Link>
-					<Link
-						href={'/services'}
-						className='font-ermilov font-bold hover:opacity-80'>Платні послуги</Link>
-					<Link
-						href={'/contacts'}
-						className='font-ermilov font-bold hover:opacity-80'>Контакти</Link>
-				</nav>
+				<div className='hidden lg:flex lg:flex-col items-end md:self-end'>
+					<nav className='lg:flex gap-11 mb-6'>
+						<Link
+							href={'/about'}
+							className='font-ermilov font-bold hover:opacity-80'>Про нас</Link>
+						<Link
+							href={'/services'}
+							className='font-ermilov font-bold hover:opacity-80'>Платні послуги</Link>
+						<Link
+							href={'/contacts'}
+							className='font-ermilov font-bold hover:opacity-80'>Контакти</Link>
+					</nav>
+					<div className='flex'>
+						<Image
+							className=""
+							src="/svg/sponsorIcon.svg"
+							alt="icon sponsor"
+							width={35}
+							height={35}
+						/>
+					</div>
+				</div>
+				<div className='hidden md:flex lg:hidden absolute bottom-[14px] right-[105px]'>
+					<Image
+						className=""
+						src="/svg/sponsorIcon.svg"
+						alt="icon sponsor"
+						width={35}
+						height={35}
+					/>
+				</div>
+				<div className='hidden sm:flex md:hidden absolute bottom-[10px] right-[81px]'>
+					<Image
+						className=""
+						src="/svg/sponsorIcon.svg"
+						alt="icon sponsor"
+						width={28}
+						height={28}
+					/>
+				</div>
+				<div className='flex sm:hidden absolute bottom-[10px] right-[61px]'>
+					<Image
+						className=""
+						src="/svg/sponsorIcon.svg"
+						alt="icon sponsor"
+						width={28}
+						height={28}
+					/>
+				</div>
 			</div>
 			<Nav />
 			<div className='absolute top-0 left-0 z-10'>
