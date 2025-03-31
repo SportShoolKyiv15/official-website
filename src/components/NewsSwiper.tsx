@@ -23,16 +23,6 @@ const NewsSwiper: FC = () => {
 	let xStart: number | null = null;
 	let yStart: number | null = null;
 
-	// const hanleClick = (): void => {
-	// 	if (extra === "") {
-	// 		setExtra("swiperOnMove");
-	// 		setIsActive(true);
-	// 	} else {
-	// 		setExtra("");
-	// 		setIsActive(false);
-	// 	};
-	// };
-
 	const hanleClickLeft = (): void => {
 		if (isTablet) {
 			if (count > 0) {
@@ -40,7 +30,7 @@ const NewsSwiper: FC = () => {
 			};
 			if (0 <= count && count <= 2) {
 				setIsActiveRight(false);
-				setSliderDisplacement(count, 728);
+				setSliderDisplacement(count, 719);
 				setExtra('swiperOnMoveMobile');
 			};
 			if (count === 0) {
@@ -53,7 +43,7 @@ const NewsSwiper: FC = () => {
 			};
 			if (0 <= count && count <= 5) {
 				setIsActiveRight(false);
-				setSliderDisplacement(count, 370);
+				setSliderDisplacement(count, 366);
 				setExtra('swiperOnMoveMobile');
 			};
 			if (count === 0) {
@@ -70,7 +60,7 @@ const NewsSwiper: FC = () => {
 			};
 			if (0 <= count && count <= 2) {
 				setIsActiveLeft(false);
-				setSliderDisplacement(count, 728);
+				setSliderDisplacement(count, 719);
 				setExtra('swiperOnMoveMobile');
 			};
 			if (count === 2) {
@@ -83,7 +73,7 @@ const NewsSwiper: FC = () => {
 			};
 			if (0 <= count && count <= 5) {
 				setIsActiveLeft(false);
-				setSliderDisplacement(count, 370);
+				setSliderDisplacement(count, 366);
 				setExtra('swiperOnMoveMobile');
 			};
 			if (count === 5) {
@@ -122,7 +112,7 @@ const NewsSwiper: FC = () => {
 				if (isTablet) {
 					if (0 <= count && count <= 2) {
 						setIsActiveRight(false);
-						setSliderDisplacement(count, 728);
+						setSliderDisplacement(count, 719);
 						setExtra('swiperOnMoveMobile');
 					}
 					if (count === 0) {
@@ -132,7 +122,7 @@ const NewsSwiper: FC = () => {
 				} else {
 					if (0 <= count && count <= 5) {
 						setIsActiveRight(false);
-						setSliderDisplacement(count, 370);
+						setSliderDisplacement(count, 366);
 						setExtra('swiperOnMoveMobile');
 					}
 					if (count === 0) {
@@ -147,7 +137,7 @@ const NewsSwiper: FC = () => {
 					};
 					if (0 <= count && count <= 2) {
 						setIsActiveLeft(false);
-						setSliderDisplacement(count, 728);
+						setSliderDisplacement(count, 719);
 						setExtra('swiperOnMoveMobile');
 					};
 					if (count === 2) {
@@ -160,7 +150,7 @@ const NewsSwiper: FC = () => {
 					};
 					if (0 <= count && count <= 5) {
 						setIsActiveLeft(false);
-						setSliderDisplacement(count, 370);
+						setSliderDisplacement(count, 366);
 						setExtra('swiperOnMoveMobile');
 					};
 					if (count === 5) {
@@ -185,30 +175,7 @@ const NewsSwiper: FC = () => {
 	return (
 		<>
 			<div className="container lg:w-full relative mx-auto">
-				<div className="flex gap-3 absolute right-0 md:right-[22px] top-[-30px]">
-					{/* <button
-						type="button"
-						className={`hidden lg:block cursor-pointer`}
-						onClick={hanleClick}
-						disabled={!isActive}
-					> */}
-					{/* <ArrowIconLeft color={`${!isActive ? 'arrow-active' : 'arrow'}`} /> */}
-					{/* <svg className={`${!isActive ? 'text-arrow-active' : 'text-arrow'}`} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M16.125 9L1.875 9M1.875 9L7.125 14.25M1.875 9L7.125 3.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-						</svg>
-					</button> */}
-					{/* <button
-						type="button"
-						className={`hidden lg:block cursor-pointer `}
-						onClick={hanleClick}
-						disabled={isActive}
-					> */}
-					{/* <ArrowIconRight color={`${isActive ? 'arrow-active' : 'arrow'}`} /> */}
-					{/* <svg className={`${isActive ? 'text-arrow-active' : 'text-arrow'}`} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M1.875 9L16.125 9M16.125 9L10.875 14.25M16.125 9L10.875 3.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-						</svg>
-					</button> */}
-
+				<div className="flex gap-3 absolute right-[10px] sm:right-[15px] md:right-[22px] top-[-30px]">
 					<button
 						type="button"
 						className={`lg:hidden cursor-pointer `}
@@ -236,7 +203,7 @@ const NewsSwiper: FC = () => {
 			</div>
 
 			<div className="overflow-hidden mx-auto overflow-hidden">
-				<ul onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} id='sliderAdvantages' className={`flex lg:flex-wrap lg:items-center lg:justify-center gap-6 pl-[15px] md:pl-0 ${extra} swiperTransition`}>
+				<ul onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} id='sliderAdvantages' className={`flex lg:flex-wrap lg:items-center lg:justify-center gap-[21px] pl-[15px] md:pl-0 ${extra} swiperTransition`}>
 					<div className="hidden md:block lg:hidden" >
 
 					</div>
@@ -292,7 +259,7 @@ const NewsSwiper: FC = () => {
 					</SwiperCard>
 					<SwiperCard idx="4">
 						<div className="absolute inset-0  bg-lightgray"></div>
-						<div className=" absolute inset-0 bg-[url('/img/newsImg2.jpg')] bg-cover bg-center bg-no-repeat"></div>
+						<div className=" absolute inset-0 bg-[url('/img/newsImg1.jpg')] bg-cover bg-center bg-no-repeat"></div>
 						<div className="absolute inset-0 news-bg-gradient"></div>
 						<div className="swiperCardContent">
 							<p className="swiperCardTitle">Стартує набір у секцію лижні гонки</p>
@@ -310,7 +277,7 @@ const NewsSwiper: FC = () => {
 					</div>
 					<SwiperCard idx="5">
 						<div className="absolute inset-0  bg-lightgray"></div>
-						<div className=" absolute inset-0 bg-[url('/img/newsImg4.jpg')] bg-cover bg-center bg-no-repeat"></div>
+						<div className=" absolute inset-0 bg-[url('/img/newsImg2.jpg')] bg-cover bg-center bg-no-repeat"></div>
 						<div className="absolute inset-0 news-bg-gradient"></div>
 						<div className="swiperCardContent">
 							<p className="swiperCardTitle">Стартує набір у секцію футболу</p>
@@ -325,7 +292,7 @@ const NewsSwiper: FC = () => {
 					</SwiperCard>
 					<SwiperCard idx="6">
 						<div className="absolute inset-0  bg-lightgray"></div>
-						<div className=" absolute inset-0 bg-[url('/img/newsImg2.jpg')] bg-cover bg-center bg-no-repeat"></div>
+						<div className=" absolute inset-0 bg-[url('/img/newsImg4.jpg')] bg-cover bg-center bg-no-repeat"></div>
 						<div className="absolute inset-0 news-bg-gradient"></div>
 						<div className="swiperCardContent">
 							<p className="swiperCardTitle">Стартує набір у секцію лижні гонки</p>

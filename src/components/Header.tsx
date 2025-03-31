@@ -37,7 +37,7 @@ const Header: React.FC = () => {
 	};
 
 	return (
-		<header className='flex flex-col items-center bg-header text-white'>
+		<header className='flex flex-col w-full items-center bg-header text-white'>
 			<div className='my-container flex justify-between items-center pt-[6px] md:pt-[11px] lg:pt-[19px] pb-[7px] md:pb-[11px] lg:pb-[18px]'>
 				<div className='flex items-center'>
 					<Link href={'/'}

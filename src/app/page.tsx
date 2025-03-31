@@ -7,8 +7,8 @@ import NewsSwiper from "@/components/NewsSwiper";
 export default function Home(): React.JSX.Element {
 	return (
 		<section className="flex flex-col gap-[50px] md:gap-20 items-center pt-[28px] md:pt-6">
-			<div className="md:w-[680px] lg:w-[1296px]">
-				<div className="flex flex-col md:flex-row items-center w-[375px] md:w-full pb-[13px] md:pb-0">
+			<div className="w-full md:w-[680px] lg:w-[1296px]">
+				<div className="flex flex-col md:flex-row items-center w-full pb-[13px] md:pb-0">
 					<Link
 						href={'/football/main'}
 						className="hero-nav-item start-form"
@@ -94,7 +94,7 @@ export default function Home(): React.JSX.Element {
 				</div>
 			</div>
 			<div>
-				<div className="flex justify-start md:mx-auto w-[345px] md:w-[680px] lg:w-[1296px] mb-[22px]">
+				<div className="flex justify-start mx-auto w-[345px] md:w-[680px] lg:w-[1296px] mb-[22px]">
 					<Title type='section-title'>Новини</Title>
 				</div>
 				<div className="w-[375px] md:w-[720px] lg:w-[1440] mb-[50px]">

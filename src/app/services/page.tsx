@@ -1,10 +1,8 @@
 const ServicesPage: React.FC = () => {
 	return (
-		<main>
-			<section>
-				<h1>Services</h1>
-			</section>
-		</main>
+		<section className="flex justify-center items-center pt-10 text-xl">
+			<h1>Services</h1>
+		</section>
 	);
 };
 
