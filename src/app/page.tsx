@@ -87,7 +87,7 @@ export default function Home(): React.JSX.Element {
 				<div className="relative w-full h-[301px] md:h-[352px] lg:h-[275px]">
 					<div className="absolute bottom-0 lg:bottom-[50%] lg:translate-y-[50%] right-0 md:right-5 lg:right-[74px] w-[275px] md:w-[285px] lg:w-[275px] h-[251px] md:h-[269px] lg:h-[275px] bg-[url(/img/sportMovement.png)]">
 					</div>
-					<div className="absolute top-6 lg:top-[50%] lg:-translate-y-[50%] lg: left-4 md:left-[46px] lg:left-[123px] flex flex-col lg:flex-row items-start lg:items-center">
+					<div className="absolute top-6 lg:top-[50%] lg:-translate-y-[50%] left-4 md:left-[46px] lg:left-[123px] flex flex-col lg:flex-row items-start lg:items-center">
 						<p className="mr-2 pt-2 pb-3">Твій старт у спорті – твоя</p>
 						<p>перемога в житті!</p>
 					</div>
