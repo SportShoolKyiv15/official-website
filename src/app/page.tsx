@@ -84,7 +84,7 @@ export default function Home(): React.JSX.Element {
 				</div>
 			</div>
 			<div className="flex flex-col items-center w-full bg-black font-display font-semibold text-[22px] md:text-[36px]">
-				<div className="relative w-[375px] md:w-[720px] lg:w-[1440px] h-[301px] md:h-[352px] lg:h-[275px] mx-auto">
+				<div className="relative w-[356px] sm:w-[375px] md:w-[720px] lg:w-[1440px] h-[301px] md:h-[352px] lg:h-[275px] mx-auto">
 					<div className="absolute bottom-0 lg:bottom-[50%] lg:translate-y-[50%] right-0 md:right-5 lg:right-[74px] w-[275px] md:w-[285px] lg:w-[275px] h-[251px] md:h-[269px] lg:h-[275px] bg-[url(/img/sportMovement.png)]">
 					</div>
 					<div className="absolute top-6 lg:top-[50%] lg:-translate-y-[50%] left-4 md:left-[46px] lg:left-[123px] flex flex-col lg:flex-row items-start lg:items-center">
