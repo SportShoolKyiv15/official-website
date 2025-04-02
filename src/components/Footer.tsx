@@ -37,7 +37,9 @@ const Footer: React.FC = () => {
 									Голосіївский район,
 								</p>
 								<p>вул. Героїв Маріуполя 7а</p>
-								<p>Тел.:<span>(044) 250-10-33</span></p>
+								<p>Тел.:
+									<Link href="tel:+38 (044) 250-10-33">(044) 250-10-33</Link>
+								</p>
 							</div>
 						</div>
 						<Link href={'/'} onKeyDown={toggleUpdate} className='md:hidden'>

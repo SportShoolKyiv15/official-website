@@ -7,8 +7,8 @@ import { setSliderDisplacement } from "@/utils/setSliderDisplacement";
 import SwiperCard from "./SwiperCard";
 import SwipeCardButton from "./buttons/SwipeCardButton";
 import useWindowWidth from "@/helpers/windowsSize";
-// import ArrowIconLeft from "./ArrowIconLeft";
-// import ArrowIconRight from "./ArrowIconRight";
+import ArrowIconLeft from "./ArrowIconLeft";
+import ArrowIconRight from "./ArrowIconRight";
 
 let count = 0;
 
@@ -16,7 +16,6 @@ const NewsSwiper: FC = () => {
 	const [extra, setExtra] = useState("");
 	const [isTablet, setIsTablet] = useState(false);
 	const [isXS, setIsXS] = useState(false);
-	// const [isActive, setIsActive] = useState(false);
 	const [isActiveRight, setIsActiveRight] = useState(false);
 	const [isActiveLeft, setIsActiveLeft] = useState(true);
 	const withWindow = useWindowWidth();
@@ -25,7 +24,9 @@ const NewsSwiper: FC = () => {
 	let yStart: number | null = null;
 
 	const hanleClickLeft = (): void => {
+
 		if (isTablet) {
+			// verify extreme swiper element for tablet
 			if (count > 0) {
 				count = count - 1;
 			};
@@ -34,27 +35,32 @@ const NewsSwiper: FC = () => {
 				setSliderDisplacement(count, 728);
 				setExtra('swiperOnMoveMobile');
 			};
+			// change direction of swiper movement for tablet
 			if (count === 0) {
 				setIsActiveLeft(true);
 				setIsActiveRight(false);
 			};
 		} else {
+			// verify extreme swiper element for extra small screen and mobile
 			if (count > 0) {
 				count = count - 1;
 			};
 			if (isXS) {
+				// change number of swiper element for extra small screen
 				if (0 <= count && count <= 5) {
 					setIsActiveRight(false);
 					setSliderDisplacement(count, 358);
 					setExtra('swiperOnMoveMobile');
 				};
 			} else {
+				// change number of swiper element for mobile
 				if (0 <= count && count <= 5) {
 					setIsActiveRight(false);
 					setSliderDisplacement(count, 367);
 					setExtra('swiperOnMoveMobile');
 				};
-			}
+			};
+			// change direction of swiper movement for extra small screen and mobile
 			if (count === 0) {
 				setIsActiveLeft(true);
 				setIsActiveRight(false);
@@ -64,35 +70,42 @@ const NewsSwiper: FC = () => {
 
 	const hanleClickRight = (): void => {
 		if (isTablet) {
+			// verify extreme swiper element for tablet
 			if (count < 2) {
 				count = count + 1
 			};
+			// change number of swiper element for tablet
 			if (0 <= count && count <= 2) {
 				setIsActiveLeft(false);
 				setSliderDisplacement(count, 728);
 				setExtra('swiperOnMoveMobile');
 			};
 			if (count === 2) {
+				// change direction of swiper movement for tablet
 				setIsActiveLeft(false);
 				setIsActiveRight(true);
 			};
 		} else {
+			// verify extreme swiper element for extra small screen and mobile
 			if (count < 5) {
 				count = count + 1
 			};
 			if (isXS) {
+				// change number of swiper element for extra small screen
 				if (0 <= count && count <= 5) {
 					setIsActiveLeft(false);
 					setSliderDisplacement(count, 358);
 					setExtra('swiperOnMoveMobile');
 				};
 			} else {
+				// change number of swiper element for mobile
 				if (0 <= count && count <= 5) {
 					setIsActiveLeft(false);
 					setSliderDisplacement(count, 367);
 					setExtra('swiperOnMoveMobile');
 				};
 			}
+			// change direction of swiper movement for extra small screen and mobile
 			if (count === 5) {
 				setIsActiveLeft(false);
 				setIsActiveRight(true);
@@ -101,6 +114,7 @@ const NewsSwiper: FC = () => {
 	};
 
 	const handleTouchStart = (e: React.TouchEvent<HTMLUListElement>): void => {
+		// determine start touch coordinates 
 		const firstTouch = e.touches[0];
 		xStart = firstTouch.clientX;
 		yStart = firstTouch.clientY;
@@ -108,6 +122,7 @@ const NewsSwiper: FC = () => {
 
 	const handleTouchEnd = (e: React.TouchEvent<HTMLUListElement>): void => {
 		if (!xStart || !yStart) {
+			// return if there weren't any touch
 			return;
 		};
 
@@ -117,38 +132,47 @@ const NewsSwiper: FC = () => {
 		xEnd = e.changedTouches[0].clientX;
 		yEnd = e.changedTouches[0].clientY;
 
+		//determine horizontaal swipe
 		const xDiff = xEnd - xStart;
+		//determine vertical swipe
 		const yDiff = yEnd - yStart;
 
 		if (Math.abs(xDiff) > Math.abs(yDiff)) {
+			// if swipe is horizontal
 			if (xDiff > 0) {
+				// verify extreme swiper element
 				if (count > 0) {
 					count = count - 1;
 				};
 				if (isTablet) {
+					// change number of swiper element for tablet
 					if (0 <= count && count <= 2) {
 						setIsActiveRight(false);
 						setSliderDisplacement(count, 728);
 						setExtra('swiperOnMoveMobile');
 					}
+					// change direction of swiper movement for tablet
 					if (count === 0) {
 						setIsActiveLeft(true);
 						setIsActiveRight(false);
 					};
 				} else {
 					if (isXS) {
+						// change number of swiper element for extra small screen
 						if (0 <= count && count <= 5) {
 							setIsActiveRight(false);
 							setSliderDisplacement(count, 358);
 							setExtra('swiperOnMoveMobile');
 						}
 					} else {
+						// change number of swiper element for mobile
 						if (0 <= count && count <= 5) {
 							setIsActiveRight(false);
 							setSliderDisplacement(count, 367);
 							setExtra('swiperOnMoveMobile');
 						}
 					}
+					// change direction of swiper movement for extra small screen and mobile
 					if (count === 0) {
 						setIsActiveLeft(true);
 						setIsActiveRight(false);
@@ -156,35 +180,42 @@ const NewsSwiper: FC = () => {
 				}
 			} else {
 				if (isTablet) {
+					// verify extreme swiper element for tablet
 					if (count < 2) {
 						count = count + 1
 					};
+					// change number of swiper element for tablet
 					if (0 <= count && count <= 2) {
 						setIsActiveLeft(false);
 						setSliderDisplacement(count, 728);
 						setExtra('swiperOnMoveMobile');
 					};
+					// change direction of swiper movement for tablet
 					if (count === 2) {
 						setIsActiveLeft(false);
 						setIsActiveRight(true);
 					};
 				} else {
+					// verify extreme swiper element for extra small screen and mobile
 					if (count < 5) {
 						count = count + 1
 					};
 					if (isXS) {
+						// change number of swiper element for extra small screen
 						if (0 <= count && count <= 5) {
 							setIsActiveLeft(false);
 							setSliderDisplacement(count, 358);
 							setExtra('swiperOnMoveMobile');
 						};
 					} else {
+						// change number of swiper element for mobile
 						if (0 <= count && count <= 5) {
 							setIsActiveLeft(false);
 							setSliderDisplacement(count, 367);
 							setExtra('swiperOnMoveMobile');
 						};
 					}
+					// change direction of swiper movement for extra small screen and mobile
 					if (count === 5) {
 						setIsActiveLeft(false);
 						setIsActiveRight(true);
@@ -196,6 +227,7 @@ const NewsSwiper: FC = () => {
 		yStart = null;
 	};
 
+	// determine screen width
 	useEffect(() => {
 		if (withWindow !== undefined && 720 <= withWindow && withWindow < 1440) {
 			setIsTablet(true);
@@ -219,10 +251,10 @@ const NewsSwiper: FC = () => {
 						onClick={hanleClickLeft}
 						disabled={isActiveLeft}
 					>
-						{/* <ArrowIconLeft color={`${!isActiveLeft ? 'arrow-active' : 'arrow'}`} /> */}
-						<svg className={`${!isActiveLeft ? 'text-arrow-active' : 'text-arrow'}`} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<ArrowIconLeft color={`${!isActiveLeft ? 'arrow-active' : 'arrow'}`} />
+						{/* <svg className={`${!isActiveLeft ? 'text-arrow-active' : 'text-arrow'}`} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M16.125 9L1.875 9M1.875 9L7.125 14.25M1.875 9L7.125 3.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-						</svg>
+						</svg> */}
 					</button>
 
 					<button
@@ -231,10 +263,10 @@ const NewsSwiper: FC = () => {
 						onClick={hanleClickRight}
 						disabled={isActiveRight}
 					>
-						{/* <ArrowIconRight color={`${!isActiveRight ? 'arrow-active' : 'arrow'}`} /> */}
-						<svg className={`${!isActiveRight ? 'text-arrow-active' : 'text-arrow'}`} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<ArrowIconRight color={`${!isActiveRight ? 'arrow-active' : 'arrow'}`} />
+						{/* <svg className={`${!isActiveRight ? 'text-arrow-active' : 'text-arrow'}`} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M1.875 9L16.125 9M16.125 9L10.875 14.25M16.125 9L10.875 3.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-						</svg>
+						</svg> */}
 					</button>
 				</div>
 			</div>
