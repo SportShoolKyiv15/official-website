@@ -40,7 +40,6 @@ const Nav: React.FC = () => {
 			};
 			// We find sport page
 			setSport(determineSportPage(pathname)?.sportName);
-
 		}
 	}, [pathname]);
 
