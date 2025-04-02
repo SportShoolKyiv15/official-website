@@ -21,6 +21,7 @@ const BurgerMenuItem: React.FC<Props> = ({ index, item, closeModal }) => {
 	return (
 		<>
 			<div className='flex justify-between'>
+				{/* burger menu item */}
 				<Link href={Object.values(MENU_ITEMS)[index].path} onClick={closeModal}>
 					{item}
 				</Link>
@@ -44,15 +45,18 @@ const BurgerMenuItem: React.FC<Props> = ({ index, item, closeModal }) => {
 							onClick={onClick}
 						/></button>}
 			</div>
-			{isOpened && Object.values(MENU_ITEMS)[index].subItems.length > 0 && <ul className='flex flex-col gap-[18px] md:gap-5 pt-[30px] pl-[14px] md:pl-5'>
-				{Object.values(MENU_ITEMS)[index].subItems.map((subItem, subIndex) => (
-					<li key={subIndex} className='text-base'>
-						<Link href={subItem[1]} onClick={closeModal}>
-							{subItem[0]}
-						</Link>
-					</li>
-				))}
-			</ul>}
+			{isOpened && Object.values(MENU_ITEMS)[index].subItems.length > 0 &&
+				// burger submenu
+				<ul className='flex flex-col gap-[18px] md:gap-5 pt-[30px] pl-[14px] md:pl-5'>
+					{Object.values(MENU_ITEMS)[index].subItems.map((subItem, subIndex) => (
+						<li key={subIndex} className='text-base'>
+							{/* burger submenu item */}
+							<Link href={subItem[1]} onClick={closeModal}>
+								{subItem[0]}
+							</Link>
+						</li>
+					))}
+				</ul>}
 		</>
 	);
 };
