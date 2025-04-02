@@ -15,6 +15,7 @@ let count = 0;
 const NewsSwiper: FC = () => {
 	const [extra, setExtra] = useState("");
 	const [isTablet, setIsTablet] = useState(false);
+	const [isXS, setIsXS] = useState(false);
 	// const [isActive, setIsActive] = useState(false);
 	const [isActiveRight, setIsActiveRight] = useState(false);
 	const [isActiveLeft, setIsActiveLeft] = useState(true);
@@ -41,11 +42,19 @@ const NewsSwiper: FC = () => {
 			if (count > 0) {
 				count = count - 1;
 			};
-			if (0 <= count && count <= 5) {
-				setIsActiveRight(false);
-				setSliderDisplacement(count, 367);
-				setExtra('swiperOnMoveMobile');
-			};
+			if (isXS) {
+				if (0 <= count && count <= 5) {
+					setIsActiveRight(false);
+					setSliderDisplacement(count, 358);
+					setExtra('swiperOnMoveMobile');
+				};
+			} else {
+				if (0 <= count && count <= 5) {
+					setIsActiveRight(false);
+					setSliderDisplacement(count, 367);
+					setExtra('swiperOnMoveMobile');
+				};
+			}
 			if (count === 0) {
 				setIsActiveLeft(true);
 				setIsActiveRight(false);
@@ -71,11 +80,19 @@ const NewsSwiper: FC = () => {
 			if (count < 5) {
 				count = count + 1
 			};
-			if (0 <= count && count <= 5) {
-				setIsActiveLeft(false);
-				setSliderDisplacement(count, 367);
-				setExtra('swiperOnMoveMobile');
-			};
+			if (isXS) {
+				if (0 <= count && count <= 5) {
+					setIsActiveLeft(false);
+					setSliderDisplacement(count, 358);
+					setExtra('swiperOnMoveMobile');
+				};
+			} else {
+				if (0 <= count && count <= 5) {
+					setIsActiveLeft(false);
+					setSliderDisplacement(count, 367);
+					setExtra('swiperOnMoveMobile');
+				};
+			}
 			if (count === 5) {
 				setIsActiveLeft(false);
 				setIsActiveRight(true);
@@ -119,10 +136,18 @@ const NewsSwiper: FC = () => {
 						setIsActiveRight(false);
 					};
 				} else {
-					if (0 <= count && count <= 5) {
-						setIsActiveRight(false);
-						setSliderDisplacement(count, 367);
-						setExtra('swiperOnMoveMobile');
+					if (isXS) {
+						if (0 <= count && count <= 5) {
+							setIsActiveRight(false);
+							setSliderDisplacement(count, 358);
+							setExtra('swiperOnMoveMobile');
+						}
+					} else {
+						if (0 <= count && count <= 5) {
+							setIsActiveRight(false);
+							setSliderDisplacement(count, 367);
+							setExtra('swiperOnMoveMobile');
+						}
 					}
 					if (count === 0) {
 						setIsActiveLeft(true);
@@ -147,11 +172,19 @@ const NewsSwiper: FC = () => {
 					if (count < 5) {
 						count = count + 1
 					};
-					if (0 <= count && count <= 5) {
-						setIsActiveLeft(false);
-						setSliderDisplacement(count, 367);
-						setExtra('swiperOnMoveMobile');
-					};
+					if (isXS) {
+						if (0 <= count && count <= 5) {
+							setIsActiveLeft(false);
+							setSliderDisplacement(count, 358);
+							setExtra('swiperOnMoveMobile');
+						};
+					} else {
+						if (0 <= count && count <= 5) {
+							setIsActiveLeft(false);
+							setSliderDisplacement(count, 367);
+							setExtra('swiperOnMoveMobile');
+						};
+					}
 					if (count === 5) {
 						setIsActiveLeft(false);
 						setIsActiveRight(true);
@@ -168,7 +201,12 @@ const NewsSwiper: FC = () => {
 			setIsTablet(true);
 		} else {
 			setIsTablet(false);
-		}
+		};
+		if (withWindow !== undefined && withWindow < 375) {
+			setIsXS(true);
+		} else {
+			setIsXS(false);
+		};
 	}, [withWindow]);
 
 	return (
