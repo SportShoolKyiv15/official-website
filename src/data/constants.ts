@@ -24,7 +24,7 @@ export const MENU_ITEMS = {
 		subItems: [
 			['Головна', '/football/main'],
 			['Тренерський склад', '/football/coach_team'],
-			['Клубні команди', '/football/club_team'],
+			['Клубні команди', '/football/club_teams'],
 			['Чемпіонати', '/football/championships'],
 			['Галерея', '/football/gallery/foto'],
 		],
