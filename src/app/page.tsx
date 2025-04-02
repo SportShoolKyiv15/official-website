@@ -11,16 +11,16 @@ export default function Home(): React.JSX.Element {
 				<div className="flex flex-col md:flex-row items-center w-full pb-[13px] md:pb-0 overflow-hidden">
 					<Link
 						href={'/football/main'}
-						className="hero-nav-item start-form"
+						className="hero-nav-item start-form md:w-[35%]"
 					>
 						<div className="absolute inset-0  bg-lightgray"></div>
-						<div className="absolute inset-0 bg-[url('/img/FB_IMG_1739877476157.jpg')] bg-cover bg-center bg-no-repeat"></div>
+						<div className="absolute inset-0 bg-[url('/img/alpineSkiingHeroImg.jpg')] bg-cover bg-center bg-no-repeat"></div>
 						<div className="absolute inset-0 hero-background-gadient"></div>
 						<div className="absolute left-4 lg:left-[38px] bottom-[28px] text-white font-display font-bold text-[26px] md:text-[20px] lg:text-[28px]">Футбол</div>
 					</Link>
 					<Link
 						href={'/biatlon/main'}
-						className="hero-nav-item form"
+						className="hero-nav-item form md:w-[30%]"
 					>
 						<div className="absolute inset-0  bg-lightgray"></div>
 						<div className=" absolute inset-0 bg-[url('/img/biatlonHeroImg.jpg')] bg-cover bg-center bg-no-repeat"></div>
@@ -29,7 +29,7 @@ export default function Home(): React.JSX.Element {
 					</Link>
 					<Link
 						href={'/sky_racing/main'}
-						className="hero-nav-item form"
+						className="hero-nav-item form md:w-[30%]"
 					>
 						<div className="absolute inset-0  bg-lightgray"></div>
 						<div className=" absolute inset-0 bg-[url('/img/skyRacingHeroImg.jpg')] bg-cover bg-center bg-no-repeat"></div>
@@ -38,7 +38,7 @@ export default function Home(): React.JSX.Element {
 					</Link>
 					<Link
 						href={'/alpine_skiing/main'}
-						className="hero-nav-item end-form"
+						className="hero-nav-item end-form md:w-[30%]"
 					>
 						<div className="absolute inset-0  bg-lightgray"></div>
 						<div className=" absolute inset-0 bg-[url('/img/alpineSkiingHeroImg.jpg')] bg-cover bg-center bg-no-repeat"></div>
@@ -83,8 +83,8 @@ export default function Home(): React.JSX.Element {
 					<p className="text-center mt-3">школу друзям</p>
 				</div>
 			</div>
-			<div className="flex flex-col items-center w-[375px] md:w-[720px] lg:w-[1440px] bg-black font-display font-semibold text-[22px] md:text-[36px]">
-				<div className="relative w-full h-[301px] md:h-[352px] lg:h-[275px]">
+			<div className="flex flex-col items-center w-full bg-black font-display font-semibold text-[22px] md:text-[36px]">
+				<div className="relative w-[375px] md:w-[720px] lg:w-[1440px] h-[301px] md:h-[352px] lg:h-[275px]">
 					<div className="absolute bottom-0 lg:bottom-[50%] lg:translate-y-[50%] right-0 md:right-5 lg:right-[74px] w-[275px] md:w-[285px] lg:w-[275px] h-[251px] md:h-[269px] lg:h-[275px] bg-[url(/img/sportMovement.png)]">
 					</div>
 					<div className="absolute top-6 lg:top-[50%] lg:-translate-y-[50%] left-4 md:left-[46px] lg:left-[123px] flex flex-col lg:flex-row items-start lg:items-center">
@@ -94,10 +94,10 @@ export default function Home(): React.JSX.Element {
 				</div>
 			</div>
 			<div>
-				<div className="flex justify-start mx-auto w-[345px] md:w-[680px] lg:w-[1296px] mb-[22px]">
+				<div className="my-container flex justify-start w-full mx-auto mb-[22px]">
 					<Title type='section-title'>Новини</Title>
 				</div>
-				<div className="w-[375px] md:w-[720px] lg:w-[1440] mb-[50px]">
+				<div className="mb-[50px] md:mb-[80px] lg:mb-[100px]">
 					<NewsSwiper />
 				</div>
 			</div>

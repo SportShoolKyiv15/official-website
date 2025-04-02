@@ -9,7 +9,7 @@ const SwiperCard: FC<Props> = ({ children, idx }) => {
 	return (
 		<li
 			key={idx}
-			className="swiperCard"
+			className="flex flex-col gap-[22px] min-w-[345px] md:min-w-[328px] lg:min-w-[416px] h-[320px] md:h-[292px] lg:h-[368px] rounded-[4px] items-center relative"
 		>
 			{children}
 		</li>

@@ -30,7 +30,7 @@ const NewsSwiper: FC = () => {
 			};
 			if (0 <= count && count <= 2) {
 				setIsActiveRight(false);
-				setSliderDisplacement(count, 719);
+				setSliderDisplacement(count, 728);
 				setExtra('swiperOnMoveMobile');
 			};
 			if (count === 0) {
@@ -43,7 +43,7 @@ const NewsSwiper: FC = () => {
 			};
 			if (0 <= count && count <= 5) {
 				setIsActiveRight(false);
-				setSliderDisplacement(count, 366);
+				setSliderDisplacement(count, 367);
 				setExtra('swiperOnMoveMobile');
 			};
 			if (count === 0) {
@@ -60,7 +60,7 @@ const NewsSwiper: FC = () => {
 			};
 			if (0 <= count && count <= 2) {
 				setIsActiveLeft(false);
-				setSliderDisplacement(count, 719);
+				setSliderDisplacement(count, 728);
 				setExtra('swiperOnMoveMobile');
 			};
 			if (count === 2) {
@@ -73,7 +73,7 @@ const NewsSwiper: FC = () => {
 			};
 			if (0 <= count && count <= 5) {
 				setIsActiveLeft(false);
-				setSliderDisplacement(count, 366);
+				setSliderDisplacement(count, 367);
 				setExtra('swiperOnMoveMobile');
 			};
 			if (count === 5) {
@@ -90,7 +90,6 @@ const NewsSwiper: FC = () => {
 	};
 
 	const handleTouchEnd = (e: React.TouchEvent<HTMLUListElement>): void => {
-
 		if (!xStart || !yStart) {
 			return;
 		};
@@ -112,7 +111,7 @@ const NewsSwiper: FC = () => {
 				if (isTablet) {
 					if (0 <= count && count <= 2) {
 						setIsActiveRight(false);
-						setSliderDisplacement(count, 719);
+						setSliderDisplacement(count, 728);
 						setExtra('swiperOnMoveMobile');
 					}
 					if (count === 0) {
@@ -122,7 +121,7 @@ const NewsSwiper: FC = () => {
 				} else {
 					if (0 <= count && count <= 5) {
 						setIsActiveRight(false);
-						setSliderDisplacement(count, 366);
+						setSliderDisplacement(count, 367);
 						setExtra('swiperOnMoveMobile');
 					}
 					if (count === 0) {
@@ -137,7 +136,7 @@ const NewsSwiper: FC = () => {
 					};
 					if (0 <= count && count <= 2) {
 						setIsActiveLeft(false);
-						setSliderDisplacement(count, 719);
+						setSliderDisplacement(count, 728);
 						setExtra('swiperOnMoveMobile');
 					};
 					if (count === 2) {
@@ -150,7 +149,7 @@ const NewsSwiper: FC = () => {
 					};
 					if (0 <= count && count <= 5) {
 						setIsActiveLeft(false);
-						setSliderDisplacement(count, 366);
+						setSliderDisplacement(count, 367);
 						setExtra('swiperOnMoveMobile');
 					};
 					if (count === 5) {
@@ -174,8 +173,8 @@ const NewsSwiper: FC = () => {
 
 	return (
 		<>
-			<div className="container lg:w-full relative mx-auto">
-				<div className="flex gap-3 absolute right-[10px] sm:right-[15px] md:right-[22px] top-[-30px]">
+			<div className="lg:w-full relative mx-auto">
+				<div className="flex gap-3 absolute right-[15px] md:right-[20px] top-[-30px]">
 					<button
 						type="button"
 						className={`lg:hidden cursor-pointer `}
@@ -202,11 +201,8 @@ const NewsSwiper: FC = () => {
 				</div>
 			</div>
 
-			<div className="overflow-hidden mx-auto overflow-hidden">
-				<ul onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} id='sliderAdvantages' className={`flex lg:flex-wrap lg:items-center lg:justify-center gap-[21px] pl-[15px] md:pl-0 ${extra} swiperTransition`}>
-					<div className="hidden md:block lg:hidden" >
-
-					</div>
+			<div className="my-container mx-auto overflow-hidden">
+				<ul onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} className={`flex lg:flex-wrap lg:items-center lg:justify-center gap-[22px] md:gap-6 ${extra}`}>
 					<SwiperCard idx="1">
 						<div className="absolute inset-0  bg-lightgray"></div>
 						<div className="absolute inset-0 bg-[url('/img/newsImg1.jpg')] bg-cover bg-center bg-no-repeat"></div>
