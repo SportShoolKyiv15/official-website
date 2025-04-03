@@ -77,7 +77,7 @@ const ModalEnroll: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisible 
 									<p className='text-center'>Дерипапа Олексій Володимирович</p>
 								</div>
 								<p>Тел.:
-									<Link href="tel:+38 (044) 250-10-33" className='text-link-tel'>(050) 534-76-70</Link>
+									<Link href="tel:+38 (050) 534-76-70" className='text-link-tel'> (050) 534-76-70</Link>
 								</p>
 							</div>
 							<div className='w-full h-[1px] bg-block-grey'></div>
@@ -95,7 +95,7 @@ const ModalEnroll: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisible 
 									<p className='text-center'>Дерипапа Олексій Володимирович</p>
 								</div>
 								<p>Тел.:
-									<Link href="tel:+38 (044) 250-10-33" className='text-link-tel'>(050) 534-76-70</Link>
+									<Link href="tel:+38 (050) 534-76-70" className='text-link-tel'> (050) 534-76-70</Link>
 								</p>
 							</div>
 							<div className='w-full h-[1px] bg-block-grey'></div>
@@ -113,7 +113,7 @@ const ModalEnroll: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisible 
 									<p className='text-center'>Дерипапа Олексій Володимирович</p>
 								</div>
 								<p>Тел.:
-									<Link href="tel:+38 (044) 250-10-33" className='text-link-tel'>(050) 534-76-70</Link>
+									<Link href="tel:+38 (050) 534-76-70" className='text-link-tel'> (050) 534-76-70</Link>
 								</p>
 							</div>
 							<div className='w-full h-[1px] bg-block-grey'></div>
@@ -131,7 +131,7 @@ const ModalEnroll: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisible 
 									<p className='text-center'>Дерипапа Олексій Володимирович</p>
 								</div>
 								<p>Тел.:
-									<Link href="tel:+38 (044) 250-10-33" className='text-link-tel'>(050) 534-76-70</Link>
+									<Link href="tel:+38 (050) 534-76-70" className='text-link-tel'> (050) 534-76-70</Link>
 								</p>
 							</div>
 						</div>
