@@ -1,7 +1,7 @@
 import { ReactNode, FC } from "react";
 
 type Props = {
-	type: "page-title" | "section-title";
+	type: "page-title" | "section-title" | "modal-title";
 	children: ReactNode;
 };
 
@@ -12,8 +12,9 @@ const Title: FC<Props> = ({ type, children }) => {
 		case "page-title":
 			return <p className="page-title">{children}</p>;
 		case "section-title":
-			return <p className=" section-title">{children}</p>
-
+			return <p className="section-title">{children}</p>;
+		case "modal-title":
+			return <p className="modal-title">{children}</p>;
 		default:
 			return <p>{children}</p>;
 	};

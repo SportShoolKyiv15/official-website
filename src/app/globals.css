@@ -78,6 +78,7 @@
   --color-button-press: rgba(168, 31, 23, 1);
   --color-button-disable: rgba(175, 175, 175, 1);
   --color-button-swipe-card: rgba(254, 76, 76, 1);
+  --color-link-tel: rgba(62, 109, 210, 1);
 
   --color-arrow-active: rgba(211, 47, 47, 1);
   --color-arrow: rgba(90, 90, 93, 1);
@@ -99,6 +100,9 @@
 @layer base {
   body {
     @apply m-0 bg-main-dark text-light text-base font-text font-normal leading-none tracking-normal;
+  }
+  body.modal-open {
+    overflow: hidden;
   }
 }
 
@@ -150,11 +154,15 @@
 }
 
 .page-title {
-  @apply mb-3 md:mb-8 md:mb-[51px] font-displayBold md:font-display text-2xl md:text-[26px] lg:text-[34px] font-semibold;
+  @apply mb-3 md:mb-8 md:mb-[51px] font-display font-bold md:font-semibold text-2xl md:text-[26px] lg:text-[34px];
 }
 
 .section-title {
-  @apply text-start text-[22px] md:text-[26px] lg:text-[32px] font-display font-semibold tracking-[0.11px];
+  @apply text-start font-display font-semibold text-[22px] md:text-[26px] lg:text-[32px] tracking-[0.11px];
+}
+
+.modal-title {
+  @apply text-center font-display font-semibold text-[22px] md:text-[24px] tracking-[0.5%] md:tracking-[0%];
 }
 
 .button {
@@ -180,7 +188,7 @@
   overflow-y: scroll;
 }
 
-.modal-overlay-burger {
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -217,6 +225,32 @@
 
 .burger-menu-hidden {
   animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes modalOn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(100%);
+  }
+}
+
+.modal-visible {
+  animation: modalOn 0.3s ease-out;
+}
+
+@keyframes modalOf {
+  from {
+    transform: scale(100%);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+.modal-hidden {
+  animation: modalOf 0.3s ease-out;
 }
 
 .hero-background-gadient {
