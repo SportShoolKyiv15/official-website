@@ -1,10 +1,39 @@
+'use client';
+
 import Link from "next/link";
+import { useState } from "react";
 
 import EnrollButton from "@/components/buttons/EnrollButton";
 import Title from "@/components/Title";
 import NewsSwiper from "@/components/NewsSwiper";
+import ModalEnroll from "@/components/modals/ModalEnroll";
 
 export default function Home(): React.JSX.Element {
+	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [IsVisible, setIsVisible] = useState(false);
+
+	const toggleModal = () => {
+		if (isModalOpen) {
+			setIsVisible(false);
+			setTimeout(() => {
+				setIsModalOpen(false);
+			}, 300)
+		} else {
+			setIsVisible(true);
+			setTimeout(() => {
+				setIsModalOpen(true);
+			}, 300)
+			document.body.classList.add("modal-open");
+		}
+	};
+
+	const closeModal = () => {
+		setIsVisible(false);
+		setTimeout(() => {
+			setIsModalOpen(false);
+		}, 300)
+		document.body.classList.remove("modal-open");
+	};
 	return (
 		<section className="flex flex-col gap-[50px] md:gap-20 items-center pt-[28px] md:pt-6">
 			<div className="w-full sm:w-[375px] md:w-[680px] lg:w-[1296px] mx-auto">
@@ -47,7 +76,7 @@ export default function Home(): React.JSX.Element {
 					</Link>
 				</div>
 				<div className="flex justify-center items-center mt-4 md:mt-2 lg:mt-[25px]">
-					<EnrollButton />
+					<EnrollButton onClick={toggleModal} />
 				</div>
 			</div>
 			<div className="my-container flex flex-col md:flex-row md:flex-wrap items-center mx-auto lg:px-[28px] font-display">
@@ -101,6 +130,7 @@ export default function Home(): React.JSX.Element {
 					<NewsSwiper />
 				</div>
 			</div>
+			<ModalEnroll isModalOpen={isModalOpen} closeModal={closeModal} IsVisible={IsVisible} />
 		</section>
 	);
 }

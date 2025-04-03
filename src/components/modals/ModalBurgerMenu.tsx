@@ -47,7 +47,7 @@ const ModalBurgerMenu: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisi
 	}, [isModalOpen, memoizedhandleKeyDown]);
 
 	return (
-		<div className={`${isModalOpen && 'modal-overlay-burger relative'}`} onClick={handleOverlayClick}>
+		<div className={`${isModalOpen && 'modal-overlay relative'}`} onClick={handleOverlayClick}>
 			{isModalOpen &&
 				<div ref={modalRef} className={`absolute top-0 left-0 w-[313px] md:w-[586px]  min-h-screen text-white bg-block-dark ${IsVisible && `burger-menu-visible`}  ${!IsVisible && `burger-menu-hidden`}`}>
 					<div className='flex gap-1 md:gap-[10px] items-center pl-4 md:pl-5 py-[6px] md:py-[11px] bg-header text-white'>
@@ -74,13 +74,13 @@ const ModalBurgerMenu: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisi
 					className="burger-menu  absolute right-4 md:right-5 top-[17px] md:top-5"
 				>
 					<Image
-						src='/svg/iconCloseModal.svg'
+						src='/svg/iconCloseBurger.svg'
 						alt='Cross'
 						width={30}
 						height={30}
 						className='md:hidden' />
 					<Image
-						src='/svg/iconCloseModal.svg'
+						src='/svg/iconCloseBurger.svg'
 						alt='Cross'
 						width={40}
 						height={40}
@@ -89,8 +89,6 @@ const ModalBurgerMenu: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisi
 			)}
 		</div>
 	);
-
-
 };
 
 export default ModalBurgerMenu;
