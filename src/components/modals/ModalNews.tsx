@@ -43,9 +43,9 @@ const ModalNews: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisible, b
 	}, [isModalOpen, memoizedhandleKeyDown]);
 
 	return (
-		<div className={`${isModalOpen && 'modal-overlay relative'}`} onClick={handleOverlayClick}>
+		<div className={`${isModalOpen && 'modal-overlay relative z-10'}`} onClick={handleOverlayClick}>
 			{isModalOpen &&
-				<div ref={modalRef} className={`absolute top-[107px] md:top-[192px] lg:top-[255px] right-[50%] translate-x-[50%] text-white bg-block-dark overflow: hidden; ${IsVisible && `modal-visible`}  ${!IsVisible && `modal-hidden`} rounded-sm z-100`}>
+				<div ref={modalRef} className={`absolute top-[107px] md:top-[192px] lg:top-[255px] right-[50%] translate-x-[50%] text-white bg-block-dark overflow: hidden; ${IsVisible && `modal-visible`}  ${!IsVisible && `modal-hidden`} rounded-sm`}>
 					<div className='w-[336px] sm:w-[343px] md:w-[532px] lg:w-[608px] px-4 py-12 md:py-14 lg:py-16 relative'>
 						<button
 							onClick={closeModal}
