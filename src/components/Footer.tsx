@@ -82,13 +82,15 @@ const Footer: React.FC = () => {
 								height={32}
 								className='transform transition-transform duration-200 hover:scale-105 hover:cursor-pointer'
 							/>
-							<Image
-								src="/svg/iconFacebook.svg"
-								alt="logo"
-								width={32}
-								height={32}
-								className='transform transition-transform duration-200 hover:scale-105 hover:cursor-pointer'
-							/>
+							<Link href='https://www.facebook.com/groups/httpswww.youtube.comchannelucwl9i9gygdsrhx92/?ref=share' target="_blank" rel="noopener noreferrer">
+								<Image
+									src="/svg/iconFacebook.svg"
+									alt="logo"
+									width={32}
+									height={32}
+									className='transform transition-transform duration-200 hover:scale-105 hover:cursor-pointer'
+								/>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -100,13 +102,15 @@ const Footer: React.FC = () => {
 						width={28}
 						height={28}
 					/>
-					<Image
-						className="hidden md:block transform transition-transform duration-200 hover:scale-105 hover:cursor-pointer"
-						src="/svg/iconFacebook.svg"
-						alt="logo"
-						width={28}
-						height={28}
-					/>
+					<Link href='https://www.facebook.com/groups/httpswww.youtube.comchannelucwl9i9gygdsrhx92/?ref=share' target="_blank" rel="noopener noreferrer">
+						<Image
+							className="hidden md:block transform transition-transform duration-200 hover:scale-105 hover:cursor-pointer"
+							src="/svg/iconFacebook.svg"
+							alt="logo"
+							width={28}
+							height={28}
+						/>
+					</Link>
 				</div>
 				<div className='flex flex-col lg:flex-row items-center lg:justify-center gap-1 lg:gap-3 text-xs'>
 					<p>© 2024, Всі права захищенні</p>
