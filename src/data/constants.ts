@@ -78,4 +78,43 @@ export const MENU_ITEMS = {
 	},
 };
 
+export const NEWS_ITEMS = [
+	{
+		title: "Стартує набір у секцію біатлону",
+		bgUrl: "bg-[url('/img/newsImg1.jpg')]",
+		text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur commodi nemo corrupti dolorum est! Architecto, quod odio? Maxime unde iure at illo rem, asperiores velit a. Assumenda soluta molestiae alias velit fugit iure rerum, a in itaque. Unde, doloribus magnam voluptatem nisi, eius, sit quaerat modi omnis iure ipsa maiores.",
+		date: "02.02.2024"
+	},
+	{
+		title: "Стартує набір у секцію лижні гонки",
+		bgUrl: "bg-[url('/img/newsImg2.jpg')]",
+		text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint quidem, temporibus soluta quas recusandae laboriosam impedit odio ea cum officiis reiciendis qui aspernatur tempore architecto obcaecati minima numquam a quis assumenda. Dignissimos nam sit quam corrupti quod ipsam rem deleniti debitis magni, delectus distinctio tempore eveniet magnam nihil hic modi obcaecati corporis culpa provident ratione alias odio inventore. Reiciendis, repellat!",
+		date: "02.02.2024"
+	},
+	{
+		title: "Стартує набір у секцію футболу",
+		bgUrl: "bg-[url('/img/newsImg4.jpg')]",
+		text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui eius blanditiis sit, dignissimos quam nobis eveniet, quisquam excepturi autem eaque ullam nemo voluptatem nesciunt. Ut doloribus voluptatum corporis minima laboriosam.",
+		date: "02.02.2024"
+	},
+	{
+		title: "Стартує набір у секцію лижні гонки",
+		bgUrl: "bg-[url('/img/newsImg1.jpg')]",
+		text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus molestias corrupti, voluptatum quia magnam quod nisi iure est, voluptas cupiditate ratione laborum tempore veniam iste, quidem voluptates ab voluptatem architecto autem quasi accusantium eos illum? Numquam sapiente consequatur ratione nam.",
+		date: "02.02.2024"
+	},
+	{
+		title: "Стартує набір у секцію футболу",
+		bgUrl: "bg-[url('/img/newsImg2.jpg')]",
+		text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque cumque ex ab dignissimos adipisci mollitia corrupti, odio beatae totam provident ipsa possimus voluptatum rem molestiae, autem vel, sit velit sunt voluptate quisquam nemo. Eligendi iusto recusandae ipsum unde earum necessitatibus eveniet sapiente dignissimos autem, minus nostrum ut aut accusantium itaque minima veritatis voluptatum in, impedit repudiandae iure sunt temporibus saepe! Enim id quisquam modi maxime nostrum provident, quibusdam voluptatum. Error eos deleniti eaque eius ullam iusto consectetur blanditiis omnis consequatur!",
+		date: "02.02.2024"
+	},
+	{
+		title: "Стартує набір у секцію лижні гонки",
+		bgUrl: "bg-[url('/img/newsImg4.jpg')]",
+		text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quos.",
+		date: "02.02.2024"
+	}
+]
+
 

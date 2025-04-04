@@ -26,9 +26,7 @@ const ModalEnroll: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisible 
 		}
 	};
 
-	const memoizedhandleKeyDown = useCallback(handleKeyDown, [isModalOpen, closeModal])
-
-
+	const memoizedhandleKeyDown = useCallback(handleKeyDown, [isModalOpen, closeModal]);
 	useEffect(() => {
 		if (isModalOpen) {
 			document.addEventListener('keydown', memoizedhandleKeyDown);
@@ -43,23 +41,23 @@ const ModalEnroll: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisible 
 	return (
 		<div className={`${isModalOpen && 'modal-overlay relative'}`} onClick={handleOverlayClick}>
 			{isModalOpen &&
-				<div ref={modalRef} className={`absolute top-[107px] md:top-[192px] lg:top-[255px] right-[50%] translate-x-[50%] text-white bg-block-dark overflow: hidden; ${IsVisible && `modal-visible`}  ${!IsVisible && `modal-hidden`}`}>
-					<div className='w-[343px] md:w-[532px] lg:w-[608px] h-[1090px] md:h-[1153px] lg:h-[1161px] px-4 md:px-0 py-[34px] md:py-10 relative'>
+				<div ref={modalRef} className={`absolute top-[107px] md:top-[192px] lg:top-[255px] right-[50%] translate-x-[50%] text-white bg-block-dark overflow: hidden; ${IsVisible && `modal-visible`}  ${!IsVisible && `modal-hidden`} rounded-sm`}>
+					<div className='w-[343px] md:w-[532px] lg:w-[608px] px-4 md:px-0 py-[34px] md:py-10 relative'>
 						<button
 							onClick={closeModal}
-							className="burger-menu  absolute right-[10px] md:right-4 lg:right-5 top-[10px] md:top-4 lg:top-5">
+							className="burger-menu absolute right-[10px] md:right-4 lg:right-5 top-[10px] md:top-4 lg:top-5 cursor-pointer">
 							<Image
 								src='/svg/iconCloseModal.svg'
 								alt='Cross'
 								width={22}
 								height={22}
-								className='md:hidden' />
+								className='md:hidden hover:scale-110' />
 							<Image
 								src='/svg/iconCloseModal.svg'
 								alt='Cross'
 								width={24}
 								height={24}
-								className='hidden md:block' />
+								className='hidden md:block hover:scale-110' />
 						</button>
 						<div className='flex flex-col gap-8 md:gap-10'>
 							<Title type='modal-title'>Оберіть спортивну секцію</Title>

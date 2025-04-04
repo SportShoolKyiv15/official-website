@@ -5,10 +5,12 @@ import { useEffect } from "react";
 
 import { setSliderDisplacement } from "@/utils/setSliderDisplacement";
 import SwiperCard from "./SwiperCard";
-import SwipeCardButton from "./buttons/SwipeCardButton";
+// import SwipeCardButton from "./buttons/SwipeCardButton";
 import useWindowWidth from "@/helpers/windowsSize";
 import ArrowIconLeft from "./ArrowIconLeft";
 import ArrowIconRight from "./ArrowIconRight";
+import { NEWS_ITEMS } from "@/data/constants";
+import ModalNews from "./modals/ModalNews";
 
 let count = 0;
 
@@ -18,13 +20,19 @@ const NewsSwiper: FC = () => {
 	const [isXS, setIsXS] = useState(false);
 	const [isActiveRight, setIsActiveRight] = useState(false);
 	const [isActiveLeft, setIsActiveLeft] = useState(true);
+	const [idx, setIdx] = useState<number>();
+	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [IsVisible, setIsVisible] = useState(false);
 	const withWindow = useWindowWidth();
 
 	let xStart: number | null = null;
 	let yStart: number | null = null;
 
-	const hanleClickLeft = (): void => {
+	const getIdx = (itenIdx: number) => {
+		setIdx(itenIdx);
+	}
 
+	const hanleClickLeft = (): void => {
 		if (isTablet) {
 			// verify extreme swiper element for tablet
 			if (count > 0) {
@@ -32,7 +40,7 @@ const NewsSwiper: FC = () => {
 			};
 			if (0 <= count && count <= 2) {
 				setIsActiveRight(false);
-				setSliderDisplacement(count, 728);
+				setSliderDisplacement(count, 706);
 				setExtra('swiperOnMoveMobile');
 			};
 			// change direction of swiper movement for tablet
@@ -77,7 +85,7 @@ const NewsSwiper: FC = () => {
 			// change number of swiper element for tablet
 			if (0 <= count && count <= 2) {
 				setIsActiveLeft(false);
-				setSliderDisplacement(count, 728);
+				setSliderDisplacement(count, 706);
 				setExtra('swiperOnMoveMobile');
 			};
 			if (count === 2) {
@@ -148,7 +156,7 @@ const NewsSwiper: FC = () => {
 					// change number of swiper element for tablet
 					if (0 <= count && count <= 2) {
 						setIsActiveRight(false);
-						setSliderDisplacement(count, 728);
+						setSliderDisplacement(count, 706);
 						setExtra('swiperOnMoveMobile');
 					}
 					// change direction of swiper movement for tablet
@@ -187,7 +195,7 @@ const NewsSwiper: FC = () => {
 					// change number of swiper element for tablet
 					if (0 <= count && count <= 2) {
 						setIsActiveLeft(false);
-						setSliderDisplacement(count, 728);
+						setSliderDisplacement(count, 706);
 						setExtra('swiperOnMoveMobile');
 					};
 					// change direction of swiper movement for tablet
@@ -227,6 +235,29 @@ const NewsSwiper: FC = () => {
 		yStart = null;
 	};
 
+	const toggleModal = () => {
+		if (isModalOpen) {
+			setIsVisible(false);
+			setTimeout(() => {
+				setIsModalOpen(false);
+			}, 300)
+		} else {
+			setIsVisible(true);
+			setTimeout(() => {
+				setIsModalOpen(true);
+			}, 300)
+			document.body.classList.add("modal-open");
+		}
+	};
+
+	const closeModal = () => {
+		setIsVisible(false);
+		setTimeout(() => {
+			setIsModalOpen(false);
+		}, 300)
+		document.body.classList.remove("modal-open");
+	};
+
 	// determine screen width
 	useEffect(() => {
 		if (withWindow !== undefined && 720 <= withWindow && withWindow < 1440) {
@@ -241,6 +272,11 @@ const NewsSwiper: FC = () => {
 		};
 	}, [withWindow]);
 
+	useEffect(() => {
+		setIdx(0);
+	}, [])
+
+	console.log('Index-OUT', idx)
 	return (
 		<>
 			<div className="lg:w-full relative mx-auto">
@@ -273,103 +309,18 @@ const NewsSwiper: FC = () => {
 
 			<div className="my-container mx-auto overflow-hidden">
 				<ul onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} className={`flex lg:flex-wrap lg:items-center lg:justify-center gap-[22px] md:gap-6 ${extra}`}>
-					<SwiperCard idx="1">
-						<div className="absolute inset-0  bg-lightgray"></div>
-						<div className="absolute inset-0 bg-[url('/img/newsImg1.jpg')] bg-cover bg-center bg-no-repeat"></div>
-						<div className="absolute inset-0 news-bg-gradient"></div>
-						<div className="swiperCardContent">
-							<p className="swiperCardTitle">Стартує набір у секцію біатлону</p>
-							<p className="swiperCardText">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur commodi nemo corrupti dolorum est! Architecto, quod odio? Maxime unde iure at illo rem, asperiores velit a. Assumenda soluta molestiae alias velit fugit iure rerum, a in itaque. Unde, doloribus magnam voluptatem nisi, eius, sit quaerat modi omnis iure ipsa maiores.
-							</p>
-							<div className="flex justify-between">
-								<SwipeCardButton>Читати далі</SwipeCardButton>
-								<p className="text-sm font-display">02.02.2024</p>
-							</div>
-						</div>
-					</SwiperCard>
-					<SwiperCard idx="2">
-						<div className="absolute inset-0  bg-lightgray"></div>
-						<div className=" absolute inset-0 bg-[url('/img/newsImg2.jpg')] bg-cover bg-center bg-no-repeat"></div>
-						<div className="absolute inset-0 news-bg-gradient"></div>
-						<div className="swiperCardContent">
-							<p className="swiperCardTitle">Стартує набір у секцію лижні гонки</p>
-							<p className="swiperCardText">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint quidem, temporibus soluta quas recusandae laboriosam impedit odio ea cum officiis reiciendis qui aspernatur tempore architecto obcaecati minima numquam a quis assumenda. Dignissimos nam sit quam corrupti quod ipsam rem deleniti debitis magni, delectus distinctio tempore eveniet magnam nihil hic modi obcaecati corporis culpa provident ratione alias odio inventore. Reiciendis, repellat!
-							</p>
-							<div className="flex justify-between">
-								<SwipeCardButton>Читати далі</SwipeCardButton>
-								<p className="text-sm font-display">02.02.2024</p>
-							</div>
-						</div>
-					</SwiperCard>
-					<div className="hidden md:block lg:hidden" >
-
-					</div>
-					<SwiperCard idx="3">
-						<div className="absolute inset-0  bg-lightgray"></div>
-						<div className=" absolute inset-0 bg-[url('/img/newsImg4.jpg')] bg-cover bg-center bg-no-repeat"></div>
-						<div className="absolute inset-0 news-bg-gradient"></div>
-						<div className="swiperCardContent">
-							<p className="swiperCardTitle">Стартує набір у секцію футболу</p>
-							<p className="swiperCardText">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui eius blanditiis sit, dignissimos quam nobis eveniet, quisquam excepturi autem eaque ullam nemo voluptatem nesciunt. Ut doloribus voluptatum corporis minima laboriosam.
-							</p>
-							<div className="flex justify-between">
-								<SwipeCardButton>Читати далі</SwipeCardButton>
-								<p className="text-sm font-display">02.02.2024</p>
-							</div>
-						</div>
-					</SwiperCard>
-					<SwiperCard idx="4">
-						<div className="absolute inset-0  bg-lightgray"></div>
-						<div className=" absolute inset-0 bg-[url('/img/newsImg1.jpg')] bg-cover bg-center bg-no-repeat"></div>
-						<div className="absolute inset-0 news-bg-gradient"></div>
-						<div className="swiperCardContent">
-							<p className="swiperCardTitle">Стартує набір у секцію лижні гонки</p>
-							<p className="swiperCardText">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus molestias corrupti, voluptatum quia magnam quod nisi iure est, voluptas cupiditate ratione laborum tempore veniam iste, quidem voluptates ab voluptatem architecto autem quasi accusantium eos illum? Numquam sapiente consequatur ratione nam.
-							</p>
-							<div className="flex justify-between">
-								<SwipeCardButton>Читати далі</SwipeCardButton>
-								<p className="text-sm font-display">02.02.2024</p>
-							</div>
-						</div>
-					</SwiperCard>
-					<div className="hidden md:block lg:hidden" >
-
-					</div>
-					<SwiperCard idx="5">
-						<div className="absolute inset-0  bg-lightgray"></div>
-						<div className=" absolute inset-0 bg-[url('/img/newsImg2.jpg')] bg-cover bg-center bg-no-repeat"></div>
-						<div className="absolute inset-0 news-bg-gradient"></div>
-						<div className="swiperCardContent">
-							<p className="swiperCardTitle">Стартує набір у секцію футболу</p>
-							<p className="swiperCardText">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque cumque ex ab dignissimos adipisci mollitia corrupti, odio beatae totam provident ipsa possimus voluptatum rem molestiae, autem vel, sit velit sunt voluptate quisquam nemo. Eligendi iusto recusandae ipsum unde earum necessitatibus eveniet sapiente dignissimos autem, minus nostrum ut aut accusantium itaque minima veritatis voluptatum in, impedit repudiandae iure sunt temporibus saepe! Enim id quisquam modi maxime nostrum provident, quibusdam voluptatum. Error eos deleniti eaque eius ullam iusto consectetur blanditiis omnis consequatur!
-							</p>
-							<div className="flex justify-between">
-								<SwipeCardButton>Читати далі</SwipeCardButton>
-								<p className="text-sm font-display">02.02.2024</p>
-							</div>
-						</div>
-					</SwiperCard>
-					<SwiperCard idx="6">
-						<div className="absolute inset-0  bg-lightgray"></div>
-						<div className=" absolute inset-0 bg-[url('/img/newsImg4.jpg')] bg-cover bg-center bg-no-repeat"></div>
-						<div className="absolute inset-0 news-bg-gradient"></div>
-						<div className="swiperCardContent">
-							<p className="swiperCardTitle">Стартує набір у секцію лижні гонки</p>
-							<p className="swiperCardText">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quos.
-							</p>
-							<div className="flex justify-between">
-								<SwipeCardButton>Читати далі</SwipeCardButton>
-								<p className="text-sm font-display">02.02.2024</p>
-							</div>
-						</div>
-					</SwiperCard>
+					{NEWS_ITEMS[0] && NEWS_ITEMS.map((item, idx) => (
+						<SwiperCard key={idx} idx={idx} bgUrl={item.bgUrl} title={item.title} text={item.text} date={item.date} toggleModal={toggleModal} getIdx={getIdx} />
+					))}
 				</ul>
+				{idx !== undefined && <ModalNews
+					isModalOpen={isModalOpen}
+					closeModal={closeModal}
+					IsVisible={IsVisible}
+					bgUrl={NEWS_ITEMS[idx].bgUrl}
+					title={NEWS_ITEMS[idx].title}
+					text={NEWS_ITEMS[idx].text}
+					date={NEWS_ITEMS[idx].date} />}
 			</div>
 		</>
 	);
