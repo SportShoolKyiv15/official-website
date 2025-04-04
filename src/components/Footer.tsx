@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
 	const { toggleUpdate } = useNav();
 
 	return (
-		<footer className='bg-black flex justify-center'>
+		<footer className='bg-black flex justify-center z-1'>
 			<div className='my-container pt-5 md:pt-10 pb-2 md:pb-[17px] lg:pb-5'>
 				<div className='md:flex md:items-center md:mb-[12px] justify-between lg:mb-[19px]'>
 					<div className='flex justify-between items-center mb-[58px] md:mb-0'>
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
 							className='hidden lg:block'
 						/>
 					</Link>
-					<div className='flex md:block justify-between lg:mt-[10px] mb-8 md:mb-0 z-1'>
+					<div className='flex md:block justify-between lg:mt-[10px] mb-8 md:mb-0'>
 						<div className='flex flex-col gap-2 lg:gap-4 lg:mb-[34px] font-display text-sm'>
 							<p>Залишились питання?</p>
 							<ContactButton />
