@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
 							<p>Залишились питання?</p>
 							<ContactButton />
 						</div>
-						<div className='md:hidden flex lg:flex md:justify-end gap-[10px] lg:gap-[14px]'>
+						<div className='md:hidden flex lg:flex md:justify-end items-center gap-[10px] lg:gap-[14px]'>
 							<Image
 								src="/svg/iconInstagram.svg"
 								alt="logo"
@@ -94,7 +94,7 @@ const Footer: React.FC = () => {
 						</div>
 					</div>
 				</div>
-				<div className='hiddden md:flex lg:hidden md:justify-end md:mb-8 gap-[10px]'>
+				<div className='hiddden md:flex lg:hidden md:justify-end items-center md:mb-8 gap-[10px]'>
 					<Image
 						className="hidden md:block transform transition-transform duration-200 hover:scale-105 hover:cursor-pointer"
 						src="/svg/iconInstagram.svg"
