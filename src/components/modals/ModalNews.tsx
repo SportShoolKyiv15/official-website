@@ -64,7 +64,7 @@ const ModalNews: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisible, b
 								className='hidden md:block hover:scale-110' />
 						</button>
 						<div className='w-full mx-auto mb-4 relative'>
-							<div className='w-full h-[300px] md:h-[360px] lg:h-[400px]'>
+							<div className='w-full aspect-3/2'>
 								<div className="absolute inset-0  bg-lightgray"></div>
 								<div className={`absolute inset-0 ${bgUrl} bg-cover bg-center bg-no-repeat`}></div>
 								{/* <div className="absolute inset-0 news-bg-gradient"></div> */}
