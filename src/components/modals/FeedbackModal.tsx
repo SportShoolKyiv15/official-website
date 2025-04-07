@@ -91,7 +91,7 @@ const FeedbackModal: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisibl
 		<div className={`${isModalOpen && 'modal-overlay relative'}`} onClick={handleOverlayClick}>
 			{isModalOpen &&
 				<div ref={modalRef} className={`absolute top-[107px] md:top-[192px] lg:top-[255px] right-[50%] translate-x-[50%] text-white bg-block-dark overflow: hidden; ${IsVisible && `modal-visible`}  ${!IsVisible && `modal-hidden`} rounded-sm`}>
-					<div className='w-[343px] md:w-[532px] px-2 py-[28px] md:px-10 md:py-10 relative'>
+					<div className='w-[343px] md:w-[532px] px-2 py-[28px] md:px-10 md:py-10 z-100 relative'>
 						<button
 							onClick={closeModal}
 							className="burger-menu absolute right-[10px] md:right-4 lg:right-5 top-[10px] md:top-4 lg:top-5 cursor-pointer">
