@@ -15,7 +15,7 @@ interface ModalProps {
 	date: string;
 };
 
-const ModalNews: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisible, bgUrl, title, text, date }) => {
+const NewsModal: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisible, bgUrl, title, text, date }) => {
 	const modalRef = useRef<HTMLDivElement | null>(null);
 
 	const handleOverlayClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -83,4 +83,4 @@ const ModalNews: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisible, b
 	);
 };
 
-export default ModalNews;
+export default NewsModal;

@@ -1,15 +1,42 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { useNav } from '../contexts/NavContext';
 import ContactButton from './buttons/ContactButton';
+import FeedbackModal from './modals/FeedbackModal';
+
 
 const Footer: React.FC = () => {
 	// Reload neighbor component Nav for reset active menu item when we go to MainPage
+	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [IsVisible, setIsVisible] = useState(false);
 	const { toggleUpdate } = useNav();
+
+	const toggleModal = () => {
+		if (isModalOpen) {
+			setIsVisible(false);
+			setTimeout(() => {
+				setIsModalOpen(false);
+			}, 300)
+		} else {
+			setIsVisible(true);
+			setTimeout(() => {
+				setIsModalOpen(true);
+			}, 300)
+			document.body.classList.add("modal-open");
+		}
+	};
+
+	const closeModal = () => {
+		setIsVisible(false);
+		setTimeout(() => {
+			setIsModalOpen(false);
+		}, 300)
+		document.body.classList.remove("modal-open");
+	};
 
 	return (
 		<footer className='bg-black flex justify-center'>
@@ -72,7 +99,7 @@ const Footer: React.FC = () => {
 					<div className='flex md:block justify-between lg:mt-[10px] mb-8 md:mb-0'>
 						<div className='flex flex-col gap-2 lg:gap-4 lg:mb-[34px] font-display text-sm'>
 							<p>Залишились питання?</p>
-							<ContactButton />
+							<ContactButton onClick={toggleModal} />
 						</div>
 						<div className='md:hidden flex lg:flex md:justify-end items-center gap-[10px] lg:gap-[14px]'>
 							<Image
@@ -117,6 +144,7 @@ const Footer: React.FC = () => {
 					<p>Договір оферти і Політика конфіденційності</p>
 				</div>
 			</div>
+			<FeedbackModal isModalOpen={isModalOpen} closeModal={closeModal} IsVisible={IsVisible} />
 		</footer>
 	);
 };

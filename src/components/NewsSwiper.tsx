@@ -5,12 +5,11 @@ import { useEffect } from "react";
 
 import { setSliderDisplacement } from "@/utils/setSliderDisplacement";
 import SwiperCard from "./SwiperCard";
-// import SwipeCardButton from "./buttons/SwipeCardButton";
 import useWindowWidth from "@/helpers/windowsSize";
 import ArrowIconLeft from "./ArrowIconLeft";
 import ArrowIconRight from "./ArrowIconRight";
 import { NEWS_ITEMS } from "@/data/constants";
-import ModalNews from "./modals/ModalNews";
+import NewsModal from "./modals/NewsModal";
 
 let count = 0;
 
@@ -276,7 +275,6 @@ const NewsSwiper: FC = () => {
 		setIdx(0);
 	}, [])
 
-	console.log('Index-OUT', idx)
 	return (
 		<>
 			<div className="lg:w-full relative mx-auto">
@@ -288,9 +286,6 @@ const NewsSwiper: FC = () => {
 						disabled={isActiveLeft}
 					>
 						<ArrowIconLeft color={`${!isActiveLeft ? 'arrow-active' : 'arrow'}`} />
-						{/* <svg className={`${!isActiveLeft ? 'text-arrow-active' : 'text-arrow'}`} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M16.125 9L1.875 9M1.875 9L7.125 14.25M1.875 9L7.125 3.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-						</svg> */}
 					</button>
 
 					<button
@@ -300,9 +295,6 @@ const NewsSwiper: FC = () => {
 						disabled={isActiveRight}
 					>
 						<ArrowIconRight color={`${!isActiveRight ? 'arrow-active' : 'arrow'}`} />
-						{/* <svg className={`${!isActiveRight ? 'text-arrow-active' : 'text-arrow'}`} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M1.875 9L16.125 9M16.125 9L10.875 14.25M16.125 9L10.875 3.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-						</svg> */}
 					</button>
 				</div>
 			</div>
@@ -310,17 +302,25 @@ const NewsSwiper: FC = () => {
 			<div className="my-container mx-auto overflow-hidden">
 				<ul onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} className={`flex lg:flex-wrap lg:items-center lg:justify-center gap-[22px] md:gap-6 ${extra}`}>
 					{NEWS_ITEMS[0] && NEWS_ITEMS.map((item, idx) => (
-						<SwiperCard key={idx} idx={idx} bgUrl={item.bgUrl} title={item.title} text={item.text} date={item.date} toggleModal={toggleModal} getIdx={getIdx} />
+						<SwiperCard
+							key={idx}
+							idx={idx}
+							bgUrl={item.bgUrl}
+							title={item.title}
+							text={item.text} date={item.date}
+							toggleModal={toggleModal}
+							getIdx={getIdx} />
 					))}
 				</ul>
-				{idx !== undefined && <ModalNews
-					isModalOpen={isModalOpen}
-					closeModal={closeModal}
-					IsVisible={IsVisible}
-					bgUrl={NEWS_ITEMS[idx].bgUrl}
-					title={NEWS_ITEMS[idx].title}
-					text={NEWS_ITEMS[idx].text}
-					date={NEWS_ITEMS[idx].date} />}
+				{idx !== undefined &&
+					<NewsModal
+						isModalOpen={isModalOpen}
+						closeModal={closeModal}
+						IsVisible={IsVisible}
+						bgUrl={NEWS_ITEMS[idx].bgUrl}
+						title={NEWS_ITEMS[idx].title}
+						text={NEWS_ITEMS[idx].text}
+						date={NEWS_ITEMS[idx].date} />}
 			</div>
 		</>
 	);
