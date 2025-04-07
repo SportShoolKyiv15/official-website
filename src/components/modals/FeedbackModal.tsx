@@ -88,10 +88,10 @@ const FeedbackModal: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisibl
 	}, [isModalOpen, memoizedhandleKeyDown]);
 
 	return (
-		<div className={`${isModalOpen && 'modal-overlay relative'}`} onClick={handleOverlayClick}>
+		<div className={`${isModalOpen && 'modal-overlay relative z-10'}`} onClick={handleOverlayClick}>
 			{isModalOpen &&
 				<div ref={modalRef} className={`absolute top-[107px] md:top-[192px] lg:top-[255px] right-[50%] translate-x-[50%] text-white bg-block-dark overflow: hidden; ${IsVisible && `modal-visible`}  ${!IsVisible && `modal-hidden`} rounded-sm`}>
-					<div className='w-[343px] md:w-[532px] px-2 py-[28px] md:px-10 md:py-10 z-100 relative'>
+					<div className='w-[343px] md:w-[532px] px-2 py-[28px] md:px-10 md:py-10 relative'>
 						<button
 							onClick={closeModal}
 							className="burger-menu absolute right-[10px] md:right-4 lg:right-5 top-[10px] md:top-4 lg:top-5 cursor-pointer">
@@ -156,7 +156,6 @@ const FeedbackModal: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisibl
 									className='button w-[327px] md:w-[297px] lg:w-[297px] h-[48px] md:h-[44px] lg:h-[48px] transform transition-transform duration-200 hover:scale-101'>
 									<span>Відправити</span>
 								</button>
-								{/* {status && <p className="mt-2 text-center">{status}</p>} */}
 							</form>
 						</div>
 					</div>
