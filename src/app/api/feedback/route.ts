@@ -31,7 +31,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
 		const mailOptions = {
 			from: process.env.EMAIL_USER,
-			to: "sportschoolkyiv15@gmail.com", // Куди надсилати повідомлення
+			to: "sportschoolkyiv15@gmail.com",
 			subject: "Нове повідомлення з форми",
 			text: `Ім'я: ${name}\nТелефон: ${phone}\nПовідомлення: ${message}`,
 		};
