@@ -166,7 +166,7 @@
 }
 
 .button {
-  @apply flex flex-col items-center justify-center text-base font-display bg-button hover:bg-button-hover cursor-pointer active:bg-button-press rounded-sm;
+  @apply flex flex-col items-center justify-center text-base font-display rounded-sm bg-button hover:bg-button-hover cursor-pointer active:bg-button-press;
 }
 
 .drop-menu-overlay {
