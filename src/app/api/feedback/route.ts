@@ -1,34 +1,41 @@
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
+import HttpError from "@/helpers/HttpError";
 import nodemailer from "nodemailer";
 
-interface FeedbackData {
+type FeedbackData = {
 	name: string;
 	phone: string;
 	message: string;
 }
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest): Promise<NextResponse> {
 	try {
-		const { name, phone, message }: FeedbackData = await req.json();
+		const body: FeedbackData = await req.json();
+		const { name, phone, message } = body;
 
-		// Налаштування транспорту для надсилання email (залишаємо, щоб отримувати повідомлення)
+		if (!name || !message || !phone) {
+			return HttpError(400, `FeedbackData is rong.`);
+		};
+
+
 		const transporter = nodemailer.createTransport({
 			service: "gmail", // або ваш SMTP-сервер
 			auth: {
 				user: process.env.EMAIL_USER as string,
 				pass: process.env.EMAIL_PASS as string,
 			},
+			// tls: {
+			// 	rejectUnauthorized: false, // НЕБЕЗПЕЧНО ДЛЯ ПРОДАКШНУ
+			// },
 		});
 
-		// Формуємо лист
 		const mailOptions = {
 			from: process.env.EMAIL_USER,
-			to: "your-email@example.com", // Куди надсилати повідомлення
+			to: "sportschoolkyiv15@gmail.com", // Куди надсилати повідомлення
 			subject: "Нове повідомлення з форми",
 			text: `Ім'я: ${name}\nТелефон: ${phone}\nПовідомлення: ${message}`,
 		};
 
-		// Відправка листа
 		await transporter.sendMail(mailOptions);
 
 		return NextResponse.json({ success: true, message: "Повідомлення надіслано!" });

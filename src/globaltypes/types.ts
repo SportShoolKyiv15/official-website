@@ -22,3 +22,5 @@ export type BurgerMenu = {
 };
 
 type MenuItem = [string, string];
+
+export type ErrorType = 400 | 401 | 403 | 404 | 409;
