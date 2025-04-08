@@ -75,7 +75,7 @@ const FeedbackModal: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisibl
 					position: 'top-center',
 					className: 'toast_success',
 					style: {
-						backgroundColor: '#0F3952',
+						backgroundColor: 'rgba(90, 90, 93, 1)',
 						color: "lightgreen",
 						fontSize: '24px',
 						borderColor: 'green',
@@ -92,7 +92,7 @@ const FeedbackModal: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisibl
 					position: 'top-center',
 					className: 'toast_error',
 					style: {
-						backgroundColor: '#0F3952',
+						backgroundColor: 'rgba(90, 90, 93, 1)',
 						color: '#fa9c9c',
 						fontSize: '24px',
 						marginBottom: '50%',
@@ -105,7 +105,7 @@ const FeedbackModal: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisibl
 					position: 'top-center',
 					className: 'toast_error',
 					style: {
-						backgroundColor: '#0F3952',
+						backgroundColor: 'rgba(90, 90, 93, 1)',
 						color: '#fa9c9c',
 						fontSize: '24px',
 						marginBottom: '50%',
