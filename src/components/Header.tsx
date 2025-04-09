@@ -97,6 +97,17 @@ const Header: React.FC = () => {
 							className='font-ermilov font-bold hover:opacity-80'>Контакти</Link>
 					</nav>
 					<div className='flex'>
+						<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
+							<Image
+								src="/svg/sponsorIcon.svg"
+								alt="icon sponsor"
+								width={35}
+								height={35}
+							/></Link>
+					</div>
+				</div>
+				<div className='hidden md:flex lg:hidden absolute bottom-[14px] right-[105px]'>
+					<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
 						<Image
 							className=""
 							src="/svg/sponsorIcon.svg"
@@ -104,34 +115,29 @@ const Header: React.FC = () => {
 							width={35}
 							height={35}
 						/>
-					</div>
-				</div>
-				<div className='hidden md:flex lg:hidden absolute bottom-[14px] right-[105px]'>
-					<Image
-						className=""
-						src="/svg/sponsorIcon.svg"
-						alt="icon sponsor"
-						width={35}
-						height={35}
-					/>
+					</Link>
 				</div>
 				<div className='hidden sm:flex md:hidden absolute bottom-[10px] right-[81px]'>
-					<Image
-						className=""
-						src="/svg/sponsorIcon.svg"
-						alt="icon sponsor"
-						width={28}
-						height={28}
-					/>
+					<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
+						<Image
+							className=""
+							src="/svg/sponsorIcon.svg"
+							alt="icon sponsor"
+							width={28}
+							height={28}
+						/>
+					</Link>
 				</div>
 				<div className='flex sm:hidden absolute bottom-[10px] right-[61px]'>
-					<Image
-						className=""
-						src="/svg/sponsorIcon.svg"
-						alt="icon sponsor"
-						width={28}
-						height={28}
-					/>
+					<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
+						<Image
+							className=""
+							src="/svg/sponsorIcon.svg"
+							alt="icon sponsor"
+							width={28}
+							height={28}
+						/>
+					</Link>
 				</div>
 			</div>
 			<Nav />
