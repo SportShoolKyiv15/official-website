@@ -161,6 +161,10 @@
   @apply text-start font-display font-semibold text-[22px] md:text-[26px] lg:text-[32px] tracking-[0.11px];
 }
 
+.section-subtitle {
+  @apply text-start font-display font-semibold text-[20px] md:text-[22px] lg:text-[26px];
+}
+
 .modal-title {
   @apply text-center font-display font-semibold text-[22px] md:text-[24px] tracking-[0.5%] md:tracking-[0%];
 }

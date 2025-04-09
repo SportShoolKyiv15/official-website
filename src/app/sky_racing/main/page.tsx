@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 import ModalEnroll from '@/components/modals/ModalEnroll';
 import SportPageHero from '@/components/SportPageHero';
+import SportFacility from '@/components/SportFacility';
 
 const SkyRacingMainPage: FC = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -33,8 +34,9 @@ const SkyRacingMainPage: FC = () => {
 		document.body.classList.remove("modal-open");
 	};
 	return (
-		<section className="flex justify-center items-center pt-[22px]">
+		<section className="flex flex-col justify-center gap-[50px] md:gap-[80px] items-center pt-[22px]">
 			<SportPageHero bgUrl="bg-[url('/img/skyRacingHero.jpg')]" toggleModal={toggleModal} directionImage='rotate-y-180' />
+			<SportFacility bgUrl="bg-[url('/img/sportFacilityImg2.jpg')]" title='Лижні гонки' />
 			<ModalEnroll isModalOpen={isModalOpen} closeModal={closeModal} IsVisible={IsVisible} />
 		</section>
 	);

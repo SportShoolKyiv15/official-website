@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 import ModalEnroll from '@/components/modals/ModalEnroll';
 import SportPageHero from '@/components/SportPageHero';
+import SportFacility from '@/components/SportFacility';
 
 const BiatlonMainPage: FC = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -33,8 +34,9 @@ const BiatlonMainPage: FC = () => {
 		document.body.classList.remove("modal-open");
 	};
 	return (
-		<section className="flex justify-center items-center pt-[22px]">
+		<section className="flex flex-col justify-center gap-[50px] md:gap-[80px] items-center pt-[22px]">
 			<SportPageHero bgUrl="bg-[url('/img/biatlonHero.jpg')]" toggleModal={toggleModal} />
+			<SportFacility bgUrl="bg-[url('/img/sportFacilityImg2.jpg')]" title='Біатлон' />
 			<ModalEnroll isModalOpen={isModalOpen} closeModal={closeModal} IsVisible={IsVisible} />
 		</section>
 	);
