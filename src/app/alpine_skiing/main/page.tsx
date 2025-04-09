@@ -35,7 +35,7 @@ const AlpineSkiingMainPage: FC = () => {
 	};
 	return (
 		<section className="flex flex-col justify-center gap-[50px] md:gap-[80px] items-center pt-[22px]">
-			<SportPageHero bgUrl="bg-[url('/img/alpineSkiingHero.jpg')]" toggleModal={toggleModal} directionImage='rotate-y-180' />
+			<SportPageHero bgUrl="bg-[url('/img/alpineSkiingHeroPageImg.jpg')]" toggleModal={toggleModal} directionImage='rotate-y-180' />
 			<SportFacility bgUrl="bg-[url('/img/sportFacilityImg2.jpg')]" title='Гірські лижі' />
 			<ModalEnroll isModalOpen={isModalOpen} closeModal={closeModal} IsVisible={IsVisible} />
 		</section>

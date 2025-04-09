@@ -35,7 +35,7 @@ const FootballMainPage: FC = () => {
 	};
 	return (
 		<section className="flex flex-col justify-center gap-[50px] md:gap-[80px] items-center pt-[22px]">
-			<SportPageHero bgUrl="bg-[url('/img/footballHero.jpg')]" toggleModal={toggleModal} directionImage='rotate-y-180' />
+			<SportPageHero bgUrl="bg-[url('/img/footballHeroPageImg.jpg')]" toggleModal={toggleModal} directionImage='rotate-y-180' />
 			<SportFacility bgUrl="bg-[url('/img/sportFacilityImg1.jpg')]" title='Футбол' />
 			<ModalEnroll isModalOpen={isModalOpen} closeModal={closeModal} IsVisible={IsVisible} />
 		</section>
