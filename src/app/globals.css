@@ -108,7 +108,7 @@
 
 @layer components {
   .my-container {
-    @apply xs:w-[356px] sm:w-[375px] md:w-[720px] lg:w-[1440px] xs:px-[10px] sm:px-[15px] md:px-[20px] lg:px-18;
+    @apply w-full xs:w-[356px] sm:w-[375px] md:w-[720px] lg:w-[1440px] xs:px-[10px] sm:px-[15px] md:px-[20px] lg:px-18;
   }
 }
 
