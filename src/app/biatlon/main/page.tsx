@@ -1,7 +1,41 @@
-const BiatlonMainPage: React.FC = () => {
+'use client';
+
+import { FC } from 'react';
+import { useState } from 'react';
+
+import ModalEnroll from '@/components/modals/ModalEnroll';
+import SportPageHero from '@/components/SportPageHero';
+
+const BiatlonMainPage: FC = () => {
+	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [IsVisible, setIsVisible] = useState(false);
+
+	const toggleModal = () => {
+		if (isModalOpen) {
+			setIsVisible(false);
+			setTimeout(() => {
+				setIsModalOpen(false);
+			}, 300)
+		} else {
+			setIsVisible(true);
+			setTimeout(() => {
+				setIsModalOpen(true);
+			}, 300)
+			document.body.classList.add("modal-open");
+		}
+	};
+
+	const closeModal = () => {
+		setIsVisible(false);
+		setTimeout(() => {
+			setIsModalOpen(false);
+		}, 300)
+		document.body.classList.remove("modal-open");
+	};
 	return (
-		<section className="flex justify-center items-center pt-10 text-xl">
-			<h1>Biatlon</h1>
+		<section className="flex justify-center items-center pt-[22px]">
+			<SportPageHero bgUrl="bg-[url('/img/biatlonHero.jpg')]" toggleModal={toggleModal} />
+			<ModalEnroll isModalOpen={isModalOpen} closeModal={closeModal} IsVisible={IsVisible} />
 		</section>
 	);
 };
