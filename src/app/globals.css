@@ -166,7 +166,15 @@
 }
 
 .button {
-  @apply flex flex-col items-center justify-center text-base font-display rounded-sm bg-button hover:bg-button-hover cursor-pointer active:bg-button-press;
+  @apply flex flex-col items-center justify-center text-base font-display rounded-sm;
+}
+
+.button-active {
+  @apply bg-button hover:bg-button-hover cursor-pointer active:bg-button-press;
+}
+
+.button-disabled {
+  @apply bg-button-disable text-arrow;
 }
 
 .drop-menu-overlay {

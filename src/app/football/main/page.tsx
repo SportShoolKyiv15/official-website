@@ -34,7 +34,7 @@ const FootballMainPage: FC = () => {
 	};
 	return (
 		<section className="flex justify-center items-center pt-[22px]">
-			<div className='w-[356px] sm:w-[375px] lg:w-[1296px] h-[254px] md:h-[227px] lg:h-[300px] relative'>
+			<div className='w-[356px] sm:w-[375px] md:w-[680] lg:w-[1296px] h-[254px] md:h-[227px] lg:h-[300px] relative'>
 				<div className="absolute inset-0  bg-lightgray"></div>
 				<div className="absolute inset-0 bg-[url('/img/footballHero.jpg')] bg-cover bg-center bg-no-repeat rotate-y-180"></div>
 				<div className="absolute inset-0 football-hero-gradient"></div>
