@@ -35,7 +35,7 @@ const BiatlonMainPage: FC = () => {
 	};
 	return (
 		<section className="flex flex-col justify-center gap-[50px] md:gap-[80px] items-center pt-[22px]">
-			<SportPageHero bgUrl="bg-[url('/img/biatlonHeroImg.jpg')]" toggleModal={toggleModal} />
+			<SportPageHero bgUrl="bg-[url('/img/biatlonHeroPageImg.jpg')]" toggleModal={toggleModal} />
 			<SportFacility bgUrl="bg-[url('/img/sportFacilityImg2.jpg')]" title='Біатлон' />
 			<ModalEnroll isModalOpen={isModalOpen} closeModal={closeModal} IsVisible={IsVisible} />
 		</section>
