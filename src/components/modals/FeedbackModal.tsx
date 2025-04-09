@@ -211,14 +211,6 @@ const FeedbackModal: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisibl
 									onClick={handleClick}
 									onSubmit={handleSubmit}
 									isDisabled={isDisabled} />
-								{/* <button
-									type="submit"
-									onClick={handleClick}
-									onSubmit={handleSubmit}
-									disabled={isDisabled}
-									className={`flex flex-col items-center justify-center w-[327px] md:w-[297px] lg:w-[297px] h-[48px] md:h-[44px] lg:h-[48px] transform transition-transform duration-200 text-base font-display rounded-sm ${!isDisabled ? 'hover:scale-101 bg-button hover:bg-button-hover cursor-pointer active:bg-button-press' : 'bg-button-disable text-arrow'}`}>
-									<span>Відправити</span>
-								</button> */}
 							</form>
 						</div>
 					</div>
