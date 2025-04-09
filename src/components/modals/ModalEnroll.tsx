@@ -39,7 +39,7 @@ const ModalEnroll: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisible 
 	}, [isModalOpen, memoizedhandleKeyDown]);
 
 	return (
-		<div className={`${isModalOpen && 'modal-overlay relative z-10'}`} onClick={handleOverlayClick}>
+		<div className={`${isModalOpen && 'modal-overlay relative z-9'}`} onClick={handleOverlayClick}>
 			{isModalOpen &&
 				<div ref={modalRef} className={`absolute top-[107px] md:top-[192px] lg:top-[255px] right-[50%] translate-x-[50%] text-white bg-block-dark overflow: hidden; ${IsVisible && `modal-visible`}  ${!IsVisible && `modal-hidden`} rounded-sm`}>
 					<div className='w-[343px] md:w-[532px] lg:w-[608px] px-4 md:px-0 py-[34px] md:py-10 relative'>
