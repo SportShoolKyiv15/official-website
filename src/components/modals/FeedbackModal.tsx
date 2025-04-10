@@ -29,7 +29,7 @@ const FeedbackModal: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisibl
 	});
 	const [isDisabled, setIsDisabled] = useState(true);
 	const nameRegex = useMemo(() => /^[А-ЯҐЄІЇЬа-яґєіїьA-Za-z\s]+$/, []);
-	const phoneRegex = useMemo(() => /^\+380\d{9}$|^\+38\s\d{3}\s\d{3}\s\d{2}\s\d{2}$|^\+38\s\(0\d{2}\)\s\d{3}-\d{2}-\d{2}$/, []);
+	const phoneRegex = useMemo(() => /^\+380\d{9}$|^\+38\s\d{3}\s\d{3}\s\d{2}\s\d{2}$|^\+38\s\(0\d{2}\)\s\d{3}-\d{2}-\d{2}$|^\+\s38\s\(0\d{2}\)\s\d{3}-\d{2}-\d{2}$|^\+380\s\(\d{2}\)\s\d{3}-\d{2}-\d{2}$/, []);
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
