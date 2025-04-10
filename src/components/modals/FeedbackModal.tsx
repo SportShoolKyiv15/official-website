@@ -29,7 +29,7 @@ const FeedbackModal: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisibl
 	});
 	const [isDisabled, setIsDisabled] = useState(true);
 	const nameRegex = useMemo(() => /^[A-Za-zА-Яа-яЁёЇїІіЄєҐґ]+$/, []);
-	const phoneRegex = useMemo(() => /^\+?[0-9]{10,15}$/, []);
+	const phoneRegex = useMemo(() => /^\+380\d{9}$|^\+38\s\d{3}\s\d{3}\s\d{2}\s\d{2}$|^\+38\s\(0\d{2}\)\s\d{3}-\d{2}-\d{2}$/, []);
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -52,6 +52,11 @@ const FeedbackModal: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisibl
 			closeModal();
 		}
 	};
+
+	const handleClick = () => {
+		closeModal();
+		setFormData({ name: '', phone: '', message: '' });
+	}
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		console.log('Повідомлення відправлено')
@@ -117,10 +122,6 @@ const FeedbackModal: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisibl
 		}
 	};
 
-	const handleClick = () => {
-		closeModal();
-	};
-
 	const memoizedhandleKeyDown = useCallback(handleKeyDown, [isModalOpen, closeModal]);
 	useEffect(() => {
 		if (isModalOpen) {
@@ -148,7 +149,7 @@ const FeedbackModal: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisibl
 				<div ref={modalRef} className={`absolute top-[107px] md:top-[192px] lg:top-[255px] right-[50%] translate-x-[50%] text-white bg-block-dark overflow: hidden; ${IsVisible && `modal-visible`}  ${!IsVisible && `modal-hidden`} rounded-sm`}>
 					<div className='w-[343px] md:w-[532px] px-2 py-[28px] md:px-10 md:py-10 relative'>
 						<button
-							onClick={closeModal}
+							onClick={handleClick}
 							className="burger-menu absolute right-[10px] md:right-4 lg:right-5 top-[10px] md:top-4 lg:top-5 cursor-pointer">
 							<Image
 								src='/svg/iconCloseModal.svg'
@@ -208,7 +209,7 @@ const FeedbackModal: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisibl
 									/>
 								</div>
 								<SendButton
-									onClick={handleClick}
+									onClick={closeModal}
 									onSubmit={handleSubmit}
 									isDisabled={isDisabled} />
 							</form>
