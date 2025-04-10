@@ -74,7 +74,7 @@ const ContactsPage: FC = () => {
 					<Link href="tel:+38 (050) 534-76-70"> (050) 534-76-70</Link>
 				</p>
 			</div>
-			<div className='min-w-[300px] xs:w-[356px] sm:w-[375px] md:w-[720pxlg:w-[1296px] h-[187px] md:h-[209px] lg:h-[332px] mb-[50px] md:mb-20 lg:mb-25'>
+			<div className='min-w-[300px] xs:w-[356px] sm:w-[375px] md:w-[720px] lg:w-[1296px] h-[187px] md:h-[209px] lg:h-[332px] mb-[50px] md:mb-20 lg:mb-25'>
 				<MyGoogleMap sport='football' />
 			</div>
 			<div className="my-container md:flex md:justify-center mb-5 md:mb-9">
@@ -113,7 +113,7 @@ const ContactsPage: FC = () => {
 					<Link href="tel:+38 (050) 534-76-70"> (050) 534-76-70</Link>
 				</p>
 			</div>
-			<div className='min-w-[300px] xs:w-[356px] sm:w-[375px] md:w-[720pxlg:w-[1296px] h-[187px] md:h-[209px] lg:h-[332px] mb-[50px] md:mb-20 lg:mb-25'>
+			<div className='min-w-[300px] xs:w-[356px] sm:w-[375px] md:w-[720px] lg:w-[1296px] h-[187px] md:h-[209px] lg:h-[332px] mb-[50px] md:mb-20 lg:mb-25'>
 				<MyGoogleMap sport='sky' />
 			</div>
 			<ModalEnroll isModalOpen={isModalOpen} closeModal={closeModal} IsVisible={IsVisible} />
