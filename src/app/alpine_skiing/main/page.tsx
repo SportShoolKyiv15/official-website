@@ -39,13 +39,13 @@ const AlpineSkiingMainPage: FC = () => {
 		<section className="flex flex-col justify-center gap-[50px] md:gap-[80px] items-center pt-[22px]">
 			<SportPageHero bgUrl="bg-[url('/img/alpineSkiingHeroPageImg.jpg')]" toggleModal={toggleModal} directionImage='rotate-y-180' />
 			<div>
-				<div className="mb-5 md:mb-6">
+				<div className="mb-5 md:mb-6 pl-[10px] sm:pl-[15px] md:pl-0">
 					<Title type="section-subtitle">Лижна база</Title>
 				</div>
 				<SportFacility bgUrl="bg-[url('/img/sportFacilityImg2.jpg')]" />
 			</div>
 			<div>
-				<div className="mb-5 md:mb-9 lg:mb-8 md:text-center">
+				<div className="mb-5 md:mb-9 lg:mb-8 pl-[10px] sm:pl-[15px] md:pl-0 md:text-center">
 					<Title type="section-subtitle">Локація</Title>
 				</div>
 				<div className='min-w-[300px] xs:w-[356px] sm:w-[375px] md:w-[680] lg:w-[1296px] h-[187px] md:h-[209px] lg:h-[332px]'>
