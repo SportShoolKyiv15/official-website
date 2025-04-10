@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { useCallback, useEffect, useRef, useState, useMemo } from 'react';
 import Image from 'next/image';
 import axios from "axios";
@@ -20,7 +20,7 @@ type FormData = {
 	message: string;
 }
 
-const FeedbackModal: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisible }) => {
+const FeedbackModal: FC<ModalProps> = ({ isModalOpen, closeModal, IsVisible }) => {
 	const modalRef = useRef<HTMLDivElement | null>(null);
 	const [formData, setFormData] = useState<FormData>({
 		name: "",

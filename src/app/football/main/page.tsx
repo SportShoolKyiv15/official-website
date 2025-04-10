@@ -6,6 +6,8 @@ import { useState } from 'react';
 import ModalEnroll from '@/components/modals/ModalEnroll';
 import SportPageHero from '@/components/SportPageHero';
 import SportFacility from '@/components/SportFacility';
+import MyGoogleMap from '@/components/MyGoogleMap';
+import Title from '@/components/Title';
 
 const FootballMainPage: FC = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,7 +38,20 @@ const FootballMainPage: FC = () => {
 	return (
 		<section className="flex flex-col justify-center gap-[50px] md:gap-[80px] items-center pt-[22px]">
 			<SportPageHero bgUrl="bg-[url('/img/footballHeroPageImg.jpg')]" toggleModal={toggleModal} directionImage='rotate-y-180' />
-			<SportFacility bgUrl="bg-[url('/img/sportFacilityImg1.jpg')]" title='Футбол' />
+			<div>
+				<div className="mb-5 md:mb-6">
+					<Title type="section-subtitle">Футбольна база</Title>
+				</div>
+				<SportFacility bgUrl="bg-[url('/img/sportFacilityImg1.jpg')]" />
+			</div>
+			<div>
+				<div className="mb-5 md:mb-9 lg:mb-8 md:text-center">
+					<Title type="section-subtitle">Локація</Title>
+				</div>
+				<div className='min-w-[300px] xs:w-[356px] sm:w-[375px] md:w-[680] lg:w-[1296px] h-[187px] md:h-[209px] lg:h-[332px]'>
+					<MyGoogleMap sport='football' />
+				</div>
+			</div>
 			<ModalEnroll isModalOpen={isModalOpen} closeModal={closeModal} IsVisible={IsVisible} />
 		</section>
 	);

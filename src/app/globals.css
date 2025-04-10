@@ -162,7 +162,7 @@
 }
 
 .section-subtitle {
-  @apply text-start font-display font-semibold text-[20px] md:text-[22px] lg:text-[26px];
+  @apply font-display font-semibold text-[20px] md:text-[22px] lg:text-[26px];
 }
 
 .modal-title {
