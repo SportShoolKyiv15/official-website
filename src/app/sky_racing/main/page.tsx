@@ -69,7 +69,7 @@ const SkyRacingMainPage: FC = () => {
 					</div>
 					<p className='mb-[14px] md:mb-6 lg:mb-0 text-center font-display text-sm md:text-lg font-semibold md:font-normal leading-[150%] md:leading-[100%]'>Голосіївский район, вул. Ягідна 2</p>
 				</div>
-				<div className='min-w-[300px] xs:w-[356px] sm:w-[375px] md:w-[680] lg:w-[1296px] h-[187px] md:h-[209px] lg:h-[332px]'>
+				<div className='min-w-[300px] xs:w-[356px] sm:w-[375px] md:w-[720px] lg:w-[1296px] h-[187px] md:h-[209px] lg:h-[332px]'>
 					<MyGoogleMap sport='sky' />
 				</div>
 			</div>
