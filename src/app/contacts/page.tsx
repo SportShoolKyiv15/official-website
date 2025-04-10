@@ -41,7 +41,7 @@ const ContactsPage: FC = () => {
 				<Title type='page-title'>Контакти</Title>
 			</div>
 			<div className="mb-[50px] md:mb-20 lg:mb-25">
-				<SportPageHero bgUrl="bg-[url('/img/biatlonHeroPageImg.jpg')]" toggleModal={toggleModal} />
+				<SportPageHero bgUrl="bg-[url('/img/contactsHeroPageImg.jpg')]" toggleModal={toggleModal} />
 			</div>
 			<div className="my-container md:flex md:justify-center mb-5 md:mb-9">
 				<Title type="section-title">Футбол</Title>
