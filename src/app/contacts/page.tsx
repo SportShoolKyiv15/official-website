@@ -10,7 +10,7 @@ import SportFacility from '@/components/SportFacility';
 import MyGoogleMap from '@/components/MyGoogleMap';
 import Title from '@/components/Title';
 
-const ContactsPage: FC = () => {
+const FootballMainPage: FC = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [IsVisible, setIsVisible] = useState(false);
 
@@ -78,7 +78,7 @@ const ContactsPage: FC = () => {
 	);
 };
 
-export default ContactsPage;
+export default FootballMainPage;
 // 'use client';
 
 // import { FC, useState } from "react";
