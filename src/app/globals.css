@@ -154,7 +154,7 @@
 }
 
 .page-title {
-  @apply mb-3 md:mb-8 md:mb-[51px] font-display font-bold md:font-semibold text-2xl md:text-[26px] lg:text-[34px];
+  @apply font-display font-bold md:font-semibold text-2xl md:text-[26px] lg:text-[34px];
 }
 
 .section-title {

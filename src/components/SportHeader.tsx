@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState, FC } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
@@ -10,7 +10,7 @@ import { determineSportPage } from '@/helpers/determineSportPege';
 
 import { Sports } from '@/globaltypes/types';
 
-const SportHeader: React.FC = () => {
+const SportHeader: FC = () => {
 	const pathname = usePathname();
 	const pathnameArrow = pathname.split('/');
 	const [sport, setSport] = useState<Sports>();
@@ -41,7 +41,9 @@ const SportHeader: React.FC = () => {
 			<div className='md:hidden my-container z-8'>
 				{isMenuOpened && <div className='md:hidden drop-menu-overlay'></div>}
 				<div className='pt-[28px]'>
-					<Title type='page-title'>{titleText}</Title>
+					<div className='mb-3'>
+						<Title type='page-title'>{titleText}</Title>
+					</div>
 					{!isMenuOpened ?
 						<div className='flex justify-between items-center w-full page-nav bg-block-grey rounded-sm'>
 							<p>Розділи</p>
@@ -76,7 +78,9 @@ const SportHeader: React.FC = () => {
 			</div>
 			{/* Desktop and tablet sport header */}
 			<div className='hidden md:block my-container pt-15 pb-[18px]'>
-				<Title type='page-title'>{titleText}</Title>
+				<div className='md:mb-8 md:mb-[51px]'>
+					<Title type='page-title'>{titleText}</Title>
+				</div>
 				<nav>
 					<SportNavListItems sport={sport} subpage={subpage} />
 				</nav>
