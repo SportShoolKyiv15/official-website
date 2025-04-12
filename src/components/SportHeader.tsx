@@ -40,7 +40,7 @@ const SportHeader: FC = () => {
 			{/* Mobile sport header */}
 			<div className='md:hidden my-container z-8'>
 				{isMenuOpened && <div className='md:hidden drop-menu-overlay'></div>}
-				<div className='pt-[28px]'>
+				<div className='py-[28px]'>
 					<div className='mb-3'>
 						<Title type='page-title'>{titleText}</Title>
 					</div>
