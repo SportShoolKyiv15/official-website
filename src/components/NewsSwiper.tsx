@@ -307,7 +307,7 @@ const NewsSwiper: FC = () => {
 			</div>
 
 			<div className="my-container mx-auto overflow-hidden">
-				<ul onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} className={`flex lg:flex-wrap lg:items-center lg:justify-center gap-[22px] md:gap-6 ${extra}`}>
+				<ul onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} className={`flex lg:flex-wrap lg:items-center lg:justify-center gap-x-[22px] md:gap-x-6 ${extra}`}>
 					{NEWS_ITEMS[0] && NEWS_ITEMS.map((item, idx) => (
 						<SwiperCard
 							key={idx}
