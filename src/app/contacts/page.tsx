@@ -47,7 +47,7 @@ const ContactsPage: FC = () => {
 				<div className="page-container md:flex md:justify-center mb-5 md:mb-9">
 					<Title type="section-title">Футбол</Title>
 				</div>
-				<div className="flex flex-col lg:flex-row lg:justify-between">
+				<div className="page-container flex flex-col lg:flex-row lg:justify-between">
 					<div className="flex flex-col mb-2 lg:mb-5">
 						<div className='flex self-start md:self-center flex-col lg:flex-row justify-start lg:items-center w-full md:mb-9 lg:mb-0'>
 							<div className='flex justify-center items-center mb-[6px] lg:mb-0 lg:mr-[6px]'>
@@ -85,7 +85,7 @@ const ContactsPage: FC = () => {
 				<div className="page-container flex md:justify-center md:text-center mb-5 md:mb-8">
 					<Title type="section-title">Біатлон, Лижні гонки,<br className="md:hidden" /> Гірські лижі</Title>
 				</div>
-				<div className="flex flex-col lg:flex-row lg:justify-between">
+				<div className="page-container flex flex-col lg:flex-row lg:justify-between">
 					<div className="flex flex-col mb-2 lg:mb-5">
 						<div className='flex self-start md:self-center flex-col lg:flex-row justify-start lg:items-center w-full md:mb-9 lg:mb-0'>
 							<div className='flex justify-center items-center mb-[6px] lg:mb-0 lg:mr-[6px]'>
