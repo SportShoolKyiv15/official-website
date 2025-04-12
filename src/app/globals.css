@@ -107,6 +107,12 @@
 }
 
 @layer components {
+  .page-wrap {
+    @apply flex flex-col justify-center items-center gap-[50px] md:gap-20 lg:gap-25 mx-auto w-full sm:w-[375px] md:w-[720px] lg:w-[1440px] pt-[28px] md:pt-15 lg:pt-[70px];
+  }
+  .page-container {
+    @apply px-[10px] sm:px-[15px] md:px-[20px] lg:px-18;
+  }
   .my-container {
     @apply w-full xs:w-[356px] sm:w-[375px] md:w-[720px] lg:w-[1440px] xs:px-[10px] sm:px-[15px] md:px-[20px] lg:px-18;
   }
@@ -158,7 +164,7 @@
 }
 
 .section-title {
-  @apply text-start font-display font-semibold text-[22px] md:text-[26px] lg:text-[32px] tracking-[0.11px];
+  @apply text-start font-display font-semibold text-[22px] md:text-[26px] lg:text-[32px] tracking-[0.11px] leading-[150%];
 }
 
 .section-subtitle {

@@ -35,9 +35,9 @@ export default function Home(): React.JSX.Element {
 		document.body.classList.remove("modal-open");
 	};
 	return (
-		<section className="flex flex-col gap-[50px] md:gap-20 items-center pt-[28px] md:pt-6">
-			<div className="w-full sm:w-[375px] md:w-[680px] lg:w-[1296px] mx-auto">
-				<div className="flex flex-col md:flex-row items-center w-full pb-[13px]  md:pb-0 overflow-hidden">
+		<section className="page-wrap md:pt-[28px] lg:pt-[70px]">
+			<div className="flex flex-col justify-center items-center w-full md:px-5 lg:px-18 mx-auto">
+				<div className="flex flex-col justify-center md:flex-row items-center w-full pb-[13px] md:pb-0 overflow-hidden">
 					<Link
 						href={'/football/main'}
 						className="hero-nav-item start-form md:w-[35%]"
@@ -79,8 +79,8 @@ export default function Home(): React.JSX.Element {
 					<EnrollButton onClick={toggleModal} />
 				</div>
 			</div>
-			<div className="my-container flex flex-col md:flex-row md:flex-wrap items-center mx-auto lg:px-[28px] font-display">
-				<div className="flex flex-col items-center justify-center md:w-[50%] lg:w-[25%] py-5">
+			<div className="flex flex-col gap-5 md:gap-[42px] lg:gap-14 md:flex-row md:flex-wrap justify-center items-center font-display">
+				<div className="flex flex-col items-center justify-center w-[268px]">
 					<p className="text-center py-3 font-semibold text-[64px]">
 						90%
 					</p>
@@ -88,7 +88,7 @@ export default function Home(): React.JSX.Element {
 					<p className="text-center mt-3">Кандидат у майстри спорту</p>
 				</div>
 				<div className='md:hidden w-full h-[1px] bg-block-grey'></div>
-				<div className="flex flex-col items-center justify-center md:w-[50%] lg:w-[25%] py-5">
+				<div className="flex flex-col items-center justify-center w-[268px]">
 					<p className="text-center py-3 font-semibold text-[64px]">
 						500+
 					</p>
@@ -96,7 +96,7 @@ export default function Home(): React.JSX.Element {
 					<p className="text-center mt-3">спортсмени на змаганнях</p>
 				</div>
 				<div className='md:hidden w-full h-[1px] bg-block-grey'></div>
-				<div className="flex flex-col items-center justify-center md:w-[50%] lg:w-[25%] py-5">
+				<div className="flex flex-col items-center justify-center w-[268px]">
 					<p className="text-center py-3 font-semibold text-[64px]">
 						80%
 					</p>
@@ -104,7 +104,7 @@ export default function Home(): React.JSX.Element {
 					<p className="text-center mt-3">професійному спорті </p>
 				</div>
 				<div className='md:hidden w-full h-[1px] bg-block-grey'></div>
-				<div className="flex flex-col items-center justify-center md:w-[50%] lg:w-[25%] py-5">
+				<div className="flex flex-col items-center justify-center w-[268px]">
 					<p className="text-center py-3 font-semibold text-[64px]">
 						95%
 					</p>
@@ -126,7 +126,7 @@ export default function Home(): React.JSX.Element {
 				<div className="my-container flex justify-start w-full mx-auto mb-[22px]">
 					<Title type='section-title'>Новини</Title>
 				</div>
-				<div className="mb-[50px] md:mb-[80px] lg:mb-[100px]">
+				<div>
 					<NewsSwiper />
 				</div>
 			</div>
