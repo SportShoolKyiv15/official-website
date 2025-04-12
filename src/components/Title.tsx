@@ -10,13 +10,13 @@ const Title: FC<Props> = ({ type, children }) => {
 	switch (type) {
 
 		case "page-title":
-			return <p className="page-title">{children}</p>;
+			return <h1 className="page-title">{children}</h1>;
 		case "section-title":
-			return <p className="section-title">{children}</p>;
+			return <h2 className="section-title">{children}</h2>;
 		case "section-subtitle":
-			return <p className="section-subtitle">{children}</p>;
+			return <h3 className="section-subtitle">{children}</h3>;
 		case "modal-title":
-			return <p className="modal-title">{children}</p>;
+			return <h3 className="modal-title">{children}</h3>;
 		default:
 			return <p>{children}</p>;
 	};

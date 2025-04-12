@@ -42,7 +42,7 @@ export default function Home(): React.JSX.Element {
 						href={'/football/main'}
 						className="hero-nav-item start-form md:w-[35%]"
 					>
-						<div className="absolute inset-0  bg-lightgray"></div>
+						<div className="absolute inset-0 bg-lightgray"></div>
 						<div className="absolute inset-0 bg-[url('/img/heroImg.jpg')] bg-cover bg-center bg-no-repeat"></div>
 						<div className="absolute inset-0 hero-background-gadient"></div>
 						<div className="absolute left-4 lg:left-[38px] bottom-[28px] text-white font-display font-bold text-[26px] md:text-[20px] lg:text-[28px]">Футбол</div>
