@@ -28,7 +28,7 @@ const MyGoogleMap: FC<Props> = ({ sport }) => {
 
 	const handleMarkerClick = () => {
 		const url = `https://www.google.com/maps/dir/?api=1&destination=${destination.lat},${destination.lng}&origin=My+Location`;
-		window.open(url, "_blank"); // Відкриває Google Maps у новій вкладці
+		window.open(url, "_blank"); // Open Google Maps in a new tab
 	};
 
 	return (

@@ -275,7 +275,6 @@ const NewsSwiper: FC = () => {
 		setIdx(0);
 	}, [])
 
-	console.log('Index-OUT', idx)
 	return (
 		<>
 			<div className="lg:w-full relative mx-auto">

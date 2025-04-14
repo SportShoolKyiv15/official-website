@@ -59,7 +59,7 @@ const ModalEnroll: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisible 
 								height={24}
 								className='hidden md:block hover:scale-110' />
 						</button>
-						<div className='flex flex-col gap-8 md:gap-10'>
+						<div className='flex flex-col gap-8 md:gap-10 text-center'>
 							<Title type='modal-title'>Оберіть спортивну секцію</Title>
 							<div className='flex flex-col gap-[14px] items-center'>
 								<Title type='modal-title'>Футбол</Title>

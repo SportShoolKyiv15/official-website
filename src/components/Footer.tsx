@@ -13,6 +13,7 @@ const Footer: React.FC = () => {
 	// Reload neighbor component Nav for reset active menu item when we go to MainPage
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [IsVisible, setIsVisible] = useState(false);
+	const destination = { lat: 50.381320102022265, lng: 30.451163440177055 };
 	const { toggleUpdate } = useNav();
 
 	const toggleModal = () => {
@@ -38,26 +39,35 @@ const Footer: React.FC = () => {
 		document.body.classList.remove("modal-open");
 	};
 
+	const handleMarkerClick = () => {
+		const url = `https://www.google.com/maps/dir/?api=1&destination=${destination.lat},${destination.lng}&origin=My+Location`;
+		window.open(url, "_blank"); // Open Google Maps in a new tab
+	};
+
 	return (
 		<footer className={`bg-black flex justify-center ${isModalOpen ? 'z-99' : 'z-0'}`}>
 			<div className='my-container pt-5 md:pt-10 pb-4 md:pb-5'>
 				<div className='md:flex md:items-center md:mb-[12px] justify-between lg:mb-[19px]'>
 					<div className='flex justify-between items-center mb-[58px] md:mb-0'>
 						<div className='flex items-start'>
-							<Image
-								className="lg:hidden mr-[6px]"
-								src="/svg/iconLocation.svg"
-								alt="icon location"
-								width={24}
-								height={24}
-							/>
-							<Image
-								className="hidden lg:block mr-[10px]"
-								src="/svg/iconLocation.svg"
-								alt="icon location"
-								width={26}
-								height={26}
-							/>
+							<button onClick={handleMarkerClick} className='lg:hidden mr-[6px] cursor-pointer'>
+								<Image
+									className=""
+									src="/svg/iconLocation.svg"
+									alt="icon location"
+									width={24}
+									height={24}
+								/>
+							</button>
+							<button onClick={handleMarkerClick} className='hidden lg:block mr-[10px] cursor-pointer'>
+								<Image
+									className=""
+									src="/svg/iconLocation.svg"
+									alt="icon location"
+									width={26}
+									height={26}
+								/>
+							</button>
 							<div className='flex flex-col gap-[6px] font-display text-sm'>
 								<p>
 									<span className='text-base font-medium'>Київ, </span>
