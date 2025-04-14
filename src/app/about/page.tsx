@@ -27,7 +27,7 @@ const AboutPage: FC = () => {
 	return (
 		<section className="page-wrap md:px-5 lg:px-0 lg:w-[1296px]">
 			<div className="w-full">
-				<div className="w-full mb-6 md:mb-[28px] lg:mb-8">
+				<div className="xs:pl-[10px] sm:pl-[15px] md:pl-0 w-full mb-6 md:mb-[28px] lg:mb-8">
 					<Title type='page-title'>Про нас</Title>
 				</div>
 				<div className="lg:flex bg-block-dark md:rounded-sm">
