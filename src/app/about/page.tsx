@@ -26,44 +26,42 @@ const AboutPage: FC = () => {
 
 	return (
 		<section className="page-wrap md:px-5 lg:px-0 lg:w-[1296px]">
-			<div className="z-100">
-				<div className="w-full">
-					<div className="w-full mb-6 md:mb-[28px] lg:mb-8">
-						<Title type='page-title'>Про нас</Title>
-					</div>
-					<div className="lg:flex bg-block-dark md:rounded-sm">
-						<div className="lg:order-2 w-full lg:w-[636px] h-[269px] md:h-[354px] lg:h-[457] mb-[28px] md:mb-10 lg:mb-0 bg-[url('/img/aboutBgImg1.jpg')] bg-cover bg-lightgray"></div>
-						<div className="lg:oder-1 lg:w-[660px] px-4  md:px-0 md:pl-3 md:pr-[152px] pb-[18px] md:pb-3 lg:pl-[70px] lg:pr-16 lg:pt-[70px]">
-							<p className="mb-6 leading-[150%]">Ласкаво просимо до ДЮСШ №15 – місця, де народжуються чемпіони! Ми – сучасна дитяча спортивна школа, яка об’єднує дітей різного віку, допомагаючи їм розкрити свій потенціал у спорті та виховати в собі силу, дисципліну і командний дух</p>
-							<h4 className="mb-[6px] md:mb-[8px] text-lg font-semibold font-display">Наша місія</h4>
-							<p className="leading-[150%]">Ми прагнемо не лише навчати дітей спортивним навичкам, а й формувати у них любов до активного способу життя, витривалість та прагнення до саморозвитку. У нашій школі кожна дитина отримує можливість проявити свої здібності, розвивати характер і досягати нових висот.</p>
-						</div>
+			<div className="w-full">
+				<div className="w-full mb-6 md:mb-[28px] lg:mb-8">
+					<Title type='page-title'>Про нас</Title>
+				</div>
+				<div className="lg:flex bg-block-dark md:rounded-sm">
+					<div className="lg:order-2 w-full lg:w-[636px] h-[269px] md:h-[354px] lg:h-[457] mb-[28px] md:mb-10 lg:mb-0 bg-[url('/img/aboutBgImg1.jpg')] bg-cover bg-lightgray"></div>
+					<div className="lg:oder-1 lg:w-[660px] px-4  md:px-0 md:pl-3 md:pr-[152px] pb-[18px] md:pb-3 lg:pl-[70px] lg:pr-16 lg:pt-[70px]">
+						<p className="mb-6 leading-[150%]">Ласкаво просимо до ДЮСШ №15 – місця, де народжуються чемпіони! Ми – сучасна дитяча спортивна школа, яка об’єднує дітей різного віку, допомагаючи їм розкрити свій потенціал у спорті та виховати в собі силу, дисципліну і командний дух</p>
+						<h4 className="mb-[6px] md:mb-[8px] text-lg font-semibold font-display">Наша місія</h4>
+						<p className="leading-[150%]">Ми прагнемо не лише навчати дітей спортивним навичкам, а й формувати у них любов до активного способу життя, витривалість та прагнення до саморозвитку. У нашій школі кожна дитина отримує можливість проявити свої здібності, розвивати характер і досягати нових висот.</p>
 					</div>
 				</div>
-				<div className="w-full">
-					<div className="w-full mb-[22px] lg:mb-8 md:mb-6 text-center">
-						<h2 className="text-[26px] font-semibold">Наші переваги</h2>
-					</div>
-					<div className="lg:flex bg-block-dark md:rounded-sm">
-						<div className="w-full lg:w-[437px] h-[269px] lg:h-[371px] mb-[28px] md:mb-10 lg:mb-0 bg-[url('/img/aboutBgImg2.jpg')] bg-cover bg-lightgray"></div>
-						<div className="lg:w-[859px] px-4 md:px-0 md:pl-3 md:pr-[152px] lg:pl-[70px] lg:pr-[264px] lg:pt-[60px] pb-[18px] md:pb-3">
-							<p className="mb-6 leading-[150%]">Ласкаво просимо до ДЮСШ №15 – місця, де народжуються чемпіони! Ми – сучасна дитяча спортивна школа, яка об’єднує дітей різного віку, допомагаючи їм розкрити свій потенціал у спорті та виховати в собі силу, дисципліну і командний дух</p>
-							<h4 className="mb-[6px] md:mb-[8px] text-lg font-semibold font-display">Наша місія</h4>
-							<p className="leading-[150%]">Ми прагнемо не лише навчати дітей спортивним навичкам, а й формувати у них любов до активного способу життя, витривалість та прагнення до саморозвитку. У нашій школі кожна дитина отримує можливість проявити свої здібності, розвивати характер і досягати нових висот.</p>
-						</div>
+			</div>
+			<div className="w-full">
+				<div className="w-full mb-[22px] lg:mb-8 md:mb-6 text-center">
+					<h2 className="text-[26px] font-semibold">Наші переваги</h2>
+				</div>
+				<div className="lg:flex bg-block-dark md:rounded-sm">
+					<div className="w-full lg:w-[437px] h-[269px] lg:h-[371px] mb-[28px] md:mb-10 lg:mb-0 bg-[url('/img/aboutBgImg2.jpg')] bg-cover bg-lightgray"></div>
+					<div className="lg:w-[859px] px-4 md:px-0 md:pl-3 md:pr-[152px] lg:pl-[70px] lg:pr-[264px] lg:pt-[60px] pb-[18px] md:pb-3">
+						<p className="mb-6 leading-[150%]">Ласкаво просимо до ДЮСШ №15 – місця, де народжуються чемпіони! Ми – сучасна дитяча спортивна школа, яка об’єднує дітей різного віку, допомагаючи їм розкрити свій потенціал у спорті та виховати в собі силу, дисципліну і командний дух</p>
+						<h4 className="mb-[6px] md:mb-[8px] text-lg font-semibold font-display">Наша місія</h4>
+						<p className="leading-[150%]">Ми прагнемо не лише навчати дітей спортивним навичкам, а й формувати у них любов до активного способу життя, витривалість та прагнення до саморозвитку. У нашій школі кожна дитина отримує можливість проявити свої здібності, розвивати характер і досягати нових висот.</p>
 					</div>
 				</div>
-				<div className="w-full">
-					<div className="w-full mb-[22px] md:mb-6 lg:mb-8">
-						<h2 className="text-[26px] font-semibold">Наші переваги</h2>
-					</div>
-					<div className="lg:flex bg-block-dark md:rounded-sm">
-						<div className="order-2 w-full lg:w-[754px] h-[269px] lg:h-[371px] mb-[28px] md:mb-10 lg:mb-0 bg-[url('/img/aboutBgImg3.jpg')] bg-cover bg-lightgray"></div>
-						<div className="order-1 lg:w-[542px] px-4 md:px-0 md:pl-3 md:pr-[152px] lg:pl-[19px] lg:pr-6 lg:pt-15 pb-[18px] md:pb-3 ">
-							<p className="mb-6 leading-[150%]">Ласкаво просимо до ДЮСШ №15 – місця, де народжуються чемпіони! Ми – сучасна дитяча спортивна школа, яка об’єднує дітей різного віку, допомагаючи їм розкрити свій потенціал у спорті та виховати в собі силу, дисципліну і командний дух</p>
-							<h4 className="mb-[6px] md:mb-[8px] text-lg font-semibold font-display">Наша місія</h4>
-							<p className="leading-[150%]">Ми прагнемо не лише навчати дітей спортивним навичкам, а й формувати у них любов до активного способу життя, витривалість та прагнення до саморозвитку. У нашій школі кожна дитина отримує можливість проявити свої здібності, розвивати характер і досягати нових висот.</p>
-						</div>
+			</div>
+			<div className="w-full">
+				<div className="w-full mb-[22px] md:mb-6 lg:mb-8">
+					<h2 className="text-[26px] font-semibold">Наші переваги</h2>
+				</div>
+				<div className="lg:flex bg-block-dark md:rounded-sm">
+					<div className="order-2 w-full lg:w-[754px] h-[269px] lg:h-[371px] mb-[28px] md:mb-10 lg:mb-0 bg-[url('/img/aboutBgImg3.jpg')] bg-cover bg-lightgray"></div>
+					<div className="order-1 lg:w-[542px] px-4 md:px-0 md:pl-3 md:pr-[152px] lg:pl-[19px] lg:pr-6 lg:pt-15 pb-[18px] md:pb-3 ">
+						<p className="mb-6 leading-[150%]">Ласкаво просимо до ДЮСШ №15 – місця, де народжуються чемпіони! Ми – сучасна дитяча спортивна школа, яка об’єднує дітей різного віку, допомагаючи їм розкрити свій потенціал у спорті та виховати в собі силу, дисципліну і командний дух</p>
+						<h4 className="mb-[6px] md:mb-[8px] text-lg font-semibold font-display">Наша місія</h4>
+						<p className="leading-[150%]">Ми прагнемо не лише навчати дітей спортивним навичкам, а й формувати у них любов до активного способу життя, витривалість та прагнення до саморозвитку. У нашій школі кожна дитина отримує можливість проявити свої здібності, розвивати характер і досягати нових висот.</p>
 					</div>
 				</div>
 			</div>
