@@ -220,7 +220,7 @@ const AboutPage: FC = () => {
 					</div>
 					<div className="lg:flex  lg:pb-16">
 						<div className="order-2 lg:w-1/2 lg:pl-[34px]">
-							<div className="flex justify-end md:justify-center items-end mb-[10px]">
+							<div className="flex justify-end md:justify-center lg:justify-start items-end mb-[10px]">
 								<Image
 									src="/svg/historyDividingParagrafsIcon.svg"
 									alt="icon dividing"
