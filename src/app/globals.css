@@ -172,7 +172,7 @@
 }
 
 .modal-title {
-  @apply text-center font-display font-semibold text-[22px] md:text-[24px] tracking-[0.5%] md:tracking-[0%];
+  @apply font-display font-semibold text-[22px] md:text-[24px] tracking-[0.5%] md:tracking-[0%];
 }
 
 .button {
@@ -234,15 +234,41 @@
 
 @keyframes slideInRight {
   from {
-    transform: translateX(0);
+    transform: translateY(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateY(-100%);
   }
 }
 
 .burger-menu-hidden {
   animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.history-visible {
+  animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.history-hidden {
+  animation: slideOut 0.8s ease-out;
 }
 
 @keyframes modalOn {
@@ -255,7 +281,7 @@
 }
 
 .modal-visible {
-  animation: modalOn 0.3s ease-out;
+  animation: modalOn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes modalOf {
@@ -268,7 +294,7 @@
 }
 
 .modal-hidden {
-  animation: modalOf 0.3s ease-out;
+  animation: modalOf 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-background-gadient {

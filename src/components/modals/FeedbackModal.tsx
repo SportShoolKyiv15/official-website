@@ -164,7 +164,7 @@ const FeedbackModal: FC<ModalProps> = ({ isModalOpen, closeModal, IsVisible }) =
 								height={24}
 								className='hidden md:block hover:scale-110' />
 						</button>
-						<div className='flex flex-col gap-6 md:gap-10'>
+						<div className='flex flex-col gap-6 md:gap-10 text-center'>
 							<Title type='modal-title'>Форма зв&apos;язку</Title>
 							<form onSubmit={handleSubmit} className="flex flex-col items-center max-w-md">
 								<div className='w-full mb-[22px] md:mb-[26px] relative'>
