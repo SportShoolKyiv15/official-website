@@ -47,9 +47,9 @@ const Nav: React.FC = () => {
 		<nav className='w-full bg-nav-gradient' aria-label='Основна навігація'>
 			<div className='my-container m-auto pt-[10px] md:pt-[6px] pb-1 md:pb-[6px] relative'>
 				{/* Mobile navigathion */}
-				<div className='md:hidden flex justify-center gap-4 sm:gap-10 text-sm sm:text-base'>
+				<div className='md:hidden flex justify-center gap-4 sm:gap-6 text-sm sm:text-base'>
 					{isToggled ?
-						<button onClick={onSwitch} className='w-5 h-5 absolute top-[2px] left-4'>
+						<button onClick={onSwitch} className='w-5 h-5 absolute top-1/2 -translate-y-1/2 left-4'>
 							<Image
 								src="/svg/double-arrow-left.svg"
 								alt="icon arrow"
@@ -57,7 +57,7 @@ const Nav: React.FC = () => {
 								height={20}
 							/>
 						</button> :
-						<button onClick={onSwitch} className='w-5 h-5 absolute top-[2px] right-4'>
+						<button onClick={onSwitch} className='w-5 h-5 absolute top-1/2 -translate-y-1/2 right-4'>
 							<Image
 								src="/svg/double-arrow-right.svg"
 								alt="icon arrow"
