@@ -53,7 +53,7 @@ const AboutPage: FC = () => {
 				</div>
 			</div>
 			<div className="w-full">
-				<div className="w-full mb-[22px] md:mb-6 lg:mb-8">
+				<div className="w-full mb-[22px] md:mb-6 lg:mb-8 pr-[15px] md:pl-0 text-right md:text-center lg:text-left">
 					<h2 className="text-[26px] font-semibold">Наші переваги</h2>
 				</div>
 				<div className="lg:flex bg-block-dark md:rounded-sm">
@@ -86,12 +86,12 @@ const AboutPage: FC = () => {
 			</div>
 			{isOpened &&
 				<div className={`page-container lg:px-22 ${IsVisible ? 'history-visible' : 'history-hidden'}`}>
-					<div className="lg:flex lg:mb-16">
+					<div className="lg:flex lg:mb-16 relative">
 						<div className="lg:w-1/2 pr-[34px]">
 							<div className="mb-[10px] relative">
 								<h2 className="text-[26px] font-semibold">2000 рік</h2>
 								<Image
-									src="/svg/historyDividingParagrafsIconStart.svg"
+									src="/svg/historyStartParagrfsIcon.svg"
 									alt="icon dividing"
 									width={15}
 									height={47}
@@ -128,12 +128,33 @@ const AboutPage: FC = () => {
 								className="hidden lg:block"
 							/>
 						</div>
+						<Image
+							src="/svg/bigVertLineIcon.svg"
+							alt="line icon"
+							width={2}
+							height={80}
+							className="hidden lg:block absolute top-4 left-1/2"
+						/>
+						<Image
+							src="/svg/redCircleIcon.svg"
+							alt="line icon"
+							width={14}
+							height={14}
+							className="hidden lg:block absolute top-4 left-1/2 -translate-x-[45%] -translate-y-1/2"
+						/>
+						<Image
+							src="/svg/smallVertLineIcon.svg"
+							alt="line icon"
+							width={2}
+							height={50}
+							className="hidden lg:block absolute -bottom-[54px] left-1/2"
+						/>
 					</div>
-					<div className="lg:flex  lg:pb-16">
+					<div className="lg:flex  lg:pb-16 relative">
 						<div className="order-2 lg:w-1/2 lg:pl-[34px]">
 							<div className="flex justify-end md:justify-center lg:justify-start items-end mb-[10px]">
 								<Image
-									src="/svg/historyDividingParagrafsIcon.svg"
+									src="/svg/historyParagrafIcon.svg"
 									alt="icon dividing"
 									width={15}
 									height={47}
@@ -173,15 +194,36 @@ const AboutPage: FC = () => {
 								className="hidden lg:block"
 							/>
 						</div>
+						<Image
+							src="/svg/bigVertLineIcon.svg"
+							alt="line icon"
+							width={2}
+							height={80}
+							className="hidden lg:block absolute top-4 right-1/2"
+						/>
+						<Image
+							src="/svg/redCircleIcon.svg"
+							alt="line icon"
+							width={14}
+							height={14}
+							className="hidden lg:block absolute top-4 right-1/2 translate-x-[45%] -translate-y-1/2"
+						/>
+						<Image
+							src="/svg/smallVertLineIcon.svg"
+							alt="line icon"
+							width={2}
+							height={50}
+							className="hidden lg:block absolute bottom-[10px] right-1/2"
+						/>
 					</div>
-					<div className="lg:flex lg:mb-16">
+					<div className="lg:flex lg:mb-16 relative">
 						<div className="lg:w-1/2 pr-[34px]">
 							<div className="flex justify-start items-end mb-[10px]">
 								<div className="mr-[26px] md:mr-[194px]">
 									<h2 className="text-[26px] font-semibold">2020 рік</h2>
 								</div>
 								<Image
-									src="/svg/historyDividingParagrafsIcon.svg"
+									src="/svg/historyParagrafIcon.svg"
 									alt="icon dividing"
 									width={15}
 									height={47}
@@ -217,12 +259,33 @@ const AboutPage: FC = () => {
 								className="hidden lg:block"
 							/>
 						</div>
+						<Image
+							src="/svg/bigVertLineIcon.svg"
+							alt="line icon"
+							width={2}
+							height={80}
+							className="hidden lg:block absolute top-4 left-1/2"
+						/>
+						<Image
+							src="/svg/redCircleIcon.svg"
+							alt="line icon"
+							width={14}
+							height={14}
+							className="hidden lg:block absolute top-4 left-1/2 -translate-x-[45%] -translate-y-1/2"
+						/>
+						<Image
+							src="/svg/smallVertLineIcon.svg"
+							alt="line icon"
+							width={2}
+							height={50}
+							className="hidden lg:block absolute -bottom-[54px] left-1/2"
+						/>
 					</div>
-					<div className="lg:flex  lg:pb-16">
+					<div className="lg:flex  lg:pb-16 relative">
 						<div className="order-2 lg:w-1/2 lg:pl-[34px]">
 							<div className="flex justify-end md:justify-center lg:justify-start items-end mb-[10px]">
 								<Image
-									src="/svg/historyDividingParagrafsIcon.svg"
+									src="/svg/historyParagrafIcon.svg"
 									alt="icon dividing"
 									width={15}
 									height={47}
@@ -261,6 +324,20 @@ const AboutPage: FC = () => {
 								className="hidden lg:block"
 							/>
 						</div>
+						<Image
+							src="/svg/bigVertLineIcon.svg"
+							alt="line icon"
+							width={2}
+							height={80}
+							className="hidden lg:block absolute top-4 right-1/2"
+						/>
+						<Image
+							src="/svg/redCircleIcon.svg"
+							alt="line icon"
+							width={14}
+							height={14}
+							className="hidden lg:block absolute top-4 right-1/2 translate-x-[45%] -translate-y-1/2"
+						/>
 					</div>
 				</div>
 			}
