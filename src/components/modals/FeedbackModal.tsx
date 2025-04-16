@@ -168,7 +168,7 @@ const FeedbackModal: FC<ModalProps> = ({ isModalOpen, closeModal, IsVisible }) =
 							<Title type='modal-title'>Форма зв&apos;язку</Title>
 							<form onSubmit={handleSubmit} className="flex flex-col items-center max-w-md">
 								<div className='w-full mb-[22px] md:mb-[26px] relative'>
-									<label htmlFor="name" className="block text-sm text-light mb-[6px]">Ім&apos;я<span className='text-button-swipe-card'>*</span></label>
+									<label htmlFor="name" className="block text-sm text-left text-light mb-[6px]">Ім&apos;я<span className='text-button-swipe-card'>*</span></label>
 									<input
 										type="text"
 										id="name"
@@ -182,7 +182,7 @@ const FeedbackModal: FC<ModalProps> = ({ isModalOpen, closeModal, IsVisible }) =
 									{(!nameRegex.test(formData.name) && (formData.name !== '')) && <p className='absolute right-0 -bottom-[22px] text-sm text-active-gallery-nav'>Невірний формат</p>}
 								</div>
 								<div className='w-full mb-[22px] md:mb-[26px] relative'>
-									<label htmlFor="phone" className="block text-sm text-light mb-[6px]">Телефон<span className='text-button-swipe-card'>*</span></label>
+									<label htmlFor="phone" className="block text-sm text-left text-light mb-[6px]">Телефон<span className='text-button-swipe-card'>*</span></label>
 									<input
 										type="tel"
 										id="phone"
@@ -196,7 +196,7 @@ const FeedbackModal: FC<ModalProps> = ({ isModalOpen, closeModal, IsVisible }) =
 									{(!phoneRegex.test(formData.phone) && (formData.phone !== '')) && <p className='absolute right-0 -bottom-[22px] text-sm text-active-gallery-nav'>Введіть номер</p>}
 								</div>
 								<div className='w-full mb-[40px]'>
-									<label htmlFor="message" className="block text-sm text-light mb-[6px]">Коментар<span className='text-button-swipe-card'>*</span></label>
+									<label htmlFor="message" className="block text-sm text-left text-light mb-[6px]">Коментар<span className='text-button-swipe-card'>*</span></label>
 									<textarea
 										name="message"
 										id="message"
