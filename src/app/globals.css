@@ -314,6 +314,14 @@
   );
 }
 
+.coach-foto-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 45.86%,
+    rgba(0, 0, 0, 0.8) 94.71%
+  );
+}
+
 .sport-movement {
   background: url("../../public/img/sportMovement.png") rgb(211, 211, 211) 0px
     0px / 100% 109.562% no-repeat;

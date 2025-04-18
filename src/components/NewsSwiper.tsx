@@ -308,14 +308,18 @@ const NewsSwiper: FC = () => {
 			<div className="my-container mx-auto overflow-hidden">
 				<ul onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} className={`flex lg:flex-wrap lg:items-center lg:justify-center gap-x-[22px] md:gap-x-6 ${extra}`}>
 					{NEWS_ITEMS[0] && NEWS_ITEMS.map((item, idx) => (
-						<SwiperCard
+						<li
 							key={idx}
-							idx={idx}
-							bgUrl={item.bgUrl}
-							title={item.title}
-							text={item.text} date={item.date}
-							toggleModal={toggleModal}
-							getIdx={getIdx} />
+							className="flex flex-col gap-[22px] min-w-[336px] sm:min-w-[345px] md:min-w-[328px] lg:min-w-[416px] h-[320px] md:h-[292px] lg:h-[368px] rounded-[4px] items-center relative"
+						>
+							<SwiperCard
+								idx={idx}
+								bgUrl={item.bgUrl}
+								title={item.title}
+								text={item.text} date={item.date}
+								toggleModal={toggleModal}
+								getIdx={getIdx} />
+						</li>
 					))}
 				</ul>
 				{idx !== undefined &&
