@@ -10,7 +10,7 @@ const FootballComandList: FC = () => {
 		<ul className="w-full flex flex-col gap-4">
 			{FOOTBALL_TEAMS &&
 				FOOTBALL_TEAMS.map((item, idx) => (
-					<li key={idx} className="flex flex-col px-3 md:px-5 py-2 md:pt-[13px] md:pb-[15px] bg-block-dark rounded-sm">
+					<li key={idx} className="flex flex-col px-2 md:px-5 py-2 md:pt-[13px] md:pb-[15px] bg-block-dark rounded-sm relative">
 						<FootballTeamCard team={FOOTBALL_TEAMS[idx]} />
 					</li>
 				))}
