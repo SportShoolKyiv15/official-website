@@ -24,6 +24,7 @@ const FootballTeamCard: FC<Props> = ({ team }) => {
 	const handleClick = () => {
 		setIsOpened(isOpened => !isOpened);
 	};
+
 	return (
 		<>
 			<div className="flex justify-between items-center px-1">
