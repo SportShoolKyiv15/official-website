@@ -7,7 +7,7 @@ import FootballTeamCard from "./FootballTeamCard";
 
 const FootballComandsList: FC = () => {
 	const [activeIndex, setActiveIndex] = useState<number | null>(null);
-	const [IsVisible, setIsVisible] = useState(false);
+
 	return (
 		<ul className="w-full flex flex-col gap-4">
 			{FOOTBALL_TEAMS &&
@@ -15,18 +15,8 @@ const FootballComandsList: FC = () => {
 					<li key={idx} className="flex flex-col px-2 md:px-5 py-2 md:pt-[13px] md:pb-[15px] bg-block-dark rounded-sm relative overflow-hidden">
 						<FootballTeamCard
 							isOpened={activeIndex === idx}
-							isVisible={IsVisible}
-							onToggle={() => {
-								if (activeIndex === idx) {
-									setIsVisible(false);
-									setTimeout(() => {
-										setActiveIndex(null);
-									}, 800)
-								} else {
-									setIsVisible(true);
-									setActiveIndex(idx);
-								}
-							}}
+							onToggle={() =>
+								setActiveIndex((prev) => (prev === idx ? null : idx))}
 							team={FOOTBALL_TEAMS[idx]} />
 					</li>
 				))}

@@ -8,20 +8,9 @@ import Image from "next/image";
 
 const AboutPage: FC = () => {
 	const [isOpened, setIsOpened] = useState(false);
-	const [isVisible, setIsVisible] = useState(false);
 
 	const handleClick = () => {
-		if (isOpened) {
-			setIsVisible(false);
-			setTimeout(() => {
-				setIsOpened(false);
-			}, 800)
-		} else {
-			setIsVisible(true);
-			// setTimeout(() => {
-			setIsOpened(true);
-			// }, 800)
-		}
+		setIsOpened(isOpened => !isOpened);
 	};
 
 	return (
@@ -84,263 +73,263 @@ const AboutPage: FC = () => {
 					}
 				</button>
 			</div>
-			{isOpened &&
-				<div className={`page-container lg:px-22 ${isVisible ? 'is-visible' : 'is-hidden'}`}>
-					<div className="lg:flex lg:mb-16 relative">
-						<div className="lg:w-1/2 pr-[34px]">
-							<div className="mb-[10px] relative">
-								<h2 className="text-[26px] font-semibold">2000 рік</h2>
-								<Image
-									src="/svg/historyStartParagrfsIcon.svg"
-									alt="icon dividing"
-									width={15}
-									height={47}
-									className="absolute -top-[70%] left-1/2 -translate-x-1/2mr-[26px] lg:hidden"
-								/>
-							</div>
-							<p className="mb-6 md:mb-4 leading-[150%]">
-								Наша спортивна школа відкрила свої двері для перших учнів. Метою створення було популяризація здорового способу життя та виховання юних спортсменів. У перші роки функціонувало лише кілька секцій, але вже тоді ми заклали фундамент для майбутнього розвитку.
-							</p>
-							<p className="mb-6 md:mb-[28px] leading-[150%]">
-								Завдяки ентузіазму перших тренерів та підтримці батьків, школа швидко стала популярною серед дітей, які мріяли про великі спортивні досягнення. Ми розпочали активну роботу з розвитку методик тренувань, щоб зробити навчальний процес ефективним і доступним для всіх.
-							</p>
-						</div>
-						<div className="lg:w-1/2 h-[215px] md:h-[426px] lg:h-[351px] mb-[42px] md:mb-15 lg:mb-0 lg:mt-[95px] overflow-hidden">
+			{/* {isOpened && */}
+			<div className={`page-container lg:px-22 ${isOpened ? 'history-opened' : 'history-closed'}`}>
+				<div className="lg:flex lg:mb-16 relative">
+					<div className="lg:w-1/2 pr-[34px]">
+						<div className="mb-[10px] relative">
+							<h2 className="text-[26px] font-semibold">2000 рік</h2>
 							<Image
-								src="/img/historyImg1.jpg"
-								alt="history foto"
-								width={345}
-								height={215}
-								className="md:hidden"
-							/>
-							<Image
-								src="/img/historyImg1.jpg"
-								alt="history foto"
-								width={680}
-								height={426}
-								className="hidden md:block lg:hidden"
-							/>
-							<Image
-								src="/img/historyImg1.jpg"
-								alt="history foto"
-								width={561}
-								height={351}
-								className="hidden lg:block"
+								src="/svg/historyStartParagrfsIcon.svg"
+								alt="icon dividing"
+								width={15}
+								height={47}
+								className="absolute -top-[70%] left-1/2 -translate-x-1/2mr-[26px] lg:hidden"
 							/>
 						</div>
+						<p className="mb-6 md:mb-4 leading-[150%]">
+							Наша спортивна школа відкрила свої двері для перших учнів. Метою створення було популяризація здорового способу життя та виховання юних спортсменів. У перші роки функціонувало лише кілька секцій, але вже тоді ми заклали фундамент для майбутнього розвитку.
+						</p>
+						<p className="mb-6 md:mb-[28px] leading-[150%]">
+							Завдяки ентузіазму перших тренерів та підтримці батьків, школа швидко стала популярною серед дітей, які мріяли про великі спортивні досягнення. Ми розпочали активну роботу з розвитку методик тренувань, щоб зробити навчальний процес ефективним і доступним для всіх.
+						</p>
+					</div>
+					<div className="lg:w-1/2 h-[215px] md:h-[426px] lg:h-[351px] mb-[42px] md:mb-15 lg:mb-0 lg:mt-[95px] overflow-hidden">
 						<Image
-							src="/svg/bigVertLineIcon.svg"
-							alt="line icon"
-							width={2}
-							height={80}
-							className="hidden lg:block absolute top-4 left-1/2"
+							src="/img/historyImg1.jpg"
+							alt="history foto"
+							width={345}
+							height={215}
+							className="md:hidden"
 						/>
 						<Image
-							src="/svg/redCircleIcon.svg"
-							alt="line icon"
-							width={14}
-							height={14}
-							className="hidden lg:block absolute top-4 left-1/2 -translate-x-[45%] -translate-y-1/2"
+							src="/img/historyImg1.jpg"
+							alt="history foto"
+							width={680}
+							height={426}
+							className="hidden md:block lg:hidden"
 						/>
 						<Image
-							src="/svg/smallVertLineIcon.svg"
-							alt="line icon"
-							width={2}
-							height={50}
-							className="hidden lg:block absolute -bottom-[54px] left-1/2"
+							src="/img/historyImg1.jpg"
+							alt="history foto"
+							width={561}
+							height={351}
+							className="hidden lg:block"
 						/>
 					</div>
-					<div className="lg:flex  lg:pb-16 relative">
-						<div className="order-2 lg:w-1/2 lg:pl-[34px]">
-							<div className="flex justify-end md:justify-center lg:justify-start items-end mb-[10px]">
-								<Image
-									src="/svg/historyParagrafIcon.svg"
-									alt="icon dividing"
-									width={15}
-									height={47}
-									className="md:order-2 mr-[26px] lg:hidden"
-								/>
-								<div className="md:order-1 md:mr-5">
-									<h2 className="text-[26px] font-semibold">2010 рік</h2>
-								</div>
-							</div>
-							<p className="mb-6 md:mb-4 leading-[150%]">
-								Школа активно розширювалася, відкрилися нові секції з футболу, легкої атлетики та гімнастики. Наші вихованці почали брати участь у міських та обласних змаганнях, виборюючи перші медалі та нагороди.
-							</p>
-							<p className="mb-6 md:mb-[28px] leading-[150%]">
-								Попит на заняття стрімко зростав, тому ми інвестували в оновлення спортивного інвентарю та розширення тренерського складу. Саме в цей період школа почала співпрацювати з місцевими спортивними федераціями, що дало змогу брати участь у більшій кількості змагань і популяризувати нашу діяльність серед молоді
-							</p>
-						</div>
-						<div className="order-1 lg:w-1/2 h-[215px] md:h-[426px] lg:h-[351px] mb-[42px] md:mb-15 lg:mb-0 lg:mt-[95px] overflow-hidden">
-							<Image
-								src="/img/historyImg2.jpg"
-								alt="history foto"
-								width={343}
-								height={215}
-								className="md:hidden"
-							/>
-							<Image
-								src="/img/historyImg2.jpg"
-								alt="history foto"
-								width={680}
-								height={426}
-								className="hidden md:block lg:hidden"
-							/>
-							<Image
-								src="/img/historyImg2.jpg"
-								alt="history foto"
-								width={561}
-								height={351}
-								className="hidden lg:block"
-							/>
-						</div>
-						<Image
-							src="/svg/bigVertLineIcon.svg"
-							alt="line icon"
-							width={2}
-							height={80}
-							className="hidden lg:block absolute top-4 right-1/2"
-						/>
-						<Image
-							src="/svg/redCircleIcon.svg"
-							alt="line icon"
-							width={14}
-							height={14}
-							className="hidden lg:block absolute top-4 right-1/2 translate-x-[45%] -translate-y-1/2"
-						/>
-						<Image
-							src="/svg/smallVertLineIcon.svg"
-							alt="line icon"
-							width={2}
-							height={50}
-							className="hidden lg:block absolute bottom-[10px] right-1/2"
-						/>
-					</div>
-					<div className="lg:flex lg:mb-16 relative">
-						<div className="lg:w-1/2 pr-[34px]">
-							<div className="flex justify-start items-end mb-[10px]">
-								<div className="mr-[26px] md:mr-[194px]">
-									<h2 className="text-[26px] font-semibold">2020 рік</h2>
-								</div>
-								<Image
-									src="/svg/historyParagrafIcon.svg"
-									alt="icon dividing"
-									width={15}
-									height={47}
-									className="lg:hidden"
-								/>
-							</div>
-							<p className="mb-6 md:mb-4 leading-[150%]">
-								Школа активно розширювалася, відкрилися нові секції з футболу, легкої атлетики та гімнастики. Наші вихованці почали брати участь у міських та обласних змаганнях, виборюючи перші медалі та нагороди.	</p>
-							<p className="mb-6 md:mb-[28px] leading-[150%]">
-								Попит на заняття стрімко зростав, тому ми інвестували в оновлення спортивного інвентарю та розширення тренерського складу. Саме в цей період школа почала співпрацювати з місцевими спортивними федераціями, що дало змогу брати участь у більшій кількості змагань і популяризувати нашу діяльність серед молоді.
-							</p>
-						</div>
-						<div className="lg:w-1/2 h-[215px] lg:h-[351px] md:h-[426px] mb-[42px] md:mb-15 lg:mb-0 lg:mt-[95px] overflow-hidden">
-							<Image
-								src="/img/historyImg3.jpg"
-								alt="history foto"
-								width={343}
-								height={215}
-								className="md:hidden"
-							/>
-							<Image
-								src="/img/historyImg3.jpg"
-								alt="history foto"
-								width={680}
-								height={426}
-								className="hidden md:block"
-							/>
-							<Image
-								src="/img/historyImg3.jpg"
-								alt="history foto"
-								width={561}
-								height={351}
-								className="hidden lg:block"
-							/>
-						</div>
-						<Image
-							src="/svg/bigVertLineIcon.svg"
-							alt="line icon"
-							width={2}
-							height={80}
-							className="hidden lg:block absolute top-4 left-1/2"
-						/>
-						<Image
-							src="/svg/redCircleIcon.svg"
-							alt="line icon"
-							width={14}
-							height={14}
-							className="hidden lg:block absolute top-4 left-1/2 -translate-x-[45%] -translate-y-1/2"
-						/>
-						<Image
-							src="/svg/smallVertLineIcon.svg"
-							alt="line icon"
-							width={2}
-							height={50}
-							className="hidden lg:block absolute -bottom-[54px] left-1/2"
-						/>
-					</div>
-					<div className="lg:flex  lg:pb-16 relative">
-						<div className="order-2 lg:w-1/2 lg:pl-[34px]">
-							<div className="flex justify-end md:justify-center lg:justify-start items-end mb-[10px]">
-								<Image
-									src="/svg/historyParagrafIcon.svg"
-									alt="icon dividing"
-									width={15}
-									height={47}
-									className="md:order-2 mr-[26px] lg:hidden"
-								/>
-								<div className="md:order-1 md:mr-5">
-									<h2 className="text-[26px] font-semibold">2025 рік</h2>
-								</div>
-							</div>
-							<p className="mb-6 md:mb-4 leading-[150%]">
-								Сьогодні ми – одна з провідних дитячих спортивних шкіл регіону. Наші вихованці представляють Україну на міжнародних змаганнях, виборюючи престижні нагороди. Ми продовжуємо розвиватися, відкривати нові напрямки та допомагати дітям досягати своїх мрій у спорті!</p>
-							<p className="mb-6 md:mb-[28px] leading-[150%]">
-								Наша школа активно співпрацює з європейськими та світовими спортивними організаціями, що дозволяє нашим вихованцям тренуватися за сучасними методиками та брати участь у міжнародних тренувальних зборах. Ми пишаємося тим, що змогли виховати спортсменів, які стають прикладом для молодших поколінь.
-							</p>
-						</div>
-						<div className="order-1 lg:w-1/2 h-[215px] md:h-[426px] lg:h-[351px] mb-[42px] md:mb-15 lg:mb-0 lg:mt-[95px] overflow-hidden">
-							<Image
-								src="/img/historyImg4.jpg"
-								alt="history foto"
-								width={343}
-								height={215}
-								className="md:hidden"
-							/>
-							<Image
-								src="/img/historyImg4.jpg"
-								alt="history foto"
-								width={680}
-								height={426}
-								className="hidden md:block lg:hidden"
-							/>
-							<Image
-								src="/img/historyImg4.jpg"
-								alt="history foto"
-								width={561}
-								height={351}
-								className="hidden lg:block"
-							/>
-						</div>
-						<Image
-							src="/svg/bigVertLineIcon.svg"
-							alt="line icon"
-							width={2}
-							height={80}
-							className="hidden lg:block absolute top-4 right-1/2"
-						/>
-						<Image
-							src="/svg/redCircleIcon.svg"
-							alt="line icon"
-							width={14}
-							height={14}
-							className="hidden lg:block absolute top-4 right-1/2 translate-x-[45%] -translate-y-1/2"
-						/>
-					</div>
+					<Image
+						src="/svg/bigVertLineIcon.svg"
+						alt="line icon"
+						width={2}
+						height={80}
+						className="hidden lg:block absolute top-4 left-1/2"
+					/>
+					<Image
+						src="/svg/redCircleIcon.svg"
+						alt="line icon"
+						width={14}
+						height={14}
+						className="hidden lg:block absolute top-4 left-1/2 -translate-x-[45%] -translate-y-1/2"
+					/>
+					<Image
+						src="/svg/smallVertLineIcon.svg"
+						alt="line icon"
+						width={2}
+						height={50}
+						className="hidden lg:block absolute -bottom-[54px] left-1/2"
+					/>
 				</div>
-			}
+				<div className="lg:flex  lg:pb-16 relative">
+					<div className="order-2 lg:w-1/2 lg:pl-[34px]">
+						<div className="flex justify-end md:justify-center lg:justify-start items-end mb-[10px]">
+							<Image
+								src="/svg/historyParagrafIcon.svg"
+								alt="icon dividing"
+								width={15}
+								height={47}
+								className="md:order-2 mr-[26px] lg:hidden"
+							/>
+							<div className="md:order-1 md:mr-5">
+								<h2 className="text-[26px] font-semibold">2010 рік</h2>
+							</div>
+						</div>
+						<p className="mb-6 md:mb-4 leading-[150%]">
+							Школа активно розширювалася, відкрилися нові секції з футболу, легкої атлетики та гімнастики. Наші вихованці почали брати участь у міських та обласних змаганнях, виборюючи перші медалі та нагороди.
+						</p>
+						<p className="mb-6 md:mb-[28px] leading-[150%]">
+							Попит на заняття стрімко зростав, тому ми інвестували в оновлення спортивного інвентарю та розширення тренерського складу. Саме в цей період школа почала співпрацювати з місцевими спортивними федераціями, що дало змогу брати участь у більшій кількості змагань і популяризувати нашу діяльність серед молоді
+						</p>
+					</div>
+					<div className="order-1 lg:w-1/2 h-[215px] md:h-[426px] lg:h-[351px] mb-[42px] md:mb-15 lg:mb-0 lg:mt-[95px] overflow-hidden">
+						<Image
+							src="/img/historyImg2.jpg"
+							alt="history foto"
+							width={343}
+							height={215}
+							className="md:hidden"
+						/>
+						<Image
+							src="/img/historyImg2.jpg"
+							alt="history foto"
+							width={680}
+							height={426}
+							className="hidden md:block lg:hidden"
+						/>
+						<Image
+							src="/img/historyImg2.jpg"
+							alt="history foto"
+							width={561}
+							height={351}
+							className="hidden lg:block"
+						/>
+					</div>
+					<Image
+						src="/svg/bigVertLineIcon.svg"
+						alt="line icon"
+						width={2}
+						height={80}
+						className="hidden lg:block absolute top-4 right-1/2"
+					/>
+					<Image
+						src="/svg/redCircleIcon.svg"
+						alt="line icon"
+						width={14}
+						height={14}
+						className="hidden lg:block absolute top-4 right-1/2 translate-x-[45%] -translate-y-1/2"
+					/>
+					<Image
+						src="/svg/smallVertLineIcon.svg"
+						alt="line icon"
+						width={2}
+						height={50}
+						className="hidden lg:block absolute bottom-[10px] right-1/2"
+					/>
+				</div>
+				<div className="lg:flex lg:mb-16 relative">
+					<div className="lg:w-1/2 pr-[34px]">
+						<div className="flex justify-start items-end mb-[10px]">
+							<div className="mr-[26px] md:mr-[194px]">
+								<h2 className="text-[26px] font-semibold">2020 рік</h2>
+							</div>
+							<Image
+								src="/svg/historyParagrafIcon.svg"
+								alt="icon dividing"
+								width={15}
+								height={47}
+								className="lg:hidden"
+							/>
+						</div>
+						<p className="mb-6 md:mb-4 leading-[150%]">
+							Школа активно розширювалася, відкрилися нові секції з футболу, легкої атлетики та гімнастики. Наші вихованці почали брати участь у міських та обласних змаганнях, виборюючи перші медалі та нагороди.	</p>
+						<p className="mb-6 md:mb-[28px] leading-[150%]">
+							Попит на заняття стрімко зростав, тому ми інвестували в оновлення спортивного інвентарю та розширення тренерського складу. Саме в цей період школа почала співпрацювати з місцевими спортивними федераціями, що дало змогу брати участь у більшій кількості змагань і популяризувати нашу діяльність серед молоді.
+						</p>
+					</div>
+					<div className="lg:w-1/2 h-[215px] lg:h-[351px] md:h-[426px] mb-[42px] md:mb-15 lg:mb-0 lg:mt-[95px] overflow-hidden">
+						<Image
+							src="/img/historyImg3.jpg"
+							alt="history foto"
+							width={343}
+							height={215}
+							className="md:hidden"
+						/>
+						<Image
+							src="/img/historyImg3.jpg"
+							alt="history foto"
+							width={680}
+							height={426}
+							className="hidden md:block"
+						/>
+						<Image
+							src="/img/historyImg3.jpg"
+							alt="history foto"
+							width={561}
+							height={351}
+							className="hidden lg:block"
+						/>
+					</div>
+					<Image
+						src="/svg/bigVertLineIcon.svg"
+						alt="line icon"
+						width={2}
+						height={80}
+						className="hidden lg:block absolute top-4 left-1/2"
+					/>
+					<Image
+						src="/svg/redCircleIcon.svg"
+						alt="line icon"
+						width={14}
+						height={14}
+						className="hidden lg:block absolute top-4 left-1/2 -translate-x-[45%] -translate-y-1/2"
+					/>
+					<Image
+						src="/svg/smallVertLineIcon.svg"
+						alt="line icon"
+						width={2}
+						height={50}
+						className="hidden lg:block absolute -bottom-[54px] left-1/2"
+					/>
+				</div>
+				<div className="lg:flex  lg:pb-16 relative">
+					<div className="order-2 lg:w-1/2 lg:pl-[34px]">
+						<div className="flex justify-end md:justify-center lg:justify-start items-end mb-[10px]">
+							<Image
+								src="/svg/historyParagrafIcon.svg"
+								alt="icon dividing"
+								width={15}
+								height={47}
+								className="md:order-2 mr-[26px] lg:hidden"
+							/>
+							<div className="md:order-1 md:mr-5">
+								<h2 className="text-[26px] font-semibold">2025 рік</h2>
+							</div>
+						</div>
+						<p className="mb-6 md:mb-4 leading-[150%]">
+							Сьогодні ми – одна з провідних дитячих спортивних шкіл регіону. Наші вихованці представляють Україну на міжнародних змаганнях, виборюючи престижні нагороди. Ми продовжуємо розвиватися, відкривати нові напрямки та допомагати дітям досягати своїх мрій у спорті!</p>
+						<p className="mb-6 md:mb-[28px] leading-[150%]">
+							Наша школа активно співпрацює з європейськими та світовими спортивними організаціями, що дозволяє нашим вихованцям тренуватися за сучасними методиками та брати участь у міжнародних тренувальних зборах. Ми пишаємося тим, що змогли виховати спортсменів, які стають прикладом для молодших поколінь.
+						</p>
+					</div>
+					<div className="order-1 lg:w-1/2 h-[215px] md:h-[426px] lg:h-[351px] mb-[42px] md:mb-15 lg:mb-0 lg:mt-[95px] overflow-hidden">
+						<Image
+							src="/img/historyImg4.jpg"
+							alt="history foto"
+							width={343}
+							height={215}
+							className="md:hidden"
+						/>
+						<Image
+							src="/img/historyImg4.jpg"
+							alt="history foto"
+							width={680}
+							height={426}
+							className="hidden md:block lg:hidden"
+						/>
+						<Image
+							src="/img/historyImg4.jpg"
+							alt="history foto"
+							width={561}
+							height={351}
+							className="hidden lg:block"
+						/>
+					</div>
+					<Image
+						src="/svg/bigVertLineIcon.svg"
+						alt="line icon"
+						width={2}
+						height={80}
+						className="hidden lg:block absolute top-4 right-1/2"
+					/>
+					<Image
+						src="/svg/redCircleIcon.svg"
+						alt="line icon"
+						width={14}
+						height={14}
+						className="hidden lg:block absolute top-4 right-1/2 translate-x-[45%] -translate-y-1/2"
+					/>
+				</div>
+			</div>
+			{/* } */}
 		</section>
 	);
 };
