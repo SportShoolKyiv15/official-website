@@ -16,7 +16,7 @@ const FootballComandsList: FC = () => {
 		FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT.forEach(() => {
 			cardRefs.current.push(React.createRef<HTMLDivElement>());
 		});
-	}
+	};
 
 	useEffect(() => {
 		if (FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT.length) {
@@ -25,7 +25,7 @@ const FootballComandsList: FC = () => {
 					setActiveIndex(idx);
 					updateComand('');
 				}
-			}, [comand])
+			}, [comand]);
 		}
 	});
 
