@@ -1,10 +1,13 @@
 "use client";
 
-import { FC, useState } from "react";
+import { FC } from "react";
 import Image from "next/image";
 import ResultButton from "./buttons/ResultsButton";
 
 type Props = {
+	isOpened: boolean,
+	onToggle: () => void,
+	isVisible: boolean,
 	team: {
 		coaches: {
 			bgUrl: string,
@@ -17,13 +20,7 @@ type Props = {
 	};
 }
 
-const FootballTeamCard: FC<Props> = ({ team }) => {
-
-	const [isOpened, setIsOpened] = useState(false);
-
-	const handleClick = () => {
-		setIsOpened(isOpened => !isOpened);
-	};
+const FootballTeamCard: FC<Props> = ({ team, isOpened, isVisible, onToggle }) => {
 
 	return (
 		<>
@@ -32,7 +29,7 @@ const FootballTeamCard: FC<Props> = ({ team }) => {
 					<h3 className="md:w-[140px] mb-[6px] md:mb-0 md:mr-[47px] lg:mr-[70px] font-display text-lg md:text-xl lg:text-[22px] font-semibold md:font-bold lg:tracking-[0.5%]">{team.name}</h3>
 					<p className="md:mr-[63px] leading-[120%]">{`Головний тренер: ${team?.coaches[0]?.name}`}</p>
 				</div>
-				<button onClick={handleClick} className="w-[22px] h-[22px] cursor-pointer">
+				<button onClick={onToggle} className="w-[22px] h-[22px] cursor-pointer">
 					<Image
 						src='/svg/arrow-down.svg'
 						alt='Arrow'
@@ -42,7 +39,7 @@ const FootballTeamCard: FC<Props> = ({ team }) => {
 				</button>
 			</div>
 			{isOpened &&
-				<div className="flex flex-col lg:flex-row md:flex-wrap md:justify-between lg:justify-start lg:gap-[71px] mt-5 md:mt-6 md:px-5 lg:px-0 md:pb-[9px] lg:pb-[118px]">
+				<div className={`flex flex-col lg:flex-row md:flex-wrap md:justify-between lg:justify-start lg:gap-[71px] mt-5 md:mt-6 md:px-5 lg:px-0 md:pb-[9px] lg:pb-[118px] ${isVisible ? 'is-visible' : 'is-hidden'}`}>
 					<div className="hidden md:block absolute left-[49px] lg:left-[360px] bottom-[13px] lg:bottom-[88px] w-[569px] lg:w-[914px] md:h-[358px] lg:h-[318px] bg-drop-menu"></div>
 					<Image
 						src={team.bgUrl}

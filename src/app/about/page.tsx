@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const AboutPage: FC = () => {
 	const [isOpened, setIsOpened] = useState(false);
-	const [IsVisible, setIsVisible] = useState(false);
+	const [isVisible, setIsVisible] = useState(false);
 
 	const handleClick = () => {
 		if (isOpened) {
@@ -85,7 +85,7 @@ const AboutPage: FC = () => {
 				</button>
 			</div>
 			{isOpened &&
-				<div className={`page-container lg:px-22 ${IsVisible ? 'history-visible' : 'history-hidden'}`}>
+				<div className={`page-container lg:px-22 ${isVisible ? 'is-visible' : 'is-hidden'}`}>
 					<div className="lg:flex lg:mb-16 relative">
 						<div className="lg:w-1/2 pr-[34px]">
 							<div className="mb-[10px] relative">
