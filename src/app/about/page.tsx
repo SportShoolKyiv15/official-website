@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FC } from "react";
+import { useState, FC, useRef, useEffect, RefObject } from "react";
 
 import Title from "@/components/Title";
 import Image from "next/image";
@@ -8,10 +8,22 @@ import Image from "next/image";
 
 const AboutPage: FC = () => {
 	const [isOpened, setIsOpened] = useState(false);
+	const expandedBlockRef: RefObject<HTMLDivElement | null> = useRef(null);
 
 	const handleClick = () => {
 		setIsOpened(isOpened => !isOpened);
 	};
+
+	useEffect(() => {
+		if (isOpened && expandedBlockRef.current) {
+			setTimeout(() => {
+				expandedBlockRef.current?.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start'
+				});
+			}, 400); // почекаємо, доки розкриється
+		}
+	}, [isOpened]);
 
 	return (
 		<section className="page-wrap md:px-5 lg:px-0 lg:w-[1296px]">
@@ -54,7 +66,7 @@ const AboutPage: FC = () => {
 					</div>
 				</div>
 			</div>
-			<div className={`flex items-center gap-[15px]`}>
+			<div ref={expandedBlockRef} className={`flex items-center gap-[15px]`}>
 				<p className="text-[22px] font-diplay font-semibold text-button-swipe-card">Історія школи</p>
 				<button onClick={handleClick} className="cursor-pointer">
 					{isOpened ?
@@ -73,7 +85,6 @@ const AboutPage: FC = () => {
 					}
 				</button>
 			</div>
-			{/* {isOpened && */}
 			<div className={`page-container lg:px-22 ${isOpened ? 'history-opened' : 'history-closed'}`}>
 				<div className="lg:flex lg:mb-16 relative">
 					<div className="lg:w-1/2 pr-[34px]">
@@ -329,7 +340,6 @@ const AboutPage: FC = () => {
 					/>
 				</div>
 			</div>
-			{/* } */}
 		</section>
 	);
 };
