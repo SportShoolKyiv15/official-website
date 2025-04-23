@@ -7,12 +7,11 @@ import FootballChampionshipTableTitle from "./FootballChampionshipTableTitle";
 import FootballChampionshipTable from "./FootballChampionshipTable";
 import { setTableColDisplacemet1 } from "@/utils/setTableColDisplacemet1";
 import { setTableColDisplacemet2 } from "@/utils/setTableColDisplacemet2";
-// import MyButton from "./buttons/MyButton";
 
 type Props = {
 	isOpened: boolean,
 	onToggle: () => void,
-	isVisible: boolean,
+	// isVisible: boolean,
 	championshipDuflu: {
 		name: string;
 		comands: {
@@ -42,7 +41,12 @@ type Props = {
 let count = 0;
 let count2 = 0;
 
-const FootballTeamCard: FC<Props> = ({ championshipDuflu, championshipKyiv, isOpened, isVisible, onToggle }) => {
+const FootballTeamCard: FC<Props> = ({
+	championshipDuflu,
+	championshipKyiv,
+	isOpened,
+	// isVisible,
+	onToggle }) => {
 
 	const [extra, setExtra] = useState('')
 	const [extra2, setExtra2] = useState('');
@@ -139,33 +143,31 @@ const FootballTeamCard: FC<Props> = ({ championshipDuflu, championshipKyiv, isOp
 
 	return (
 		<div>
-			<div className="flex justify-between items-center px-1">
-				<div className="flex flex-col md:flex-row md:items-center w-[297px] md:w-full">
+			<button onClick={onToggle} className="flex justify-between w-full items-center px-1 cursor-pointer">
+				<div className="flex md:items-center w-[297px] md:w-full">
 					<h3 className="md:w-[140px] mb-[6px] md:mb-0 md:mr-[47px] lg:mr-[70px] font-display text-lg md:text-xl lg:text-[22px] font-semibold md:font-bold lg:tracking-[0.5%]">{championshipDuflu.name}</h3>
 				</div>
-				<button onClick={onToggle} className="w-[22px] h-[22px] cursor-pointer">
+				<div className="w-[22px] h-[22px]">
 					<Image
 						src='/svg/arrow-down.svg'
 						alt='Arrow'
 						width={22}
 						height={22}
 						className={`${isOpened && "rotate-180"}`} />
-				</button>
+				</div>
+			</button>
+			<div className={`flex flex-col md:justify-between lg:justify-start gap-[50px] lg:gap-[60px] ${isOpened ? 'item-opened mt-5 md:mt-6  md:pb-[9px] lg:pb-5' : 'item-closed'}`}>
+				<div>
+					<p className="mb-[18px] text-center lg:text-lg font-display font-semibold">Чемпіонат ДЮФЛУ</p>
+					<FootballChampionshipTableTitle extra={countIcon * 103} />
+					<FootballChampionshipTable handleTouchStart={handleTouchStart} handleTouchEnd={handleTouchEnd} ref={tableRef1} extra={extra} comands={championshipDuflu.comands} />
+				</div>
+				<div>
+					<p className="mb-[18px] text-center lg:text-lg font-display font-semibold">Чемпіонат Києва</p>
+					<FootballChampionshipTableTitle extra={countIcon2 * 103} />
+					<FootballChampionshipTable handleTouchStart={handleTouchStart} handleTouchEnd={handleTouchEnd} ref={tableRef2} extra={extra2} comands={championshipKyiv.comands} />
+				</div>
 			</div>
-			{isOpened &&
-				<div className={`flex flex-col lg:flex-row md:flex-wrap md:justify-between lg:justify-start gap-[50px] lg:gap-[60px] mt-5 md:mt-6  md:pb-[9px] lg:pb-5 ${isVisible ? 'is-visible' : 'is-hidden'}`}>
-					<div>
-						<p className="mb-[18px] text-center lg:text-lg font-display font-semibold">Чемпіонат ДЮФЛУ</p>
-						<FootballChampionshipTableTitle extra={countIcon * 103} />
-						<FootballChampionshipTable handleTouchStart={handleTouchStart} handleTouchEnd={handleTouchEnd} ref={tableRef1} extra={extra} comands={championshipDuflu.comands} />
-
-					</div>
-					<div>
-						<p className="mb-[18px] text-center lg:text-lg font-display font-semibold">Чемпіонат Києва</p>
-						<FootballChampionshipTableTitle extra={countIcon2 * 103} />
-						<FootballChampionshipTable handleTouchStart={handleTouchStart} handleTouchEnd={handleTouchEnd} ref={tableRef2} extra={extra2} comands={championshipKyiv.comands} />
-					</div>
-				</div>}
 		</div>
 	);
 };

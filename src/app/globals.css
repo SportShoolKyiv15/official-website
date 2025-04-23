@@ -274,6 +274,35 @@
   animation: slideOut 0.8s ease-out;
 }
 
+.item-opened {
+  max-height: 762px;
+  opacity: 1;
+  visibility: visible;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.8s ease;
+}
+
+.item-closed {
+  max-height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.history-opened {
+  max-height: 3500px;
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.history-closed {
+  max-height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
 @keyframes modalOn {
   from {
     transform: scale(0);
