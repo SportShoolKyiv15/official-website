@@ -6,8 +6,7 @@ import { useEffect } from "react";
 import { setSliderDisplacement } from "@/utils/setSliderDisplacement";
 import SwiperCard from "./SwiperCard";
 import useWindowWidth from "@/helpers/windowsSize";
-// import ArrowIconLeft from "./ArrowIconLeft";
-// import ArrowIconRight from "./ArrowIconRight";
+
 import { NEWS_ITEMS } from "@/data/constants";
 import NewsModal from "./modals/NewsModal";
 
@@ -285,7 +284,6 @@ const NewsSwiper: FC = () => {
 						onClick={hanleClickLeft}
 						disabled={isActiveLeft}
 					>
-						{/* <ArrowIconLeft color={`${!isActiveLeft ? 'arrow-active' : 'arrow'}`} /> */}
 						<svg className={`${!isActiveLeft ? 'text-arrow-active' : 'text-arrow'}`} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M16.125 9L1.875 9M1.875 9L7.125 14.25M1.875 9L7.125 3.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
 						</svg>
@@ -297,7 +295,6 @@ const NewsSwiper: FC = () => {
 						onClick={hanleClickRight}
 						disabled={isActiveRight}
 					>
-						{/* <ArrowIconRight color={`${!isActiveRight ? 'arrow-active' : 'arrow'}`} /> */}
 						<svg className={`${!isActiveRight ? 'text-arrow-active' : 'text-arrow'}`} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M1.875 9L16.125 9M16.125 9L10.875 14.25M16.125 9L10.875 3.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
 						</svg>

@@ -1,12 +1,13 @@
 "use client";
 
-import { FC, useState, useRef } from "react";
+import { FC, useState, useRef, useEffect } from "react";
 import Image from "next/image";
 
 import FootballChampionshipTableTitle from "./FootballChampionshipTableTitle";
 import FootballChampionshipTable from "./FootballChampionshipTable";
 import { setTableColDisplacemet1 } from "@/utils/setTableColDisplacemet1";
 import { setTableColDisplacemet2 } from "@/utils/setTableColDisplacemet2";
+import useWindowWidth from "@/helpers/windowsSize";
 
 type Props = {
 	isOpened: boolean,
@@ -54,6 +55,8 @@ const FootballTeamCard: FC<Props> = ({
 	const tableRef2 = useRef<HTMLTableElement | null>(null);
 	const [countIcon, setCountIcon] = useState(0);
 	const [countIcon2, setCountIcon2] = useState(0);
+	const [isXS, setIsXS] = useState(false);
+	const withWindow = useWindowWidth();
 
 	let xStart: number | null = null;
 	let yStart: number | null = null;
@@ -95,8 +98,13 @@ const FootballTeamCard: FC<Props> = ({
 							count = count - 1;
 						};
 						if (0 <= count && count <= 3) {
-							setTableColDisplacemet1(count, 103);
-							setExtra('swiperOnMoveTable1');
+							if (isXS) {
+								setTableColDisplacemet1(count, 100);
+								setExtra('swiperOnMoveTable1');
+							} else {
+								setTableColDisplacemet1(count, 103);
+								setExtra('swiperOnMoveTable1');
+							}
 						}
 					} else {
 						if (count < 3) {
@@ -104,8 +112,13 @@ const FootballTeamCard: FC<Props> = ({
 							count = count + 1;
 						};
 						if (0 <= count && count <= 3) {
-							setTableColDisplacemet1(count, 103);
-							setExtra('swiperOnMoveTable1');
+							if (isXS) {
+								setTableColDisplacemet1(count, 100);
+								setExtra('swiperOnMoveTable1');
+							} else {
+								setTableColDisplacemet1(count, 103);
+								setExtra('swiperOnMoveTable1');
+							}
 						};
 					}
 				};
@@ -140,6 +153,15 @@ const FootballTeamCard: FC<Props> = ({
 		xStart = null;
 		yStart = null;
 	};
+
+	// determine screen width
+	useEffect(() => {
+		if (withWindow !== undefined && withWindow < 375) {
+			setIsXS(true);
+		} else {
+			setIsXS(false);
+		};
+	}, [withWindow]);
 
 	return (
 		<div>

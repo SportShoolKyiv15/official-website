@@ -275,7 +275,7 @@
 }
 
 .item-opened {
-  max-height: 762px;
+  max-height: 800px;
   opacity: 1;
   visibility: visible;
   overflow: hidden;

@@ -18,11 +18,11 @@ type Props = {
 const FootballChampionshipTable = forwardRef<HTMLTableElement, Props>(function FootballServicesTable({ extra, handleTouchStart, handleTouchEnd, comands }, ref: Ref<HTMLTableElement>) {
 
 	return (
-		<table onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} ref={ref} className="border-collapse w-[327px] md:w-[640px] lg:w-[1256px] text-sm md:text-base overflow-hidden">
+		<table onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} ref={ref} className="border-collapse text-sm md:text-base">
 			<thead>
-				<tr className="flex md:table-row text-center w-[327px] md:w-[640px] lg:w-[1256px] h-[50px] text-black-text bg-table-title overflow-hidde">
+				<tr className="flex md:table-row text-center h-[50px] text-black-text bg-table-title overflow-hidde">
 					<th className="hidden md:table-cell w-[31px] lg:w-[39px] border-r border-arrow bg-table-title">#</th>
-					<th className="flex justify-center items-center md:table-cell min-w-[220px] sm:min-w-[224px] md:min-w-[267px] lg:w-[702px] align-middle border-r border-arrow bg-table-title z-9"><span className="">Команди</span></th>
+					<th className="flex justify-center items-center md:table-cell min-w-[220px] sm:min-w-[225px] md:min-w-[267px] lg:w-[702px] align-middle border-r border-arrow bg-table-title z-9"><span className="">Команди</span></th>
 					<th className={`flex justify-center items-center md:table-cell min-w-[50px] sm:min-w-[51px] md:min-w-[51px] lg:w-[267px] border-r border-arrow bg-table-title ${extra}`}>Ігор</th>
 					<th className={`flex justify-center items-center md:table-cell min-w-[50px] sm:min-w-[52px] md:min-w-[60px] lg:w-[248px] border-r border-arrow bg-table-title ${extra}`}>Очки</th>
 					<th className={`flex justify-center items-center md:table-cell min-w-[50px] smmin-w-[51px] md:min-w-[45px] lg:w-[267px]  border-r border-arrow bg-table-title ${extra}`}>Ніч</th>
@@ -34,7 +34,7 @@ const FootballChampionshipTable = forwardRef<HTMLTableElement, Props>(function F
 			<tbody>
 				{comands.length &&
 					comands.map((item, idx) => (
-						<tr key={idx} className="flex md:table-row text-center w-[327px] md:w-[640px] overflow-hidde">
+						<tr key={idx} className="flex md:table-row text-center">
 							<td className="hidden md:table-cell w[31px] border-x border-b border-arrow">{idx + 1}</td>
 							<td className="flex justify-start items-center md:table-cell min-w-[220px] sm:min-w-[224px] md:min-w-[267px] px-[5px] md:px-[14px] py-2 leading-[150%] text-left border-x border-b border-arrow bg-block-dark z-9">{item.name}</td>
 							<td className={`flex justify-center items-center md:table-cell min-w-[50px] sm:min-w-[51px] md:min-w-[51px] border-r border-b border-arrow ${extra}`}>{item.games}</td>
