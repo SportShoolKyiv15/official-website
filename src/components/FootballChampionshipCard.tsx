@@ -134,8 +134,13 @@ const FootballTeamCard: FC<Props> = ({
 							count2 = count2 - 1;
 						};
 						if (0 <= count2 && count2 <= 3) {
-							setTableColDisplacemet2(count2, 103);
-							setExtra2('swiperOnMoveTable2');
+							if (isXS) {
+								setTableColDisplacemet2(count2, 100);
+								setExtra2('swiperOnMoveTable2');
+							} else {
+								setTableColDisplacemet2(count2, 103);
+								setExtra2('swiperOnMoveTable2');
+							}
 						}
 					} else {
 						if (count2 < 3) {
@@ -143,8 +148,13 @@ const FootballTeamCard: FC<Props> = ({
 							count2 = count2 + 1;
 						};
 						if (0 <= count2 && count2 <= 3) {
-							setTableColDisplacemet2(count2, 103);
-							setExtra2('swiperOnMoveTable2');
+							if (isXS) {
+								setTableColDisplacemet2(count2, 100);
+								setExtra2('swiperOnMoveTable2');
+							} else {
+								setTableColDisplacemet2(count2, 103);
+								setExtra2('swiperOnMoveTable2');
+							}
 						};
 					}
 				};
