@@ -260,6 +260,612 @@ export const FOOTBALL_TEAMS = [
 	}
 ]
 
+export const FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT = [
+	{
+		name: "U7 2018 рік",
+		comands: [
+			{
+				name: "Динамо Київ",
+				games: 10,
+				points: 22,
+				win: 7,
+				draw: 1,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 15 Київ",
+				games: 10,
+				points: 26,
+				win: 8,
+				draw: 2,
+				defeat: 0,
+				score: '30-25',
+			},
+			{
+				name: "Шахтар Донецьк",
+				games: 10,
+				points: 18,
+				win: 6,
+				draw: 0,
+				defeat: 4,
+				score: '30-25',
+			},
+			{
+				name: "Чорноморець Одеса",
+				games: 10,
+				points: 20,
+				win: 6,
+				draw: 2,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "Волинь Луцьк",
+				games: 10,
+				points: 17,
+				win: 5,
+				draw: 2,
+				defeat: 3,
+				score: '30-25',
+			}
+		]
+	},
+	{
+		name: "U8 2017 рік",
+		comands: [
+			{
+				name: "Динамо Київ",
+				games: 10,
+				points: 22,
+				win: 7,
+				draw: 1,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 15 Київ",
+				games: 10,
+				points: 26,
+				win: 8,
+				draw: 2,
+				defeat: 0,
+				score: '30-25',
+			},
+			{
+				name: "Шахтар Донецьк",
+				games: 10,
+				points: 18,
+				win: 6,
+				draw: 0,
+				defeat: 4,
+				score: '30-25',
+			},
+			{
+				name: "Чорноморець Одеса",
+				games: 10,
+				points: 20,
+				win: 6,
+				draw: 2,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "Волинь Луцьк",
+				games: 10,
+				points: 17,
+				win: 5,
+				draw: 2,
+				defeat: 3,
+				score: '30-25',
+			}
+		]
+	},
+	{
+		name: "U9 2016 рік",
+		comands: [
+			{
+				name: "Динамо Київ",
+				games: 10,
+				points: 22,
+				win: 7,
+				draw: 1,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 15 Київ",
+				games: 10,
+				points: 26,
+				win: 8,
+				draw: 2,
+				defeat: 0,
+				score: '30-25',
+			},
+			{
+				name: "Шахтар Донецьк",
+				games: 10,
+				points: 18,
+				win: 6,
+				draw: 0,
+				defeat: 4,
+				score: '30-25',
+			},
+			{
+				name: "Чорноморець Одеса",
+				games: 10,
+				points: 20,
+				win: 6,
+				draw: 2,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "Волинь Луцьк",
+				games: 10,
+				points: 17,
+				win: 5,
+				draw: 2,
+				defeat: 3,
+				score: '30-25',
+			}
+		]
+	},
+	{
+		name: "U10 2015 рік",
+		comands: [
+			{
+				name: "Динамо Київ",
+				games: 10,
+				points: 22,
+				win: 7,
+				draw: 1,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 15 Київ",
+				games: 10,
+				points: 26,
+				win: 8,
+				draw: 2,
+				defeat: 0,
+				score: '30-25',
+			},
+			{
+				name: "Шахтар Донецьк",
+				games: 10,
+				points: 18,
+				win: 6,
+				draw: 0,
+				defeat: 4,
+				score: '30-25',
+			},
+			{
+				name: "Чорноморець Одеса",
+				games: 10,
+				points: 20,
+				win: 6,
+				draw: 2,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "Волинь Луцьк",
+				games: 10,
+				points: 17,
+				win: 5,
+				draw: 2,
+				defeat: 3,
+				score: '30-25',
+			}
+		]
+	},
+	{
+		name: "U11 2014 рік",
+		comands: [
+			{
+				name: "Динамо Київ",
+				games: 10,
+				points: 22,
+				win: 7,
+				draw: 1,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 15 Київ",
+				games: 10,
+				points: 26,
+				win: 8,
+				draw: 2,
+				defeat: 0,
+				score: '30-25',
+			},
+			{
+				name: "Шахтар Донецьк",
+				games: 10,
+				points: 18,
+				win: 6,
+				draw: 0,
+				defeat: 4,
+				score: '30-25',
+			},
+			{
+				name: "Чорноморець Одеса",
+				games: 10,
+				points: 20,
+				win: 6,
+				draw: 2,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "Волинь Луцьк",
+				games: 10,
+				points: 17,
+				win: 5,
+				draw: 2,
+				defeat: 3,
+				score: '30-25',
+			}
+		]
+	},
+	{
+		name: "U12 2013 рік",
+		comands: [
+			{
+				name: "Динамо Київ",
+				games: 10,
+				points: 22,
+				win: 7,
+				draw: 1,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 15 Київ",
+				games: 10,
+				points: 26,
+				win: 8,
+				draw: 2,
+				defeat: 0,
+				score: '30-25',
+			},
+			{
+				name: "Шахтар Донецьк",
+				games: 10,
+				points: 18,
+				win: 6,
+				draw: 0,
+				defeat: 4,
+				score: '30-25',
+			},
+			{
+				name: "Чорноморець Одеса",
+				games: 10,
+				points: 20,
+				win: 6,
+				draw: 2,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "Волинь Луцьк",
+				games: 10,
+				points: 17,
+				win: 5,
+				draw: 2,
+				defeat: 3,
+				score: '30-25',
+			}
+		]
+	}
+]
+
+export const FOOTBALL_CHAMPIONSHIP_KYIV_RESULT = [
+	{
+		name: "U7 2018 рік",
+		comands: [
+			{
+				name: "Переможець",
+				games: 10,
+				points: 22,
+				win: 7,
+				draw: 1,
+				defeat: 2,
+				score: '30-25'
+			},
+			{
+				name: "ДЮСШ 15",
+				games: 10,
+				points: 26,
+				win: 8,
+				draw: 2,
+				defeat: 0,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 21",
+				games: 10,
+				points: 18,
+				win: 6,
+				draw: 0,
+				defeat: 4,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 10",
+				games: 10,
+				points: 20,
+				win: 6,
+				draw: 2,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "Атлет",
+				games: 10,
+				points: 17,
+				win: 5,
+				draw: 2,
+				defeat: 3,
+				score: '30-25',
+			}
+		]
+	},
+	{
+		name: "U8 2017 рік",
+		comands: [
+			{
+				name: "Переможець",
+				games: 10,
+				points: 22,
+				win: 7,
+				draw: 1,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 15",
+				games: 10,
+				points: 26,
+				win: 8,
+				draw: 2,
+				defeat: 0,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 21",
+				games: 10,
+				points: 18,
+				win: 6,
+				draw: 0,
+				defeat: 4,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 10",
+				games: 10,
+				points: 20,
+				win: 6,
+				draw: 2,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "Атлет",
+				games: 10,
+				points: 17,
+				win: 5,
+				draw: 2,
+				defeat: 3,
+				score: '30-25',
+			}
+		]
+	},
+	{
+		name: "U9 2016 рік",
+		comands: [
+			{
+				name: "Переможець",
+				games: 10,
+				points: 22,
+				win: 7,
+				draw: 1,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 15",
+				games: 10,
+				points: 26,
+				win: 8,
+				draw: 2,
+				defeat: 0,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 21",
+				games: 10,
+				points: 18,
+				win: 6,
+				draw: 0,
+				defeat: 4,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 10",
+				games: 10,
+				points: 20,
+				win: 6,
+				draw: 2,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "Атлет",
+				games: 10,
+				points: 17,
+				win: 5,
+				draw: 2,
+				defeat: 3,
+				score: '30-25',
+			}
+		]
+	},
+	{
+		name: "U10 2015 рік",
+		comands: [
+			{
+				name: "Переможець",
+				games: 10,
+				points: 22,
+				win: 7,
+				draw: 1,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 15",
+				games: 10,
+				points: 26,
+				win: 8,
+				draw: 2,
+				defeat: 0,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 21",
+				games: 10,
+				points: 18,
+				win: 6,
+				draw: 0,
+				defeat: 4,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 10",
+				games: 10,
+				points: 20,
+				win: 6,
+				draw: 2,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "Атлет",
+				games: 10,
+				points: 17,
+				win: 5,
+				draw: 2,
+				defeat: 3,
+				score: '30-25',
+			}
+		]
+	},
+	{
+		name: "U11 2014 рік",
+		comands: [
+			{
+				name: "Переможець",
+				games: 10,
+				points: 22,
+				win: 7,
+				draw: 1,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 15",
+				games: 10,
+				points: 26,
+				win: 8,
+				draw: 2,
+				defeat: 0,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 21",
+				games: 10,
+				points: 18,
+				win: 6,
+				draw: 0,
+				defeat: 4,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 10",
+				games: 10,
+				points: 20,
+				win: 6,
+				draw: 2,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "Атлет",
+				games: 10,
+				points: 17,
+				win: 5,
+				draw: 2,
+				defeat: 3,
+				score: '30-25',
+			}
+		]
+	},
+	{
+		name: "U12 2013 рік",
+		comands: [
+			{
+				name: "Переможець",
+				games: 10,
+				points: 22,
+				win: 7,
+				draw: 1,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 15",
+				games: 10,
+				points: 26,
+				win: 8,
+				draw: 2,
+				defeat: 0,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 21",
+				games: 10,
+				points: 18,
+				win: 6,
+				draw: 0,
+				defeat: 4,
+				score: '30-25',
+			},
+			{
+				name: "ДЮСШ 10",
+				games: 10,
+				points: 20,
+				win: 6,
+				draw: 2,
+				defeat: 2,
+				score: '30-25',
+			},
+			{
+				name: "Атлет",
+				games: 10,
+				points: 17,
+				win: 5,
+				draw: 2,
+				defeat: 3,
+				score: '30-25',
+			}
+		]
+	},
+]
+
 
 
 

@@ -3,7 +3,7 @@
 import { FC } from "react";
 
 import Title from "@/components/Title";
-import FootballComandList from "@/components/FootballComandList";
+import FootballComandsList from "@/components/FootballComandsList";
 
 const FootballClubTeamsPage: FC = () => {
 	return (
@@ -11,7 +11,7 @@ const FootballClubTeamsPage: FC = () => {
 			<div>
 				<Title type='section-subtitle'>Клубні команди</Title>
 			</div>
-			<FootballComandList />
+			<FootballComandsList />
 		</section>
 	);
 };

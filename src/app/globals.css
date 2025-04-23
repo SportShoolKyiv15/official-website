@@ -6,6 +6,8 @@
 
 :root {
   --displacement: 0;
+  --displacementTable1: 0;
+  --displacementTable2: 0;
 }
 
 @font-face {
@@ -255,7 +257,7 @@
   }
 }
 
-.history-visible {
+.is-visible {
   animation: slideIn 0.8s ease-out;
 }
 
@@ -268,7 +270,7 @@
   }
 }
 
-.history-hidden {
+.is-hidden {
   animation: slideOut 0.8s ease-out;
 }
 
@@ -358,6 +360,22 @@
 .swiperOnMoveTableLeft {
   @apply md:translate-x-[100%];
   transform: translate(-100%);
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 800ms;
+}
+
+.swiperOnMoveTable1 {
+  @apply md:translate-x-[0px];
+  transform: translate(var(--displacementTable1));
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 800ms;
+}
+
+.swiperOnMoveTable2 {
+  @apply md:translate-x-[0px];
+  transform: translate(var(--displacementTable2));
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 800ms;
