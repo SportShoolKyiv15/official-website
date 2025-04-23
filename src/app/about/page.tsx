@@ -54,7 +54,7 @@ const AboutPage: FC = () => {
 					</div>
 				</div>
 			</div>
-			<div className={`flex items-center gap-[15px] ${!isOpened && 'mb-[50px]'}`}>
+			<div className={`flex items-center gap-[15px]`}>
 				<p className="text-[22px] font-diplay font-semibold text-button-swipe-card">Історія школи</p>
 				<button onClick={handleClick} className="cursor-pointer">
 					{isOpened ?
