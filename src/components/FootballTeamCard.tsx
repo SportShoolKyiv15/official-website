@@ -3,6 +3,7 @@
 import { FC } from "react";
 import Image from "next/image";
 import ResultButton from "./buttons/ResultsButton";
+import { useFootballComand } from "@/contexts/FootballContext";
 
 type Props = {
 	isOpened: boolean,
@@ -20,6 +21,7 @@ type Props = {
 }
 
 const FootballTeamCard: FC<Props> = ({ team, isOpened, onToggle }) => {
+	const { updateComand } = useFootballComand();
 
 	return (
 		<>
@@ -80,7 +82,7 @@ const FootballTeamCard: FC<Props> = ({ team, isOpened, onToggle }) => {
 						</div>
 					</div>
 					<div className="md:order-1 self-end md:mr-[21px] lg:absolute lg:bottom-5 lg:left-1/2 lg:-translate-x-1/2">
-						<ResultButton />
+						<ResultButton updateComand={updateComand} team={team.name} />
 					</div>
 				</div>
 			</div>
