@@ -26,7 +26,7 @@ const FootballTeamCard: FC<Props> = ({ team, isOpened, onToggle, cardRef }) => {
 
 	return (
 		<div ref={cardRef}>
-			<button onClick={onToggle} className="flex justify-between items-center px-1 cursor-pointer">
+			<button onClick={onToggle} className="flex justify-between items-center w-full px-1 cursor-pointer">
 				<div className="flex flex-col md:flex-row md:items-center w-[297px] md:w-full">
 					<h3 className="md:w-[140px] mb-[6px] md:mb-0 md:mr-[47px] lg:mr-[70px] font-display text-lg md:text-xl lg:text-[22px] text-left font-semibold md:font-bold lg:tracking-[0.5%]">{team.name}</h3>
 					<p className="md:mr-[63px] text-left leading-[120%]">{`Головний тренер: ${team?.coaches[0]?.name}`}</p>
