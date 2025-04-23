@@ -12,7 +12,7 @@ import useWindowWidth from "@/helpers/windowsSize";
 type Props = {
 	isOpened: boolean,
 	onToggle: () => void,
-	// isVisible: boolean,
+	cardRef?: React.RefObject<HTMLDivElement | null>;
 	championshipDuflu: {
 		name: string;
 		comands: {
@@ -46,8 +46,9 @@ const FootballTeamCard: FC<Props> = ({
 	championshipDuflu,
 	championshipKyiv,
 	isOpened,
-	// isVisible,
-	onToggle }) => {
+	onToggle,
+	cardRef
+}) => {
 
 	const [extra, setExtra] = useState('')
 	const [extra2, setExtra2] = useState('');
@@ -174,7 +175,7 @@ const FootballTeamCard: FC<Props> = ({
 	}, [withWindow]);
 
 	return (
-		<div>
+		<div ref={cardRef}>
 			<button onClick={onToggle} className="flex justify-between w-full items-center px-1 cursor-pointer">
 				<div className="flex md:items-center w-[297px] md:w-full">
 					<h3 className="md:w-[140px] mb-[6px] md:mb-0 md:mr-[47px] lg:mr-[70px] font-display text-lg md:text-xl lg:text-[22px] font-semibold md:font-bold lg:tracking-[0.5%]">{championshipDuflu.name}</h3>
