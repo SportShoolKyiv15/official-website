@@ -83,7 +83,7 @@ const ServicesPage: FC = () => {
 			<div className="page-container w-full mb-[50px] md:mb-20 lg:mb-25 lg:px-5">
 				<h2 className="mb-5 md:mb-10 text-center font-display text-xl md:text-2xl font-bold">Лижні види спорту</h2>
 				<p className="w-full flex justify-center md:justify-end mb-[18px] md:mb-[14px] text-right font-display font-semibold text-sm lg:text-lg leading-[150%]"><span className="md:block text-center md:inline" >Київ</span><span className="inline md:block">,&nbsp;</span >Голосіївский район, вул. Ягідна, 2</p>
-				<ServicesTableTitle extra={extra} />
+				<ServicesTableTitle extra={extra2} />
 				<SkyServicesTable handleTouchStart={handleTouchStart} handleTouchEnd={handleTouchEnd} ref={tableRef2} extra={extra2} />
 			</div>
 		</section>
