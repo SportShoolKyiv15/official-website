@@ -21,16 +21,19 @@ const FootballComandsList: FC = () => {
 	};
 
 	useEffect(() => {
-		const teamFromURL = searchParams.get('team');
+		const teamFromURL = searchParams.get("team");
 		if (teamFromURL) {
-			const index = FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT.findIndex(item =>
-				(item.name === teamFromURL)
+			const index = FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT.findIndex(
+				(item) => item.name === teamFromURL
 			);
 			if (index !== -1) {
 				setActiveIndex(index);
-				router.replace('/football/championships', { scroll: false });
-			};
+				router.replace("/football/championships", { scroll: false });
+			}
 		}
+	}, [searchParams, router]);
+
+	useEffect(() => {
 		if (activeIndex !== null && cardRefs.current[activeIndex]?.current) {
 			setTimeout(() => {
 				cardRefs.current[activeIndex]?.current?.scrollIntoView({
@@ -39,7 +42,7 @@ const FootballComandsList: FC = () => {
 				});
 			}, 400);
 		}
-	}, [activeIndex, searchParams, router]);
+	}, [activeIndex]);
 
 	return (
 		<ul className="w-full flex flex-col gap-4">
