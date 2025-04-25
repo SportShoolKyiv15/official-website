@@ -1,16 +1,18 @@
 "use client";
 
 import React, { FC, useEffect, useState, useRef } from "react";
+import { useSearchParams, useRouter } from 'next/navigation';
 
 import { FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT } from "@/data/constants";
 import { FOOTBALL_CHAMPIONSHIP_KYIV_RESULT } from "@/data/constants";
 import FootballChampionshipCard from "./FootballChampionshipCard";
-import { useFootballComand } from "@/contexts/FootballContext";
+
 
 const FootballComandsList: FC = () => {
 	const [activeIndex, setActiveIndex] = useState<number | null>(null);
-	const { comand, updateComand } = useFootballComand();
 	const cardRefs = useRef<React.RefObject<HTMLDivElement | null>[]>([]);
+	const searchParams = useSearchParams();
+	const router = useRouter();
 
 	if (cardRefs.current.length === 0) {
 		FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT.forEach(() => {
@@ -19,15 +21,17 @@ const FootballComandsList: FC = () => {
 	};
 
 	useEffect(() => {
-		if (FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT.length) {
-			FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT.map((item, idx) => {
-				if (item.name === comand) {
-					setActiveIndex(idx);
-					updateComand('');
-				}
-			}, [comand]);
+		const teamFromURL = searchParams.get("team");
+		if (teamFromURL) {
+			const index = FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT.findIndex(
+				(item) => item.name === teamFromURL
+			);
+			if (index !== -1) {
+				setActiveIndex(index);
+				router.replace("/football/championships", { scroll: false });
+			}
 		}
-	});
+	}, [searchParams, router]);
 
 	useEffect(() => {
 		if (activeIndex !== null && cardRefs.current[activeIndex]?.current) {
