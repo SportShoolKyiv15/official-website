@@ -79,7 +79,8 @@ const Footer: React.FC = () => {
 								</p>
 							</div>
 						</div>
-						<Link href={'/'} onKeyDown={toggleUpdate} className='md:hidden'>
+						<Link href={'/'}
+							onClick={toggleUpdate} className='md:hidden'>
 							<Image
 								src="/svg/logoFooter.svg"
 								alt="logo"
