@@ -192,12 +192,12 @@ const FootballTeamCard: FC<Props> = ({
 			<div className={`flex flex-col md:justify-between lg:justify-start gap-[50px] lg:gap-[60px] ${isOpened ? 'item-opened mt-5 md:mt-6  md:pb-[9px] lg:pb-5' : 'item-closed'}`}>
 				<div>
 					<p className="mb-[18px] text-center lg:text-lg font-display font-semibold">Чемпіонат ДЮФЛУ</p>
-					<FootballChampionshipTableTitle extra={countIcon * 103} />
+					<FootballChampionshipTableTitle extra={countIcon} />
 					<FootballChampionshipTable handleTouchStart={handleTouchStart} handleTouchEnd={handleTouchEnd} ref={tableRef1} extra={extra} comands={championshipDuflu.comands} />
 				</div>
 				<div>
 					<p className="mb-[18px] text-center lg:text-lg font-display font-semibold">Чемпіонат Києва</p>
-					<FootballChampionshipTableTitle extra={countIcon2 * 103} />
+					<FootballChampionshipTableTitle extra={countIcon2} />
 					<FootballChampionshipTable handleTouchStart={handleTouchStart} handleTouchEnd={handleTouchEnd} ref={tableRef2} extra={extra2} comands={championshipKyiv.comands} />
 				</div>
 			</div>
