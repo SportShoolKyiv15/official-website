@@ -48,7 +48,7 @@ const BiatlonGaleryFotoPage: React.FC = () => {
 				<button onClick={() => toggleModal(galery[0])} className="md:hidden relative h-[239px]">
 					<Image
 						src={galery[0]}
-						alt='Team foto'
+						alt='Photo'
 						fill
 						style={{ objectFit: "cover" }}
 						sizes="100vw"
@@ -58,7 +58,7 @@ const BiatlonGaleryFotoPage: React.FC = () => {
 					<button onClick={() => toggleModal(galery[0])} className="hidden md:block w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] relative h-[151px] lg:h-[290px]">
 						<Image
 							src={galery[0]}
-							alt='Team foto'
+							alt='Photo'
 							fill
 							style={{ objectFit: "cover" }}
 							sizes="100vw"
@@ -67,7 +67,7 @@ const BiatlonGaleryFotoPage: React.FC = () => {
 					<button onClick={() => toggleModal(galery[1])} className="relative w-[calc(50%-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[151px] lg:h-[290px]">
 						<Image
 							src={galery[1]}
-							alt="Photo 1"
+							alt="Photo"
 							fill
 							style={{ objectFit: "cover" }}
 							sizes="50vw"
@@ -76,7 +76,7 @@ const BiatlonGaleryFotoPage: React.FC = () => {
 					<button onClick={() => toggleModal(galery[2])} className="relative w-[calc(50%-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[151px] lg:h-[290px]">
 						<Image
 							src={galery[2]}
-							alt="Photo 2"
+							alt="Photo"
 							fill
 							style={{ objectFit: "cover" }}
 							sizes="50vw"
@@ -84,19 +84,19 @@ const BiatlonGaleryFotoPage: React.FC = () => {
 					</button>
 				</div>
 				<div className="flex w-full gap-[10px] md:gap-4 lg:gap-6">
-					<button onClick={() => toggleModal(galery[3])} className="relative w-[calc(100%/3-5px)] md:w-[calc((100%-2*16px)/3)] md:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[245px] lg:h-[468px]">
+					<button onClick={() => toggleModal(galery[9])} className="relative w-[calc(100%/3-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] md:grow h-[116px] md:h-[245px] lg:h-[468px]">
 						<Image
 							src={galery[3]}
-							alt="Photo 1"
+							alt="Photo"
 							fill
 							style={{ objectFit: "cover" }}
 							sizes="50vw"
 						/>
 					</button>
-					<button onClick={() => toggleModal(galery[4])} className="relative w-[calc(100%/3*2-5px)] md:grow h-[116px] md:h-[245px] lg:h-[468px]">
+					<button onClick={() => toggleModal(galery[7])} className="relative w-[calc(100%/3*2-5px)] md:grow h-[116px] md:h-[245px] lg:h-[468px]">
 						<Image
 							src={galery[4]}
-							alt="Photo 2"
+							alt="Photo"
 							fill
 							style={{ objectFit: "cover" }}
 							sizes="50vw"
@@ -106,7 +106,7 @@ const BiatlonGaleryFotoPage: React.FC = () => {
 				<button onClick={() => toggleModal(galery[6])} className="md:hidden relative h-[239px]">
 					<Image
 						src={galery[6]}
-						alt='Team foto'
+						alt='Photo'
 						fill
 						style={{ objectFit: "cover" }}
 						sizes="100vw"
@@ -116,7 +116,7 @@ const BiatlonGaleryFotoPage: React.FC = () => {
 					<button onClick={() => toggleModal(galery[6])} className="hidden md:block w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] relative h-[151px] lg:h-[290px]">
 						<Image
 							src={galery[6]}
-							alt='Team foto'
+							alt='Photo'
 							fill
 							style={{ objectFit: "cover" }}
 							sizes="100vw"
@@ -125,7 +125,7 @@ const BiatlonGaleryFotoPage: React.FC = () => {
 					<button onClick={() => toggleModal(galery[5])} className="relative w-[calc(50%-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[151px] lg:h-[290px]">
 						<Image
 							src={galery[5]}
-							alt="Photo 1"
+							alt="Photo"
 							fill
 							style={{ objectFit: "cover" }}
 							sizes="50vw"
@@ -134,7 +134,7 @@ const BiatlonGaleryFotoPage: React.FC = () => {
 					<button onClick={() => toggleModal(galery[8])} className="relative w-[calc(50%-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[151px] lg:h-[290px]">
 						<Image
 							src={galery[8]}
-							alt="Photo 2"
+							alt="Photo"
 							fill
 							style={{ objectFit: "cover" }}
 							sizes="50vw"
@@ -145,7 +145,7 @@ const BiatlonGaleryFotoPage: React.FC = () => {
 					<button onClick={() => toggleModal(galery[9])} className="relative w-[calc(100%/3-5px)] md:grow h-[116px] md:h-[245px] lg:h-[468px]">
 						<Image
 							src={galery[9]}
-							alt="Photo 1"
+							alt="Photo"
 							fill
 							style={{ objectFit: "cover" }}
 							sizes="50vw"
@@ -154,7 +154,7 @@ const BiatlonGaleryFotoPage: React.FC = () => {
 					<button onClick={() => toggleModal(galery[7])} className="relative w-[calc(100%/3*2-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[245px] lg:h-[468px]">
 						<Image
 							src={galery[7]}
-							alt="Photo 2"
+							alt="Photo"
 							fill
 							style={{ objectFit: "cover" }}
 							sizes="50vw"
