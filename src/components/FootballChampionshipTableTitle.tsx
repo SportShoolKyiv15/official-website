@@ -7,6 +7,7 @@ type Props = {
 
 
 const FootballChampionshipTableTitle: FC<Props> = ({ extra }) => {
+
 	const baseOrders = ['order-1', 'order-2', 'order-3', 'order-4'];
 	const first = baseOrders[extra];
 	const orderClasses = [first, ...baseOrders.filter(o => o !== first)];

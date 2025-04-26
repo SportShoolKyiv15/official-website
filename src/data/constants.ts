@@ -866,6 +866,19 @@ export const FOOTBALL_CHAMPIONSHIP_KYIV_RESULT = [
 	},
 ]
 
+export const FOOTBALL_FOTO_GALERY = [
+	"/img/galery/football/footballFotoGalery1.jpg",
+	"/img/galery/football/footballFotoGalery2.jpg",
+	"/img/galery/football/footballFotoGalery3.jpg",
+	"/img/galery/football/footballFotoGalery4.jpg",
+	"/img/galery/football/footballFotoGalery5.jpg",
+	"/img/galery/football/footballFotoGalery1.jpg",
+	"/img/galery/football/footballFotoGalery2.jpg",
+	"/img/galery/football/footballFotoGalery3.jpg",
+	"/img/galery/football/footballFotoGalery4.jpg",
+	"/img/galery/football/footballFotoGalery5.jpg"
+]
+
 
 
 
