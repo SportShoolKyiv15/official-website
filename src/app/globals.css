@@ -64,6 +64,7 @@
   --color-black: rgba(0, 0, 0, 1);
   --color-main-dark: rgba(24, 25, 28, 1);
   --color-block-dark: rgba(41, 41, 46, 1);
+  --color-button-dark: rgba(41, 41, 46, 0.2);
   --color-drop-menu: rgba(48, 48, 54, 1);
   --color-block-grey: rgba(61, 61, 63, 1);
   --color-light: rgba(238, 238, 238, 1);
