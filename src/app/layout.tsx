@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ReactNode, FC } from 'react';
 import ToastProvider from "@/components/providers/TostifyProvider";
+import GoogleMapsProvider from "@/components/providers/GoogleMapsProvider";
 import "./globals.css";
 
 import { NavProvider } from "@/contexts/NavContext";
@@ -22,13 +23,15 @@ const RootLayout: FC<Props> = ({ children }) => {
 		<html lang="en">
 			<body>
 				<ToastProvider>
-					<NavProvider>
-						<div className="flex flex-col w-full min-h-screen">
-							<Header />
-							<main className="flex-1">{children}</main>
-							<Footer />
-						</div>
-					</NavProvider>
+					<GoogleMapsProvider>
+						<NavProvider>
+							<div className="flex flex-col w-full min-h-screen">
+								<Header />
+								<main className="flex-1">{children}</main>
+								<Footer />
+							</div>
+						</NavProvider>
+					</GoogleMapsProvider>
 				</ToastProvider>
 			</body>
 		</html>

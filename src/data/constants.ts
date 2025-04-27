@@ -1,3 +1,4 @@
+import { FootballChampioship, SkyChampioship } from '@/globaltypes/types';
 // Name of submenu items and corresponding last part of pathname for sport pages
 export const ITEMS = {
 	football: [['Головна', 'main'], ['Тренерський склад', 'coach_team'], ['Клубні команди', 'club_teams'], ['Чемпіонати', 'championships'], ['Галерея', 'gallery/foto']],
@@ -260,7 +261,7 @@ export const FOOTBALL_TEAMS = [
 	}
 ]
 
-export const FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT = [
+export const FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT: FootballChampioship[] = [
 	{
 		name: "U7 2018 рік",
 		comands: [
@@ -563,7 +564,7 @@ export const FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT = [
 	}
 ]
 
-export const FOOTBALL_CHAMPIONSHIP_KYIV_RESULT = [
+export const FOOTBALL_CHAMPIONSHIP_KYIV_RESULT: FootballChampioship[] = [
 	{
 		name: "U7 2018 рік",
 		comands: [
@@ -862,6 +863,492 @@ export const FOOTBALL_CHAMPIONSHIP_KYIV_RESULT = [
 				defeat: 3,
 				score: '30-25',
 			}
+		]
+	},
+]
+
+export const ALPINE_SKIING_CHAMPIONSHIPS_RESULTS: SkyChampioship[] = [
+	{
+		name: "Чемпіонат України юнаки та дівчата.",
+		participants: [
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Змішана естафета",
+				distance: 20,
+				result: 3
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Спринт",
+				distance: 5,
+				result: 1
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Командна гонка",
+				distance: 15,
+				result: 4
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 3
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Змішана естафета",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Спринт",
+				distance: 10,
+				result: 3
+			},
+		]
+	},
+	{
+		name: "Чемпіонат України юніори та юніорки.",
+		participants: [
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Змішана естафета",
+				distance: 20,
+				result: 3
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Спринт",
+				distance: 5,
+				result: 1
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Командна гонка",
+				distance: 15,
+				result: 4
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 3
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Змішана естафета",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Спринт",
+				distance: 10,
+				result: 3
+			},
+		]
+	},
+	{
+		name: "Чемпіонат України чоловіки та жінки.",
+		participants: [
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Змішана естафета",
+				distance: 20,
+				result: 3
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Спринт",
+				distance: 5,
+				result: 1
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Командна гонка",
+				distance: 15,
+				result: 4
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 3
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Змішана естафета",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Спринт",
+				distance: 10,
+				result: 3
+			},
+		]
+	},
+]
+
+export const SKY_RACING_CHAMPIONSHIPS_RESULTS: SkyChampioship[] = [
+	{
+		name: "Чемпіонат України юнаки та дівчата.",
+		participants: [
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Змішана естафета",
+				distance: 20,
+				result: 3
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Спринт",
+				distance: 5,
+				result: 1
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Командна гонка",
+				distance: 15,
+				result: 4
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 3
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Змішана естафета",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Спринт",
+				distance: 10,
+				result: 3
+			},
+		]
+	},
+	{
+		name: "Чемпіонат України юніори та юніорки.",
+		participants: [
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Змішана естафета",
+				distance: 20,
+				result: 3
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Спринт",
+				distance: 5,
+				result: 1
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Командна гонка",
+				distance: 15,
+				result: 4
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 3
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Змішана естафета",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Спринт",
+				distance: 10,
+				result: 3
+			},
+		]
+	},
+	{
+		name: "Чемпіонат України чоловіки та жінки.",
+		participants: [
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Змішана естафета",
+				distance: 20,
+				result: 3
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Спринт",
+				distance: 5,
+				result: 1
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Командна гонка",
+				distance: 15,
+				result: 4
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 3
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Змішана естафета",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Спринт",
+				distance: 10,
+				result: 3
+			},
+		]
+	},
+]
+
+export const BIATLON_CHAMPIONSHIPS_RESULTS: SkyChampioship[] = [
+	{
+		name: "Чемпіонат України юнаки та дівчата.",
+		participants: [
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Змішана естафета",
+				distance: 20,
+				result: 3
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Спринт",
+				distance: 5,
+				result: 1
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Командна гонка",
+				distance: 15,
+				result: 4
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 3
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Змішана естафета",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Спринт",
+				distance: 10,
+				result: 3
+			},
+		]
+	},
+	{
+		name: "Чемпіонат України юніори та юніорки.",
+		participants: [
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Змішана естафета",
+				distance: 20,
+				result: 3
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Спринт",
+				distance: 5,
+				result: 1
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Командна гонка",
+				distance: 15,
+				result: 4
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 3
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Змішана естафета",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Спринт",
+				distance: 10,
+				result: 3
+			},
+		]
+	},
+	{
+		name: "Чемпіонат України чоловіки та жінки.",
+		participants: [
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Змішана естафета",
+				distance: 20,
+				result: 3
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Спринт",
+				distance: 5,
+				result: 1
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Командна гонка",
+				distance: 15,
+				result: 4
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Гонка переслідування",
+				distance: 10,
+				result: 3
+			},
+			{
+				name: 'Петренко Павло Шванович',
+				sportDiscipline: "Змішана естафета",
+				distance: 10,
+				result: 2
+			},
+			{
+				name: 'Шевченко Володимир Олександрович',
+				sportDiscipline: "Спринт",
+				distance: 10,
+				result: 3
+			},
 		]
 	},
 ]

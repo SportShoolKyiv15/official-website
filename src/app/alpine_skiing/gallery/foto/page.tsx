@@ -142,7 +142,7 @@ const AlpineSkiingGaleryFotoPage: React.FC = () => {
 					</button>
 				</div>
 				<div className="flex w-full gap-[10px] md:gap-4 lg:gap-6">
-					<button onClick={() => toggleModal(galery[9])} className="relative w-[calc(100%/3-5px)] md:grow h-[116px] md:h-[245px] lg:h-[468px]">
+					<button onClick={() => toggleModal(galery[9])} className="relative w-[calc(100%/3*2-5px)] md:grow h-[116px] md:h-[245px] lg:h-[468px]">
 						<Image
 							src={galery[9]}
 							alt="Photo"
@@ -151,7 +151,7 @@ const AlpineSkiingGaleryFotoPage: React.FC = () => {
 							sizes="50vw"
 						/>
 					</button>
-					<button onClick={() => toggleModal(galery[7])} className="relative w-[calc(100%/3*2-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[245px] lg:h-[468px]">
+					<button onClick={() => toggleModal(galery[7])} className="relative w-[calc(100%/3-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[245px] lg:h-[468px]">
 						<Image
 							src={galery[7]}
 							alt="Photo"
