@@ -10,13 +10,13 @@ import FootballChampionshipCard from "./FootballChampionshipCard";
 
 const FootballComandsList: FC = () => {
 	const [activeIndex, setActiveIndex] = useState<number | null>(null);
-	const cardRefs = useRef<React.RefObject<HTMLDivElement | null>[]>([]);
+	const cardRefs = useRef<React.RefObject<HTMLLIElement | null>[]>([]);
 	const searchParams = useSearchParams();
 	const router = useRouter();
 
 	if (cardRefs.current.length === 0) {
 		FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT.forEach(() => {
-			cardRefs.current.push(React.createRef<HTMLDivElement>());
+			cardRefs.current.push(React.createRef<HTMLLIElement>());
 		});
 	};
 
@@ -48,12 +48,11 @@ const FootballComandsList: FC = () => {
 		<ul className="w-full flex flex-col gap-4">
 			{FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT.length &&
 				FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT.map((item, idx) => (
-					<li key={idx} className="flex flex-col px-2 md:px-5 py-2 md:pt-[13px] md:pb-[15px] bg-block-dark rounded-sm relative">
+					<li key={idx} ref={cardRefs.current[idx]} className="flex flex-col px-2 md:px-5 py-2 md:pt-[13px] md:pb-[15px] bg-block-dark rounded-sm relative">
 						<FootballChampionshipCard
 							isOpened={activeIndex === idx}
 							onToggle={() =>
 								setActiveIndex((prev) => (prev === idx ? null : idx))}
-							cardRef={cardRefs.current[idx]}
 							championshipDuflu={FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT[idx]}
 							championshipKyiv={FOOTBALL_CHAMPIONSHIP_KYIV_RESULT[idx]} />
 					</li>
