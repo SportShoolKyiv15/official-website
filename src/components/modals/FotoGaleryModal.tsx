@@ -45,7 +45,7 @@ const FotoGaleryModal: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisi
 					<div className='w-[336px] sm:w-[343px] md:w-[532px] lg:w-[980px] p-2 md:p-3  relative'>
 						<button
 							onClick={closeModal}
-							className="absolute right-[10px] md:right-4 lg:right-5 top-[10px] md:top-4 lg:top-5 cursor-pointer rounded-[50%] bg-button-dark z-101">
+							className="absolute right-[10px] md:right-4 lg:right-5 top-[10px] md:top-4 lg:top-5 cursor-pointer z-101">
 							<Image
 								src='/svg/iconCloseModal.svg'
 								alt='Cross'
