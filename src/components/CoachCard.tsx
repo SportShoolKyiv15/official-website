@@ -40,7 +40,7 @@ const CoachCard: FC<Props> = ({ idx, bgUrl, name, team }) => {
 	return (
 		<button
 			onClick={toggleModal}
-			className='w-[343px] md:w-[328px] lg:w-[374px] h-[422px] md:h-[403px] lg:h-[460px] relative rounded-sm overflow-hidden cursor-pointer'
+			className='w-[343px] md:w-[328px] lg:w-[374px] h-[422px] md:h-[403px] lg:h-[460px] relative rounded-sm overflow-hidden cursor-pointer animate-appear-in'
 		>
 			<div className="absolute inset-0  bg-lightgray"></div>
 			<div className={`absolute inset-0 ${bgUrl} bg-cover bg-center bg-no-repeat`}></div>
