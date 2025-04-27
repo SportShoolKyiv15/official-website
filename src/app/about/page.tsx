@@ -32,7 +32,7 @@ const AboutPage: FC = () => {
 					<Title type='page-title'>Про нас</Title>
 				</div>
 				<div className="lg:flex bg-block-dark md:rounded-sm">
-					<div className="lg:order-2 w-full lg:w-[636px] h-[269px] md:h-[354px] lg:h-[457] mb-[28px] md:mb-10 lg:mb-0 bg-[url('/img/aboutBgImg1.jpg')] bg-cover bg-lightgray"></div>
+					<div className="lg:order-2 w-full lg:w-[636px] h-[269px] md:h-[354px] lg:h-[457] mb-[28px] md:mb-10 lg:mb-0 bg-[url('/img/aboutBgImg1.jpg')] bg-cover bg-lightgray animate-appear-in"></div>
 					<div className="lg:oder-1 lg:w-[660px] px-4  md:px-0 md:pl-3 md:pr-[152px] pb-[18px] md:pb-3 lg:pl-[70px] lg:pr-16 lg:pt-[70px]">
 						<p className="mb-6 leading-[150%]">Ласкаво просимо до ДЮСШ №15 – місця, де народжуються чемпіони! Ми – сучасна дитяча спортивна школа, яка об’єднує дітей різного віку, допомагаючи їм розкрити свій потенціал у спорті та виховати в собі силу, дисципліну і командний дух</p>
 						<h4 className="mb-[6px] md:mb-[8px] text-lg font-semibold font-display">Наша місія</h4>
@@ -45,7 +45,7 @@ const AboutPage: FC = () => {
 					<h2 className="text-[26px] font-semibold">Наші переваги</h2>
 				</div>
 				<div className="lg:flex bg-block-dark md:rounded-sm">
-					<div className="w-full lg:w-[437px] h-[269px] lg:h-[371px] mb-[28px] md:mb-10 lg:mb-0 bg-[url('/img/aboutBgImg2.jpg')] bg-cover bg-lightgray"></div>
+					<div className="w-full lg:w-[437px] h-[269px] lg:h-[371px] mb-[28px] md:mb-10 lg:mb-0 bg-[url('/img/aboutBgImg2.jpg')] bg-cover bg-lightgray animate-appear-out"></div>
 					<div className="lg:w-[859px] px-4 md:px-0 md:pl-3 md:pr-[152px] lg:pl-[70px] lg:pr-[264px] lg:pt-[60px] pb-[18px] md:pb-3">
 						<p className="mb-6 leading-[150%]">Ласкаво просимо до ДЮСШ №15 – місця, де народжуються чемпіони! Ми – сучасна дитяча спортивна школа, яка об’єднує дітей різного віку, допомагаючи їм розкрити свій потенціал у спорті та виховати в собі силу, дисципліну і командний дух</p>
 						<h4 className="mb-[6px] md:mb-[8px] text-lg font-semibold font-display">Наша місія</h4>
@@ -58,7 +58,7 @@ const AboutPage: FC = () => {
 					<h2 className="text-[26px] font-semibold">Наші переваги</h2>
 				</div>
 				<div className="lg:flex bg-block-dark md:rounded-sm">
-					<div className="order-2 w-full lg:w-[754px] h-[269px] lg:h-[371px] mb-[28px] md:mb-10 lg:mb-0 bg-[url('/img/aboutBgImg3.jpg')] bg-cover bg-lightgray"></div>
+					<div className="order-2 w-full lg:w-[754px] h-[269px] lg:h-[371px] mb-[28px] md:mb-10 lg:mb-0 bg-[url('/img/aboutBgImg3.jpg')] bg-cover bg-lightgray animate-appear-in"></div>
 					<div className="order-1 lg:w-[542px] px-4 md:px-0 md:pl-3 md:pr-[152px] lg:pl-[19px] lg:pr-6 lg:pt-15 pb-[18px] md:pb-3 ">
 						<p className="mb-6 leading-[150%]">Ласкаво просимо до ДЮСШ №15 – місця, де народжуються чемпіони! Ми – сучасна дитяча спортивна школа, яка об’єднує дітей різного віку, допомагаючи їм розкрити свій потенціал у спорті та виховати в собі силу, дисципліну і командний дух</p>
 						<h4 className="mb-[6px] md:mb-[8px] text-lg font-semibold font-display">Наша місія</h4>
@@ -105,7 +105,7 @@ const AboutPage: FC = () => {
 							Завдяки ентузіазму перших тренерів та підтримці батьків, школа швидко стала популярною серед дітей, які мріяли про великі спортивні досягнення. Ми розпочали активну роботу з розвитку методик тренувань, щоб зробити навчальний процес ефективним і доступним для всіх.
 						</p>
 					</div>
-					<div className="lg:w-1/2 h-[215px] md:h-[426px] lg:h-[351px] mb-[42px] md:mb-15 lg:mb-0 lg:mt-[95px] overflow-hidden">
+					<div className="lg:w-1/2 h-[215px] md:h-[426px] lg:h-[351px] mb-[42px] md:mb-15 lg:mb-0 lg:mt-[95px] overflow-hidden animate-appear-in">
 						<Image
 							src="/img/historyImg1.jpg"
 							alt="history foto"
@@ -171,7 +171,7 @@ const AboutPage: FC = () => {
 							Попит на заняття стрімко зростав, тому ми інвестували в оновлення спортивного інвентарю та розширення тренерського складу. Саме в цей період школа почала співпрацювати з місцевими спортивними федераціями, що дало змогу брати участь у більшій кількості змагань і популяризувати нашу діяльність серед молоді
 						</p>
 					</div>
-					<div className="order-1 lg:w-1/2 h-[215px] md:h-[426px] lg:h-[351px] mb-[42px] md:mb-15 lg:mb-0 lg:mt-[95px] overflow-hidden">
+					<div className="order-1 lg:w-1/2 h-[215px] md:h-[426px] lg:h-[351px] mb-[42px] md:mb-15 lg:mb-0 lg:mt-[95px] overflow-hidden animate-appear-out">
 						<Image
 							src="/img/historyImg2.jpg"
 							alt="history foto"
@@ -236,7 +236,7 @@ const AboutPage: FC = () => {
 							Попит на заняття стрімко зростав, тому ми інвестували в оновлення спортивного інвентарю та розширення тренерського складу. Саме в цей період школа почала співпрацювати з місцевими спортивними федераціями, що дало змогу брати участь у більшій кількості змагань і популяризувати нашу діяльність серед молоді.
 						</p>
 					</div>
-					<div className="lg:w-1/2 h-[215px] lg:h-[351px] md:h-[426px] mb-[42px] md:mb-15 lg:mb-0 lg:mt-[95px] overflow-hidden">
+					<div className="lg:w-1/2 h-[215px] lg:h-[351px] md:h-[426px] mb-[42px] md:mb-15 lg:mb-0 lg:mt-[95px] overflow-hidden animate-appear-in">
 						<Image
 							src="/img/historyImg3.jpg"
 							alt="history foto"
@@ -301,7 +301,7 @@ const AboutPage: FC = () => {
 							Наша школа активно співпрацює з європейськими та світовими спортивними організаціями, що дозволяє нашим вихованцям тренуватися за сучасними методиками та брати участь у міжнародних тренувальних зборах. Ми пишаємося тим, що змогли виховати спортсменів, які стають прикладом для молодших поколінь.
 						</p>
 					</div>
-					<div className="order-1 lg:w-1/2 h-[215px] md:h-[426px] lg:h-[351px] mb-[42px] md:mb-15 lg:mb-0 lg:mt-[95px] overflow-hidden">
+					<div className="order-1 lg:w-1/2 h-[215px] md:h-[426px] lg:h-[351px] mb-[42px] md:mb-15 lg:mb-0 lg:mt-[95px] overflow-hidden animate-appear-out">
 						<Image
 							src="/img/historyImg4.jpg"
 							alt="history foto"
