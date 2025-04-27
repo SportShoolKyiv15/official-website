@@ -40,7 +40,7 @@ const ChampionshipsList: FC<Props> = ({ championships }) => {
 			setTimeout(() => {
 				cardRefs.current[activeIndex]?.current?.scrollIntoView({
 					behavior: "smooth",
-					block: "center",
+					block: "start",
 				});
 			}, 400);
 		}
@@ -49,7 +49,7 @@ const ChampionshipsList: FC<Props> = ({ championships }) => {
 	return (
 		<ul className="w-full flex flex-col gap-4">
 			{championships.length &&
-				championships.map((item, idx) => (
+				championships.map((_, idx) => (
 					<li key={idx} ref={cardRefs.current[idx]} className="flex flex-col px-2 md:px-5 py-2 md:pt-[13px] md:pb-[15px] bg-block-dark rounded-sm relative">
 						<ChampionshipCard
 							isOpened={activeIndex === idx}

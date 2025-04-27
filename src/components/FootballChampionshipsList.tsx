@@ -38,7 +38,7 @@ const FootballComandsList: FC = () => {
 			setTimeout(() => {
 				cardRefs.current[activeIndex]?.current?.scrollIntoView({
 					behavior: "smooth",
-					block: "center",
+					block: "start",
 				});
 			}, 400);
 		}
@@ -47,7 +47,7 @@ const FootballComandsList: FC = () => {
 	return (
 		<ul className="w-full flex flex-col gap-4">
 			{FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT.length &&
-				FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT.map((item, idx) => (
+				FOOTBALL_CHAMPIONSHIP_DUFLU_RESULT.map((_, idx) => (
 					<li key={idx} ref={cardRefs.current[idx]} className="flex flex-col px-2 md:px-5 py-2 md:pt-[13px] md:pb-[15px] bg-block-dark rounded-sm relative">
 						<FootballChampionshipCard
 							isOpened={activeIndex === idx}

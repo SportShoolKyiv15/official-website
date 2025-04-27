@@ -45,7 +45,7 @@ const FootballGaleryFotoPage: React.FC = () => {
 				<GalleryNav />
 			</div>
 			<div className="flex w-full flex-col gap-[10px] md:gap-4 lg:gap-6">
-				<button onClick={() => toggleModal(galery[0])} className="md:hidden relative h-[239px]">
+				<button onClick={() => toggleModal(galery[0])} className="md:hidden relative h-[239px] cursor-pointer">
 					<Image
 						src={galery[0]}
 						alt='Photo'
@@ -55,7 +55,7 @@ const FootballGaleryFotoPage: React.FC = () => {
 					/>
 				</button>
 				<div className="flex w-full gap-[10px] md:gap-4 lg:gap-6">
-					<button onClick={() => toggleModal(galery[0])} className="hidden md:block w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] relative h-[151px] lg:h-[290px]">
+					<button onClick={() => toggleModal(galery[0])} className="hidden md:block w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] relative h-[151px] lg:h-[290px] cursor-pointer">
 						<Image
 							src={galery[0]}
 							alt='Photo'
@@ -64,7 +64,7 @@ const FootballGaleryFotoPage: React.FC = () => {
 							sizes="100vw"
 						/>
 					</button>
-					<button onClick={() => toggleModal(galery[1])} className="relative w-[calc(50%-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[151px] lg:h-[290px]">
+					<button onClick={() => toggleModal(galery[1])} className="relative w-[calc(50%-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[151px] lg:h-[290px] cursor-pointer">
 						<Image
 							src={galery[1]}
 							alt="Photo"
@@ -73,7 +73,7 @@ const FootballGaleryFotoPage: React.FC = () => {
 							sizes="50vw"
 						/>
 					</button>
-					<button onClick={() => toggleModal(galery[2])} className="relative w-[calc(50%-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[151px] lg:h-[290px]">
+					<button onClick={() => toggleModal(galery[2])} className="relative w-[calc(50%-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[151px] lg:h-[290px] cursor-pointer">
 						<Image
 							src={galery[2]}
 							alt="Photo"
@@ -84,7 +84,7 @@ const FootballGaleryFotoPage: React.FC = () => {
 					</button>
 				</div>
 				<div className="flex w-full gap-[10px] md:gap-4 lg:gap-6">
-					<button onClick={() => toggleModal(galery[9])} className="relative w-[calc(100%/3-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[245px] lg:h-[468px]">
+					<button onClick={() => toggleModal(galery[3])} className="relative w-[calc(100%/3-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[245px] lg:h-[468px] cursor-pointer">
 						<Image
 							src={galery[3]}
 							alt="Photo"
@@ -93,7 +93,7 @@ const FootballGaleryFotoPage: React.FC = () => {
 							sizes="50vw"
 						/>
 					</button>
-					<button onClick={() => toggleModal(galery[7])} className="relative w-[calc(100%/3*2-5px)] md:grow h-[116px] md:h-[245px] lg:h-[468px]">
+					<button onClick={() => toggleModal(galery[4])} className="relative w-[calc(100%/3*2-5px)] md:grow h-[116px] md:h-[245px] lg:h-[468px] cursor-pointer">
 						<Image
 							src={galery[4]}
 							alt="Photo"
@@ -103,7 +103,7 @@ const FootballGaleryFotoPage: React.FC = () => {
 						/>
 					</button>
 				</div>
-				<button onClick={() => toggleModal(galery[6])} className="md:hidden relative h-[239px]">
+				<button onClick={() => toggleModal(galery[6])} className="md:hidden relative h-[239px] cursor-pointer">
 					<Image
 						src={galery[6]}
 						alt='Photo'
@@ -113,7 +113,7 @@ const FootballGaleryFotoPage: React.FC = () => {
 					/>
 				</button>
 				<div className="flex w-full gap-[10px] md:gap-4 lg:gap-6">
-					<button onClick={() => toggleModal(galery[6])} className="hidden md:block w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] relative h-[151px] lg:h-[290px]">
+					<button onClick={() => toggleModal(galery[6])} className="hidden md:block w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] relative h-[151px] lg:h-[290px] cursor-pointer">
 						<Image
 							src={galery[6]}
 							alt='Photo'
@@ -122,7 +122,7 @@ const FootballGaleryFotoPage: React.FC = () => {
 							sizes="100vw"
 						/>
 					</button>
-					<button onClick={() => toggleModal(galery[5])} className="relative w-[calc(50%-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[151px] lg:h-[290px]">
+					<button onClick={() => toggleModal(galery[5])} className="relative w-[calc(50%-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[151px] lg:h-[290px] cursor-pointer">
 						<Image
 							src={galery[5]}
 							alt="Photo"
@@ -131,7 +131,7 @@ const FootballGaleryFotoPage: React.FC = () => {
 							sizes="50vw"
 						/>
 					</button>
-					<button onClick={() => toggleModal(galery[8])} className="relative w-[calc(50%-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[151px] lg:h-[290px]">
+					<button onClick={() => toggleModal(galery[8])} className="relative w-[calc(50%-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[151px] lg:h-[290px] cursor-pointer">
 						<Image
 							src={galery[8]}
 							alt="Photo"
@@ -142,7 +142,7 @@ const FootballGaleryFotoPage: React.FC = () => {
 					</button>
 				</div>
 				<div className="flex w-full gap-[10px] md:gap-4 lg:gap-6">
-					<button onClick={() => toggleModal(galery[9])} className="relative w-[calc(100%/3*2-5px)] md:grow h-[116px] md:h-[245px] lg:h-[468px]">
+					<button onClick={() => toggleModal(galery[9])} className="relative w-[calc(100%/3*2-5px)] md:grow h-[116px] md:h-[245px] lg:h-[468px] cursor-pointer">
 						<Image
 							src={galery[9]}
 							alt="Photo"
@@ -151,7 +151,7 @@ const FootballGaleryFotoPage: React.FC = () => {
 							sizes="50vw"
 						/>
 					</button>
-					<button onClick={() => toggleModal(galery[7])} className="relative w-[calc(100%/3-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[245px] lg:h-[468px]">
+					<button onClick={() => toggleModal(galery[7])} className="relative w-[calc(100%/3-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[245px] lg:h-[468px] cursor-pointer">
 						<Image
 							src={galery[7]}
 							alt="Photo"

@@ -19,7 +19,7 @@ const FootballChampionshipTable = forwardRef<HTMLTableElement, Props>(function F
 			<thead>
 				<tr className="flex md:table-row text-center h-[50px] text-black-text bg-table-title overflow-hidde">
 					<th className="hidden md:table-cell w-[31px] lg:w-[41px] border-r border-arrow bg-table-title">#</th>
-					<th className="flex justify-center items-center md:table-cell min-w-[180px] sm:min-w-[181px] md:min-w-[325px] lg:w-[710px] align-middle border-r border-arrow bg-table-title z-9"><span className="">П.І.Б</span></th>
+					<th className="flex justify-center md:text-left  items-center md:table-cell md:pl-[96px] lg:pl-[301px] min-w-[180px] sm:min-w-[181px] md:min-w-[325px] lg:w-[749px] align-middle border-r border-arrow bg-table-title z-9">П.І.Б</th>
 					<th className={`flex justify-center items-center md:table-cell min-w-[140px] sm:min-w-[146px] md:min-w-[136px] lg:w-[228px] border-r border-arrow bg-table-title ${extra}`}>Дисципліна</th>
 					<th className={`flex justify-center items-center md:table-cell min-w-[140px] sm:min-w-[146px] md:min-w-[88px] lg:w-[146px] border-r border-arrow bg-table-title ${extra}`}>Дистанція</th>
 					<th className={`flex justify-center items-center md:table-cell min-w-[140px] sm:min-w-[146px] md:min-w-[60px] lg:w-[133px]  border-r border-arrow bg-table-title ${extra}`}>Місце</th>
