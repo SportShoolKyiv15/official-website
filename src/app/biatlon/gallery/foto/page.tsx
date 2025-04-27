@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useEffect, FC } from "react";
+import { useState, useEffect, FC, useRef } from "react";
 
 import GalleryNav from "@/components/GalleryNav";
 import Title from "@/components/Title";
@@ -14,7 +14,7 @@ const BiatlonGaleryFotoPage: FC = () => {
 	const [IsVisible, setIsVisible] = useState(false);
 	const [url, setUrl] = useState('');
 	const [visibleCount, setVisibleCount] = useState(10);
-	const [isLoading, setIsLoading] = useState(false);
+	const loaderRef = useRef<HTMLDivElement | null>(null);
 	const galery = FOOTBALL_FOTO_GALERY;
 
 	const toggleModal = (urlString: string) => {
@@ -41,26 +41,27 @@ const BiatlonGaleryFotoPage: FC = () => {
 		document.body.classList.remove("modal-open");
 	};
 
-	const loadMore = useCallback(() => {
-		if (visibleCount >= galery.length || isLoading) return;
-
-		setIsLoading(true);
-		setTimeout(() => {
-			setVisibleCount(prev => Math.min(prev + 10, galery.length));
-			setIsLoading(false);
-		}, 500);
-	}, [visibleCount, galery.length, isLoading]);
-
-	const handleScroll = useCallback(() => {
-		if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
-			loadMore();
-		}
-	}, [loadMore]);
-
 	useEffect(() => {
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, [handleScroll]);
+		const observer = new IntersectionObserver((entries) => {
+			const firstEntry = entries[0];
+			if (firstEntry.isIntersecting) {
+				setVisibleCount(prev => Math.min(prev + 10, galery.length));
+			}
+		}, {
+			rootMargin: "0px",
+		});
+
+		const loader = loaderRef.current;
+		if (loader) {
+			observer.observe(loader);
+		}
+
+		return () => {
+			if (loader) {
+				observer.unobserve(loader);
+			}
+		};
+	}, [galery.length]);
 
 	return (
 		<section className="page-wrap gap-6 md:gap-8 mt-8 md:mt-10 lg:mt-[50px] mb-[50px] md:mb-[80px] lg:mb-[100px] xs:px-[10px] sm:px-4 md:px-[20px] lg:px-[72px] pt-0">
@@ -71,7 +72,7 @@ const BiatlonGaleryFotoPage: FC = () => {
 			<div className="flex flex-wrap w-full gap-[10px] md:gap-4 lg:gap-6">
 				{galery.length && galery.slice(0, visibleCount).map((item, idx) => (
 					<button key={idx} onClick={() => toggleModal(item)}
-						className={`relative cursor-pointer
+						className={`relative cursor-pointer animate-fade-in
 						 ${idx % 5 === 0 && "w-full md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[239px] md:h-[151px] lg:h-[290px]"}
 						 ${(idx - 1) % 5 === 0 && "w-[calc(50%-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[151px] lg:h-[290px]"}
 						 ${(idx - 2) % 5 === 0 && "w-[calc(50%-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[151px] lg:h-[290px]"}
@@ -88,8 +89,8 @@ const BiatlonGaleryFotoPage: FC = () => {
 					</button>
 				))}
 			</div>
-			{isLoading && (
-				<div className="flex justify-center mt-4">
+			{visibleCount < galery.length && (
+				<div ref={loaderRef} className="h-[50px] flex justify-center items-center mt-6">
 					<span className="text-gray-500 animate-pulse">Завантаження...</span>
 				</div>
 			)}
