@@ -45,10 +45,12 @@ const FootballGaleryFotoPage: FC = () => {
 		const observer = new IntersectionObserver((entries) => {
 			const firstEntry = entries[0];
 			if (firstEntry.isIntersecting) {
-				setVisibleCount(prev => Math.min(prev + 10, galery.length));
+				setTimeout(() => {
+					setVisibleCount(prev => Math.min(prev + 10, galery.length));
+				}, 700)
 			}
 		}, {
-			rootMargin: "0px",
+			rootMargin: "100px",
 		});
 
 		const loader = loaderRef.current;
