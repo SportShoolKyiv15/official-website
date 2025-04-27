@@ -417,6 +417,19 @@
     rgba(0, 0, 0, 0) -6.84%,
     rgba(0, 0, 0, 0.85) 62.89%
   );
-  /* background: linear-gradient
-    (-89.79deg, rgba(0, 0, 0, 0) -6.84%, rgba(0, 0, 0, 0.85) 62.89%); */
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease forwards;
 }
