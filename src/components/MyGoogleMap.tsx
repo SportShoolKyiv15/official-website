@@ -45,7 +45,7 @@
 "use client";
 
 import { FC } from "react";
-import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import { GoogleMap } from "@react-google-maps/api";
 
 type Props = {
 	sport: 'football' | 'sky';
@@ -88,20 +88,15 @@ const MyGoogleMap: FC<Props> = ({ sport }) => {
 	};
 
 	return (
-		<LoadScript
-			googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? ''}
-			libraries={['marker']}>
-			<GoogleMap
-				mapContainerStyle={containerStyle}
-				center={destination}
-				zoom={14}
-				onLoad={handleMapLoad}
-				options={{
-					mapId: process.env.NEXT_PUBLIC_GOOGLE_MAP_ID,
-				}}
-			>
-			</GoogleMap>
-		</LoadScript>
+		<GoogleMap
+			mapContainerStyle={containerStyle}
+			center={destination}
+			zoom={14}
+			onLoad={handleMapLoad}
+			options={{
+				mapId: process.env.NEXT_PUBLIC_GOOGLE_MAP_ID,
+			}}>
+		</GoogleMap>
 	);
 }
 

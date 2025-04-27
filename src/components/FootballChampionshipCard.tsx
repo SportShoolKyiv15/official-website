@@ -3,44 +3,24 @@
 import { FC, useState, useRef, useEffect } from "react";
 import Image from "next/image";
 
-import FootballChampionshipTableTitle from "./FootballChampionshipTableTitle";
+import TableTitle from "./TableTitle";
 import FootballChampionshipTable from "./FootballChampionshipTable";
 import { setTableColDisplacemet1 } from "@/utils/setTableColDisplacemet1";
 import { setTableColDisplacemet2 } from "@/utils/setTableColDisplacemet2";
 import useWindowWidth from "@/helpers/windowsSize";
+import { FootballChampioship } from '@/globaltypes/types';
 
 type Props = {
 	isOpened: boolean,
 	onToggle: () => void,
 	cardRef?: React.RefObject<HTMLDivElement | null>;
-	championshipDuflu: {
-		name: string;
-		comands: {
-			name: string,
-			games: number,
-			points: number,
-			win: number,
-			draw: number,
-			defeat: number,
-			score: string,
-		}[],
-	};
-	championshipKyiv: {
-		name: string;
-		comands: {
-			name: string,
-			games: number,
-			points: number,
-			win: number,
-			draw: number,
-			defeat: number,
-			score: string,
-		}[],
-	};
+	championshipDuflu: FootballChampioship;
+	championshipKyiv: FootballChampioship;
 };
 
 let count = 0;
 let count2 = 0;
+const numberShifts = 4;
 
 const FootballTeamCard: FC<Props> = ({
 	championshipDuflu,
@@ -192,12 +172,12 @@ const FootballTeamCard: FC<Props> = ({
 			<div className={`flex flex-col md:justify-between lg:justify-start gap-[50px] lg:gap-[60px] ${isOpened ? 'item-opened mt-5 md:mt-6  md:pb-[9px] lg:pb-5' : 'item-closed'}`}>
 				<div>
 					<p className="mb-[18px] text-center lg:text-lg font-display font-semibold">Чемпіонат ДЮФЛУ</p>
-					<FootballChampionshipTableTitle extra={countIcon} />
+					<TableTitle numberShifts={numberShifts} extra={countIcon}>Турнірна таблиця</TableTitle>
 					<FootballChampionshipTable handleTouchStart={handleTouchStart} handleTouchEnd={handleTouchEnd} ref={tableRef1} extra={extra} comands={championshipDuflu.comands} />
 				</div>
 				<div>
 					<p className="mb-[18px] text-center lg:text-lg font-display font-semibold">Чемпіонат Києва</p>
-					<FootballChampionshipTableTitle extra={countIcon2} />
+					<TableTitle numberShifts={numberShifts} extra={countIcon2}>Турнірна таблиця</TableTitle>
 					<FootballChampionshipTable handleTouchStart={handleTouchStart} handleTouchEnd={handleTouchEnd} ref={tableRef2} extra={extra2} comands={championshipKyiv.comands} />
 				</div>
 			</div>

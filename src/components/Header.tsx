@@ -31,6 +31,7 @@ const Header: React.FC = () => {
 
 	const closeModal = () => {
 		setIsVisible(false);
+		toggleUpdate();
 		setTimeout(() => {
 			setIsModalOpen(false);
 		}, 300)
@@ -88,12 +89,15 @@ const Header: React.FC = () => {
 					<nav className='lg:flex gap-11 mb-6'>
 						<Link
 							href={'/about'}
+							onClick={toggleUpdate}
 							className='font-ermilov font-bold hover:opacity-80'>Про нас</Link>
 						<Link
 							href={'/services'}
+							onClick={toggleUpdate}
 							className='font-ermilov font-bold hover:opacity-80'>Платні послуги</Link>
 						<Link
 							href={'/contacts'}
+							onClick={toggleUpdate}
 							className='font-ermilov font-bold hover:opacity-80'>Контакти</Link>
 					</nav>
 					<div className='flex'>
