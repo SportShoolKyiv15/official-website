@@ -434,7 +434,7 @@
   animation: fade-in 1s ease forwards;
 }
 
-@keyframes appear-in {
+/* @keyframes appear-in {
   0% {
     opacity: 0;
   }
@@ -445,4 +445,4 @@
 
 .animate-appear-in {
   animation: appear-in 1s ease forwards;
-}
+} */
