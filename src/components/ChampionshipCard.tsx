@@ -121,8 +121,6 @@ const ChampionshipCard: FC<Props> = ({
 		};
 	}, [withWindow]);
 
-	console.log(isOpened)
-
 	return (
 		<div ref={cardRef}>
 			<button onClick={onToggle} className="flex justify-between w-full items-center px-1 cursor-pointer">
