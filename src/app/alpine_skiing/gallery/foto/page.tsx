@@ -4,7 +4,7 @@ import { useState, useEffect, FC, useRef } from "react";
 
 import GalleryNav from "@/components/GalleryNav";
 import Title from "@/components/Title";
-import Image from "next/image";
+import GaleryList from "@/components/GaleryList";
 import FotoGaleryModal from "@/components/modals/FotoGaleryModal";
 
 import { FOOTBALL_FOTO_GALERY } from "@/data/constants";
@@ -71,26 +71,7 @@ const AlpineSkiingGaleryFotoPage: FC = () => {
 				<Title type='section-subtitle'>Галерея</Title>
 				<GalleryNav />
 			</div>
-			<div className="flex flex-wrap w-full gap-[10px] md:gap-4 lg:gap-6">
-				{galery.length && galery.slice(0, visibleCount).map((item, idx) => (
-					<button key={idx} onClick={() => toggleModal(item)}
-						className={`relative cursor-pointer animate-fade-in
-						 ${idx % 5 === 0 && "w-full md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[239px] md:h-[151px] lg:h-[290px]"}
-						 ${(idx - 1) % 5 === 0 && "w-[calc(50%-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[151px] lg:h-[290px]"}
-						 ${(idx - 2) % 5 === 0 && "w-[calc(50%-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[151px] lg:h-[290px]"}
-						${(idx - 3) % 5 === 0 && "w-[calc(100%/3-5px)] md:w-[calc((100%-2*16px)/3)] lg:w-[calc((100%-2*24px)/3)] h-[116px] md:h-[245px] lg:h-[468px]"}
-							${(idx - 4) % 5 === 0 && "w-[calc(100%/3*2-5px)] md:w-[calc((100%-10px)/3*2)] lg:w-[calc((100%-16px)/3*2)] h-[116px] md:h-[245px] lg:h-[468px]"}
-						 `}>
-						<Image
-							src={item}
-							alt={`Photo ${idx + 1}`}
-							fill
-							style={{ objectFit: "cover" }}
-							sizes="100vw"
-						/>
-					</button>
-				))}
-			</div>
+			<GaleryList toggleModal={toggleModal} galery={galery} visibleCount={visibleCount} />
 			{visibleCount < galery.length && (
 				<div ref={loaderRef} className="h-[50px] flex justify-center items-center mt-6">
 					<span className="text-gray-500 animate-pulse">Завантаження...</span>
