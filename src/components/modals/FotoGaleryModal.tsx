@@ -1,7 +1,6 @@
 'use client';
 
-import React from 'react';
-import { useCallback, useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 interface ModalProps {

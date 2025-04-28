@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { FC, useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -10,7 +10,11 @@ import { useNav } from '../contexts/NavContext';
 
 import { Sports } from '@/globaltypes/types';
 
-const Nav: React.FC = () => {
+type Props = {
+	hideHeader: boolean;
+}
+
+const Nav: FC<Props> = ({ hideHeader }) => {
 	const pathname = usePathname();
 	const [isToggled, setIsToggled] = useState(false);
 	const [sport, setSport] = useState<Sports>();
@@ -119,7 +123,7 @@ const Nav: React.FC = () => {
 						</>}
 				</div>
 				{/* Desktop and tablet navigation */}
-				<div className='hidden md:flex justify-between lg:justify-center gap-10 lg:gap-[38px] md:px-[14px] lg:px-0'>
+				<div className='hidden md:flex justify-between lg:justify-center gap-10 lg:gap-[38px] md:px-[14px] lg:px-0 relative'>
 					<Link href={'/football/main'} onClick={onClick} className='flex items-center'>
 						<div className='flex w-9 items-center justify-center'>
 							<Image
@@ -168,6 +172,26 @@ const Nav: React.FC = () => {
 						</div>
 						<p className={`${sport === 'alpine_skiing' && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Гірські лижі</p>
 					</Link>
+					<div className={`hidden lg:block absolute top-1/2 -translate-y-1/2 left-[294px] ${hideHeader ? 'history-opened' : 'history-closed'}`}>
+						<Image
+							className='mr-[6px]'
+							src="/svg/smallLogo.svg"
+							alt="Logo"
+							width={49}
+							height={41}
+						/>
+					</div>
+					<div className={`flex hidden lg:block  absolute top-1/2 -translate-y-1/2 right-[294px] ${hideHeader ? ' history-opened' : 'history-closed'}`}>
+						<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
+							<Image
+								className=""
+								src="/svg/sponsorIcon.svg"
+								alt="icon sponsor"
+								width={28}
+								height={28}
+							/>
+						</Link>
+					</div>
 				</div>
 			</div>
 		</nav>

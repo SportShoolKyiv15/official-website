@@ -1,5 +1,4 @@
-import { FC } from 'react';
-import { useCallback, useEffect, useRef, useState, useMemo } from 'react';
+import { FC, useCallback, useEffect, useRef, useState, useMemo } from 'react';
 import Image from 'next/image';
 import axios from "axios";
 import { AxiosError } from 'axios';
