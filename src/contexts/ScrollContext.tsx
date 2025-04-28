@@ -17,10 +17,7 @@ export const ScrollProvider = ({ children }: { children: React.ReactNode }) => {
 	useEffect(() => {
 		const handleScroll = () => {
 			const currentScrollTop = window.scrollY;
-			// const windowHeight = window.innerHeight;
-			// const fullHeight = document.body.scrollHeight;
 
-			// const isBottom = currentScrollTop + windowHeight >= fullHeight - 10; // -10 для невеликого запасу
 			const isTop = currentScrollTop === 0;
 
 			setAtTop(isTop);
