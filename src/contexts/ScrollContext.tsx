@@ -21,7 +21,7 @@ export const ScrollProvider = ({ children }: { children: React.ReactNode }) => {
 			// const fullHeight = document.body.scrollHeight;
 
 			// const isBottom = currentScrollTop + windowHeight >= fullHeight - 10; // -10 для невеликого запасу
-			const isTop = currentScrollTop < 50;
+			const isTop = currentScrollTop === 0;
 
 			setAtTop(isTop);
 
