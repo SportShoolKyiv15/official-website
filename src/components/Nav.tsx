@@ -172,7 +172,7 @@ const Nav: FC<Props> = ({ hideHeader }) => {
 						</div>
 						<p className={`${sport === 'alpine_skiing' && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Гірські лижі</p>
 					</Link>
-					<div className={`hidden lg:block absolute top-1/2 -translate-y-1/2 left-[294px] ${hideHeader ? 'history-opened' : 'history-closed'}`}>
+					<div className={`hidden lg:block absolute top-1/2 -translate-y-1/2 left-[194px] ${hideHeader ? 'history-opened' : 'history-closed'}`}>
 						<Image
 							className='mr-[6px]'
 							src="/svg/smallLogo.svg"
@@ -181,7 +181,7 @@ const Nav: FC<Props> = ({ hideHeader }) => {
 							height={41}
 						/>
 					</div>
-					<div className={`flex hidden lg:block  absolute top-1/2 -translate-y-1/2 right-[294px] ${hideHeader ? ' history-opened' : 'history-closed'}`}>
+					<div className={`flex hidden lg:block  absolute top-1/2 -translate-y-1/2 right-[194px] ${hideHeader ? ' history-opened' : 'history-closed'}`}>
 						<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
 							<Image
 								className=""
