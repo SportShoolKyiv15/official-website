@@ -1,5 +1,4 @@
-import React from 'react';
-import { useCallback, useEffect, useRef } from 'react';
+import React, { FC, useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 import { COACH_TEAM } from '@/data/constants';
@@ -11,7 +10,7 @@ interface ModalProps {
 	IsVisible: boolean;
 };
 
-const CoachAutobiographyModal: React.FC<ModalProps> = ({ idx, isModalOpen, closeModal, IsVisible }) => {
+const CoachAutobiographyModal: FC<ModalProps> = ({ idx, isModalOpen, closeModal, IsVisible }) => {
 	const modalRef = useRef<HTMLDivElement | null>(null);
 
 	const handleOverlayClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
