@@ -119,7 +119,7 @@ const Header: React.FC = () => {
 						/>
 					</Link>
 				</div>
-				<div className={`hidden sm:flex md:hidden absolute bottom-[10px] right-[81px] ${isModalOpen && 'sm:hidden'}`}>
+				<div className={`hidden sm:flex md:hidden absolute top-1/2 -translate-y-1/2 right-[81px] ${isModalOpen && 'sm:hidden'}`}>
 					<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
 						<Image
 							src="/svg/sponsorIcon.svg"
@@ -129,7 +129,7 @@ const Header: React.FC = () => {
 						/>
 					</Link>
 				</div>
-				<div className={`flex sm:hidden absolute bottom-[10px] right-[61px] ${isModalOpen && 'hidden'}`}>
+				<div className={`flex sm:hidden absolute top-1/2 -translate-y-1/2 right-[61px] ${isModalOpen && 'hidden'}`}>
 					<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
 						<Image
 							src="/svg/sponsorIcon.svg"
