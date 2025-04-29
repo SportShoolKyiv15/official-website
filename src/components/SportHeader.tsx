@@ -69,7 +69,7 @@ const SportHeader: FC = () => {
 									/></button>
 							</div>
 							<div className='w-full h-[1px] bg-line-drop-menu'></div>
-							<nav className='w-[336px] sm:w-[345px] absolute top-[100%] pt-3 pb-5 bg-drop-menu rounded-b-sm' aria-label='Навігація по сторінці'>
+							<nav className='w-[336px] sm:w-[345px] absolute top-[100%] pt-5 pb-5 bg-drop-menu rounded-b-sm' aria-label='Навігація по сторінці'>
 								<SportNavListItems sport={sport} subpage={subpage} onClick={onClick} />
 							</nav>
 						</div>
