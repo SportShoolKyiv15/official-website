@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import useWindowWidth from '@/helpers/windowsSize';
 import BurgerMenu from '../BurgerMenu';
@@ -49,21 +50,34 @@ const ModalBurgerMenu: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisi
 		<div className={`${isModalOpen && 'modal-overlay relative'}`} onClick={handleOverlayClick}>
 			{isModalOpen &&
 				<div ref={modalRef} className={`absolute top-0 left-0 w-[313px] md:w-[586px]  min-h-screen text-white bg-block-dark ${IsVisible ? `burger-menu-visible` : `burger-menu-hidden`}`}>
-					<div className='flex gap-1 md:gap-[10px] items-center pl-4 md:pl-5 py-[6px] md:py-[11px] bg-header text-white'>
-						<Image
-							src='/svg/logoHeader.svg'
-							alt='Logo'
-							width={60}
-							height={51}
-							className='md:hidden' />
-						<Image
-							src='/svg/logoHeader.svg'
-							alt='Logo'
-							width={82}
-							height={70}
-							className='hidden md:block lg:hidden' />
-						<p className='md:hidden text-lg font-ermilov font-bold leading-[110%]'>КДЮСШ</p>
-						<p className='hidden md:block md:w-[285px] lg:w-[377px] text-lg lg:text-xl font-ermilov font-bold leading-[110%]'>Комплексна дитяча юнацька спортивна школа 15</p>
+					<div className='flex justify-between items center w-full px-4 md:px-5 py-[6px] md:py-[11px] bg-header'>
+						<div className='flex gap-1 md:gap-[10px] items-center w-full  text-white relative'>
+							<Image
+								src='/svg/logoHeader.svg'
+								alt='Logo'
+								width={60}
+								height={51}
+								className='md:hidden' />
+							<Image
+								src='/svg/logoHeader.svg'
+								alt='Logo'
+								width={82}
+								height={70}
+								className='hidden md:block lg:hidden' />
+							<p className='md:hidden text-lg font-ermilov font-bold leading-[110%]'>КДЮСШ</p>
+							<p className='hidden md:block md:w-[285px] lg:w-[377px] text-lg lg:text-xl font-ermilov font-bold leading-[110%]'>Комплексна дитяча юнацька спортивна школа 15</p>
+						</div>
+						<div className={`flex items-center`}>
+							<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
+								<Image
+									className=""
+									src="/svg/sponsorIcon.svg"
+									alt="icon sponsor"
+									width={28}
+									height={28}
+								/>
+							</Link>
+						</div>
 					</div>
 					<BurgerMenu closeModal={closeModal} />
 				</div>}
