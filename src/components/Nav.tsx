@@ -7,18 +7,16 @@ import { usePathname } from 'next/navigation';
 
 import { determineSportPage } from '@/helpers/determineSportPege';
 import { useNav } from '../contexts/NavContext';
+import { useScroll } from '@/contexts/ScrollContext';
 
 import { Sports } from '@/globaltypes/types';
 
-type Props = {
-	hideHeader: boolean;
-}
-
-const Nav: FC<Props> = ({ hideHeader }) => {
+const Nav: FC = ({ }) => {
 	const pathname = usePathname();
 	const [isToggled, setIsToggled] = useState(false);
 	const [sport, setSport] = useState<Sports>();
 	const { isUpdated, toggleUpdate } = useNav();
+	const { hideHeader } = useScroll();
 
 	// Switch menu items in mobile
 	const onSwitch = () => {

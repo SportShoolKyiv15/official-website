@@ -6,14 +6,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { useNav } from '../contexts/NavContext';
-import { useScroll } from '../contexts/ScrollContext';
 import ModalBurgerMenu from './modals/ModalBurgerMenu';
-import Nav from './Nav';
 
 const Header: React.FC = () => {
 	// Reload neighbor component Nav for reset active menu item when we go to MainPage
 	const { toggleUpdate } = useNav();
-	const { hideHeader } = useScroll()
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [IsVisible, setIsVisible] = useState(false);
 
@@ -40,8 +37,8 @@ const Header: React.FC = () => {
 	};
 
 	return (
-		<header className='sticky top-0 z-50 flex flex-col w-full items-center bg-header text-white'>
-			<div className={`my-container flex justify-between items-center pt-[6px] md:pt-[11px] lg:pt-[19px] pb-[7px] md:pb-[11px] lg:pb-[18px] relative ${hideHeader ? 'header-hidden pt-0 pb-0' : 'header-visible'}`}>
+		<header className='flex flex-col w-full items-center bg-header text-white'>
+			<div className={`my-container flex justify-between items-center pt-[6px] md:pt-[11px] lg:pt-[19px] pb-[7px] md:pb-[11px] lg:pb-[18px] relative`}>
 				<div className='flex items-center'>
 					<Link href={'/'}
 						onClick={toggleUpdate}
@@ -146,9 +143,9 @@ const Header: React.FC = () => {
 					</Link>
 				</div>
 			</div>
-			<div className={`w-full bg-header`}>
+			{/* <div className={`w-full bg-header`}>
 				<Nav hideHeader={hideHeader} />
-			</div>
+			</div> */}
 			<div className='absolute top-0 left-0 z-10'>
 				<ModalBurgerMenu isModalOpen={isModalOpen} closeModal={closeModal} IsVisible={IsVisible} />
 			</div>
