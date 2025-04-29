@@ -31,6 +31,10 @@ const Nav: FC = ({ }) => {
 	};
 
 	useEffect(() => {
+		setSport(undefined)
+	}, [isUpdated])
+
+	useEffect(() => {
 		if (pathname && determineSportPage(pathname)?.sportName) {
 			const ourPath = determineSportPage(pathname)?.sportName;
 			// Switch navigation items
@@ -47,6 +51,7 @@ const Nav: FC = ({ }) => {
 
 	return (
 		<nav className='w-full bg-nav-gradient' aria-label='Основна навігація'>
+			<div className={`w-full h-1 bg-header ${hideHeader ? 'block' : 'hidden'}`}></div>
 			<div className='my-container m-auto pt-[10px] md:pt-[6px] pb-1 md:pb-[6px] relative'>
 				{/* Mobile navigathion */}
 				<div className='md:hidden flex justify-center gap-4 sm:gap-6 text-sm sm:text-base'>
@@ -170,7 +175,7 @@ const Nav: FC = ({ }) => {
 						</div>
 						<p className={`${sport === 'alpine_skiing' && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Гірські лижі</p>
 					</Link>
-					<div className={`hidden lg:block absolute top-1/2 -translate-y-1/2 left-[194px] ${hideHeader ? 'history-opened' : 'history-closed'}`}>
+					<div className={`hidden lg:block absolute top-1/2 -translate-y-1/2 left-[194px] ${hideHeader ? 'nav-Logo-visible' : 'header-Logo-hidden'}`}>
 						<Image
 							className='mr-[6px]'
 							src="/svg/smallLogo.svg"
@@ -179,7 +184,7 @@ const Nav: FC = ({ }) => {
 							height={41}
 						/>
 					</div>
-					<div className={`flex hidden lg:block  absolute top-1/2 -translate-y-1/2 right-[194px] ${hideHeader ? ' history-opened' : 'history-closed'}`}>
+					<div className={`flex hidden lg:block  absolute top-1/2 -translate-y-1/2 right-[194px] ${hideHeader ? 'nav-Logo-visible' : 'header-Logo-hidden'}`}>
 						<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
 							<Image
 								className=""
