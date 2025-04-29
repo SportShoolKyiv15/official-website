@@ -339,14 +339,14 @@
   transition: max-height 0.7s ease, opacity 0.7s ease;
 }
 
-.header-visible {
-  max-height: 130px;
+.nav-Logo-visible {
+  max-height: 60px;
   opacity: 1;
   overflow: hidden;
   transition: max-height 0.1s ease, opacity 0.1s ease;
 }
 
-.header-hidden {
+.header-Logo-hidden {
   max-height: 0px;
   opacity: 0;
   overflow: hidden;
