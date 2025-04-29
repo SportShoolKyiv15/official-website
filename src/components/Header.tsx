@@ -143,9 +143,6 @@ const Header: React.FC = () => {
 					</Link>
 				</div>
 			</div>
-			{/* <div className={`w-full bg-header`}>
-				<Nav hideHeader={hideHeader} />
-			</div> */}
 			<div className='absolute top-0 left-0 z-10'>
 				<ModalBurgerMenu isModalOpen={isModalOpen} closeModal={closeModal} IsVisible={IsVisible} />
 			</div>

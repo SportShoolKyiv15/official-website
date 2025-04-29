@@ -29,8 +29,10 @@ const RootLayout: FC<Props> = ({ children }) => {
 						<ScrollProvider>
 							<NavProvider>
 								<div className="flex flex-col w-full min-h-screen">
-									<Header />
-									<div className="sticky top-0 z-50 ">
+									<div className="z-20">
+										<Header />
+									</div>
+									<div className="sticky top-0 z-10">
 										<Nav />
 									</div>
 									<main className="flex-1">{children}</main>
