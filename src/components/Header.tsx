@@ -109,7 +109,7 @@ const Header: React.FC = () => {
 							/></Link>
 					</div>
 				</div>
-				<div className='hidden md:flex lg:hidden absolute bottom-[14px] right-[105px]'>
+				<div className={`hidden md:flex lg:hidden absolute bottom-[14px] right-[105px] ${isModalOpen && 'md:hidden'}`}>
 					<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
 						<Image
 							src="/svg/sponsorIcon.svg"
@@ -119,7 +119,7 @@ const Header: React.FC = () => {
 						/>
 					</Link>
 				</div>
-				<div className='hidden sm:flex md:hidden absolute bottom-[10px] right-[81px]'>
+				<div className={`hidden sm:flex md:hidden absolute bottom-[10px] right-[81px] ${isModalOpen && 'sm:hidden'}`}>
 					<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
 						<Image
 							src="/svg/sponsorIcon.svg"
@@ -129,7 +129,7 @@ const Header: React.FC = () => {
 						/>
 					</Link>
 				</div>
-				<div className='flex sm:hidden absolute bottom-[10px] right-[61px]'>
+				<div className={`flex sm:hidden absolute bottom-[10px] right-[61px] ${isModalOpen && 'hidden'}`}>
 					<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
 						<Image
 							src="/svg/sponsorIcon.svg"
