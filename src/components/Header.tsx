@@ -112,7 +112,6 @@ const Header: React.FC = () => {
 				<div className='hidden md:flex lg:hidden absolute bottom-[14px] right-[105px]'>
 					<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
 						<Image
-							className=""
 							src="/svg/sponsorIcon.svg"
 							alt="icon sponsor"
 							width={35}
@@ -123,22 +122,20 @@ const Header: React.FC = () => {
 				<div className='hidden sm:flex md:hidden absolute bottom-[10px] right-[81px]'>
 					<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
 						<Image
-							className=""
 							src="/svg/sponsorIcon.svg"
 							alt="icon sponsor"
-							width={28}
-							height={28}
+							width={35}
+							height={35}
 						/>
 					</Link>
 				</div>
 				<div className='flex sm:hidden absolute bottom-[10px] right-[61px]'>
 					<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
 						<Image
-							className=""
 							src="/svg/sponsorIcon.svg"
 							alt="icon sponsor"
-							width={28}
-							height={28}
+							width={35}
+							height={35}
 						/>
 					</Link>
 				</div>
