@@ -70,11 +70,10 @@ const ModalBurgerMenu: React.FC<ModalProps> = ({ isModalOpen, closeModal, IsVisi
 						<div className={`flex items-center`}>
 							<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
 								<Image
-									className=""
 									src="/svg/sponsorIcon.svg"
 									alt="icon sponsor"
-									width={28}
-									height={28}
+									width={40}
+									height={40}
 								/>
 							</Link>
 						</div>
