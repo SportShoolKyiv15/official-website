@@ -342,12 +342,14 @@
 .header-visible {
   max-height: 130px;
   opacity: 1;
+  overflow: hidden;
   transition: max-height 0.1s ease, opacity 0.1s ease;
 }
 
 .header-hidden {
   max-height: 0px;
   opacity: 0;
+  overflow: hidden;
   padding-top: 0;
   padding-bottom: 0;
   transition: max-height 0.1s ease, opacity 0.1s ease;
