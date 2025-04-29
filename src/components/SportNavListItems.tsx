@@ -13,7 +13,7 @@ type Props = {
 const SportNavListItems: React.FC<Props> = ({ sport, subpage, onClick }) => {
 	return (
 		<>
-			<ul className='md:hidden flex flex-col gap-4 pl-10'>
+			<ul className='md:hidden flex flex-col gap-8 pl-10'>
 				{sport && ITEMS[sport].map((item, index) => (
 					<li key={index}>
 						<Link href={`/${sport}/${item[1]}`} onClick={onClick}>{item[0]}</Link>
