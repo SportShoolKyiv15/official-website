@@ -151,6 +151,16 @@
   overflow: hidden;
 }
 
+.hero-nav-item-title {
+  @apply left-4 lg:left-[38px];
+  transition: left 0.5s ease;
+}
+
+.hero-nav-item:hover .hero-nav-item-title {
+  @apply left-16 lg:left-34;
+  transition: left 0.5s ease;
+}
+
 .start-form {
   @apply md:-mr-[28px] lg:-mr-[32px];
   @media screen and (min-width: 720px) {
