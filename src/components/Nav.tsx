@@ -167,7 +167,7 @@ const Nav: FC = ({ }) => {
 								</Link>
 							</div>}
 					</div>
-					<div className='lg:hidden'>
+					<div className='md:hidden'>
 						{!isModalOpen && hideHeader &&
 							<button onClick={toggleModal} className='md:self-start'>
 								<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
