@@ -14,7 +14,6 @@ const Footer: React.FC = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [IsVisible, setIsVisible] = useState(false);
 	const destination = { lat: 50.381320102022265, lng: 30.451163440177055 };
-	const { toggleUpdate } = useNav();
 
 	const toggleModal = () => {
 		if (isModalOpen) {
