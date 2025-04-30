@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { MENU_ITEMS } from '@/data/constants';
-import { useNav } from '@/contexts/NavContext';
 
 type Props = {
 	index: number;
@@ -15,7 +14,6 @@ type Props = {
 
 const BurgerMenuItem: React.FC<Props> = ({ index, item, closeModal }) => {
 	const [isOpened, setIsOpend] = useState(false);
-	const { toggleUpdate } = useNav();
 
 	const onClick = () => {
 		setIsOpend(isOpened => !isOpened);
@@ -28,7 +26,6 @@ const BurgerMenuItem: React.FC<Props> = ({ index, item, closeModal }) => {
 					href={Object.values(MENU_ITEMS)[index].path}
 					onClick={() => {
 						closeModal();
-						toggleUpdate();
 					}}>
 					{item}
 				</Link>
@@ -62,7 +59,6 @@ const BurgerMenuItem: React.FC<Props> = ({ index, item, closeModal }) => {
 								href={subItem[1]}
 								onClick={() => {
 									closeModal();
-									toggleUpdate();
 								}}>
 								{subItem[0]}
 							</Link>

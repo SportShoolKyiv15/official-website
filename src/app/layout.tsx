@@ -6,7 +6,6 @@ import GoogleMapsProvider from "@/components/providers/GoogleMapsProvider";
 import { ScrollProvider } from '@/contexts/ScrollContext';
 import Nav from "@/components/Nav";
 import "./globals.css";
-import { NavProvider } from "@/contexts/NavContext";
 import { SportProvider } from "@/contexts/SportContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -29,18 +28,16 @@ const RootLayout: FC<Props> = ({ children }) => {
 					<GoogleMapsProvider>
 						<ScrollProvider>
 							<SportProvider>
-								<NavProvider>
-									<div className="flex flex-col w-full min-h-screen">
-										<div className="z-20">
-											<Header />
-										</div>
-										<div className="sticky top-0 z-10">
-											<Nav />
-										</div>
-										<main className="flex-1">{children}</main>
-										<Footer />
+								<div className="flex flex-col w-full min-h-screen">
+									<div className="z-20">
+										<Header />
 									</div>
-								</NavProvider>
+									<div className="sticky top-0 z-10">
+										<Nav />
+									</div>
+									<main className="flex-1">{children}</main>
+									<Footer />
+								</div>
 							</SportProvider>
 						</ScrollProvider>
 					</GoogleMapsProvider>
