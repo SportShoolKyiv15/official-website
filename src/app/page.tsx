@@ -52,7 +52,7 @@ export default function Home(): React.JSX.Element {
 						<div className="absolute inset-0 bg-lightgray"></div>
 						<div className="absolute inset-0 bg-[url('/img/heroImg.jpg')] bg-cover bg-center bg-no-repeat"></div>
 						<div className="absolute inset-0 hero-background-gadient"></div>
-						<div className="absolute left-4 lg:left-[38px] bottom-[28px] text-white font-display font-bold text-[26px] md:text-[20px] lg:text-[28px]">Футбол</div>
+						<div className="absolute bottom-[28px] text-white font-display font-bold text-[26px] md:text-[20px] lg:text-[28px] hero-nav-item-title">Футбол</div>
 					</Link>
 					<Link
 						href={'/biatlon/main'}
@@ -61,7 +61,7 @@ export default function Home(): React.JSX.Element {
 						<div className="absolute inset-0  bg-lightgray"></div>
 						<div className=" absolute inset-0 bg-[url('/img/biatlonHeroImg.jpg')] bg-cover bg-center bg-no-repeat"></div>
 						<div className="absolute inset-0 hero-background-gadient"></div>
-						<div className="absolute left-4 lg:left-[38px] bottom-[28px] text-white font-display font-bold text-[26px] md:text-[20px] lg:text-[28px]">Біатлон</div>
+						<div className="absolute bottom-[28px] text-white font-display font-bold text-[26px] md:text-[20px] lg:text-[28px]  hero-nav-item-title">Біатлон</div>
 					</Link>
 					<Link
 						href={'/sky_racing/main'}
@@ -70,7 +70,7 @@ export default function Home(): React.JSX.Element {
 						<div className="absolute inset-0  bg-lightgray"></div>
 						<div className=" absolute inset-0 bg-[url('/img/skyRacingHeroImg.jpg')] bg-cover bg-center bg-no-repeat"></div>
 						<div className="absolute inset-0  hero-background-gadient"></div>
-						<div className="absolute left-4 lg:left-[38px] bottom-[28px] text-white font-display font-bold text-[26px] md:text-[20px] lg:text-[28px]">Лижні гонки</div>
+						<div className="absolute bottom-[28px] text-white font-display font-bold text-[26px] md:text-[20px] lg:text-[28px] hero-nav-item-title">Лижні гонки</div>
 					</Link>
 					<Link
 						href={'/alpine_skiing/main'}
@@ -79,7 +79,7 @@ export default function Home(): React.JSX.Element {
 						<div className="absolute inset-0  bg-lightgray"></div>
 						<div className=" absolute inset-0 bg-[url('/img/alpineSkiingHeroImg.jpg')] bg-cover bg-center bg-no-repeat"></div>
 						<div className="absolute inset-0  hero-background-gadient"></div>
-						<div className="absolute left-4 lg:left-[38px] bottom-[28px] text-white font-display font-bold text-[26px] md:text-[20px] lg:text-[28px]">Гірські лижі</div>
+						<div className="absolute bottom-[28px] text-white font-display font-bold text-[26px] md:text-[20px] lg:text-[28px] hero-nav-item-title">Гірські лижі</div>
 					</Link>
 				</div>
 				<div className="flex justify-center items-center mt-4 md:mt-2 lg:mt-[25px]">
