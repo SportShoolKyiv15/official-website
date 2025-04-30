@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { useNav } from '../contexts/NavContext';
+import { useSport } from '@/contexts/SportContext';
 import ModalBurgerMenu from './modals/ModalBurgerMenu';
 
 const Header: React.FC = () => {
@@ -13,6 +14,7 @@ const Header: React.FC = () => {
 	const { toggleUpdate } = useNav();
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [IsVisible, setIsVisible] = useState(false);
+	const { sport } = useSport();
 
 	const toggleModal = () => {
 		if (isModalOpen) {
@@ -62,7 +64,25 @@ const Header: React.FC = () => {
 							className='hidden lg:block mr-[10px]' />
 					</Link>
 					<p className='md:hidden text-lg font-ermilov font-bold leading-[110%]'>КДЮСШ</p>
-					<p className='hidden md:block md:w-[285px] lg:w-[377px] text-lg lg:text-xl font-ermilov font-bold leading-[110%]'>Комплексна дитяча юнацька спортивна школа 15</p>
+					<p className='hidden md:block md:w-[315px] lg:w-[377px] text-lg lg:text-xl font-ermilov font-bold leading-[110%]'>Комплексна дитяча юнацька спортивна школа 15</p>
+					<div className={`hidden md:flex ${sport !== 'football' && 'md:hidden'}`}>
+						<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
+							<Image
+								src="/svg/sponsorIcon.svg"
+								alt="icon sponsor"
+								width={70}
+								height={70}
+								className='hidden lg:block'
+							/>
+							<Image
+								src="/svg/sponsorIcon.svg"
+								alt="icon sponsor"
+								width={50}
+								height={50}
+								className='hidden md:block lg:hidden'
+							/>
+						</Link>
+					</div>
 				</div>
 				<div className='lg:hidden'>
 					{!isModalOpen &&
