@@ -18,7 +18,7 @@ export const ScrollProvider = ({ children }: { children: React.ReactNode }) => {
 		const handleScroll = () => {
 			const currentScrollTop = window.scrollY;
 
-			const isTop = currentScrollTop === 0;
+			const isTop = currentScrollTop <= 50;
 
 			setAtTop(isTop);
 
