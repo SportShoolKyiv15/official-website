@@ -7,7 +7,6 @@ import Link from 'next/link';
 import ContactButton from './buttons/ContactButton';
 import FeedbackModal from './modals/FeedbackModal';
 
-
 const Footer: React.FC = () => {
 	// Reload neighbor component Nav for reset active menu item when we go to MainPage
 	const [isModalOpen, setIsModalOpen] = useState(false);
