@@ -8,14 +8,13 @@ import { usePathname } from 'next/navigation';
 import { determineSportPage } from '@/helpers/determineSportPege';
 import { useNav } from '../contexts/NavContext';
 import { useScroll } from '@/contexts/ScrollContext';
-
-import { Sports } from '@/globaltypes/types';
+import { useSport } from '@/contexts/SportContext';
 import ModalBurgerMenu from './modals/ModalBurgerMenu';
 
 const Nav: FC = ({ }) => {
 	const pathname = usePathname();
 	const [isToggled, setIsToggled] = useState(false);
-	const [sport, setSport] = useState<Sports>();
+	const { sport, getSport } = useSport();
 	const { isUpdated, toggleUpdate } = useNav();
 	const { hideHeader } = useScroll();
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -56,10 +55,8 @@ const Nav: FC = ({ }) => {
 	};
 
 	useEffect(() => {
-		setSport(undefined)
-	}, [isUpdated])
-
-	useEffect(() => {
+		console.log('pathname', pathname)
+		console.log('sport', sport)
 		if (pathname && determineSportPage(pathname)?.sportName) {
 			const ourPath = determineSportPage(pathname)?.sportName;
 			// Switch navigation items
@@ -70,9 +67,9 @@ const Nav: FC = ({ }) => {
 				setIsToggled(true)
 			};
 			// We find sport page
-			setSport(determineSportPage(pathname)?.sportName);
+			getSport(determineSportPage(pathname)?.sportName);
 		}
-	}, [pathname]);
+	}, [pathname, getSport, sport]);
 
 	return (
 		<nav className='w-full bg-nav-gradient' aria-label='Основна навігація'>
@@ -99,7 +96,7 @@ const Nav: FC = ({ }) => {
 							/>
 						</button>}
 						{!isToggled ?
-							<div className={`${hideHeader ? 'w-[280px] pl-14 justify-between' : 'gap-4'} flex items-center`}>
+							<div className={`${hideHeader ? 'justify-center gap-6' : 'gap-4'} flex items-center`}>
 								<Link href={'/football/main'} onClick={onClick} className={`flex items-center ${sport === 'football' && !isUpdated && hideHeader && 'border-b-2 border-button-hover'}`}>
 									<div className='flex w-9 items-center justify-center'>
 										<Image
@@ -132,8 +129,8 @@ const Nav: FC = ({ }) => {
 										height={20}
 									/>
 								</button>}
-							</div> : <div className={`${hideHeader ? 'w-full' : 'gap-4'} flex items-center`}>
-								{hideHeader && <button onClick={onSwitch} className='w-5 h-5 mr-11'>
+							</div> : <div className={`${hideHeader ? 'justify-center gap-6' : 'gap-4'} flex items-center`}>
+								{hideHeader && <button onClick={onSwitch} className='w-5 h-5'>
 									<Image
 										src="/svg/double-arrow-left.svg"
 										alt="icon arrow"
@@ -141,7 +138,7 @@ const Nav: FC = ({ }) => {
 										height={20}
 									/>
 								</button>}
-								<Link href={'/sky_racing/main'} onClick={onClick} className={`flex items-center ${hideHeader && 'mr-16'} ${sport === 'sky_racing' && !isUpdated && hideHeader && 'border-b-2 border-button-hover'}`}>
+								<Link href={'/sky_racing/main'} onClick={onClick} className={`flex items-center ${sport === 'sky_racing' && !isUpdated && hideHeader && 'border-b-2 border-button-hover'}`}>
 									<div className='flex w-10 items-center justify-center'>
 										<Image
 											className='mr-[9px]'

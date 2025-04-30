@@ -1,16 +1,18 @@
 'use client';
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import EnrollButton from "@/components/buttons/EnrollButton";
 import Title from "@/components/Title";
 import NewsSwiper from "@/components/NewsSwiper";
 import ModalEnroll from "@/components/modals/ModalEnroll";
+import { useSport } from '@/contexts/SportContext';
 
 export default function Home(): React.JSX.Element {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [IsVisible, setIsVisible] = useState(false);
+	const { getSport } = useSport();
 
 	const toggleModal = () => {
 		if (isModalOpen) {
@@ -34,6 +36,11 @@ export default function Home(): React.JSX.Element {
 		}, 300)
 		document.body.classList.remove("modal-open");
 	};
+
+	useEffect(() => {
+		getSport(undefined);
+	}, [getSport]);
+
 	return (
 		<section className="page-wrap md:pt-[28px] lg:pt-[70px]">
 			<div className="flex flex-col justify-center items-center w-full md:px-5 lg:px-18 mx-auto">

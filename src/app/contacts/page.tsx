@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useState } from "react";
+import { FC, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,10 +8,12 @@ import Title from "@/components/Title";
 import SportPageHero from "@/components/SportPageHero";
 import ModalEnroll from "@/components/modals/ModalEnroll";
 import MyGoogleMap from "@/components/MyGoogleMap";
+import { useSport } from '@/contexts/SportContext';
 
 const ContactsPage: FC = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [IsVisible, setIsVisible] = useState(false);
+	const { getSport } = useSport();
 
 	const toggleModal = () => {
 		if (isModalOpen) {
@@ -35,6 +37,11 @@ const ContactsPage: FC = () => {
 		}, 300)
 		document.body.classList.remove("modal-open");
 	};
+
+	useEffect(() => {
+		getSport(undefined);
+	}, [getSport]);
+
 	return (
 		<section className="page-wrap bg-main-dark mx-auto">
 			<div className="page-container ">

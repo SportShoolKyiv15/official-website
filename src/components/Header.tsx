@@ -41,7 +41,6 @@ const Header: React.FC = () => {
 			<div className={`my-container flex justify-between items-center pt-[6px] md:pt-[11px] lg:pt-[19px] pb-[7px] md:pb-[11px] lg:pb-[18px] relative`}>
 				<div className='flex items-center'>
 					<Link href={'/'}
-						onClick={toggleUpdate}
 						className='transform transition-transform duration-200 hover:scale-102 hover:cursor-pointer'>
 						<Image
 							src='/svg/logoHeader.svg'

@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useState, useRef } from "react";
+import { FC, useState, useRef, useEffect } from "react";
 
 import Title from "@/components/Title";
 import TableTitle from "@/components/TableTitle";
@@ -8,6 +8,7 @@ import FootballServicesTable from "@/components/FootballServicesTable";
 import SkyServicesTable from "@/components/SkyServicesTable";
 import { setTableColDisplacemet1 } from "@/utils/setTableColDisplacemet1";
 import { setTableColDisplacemet2 } from "@/utils/setTableColDisplacemet2";
+import { useSport } from '@/contexts/SportContext';
 
 let count = 0;
 let count2 = 0;
@@ -20,6 +21,7 @@ const ServicesPage: FC = () => {
 	const tableRef2 = useRef<HTMLTableElement | null>(null);
 	const [countIcon, setCountIcon] = useState(0);
 	const [countIcon2, setCountIcon2] = useState(0);
+	const { getSport } = useSport();
 
 	let xStart: number | null = null;
 	let yStart: number | null = null;
@@ -106,6 +108,10 @@ const ServicesPage: FC = () => {
 		xStart = null;
 		yStart = null;
 	};
+
+	useEffect(() => {
+		getSport(undefined);
+	}, [getSport]);
 
 	return (
 		<section className="page-wrap lg:w-[1296px]">
