@@ -77,7 +77,7 @@ const Nav: FC = ({ }) => {
 	return (
 		<nav className='w-full bg-nav-gradient' aria-label='Основна навігація'>
 			<div className={`w-full h-1 bg-header ${hideHeader ? 'block' : 'hidden'}`}></div>
-			<div className={`my-container m-auto ${hideHeader ? 'pt-0 pb-0' : 'pt-[10px] pb-1'} md:pt-[6px] md:pb-[6px] relative`}>
+			<div className={`my-container m-auto ${hideHeader ? 'pt-0 pb-[2px]' : 'pt-[10px] pb-1'} md:pt-[6px] md:pb-[6px] relative`}>
 				<div className='flex w-full'>
 					{/* Mobile navigathion */}
 					<div className={`md:hidden flex flex-grow justify-center gap-4 sm:gap-6 text-sm sm:text-base`}>
@@ -99,8 +99,8 @@ const Nav: FC = ({ }) => {
 							/>
 						</button>}
 						{!isToggled ?
-							<div className={`${hideHeader ? 'gap-12' : 'gap-4'} flex items-center`}>
-								<Link href={'/football/main'} onClick={onClick} className='flex items-center'>
+							<div className={`${hideHeader ? 'w-[280px] pl-14 justify-between' : 'gap-4'} flex items-center`}>
+								<Link href={'/football/main'} onClick={onClick} className={`flex items-center ${sport === 'football' && !isUpdated && hideHeader && 'border-b-2 border-button-hover'}`}>
 									<div className='flex w-9 items-center justify-center'>
 										<Image
 											className='mr-[9px]'
@@ -112,7 +112,7 @@ const Nav: FC = ({ }) => {
 									</div>
 									{!hideHeader && <p className={`${sport === 'football' && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Футбол</p>}
 								</Link>
-								<Link href={'/biatlon/main'} onClick={onClick} className='flex items-center'>
+								<Link href={'/biatlon/main'} onClick={onClick} className={`flex items-center ${sport === 'biatlon' && !isUpdated && hideHeader && 'border-b-2 border-button-hover'}`}>
 									<div className='flex w-9 items-center justify-center'>
 										<Image
 											className='mr-[9px]'
@@ -132,8 +132,8 @@ const Nav: FC = ({ }) => {
 										height={20}
 									/>
 								</button>}
-							</div> : <div className={`${hideHeader ? 'gap-12' : 'gap-4'} flex items-center`}>
-								{hideHeader && <button onClick={onSwitch} className='w-5 h-5'>
+							</div> : <div className={`${hideHeader ? 'w-full' : 'gap-4'} flex items-center`}>
+								{hideHeader && <button onClick={onSwitch} className='w-5 h-5 mr-11'>
 									<Image
 										src="/svg/double-arrow-left.svg"
 										alt="icon arrow"
@@ -141,7 +141,7 @@ const Nav: FC = ({ }) => {
 										height={20}
 									/>
 								</button>}
-								<Link href={'/sky_racing/main'} onClick={onClick} className='flex items-center'>
+								<Link href={'/sky_racing/main'} onClick={onClick} className={`flex items-center ${hideHeader && 'mr-16'} ${sport === 'sky_racing' && !isUpdated && hideHeader && 'border-b-2 border-button-hover'}`}>
 									<div className='flex w-10 items-center justify-center'>
 										<Image
 											className='mr-[9px]'
@@ -153,7 +153,7 @@ const Nav: FC = ({ }) => {
 									</div>
 									{!hideHeader && <p className={`${sport === 'sky_racing' && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Лижні гонки</p>}
 								</Link>
-								<Link href={'/alpine_skiing/main'} onClick={onClick} className='flex items-center'>
+								<Link href={'/alpine_skiing/main'} onClick={onClick} className={`flex items-center ${sport === 'alpine_skiing' && !isUpdated && hideHeader && 'border-b-2 border-button-hover'}`}>
 									<div className='flex w-9 items-center justify-center'>
 										<Image
 											className='mr-[9px]'
