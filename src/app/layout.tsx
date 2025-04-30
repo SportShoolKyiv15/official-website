@@ -9,7 +9,7 @@ import "./globals.css";
 import { SportProvider } from "@/contexts/SportContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import BackToTopButton from "@/components/buttons/BackToTopButton";
 
 export const metadata: Metadata = {
 	title: "КДЮСШ 15",
@@ -37,6 +37,7 @@ const RootLayout: FC<Props> = ({ children }) => {
 									</div>
 									<main className="flex-1">{children}</main>
 									<Footer />
+									<BackToTopButton />
 								</div>
 							</SportProvider>
 						</ScrollProvider>
