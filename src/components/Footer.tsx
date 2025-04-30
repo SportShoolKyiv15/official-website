@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { useNav } from '../contexts/NavContext';
 import ContactButton from './buttons/ContactButton';
 import FeedbackModal from './modals/FeedbackModal';
 
@@ -14,7 +13,6 @@ const Footer: React.FC = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [IsVisible, setIsVisible] = useState(false);
 	const destination = { lat: 50.381320102022265, lng: 30.451163440177055 };
-	const { toggleUpdate } = useNav();
 
 	const toggleModal = () => {
 		if (isModalOpen) {
@@ -80,7 +78,7 @@ const Footer: React.FC = () => {
 							</div>
 						</div>
 						<Link href={'/'}
-							onClick={toggleUpdate} className='md:hidden'>
+							className='md:hidden'>
 							<Image
 								src="/svg/logoFooter.svg"
 								alt="logo"
@@ -90,7 +88,6 @@ const Footer: React.FC = () => {
 						</Link>
 					</div>
 					<Link href={'/'}
-						onClick={toggleUpdate}
 						className='transform transition-transform duration-200 hover:scale-102 hover:cursor-pointer'>
 						<Image
 							src="/svg/logoFooter.svg"
