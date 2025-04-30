@@ -5,13 +5,10 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { useNav } from '../contexts/NavContext';
 import { useSport } from '@/contexts/SportContext';
 import ModalBurgerMenu from './modals/ModalBurgerMenu';
 
 const Header: React.FC = () => {
-	// Reload neighbor component Nav for reset active menu item when we go to MainPage
-	const { toggleUpdate } = useNav();
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [IsVisible, setIsVisible] = useState(false);
 	const { sport } = useSport();
@@ -32,7 +29,6 @@ const Header: React.FC = () => {
 
 	const closeModal = () => {
 		setIsVisible(false);
-		toggleUpdate();
 		setTimeout(() => {
 			setIsModalOpen(false);
 		}, 300)
@@ -107,15 +103,15 @@ const Header: React.FC = () => {
 					<nav className='lg:flex gap-11 mb-6'>
 						<Link
 							href={'/about'}
-							onClick={toggleUpdate}
+							// onClick={toggleUpdate}
 							className='font-ermilov font-bold hover:opacity-80'>Про нас</Link>
 						<Link
 							href={'/services'}
-							onClick={toggleUpdate}
+							// onClick={toggleUpdate}
 							className='font-ermilov font-bold hover:opacity-80'>Платні послуги</Link>
 						<Link
 							href={'/contacts'}
-							onClick={toggleUpdate}
+							// onClick={toggleUpdate}
 							className='font-ermilov font-bold hover:opacity-80'>Контакти</Link>
 					</nav>
 					<div className={`block w-[35px] h-[35px]`}>

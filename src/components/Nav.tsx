@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import { determineSportPage } from '@/helpers/determineSportPege';
-import { useNav } from '../contexts/NavContext';
 import { useScroll } from '@/contexts/ScrollContext';
 import { useSport } from '@/contexts/SportContext';
 import ModalBurgerMenu from './modals/ModalBurgerMenu';
@@ -15,7 +14,6 @@ const Nav: FC = ({ }) => {
 	const pathname = usePathname();
 	const [isToggled, setIsToggled] = useState(false);
 	const { sport, getSport } = useSport();
-	const { isUpdated, toggleUpdate } = useNav();
 	const { hideHeader } = useScroll();
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [IsVisible, setIsVisible] = useState(false);
@@ -23,13 +21,6 @@ const Nav: FC = ({ }) => {
 	// Switch menu items in mobile
 	const onSwitch = () => {
 		setIsToggled(!isToggled);
-	};
-
-	// Reset isUpdate for switch on active color for menu items
-	const onClick = () => {
-		if (isUpdated) {
-			toggleUpdate();
-		}
 	};
 
 	const toggleModal = () => {
@@ -48,7 +39,6 @@ const Nav: FC = ({ }) => {
 
 	const closeModal = () => {
 		setIsVisible(false);
-		toggleUpdate();
 		setTimeout(() => {
 			setIsModalOpen(false);
 		}, 300)
@@ -105,7 +95,7 @@ const Nav: FC = ({ }) => {
 											height={36}
 										/>
 									</div>
-									{!hideHeader && <p className={`${sport === 'football' && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Футбол</p>}
+									{!hideHeader && <p className={`${sport === 'football' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Футбол</p>}
 								</Link>
 								<Link href={'/biatlon/main'} className={`flex items-center ${sport === 'biatlon' && hideHeader && 'border-b-2 border-button-hover'}`}>
 									<div className='flex w-9 items-center justify-center'>
@@ -117,7 +107,7 @@ const Nav: FC = ({ }) => {
 											height={36}
 										/>
 									</div>
-									{!hideHeader && <p className={`${sport === 'biatlon' && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Біатлон</p>}
+									{!hideHeader && <p className={`${sport === 'biatlon' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Біатлон</p>}
 								</Link>
 								{hideHeader && <button onClick={onSwitch} className='w-5 h-5'>
 									<Image
@@ -146,7 +136,7 @@ const Nav: FC = ({ }) => {
 											height={36}
 										/>
 									</div>
-									{!hideHeader && <p className={`${sport === 'sky_racing' && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Лижні гонки</p>}
+									{!hideHeader && <p className={`${sport === 'sky_racing' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Лижні гонки</p>}
 								</Link>
 								<Link href={'/alpine_skiing/main'} className={`flex items-center ${sport === 'alpine_skiing' && hideHeader && 'border-b-2 border-button-hover'}`}>
 									<div className='flex w-9 items-center justify-center'>
@@ -158,7 +148,7 @@ const Nav: FC = ({ }) => {
 											height={36}
 										/>
 									</div>
-									{!hideHeader && <p className={`${sport === 'alpine_skiing' && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Гірські лижі</p>}
+									{!hideHeader && <p className={`${sport === 'alpine_skiing' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Гірські лижі</p>}
 								</Link>
 							</div>}
 					</div>
@@ -176,7 +166,7 @@ const Nav: FC = ({ }) => {
 				</div>
 				{/* Desktop and tablet navigation */}
 				<div className='hidden md:flex justify-between lg:justify-center gap-10 lg:gap-[38px] md:px-[14px] lg:px-0 relative'>
-					<Link href={'/football/main'} onClick={onClick} className='flex items-center'>
+					<Link href={'/football/main'} className='flex items-center'>
 						<div className='flex w-9 items-center justify-center'>
 							<Image
 								className='mr-[6px]'
@@ -186,9 +176,9 @@ const Nav: FC = ({ }) => {
 								height={40}
 							/>
 						</div>
-						<p className={`${sport === 'football' && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Футбол</p>
+						<p className={`${sport === 'football' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Футбол</p>
 					</Link>
-					<Link href={'/biatlon/main'} onClick={onClick} className='flex items-center'>
+					<Link href={'/biatlon/main'} className='flex items-center'>
 						<div className='flex w-9 items-center justify-center'>
 							<Image
 								className='mr-[6px]'
@@ -198,9 +188,9 @@ const Nav: FC = ({ }) => {
 								height={49}
 							/>
 						</div>
-						<p className={`${sport === 'biatlon' && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Біатлон</p>
+						<p className={`${sport === 'biatlon' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Біатлон</p>
 					</Link>
-					<Link href={'/sky_racing/main'} onClick={onClick} className='flex items-center'>
+					<Link href={'/sky_racing/main'} className='flex items-center'>
 						<div className='flex w-10 items-center justify-center'>
 							<Image
 								className='mr-[6px]'
@@ -210,9 +200,9 @@ const Nav: FC = ({ }) => {
 								height={40}
 							/>
 						</div>
-						<p className={`${sport === 'sky_racing'! && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Лижні гонки</p>
+						<p className={`${sport === 'sky_racing' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Лижні гонки</p>
 					</Link>
-					<Link href={'/alpine_skiing/main'} onClick={onClick} className='flex items-center'>
+					<Link href={'/alpine_skiing/main'} className='flex items-center'>
 						<div className='flex w-9 items-center justify-center'>
 							<Image
 								className='mr-[6px]'
@@ -222,7 +212,7 @@ const Nav: FC = ({ }) => {
 								height={40}
 							/>
 						</div>
-						<p className={`${sport === 'alpine_skiing' && !isUpdated ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Гірські лижі</p>
+						<p className={`${sport === 'alpine_skiing' ? 'text-button-hover' : 'text-black-text'} font-semibold hover:text-button-hover`}>Гірські лижі</p>
 					</Link>
 					<div className={`hidden lg:block absolute top-1/2 -translate-y-1/2 left-[194px] ${hideHeader ? 'nav-Logo-visible' : 'header-Logo-hidden'}`}>
 						<Image
