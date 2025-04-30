@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
 							</div>
 						</div>
 						<Link href={'/'}
-							onClick={toggleUpdate} className='md:hidden'>
+							className='md:hidden'>
 							<Image
 								src="/svg/logoFooter.svg"
 								alt="logo"
@@ -90,7 +90,6 @@ const Footer: React.FC = () => {
 						</Link>
 					</div>
 					<Link href={'/'}
-						onClick={toggleUpdate}
 						className='transform transition-transform duration-200 hover:scale-102 hover:cursor-pointer'>
 						<Image
 							src="/svg/logoFooter.svg"
