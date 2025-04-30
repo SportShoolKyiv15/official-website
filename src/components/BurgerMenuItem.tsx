@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { MENU_ITEMS } from '@/data/constants';
+import { useNav } from '@/contexts/NavContext';
 
 type Props = {
 	index: number;
@@ -14,6 +15,7 @@ type Props = {
 
 const BurgerMenuItem: React.FC<Props> = ({ index, item, closeModal }) => {
 	const [isOpened, setIsOpend] = useState(false);
+	const { toggleUpdate } = useNav();
 
 	const onClick = () => {
 		setIsOpend(isOpened => !isOpened);
@@ -22,7 +24,12 @@ const BurgerMenuItem: React.FC<Props> = ({ index, item, closeModal }) => {
 		<>
 			<div className='flex justify-between'>
 				{/* burger menu item */}
-				<Link href={Object.values(MENU_ITEMS)[index].path} onClick={closeModal}>
+				<Link
+					href={Object.values(MENU_ITEMS)[index].path}
+					onClick={() => {
+						closeModal();
+						toggleUpdate();
+					}}>
 					{item}
 				</Link>
 				{isOpened &&
@@ -51,7 +58,12 @@ const BurgerMenuItem: React.FC<Props> = ({ index, item, closeModal }) => {
 					{Object.values(MENU_ITEMS)[index].subItems.map((subItem, subIndex) => (
 						<li key={subIndex} className='text-base'>
 							{/* burger submenu item */}
-							<Link href={subItem[1]} onClick={closeModal}>
+							<Link
+								href={subItem[1]}
+								onClick={() => {
+									closeModal();
+									toggleUpdate();
+								}}>
 								{subItem[0]}
 							</Link>
 						</li>

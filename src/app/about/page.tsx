@@ -4,11 +4,13 @@ import { useState, FC, useRef, useEffect, RefObject } from "react";
 
 import Title from "@/components/Title";
 import Image from "next/image";
+import { useSport } from '@/contexts/SportContext';
 
 
 const AboutPage: FC = () => {
 	const [isOpened, setIsOpened] = useState(false);
 	const expandedBlockRef: RefObject<HTMLDivElement | null> = useRef(null);
+	const { getSport } = useSport();
 
 	const handleClick = () => {
 		setIsOpened(isOpened => !isOpened);
@@ -24,6 +26,10 @@ const AboutPage: FC = () => {
 			}, 400); // почекаємо, доки розкриється
 		}
 	}, [isOpened]);
+
+	useEffect(() => {
+		getSport(undefined);
+	}, [getSport]);
 
 	return (
 		<section className="page-wrap md:px-5 lg:px-0 lg:w-[1296px]">

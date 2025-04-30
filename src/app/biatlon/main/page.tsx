@@ -36,6 +36,7 @@ const BiatlonMainPage: FC = () => {
 		}, 300)
 		document.body.classList.remove("modal-open");
 	};
+
 	return (
 		<section className="page-wrap">
 			<SportPageHero bgUrl="bg-[url('/img/biatlonHeroPageImg.jpg')]" toggleModal={toggleModal} />
