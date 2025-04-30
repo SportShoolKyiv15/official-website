@@ -103,7 +103,7 @@ const Header: React.FC = () => {
 							/>
 						</button>}
 				</div>
-				<div className='hidden lg:flex lg:flex-col items-end md:self-end'>
+				<div className={`hidden lg:flex lg:flex-col items-end md:self-end`}>
 					<nav className='lg:flex gap-11 mb-6'>
 						<Link
 							href={'/about'}
@@ -118,23 +118,25 @@ const Header: React.FC = () => {
 							onClick={toggleUpdate}
 							className='font-ermilov font-bold hover:opacity-80'>Контакти</Link>
 					</nav>
-					<div className='flex'>
+					<div className={`block w-[35px] h-[35px]`}>
 						<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
 							<Image
 								src="/svg/sponsorIcon.svg"
 								alt="icon sponsor"
 								width={35}
 								height={35}
+								className={`block w-[35px] h-[35px] ${sport === 'football' && 'lg:hidden'}`}
 							/></Link>
 					</div>
 				</div>
-				<div className={`hidden md:flex lg:hidden absolute bottom-[14px] right-[105px] ${isModalOpen && 'md:hidden'}`}>
+				<div className={`hidden md:block lg:hidden absolute bottom-[14px] right-[105px]`}>
 					<Link href='https://kudrivka.com.ua/' className='hover:scale-102 hover:cursor-pointer' target="_blank" rel="noopener noreferrer">
 						<Image
 							src="/svg/sponsorIcon.svg"
 							alt="icon sponsor"
 							width={35}
 							height={35}
+							className={`${sport === 'football' && 'md:hidden'}`}
 						/>
 					</Link>
 				</div>
