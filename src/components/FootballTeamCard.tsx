@@ -69,15 +69,15 @@ const FootballTeamCard: FC<Props> = ({ team, isOpened, onToggle, cardRef }) => {
 							<div className="absolute inset-0  bg-lightgray"></div>
 							<div className={`absolute inset-0 ${team.coaches[0].bgUrl} bg-cover bg-center bg-no-repeat`}></div>
 							<div className="absolute inset-0 hero-background-gadient"></div>
-							<div className="absolute w-[147px] lg:w-[206px] left-[6px]] lg:left-3 bottom-[6px] lg:bottom-3 text-white font-display font-semibold text-sm lg:font-base leading-[150%]">Головний тренер:<br /> {team.coaches[0].name}</div>
+							<div className="absolute w-[147px] lg:w-[206px] left-[10px] lg:left-3 bottom-[6px] lg:bottom-3 text-white font-display font-semibold text-sm lg:font-base leading-[150%]">Головний тренер:<br /> {team.coaches[0].name}</div>
 						</div>
 						<div
-							className='w-[159px]  lg:w-[232px] h-[213px] lg:h-[311px] relative rounded-xs overflow-hidden'
+							className='w-[159px] lg:w-[232px] h-[213px] lg:h-[311px] relative rounded-xs overflow-hidden'
 						>
 							<div className="absolute inset-0  bg-lightgray"></div>
 							<div className={`absolute inset-0 ${team.coaches[0].bgUrl} bg-cover bg-center bg-no-repeat`}></div>
 							<div className="absolute inset-0 hero-background-gadient"></div>
-							<div className="absolute w-[147px] lg:w-[206px] left-[6px] lg:left-3 bottom-[6px] lg:bottom-3 text-white font-display font-semibold text-sm lg:font-base leading-[150%]">Tренер:<br />{team.coaches[0].name}</div>
+							<div className="absolute w-[147px] lg:w-[206px] left-[10px] lg:left-3 bottom-[6px] lg:bottom-3 text-white font-display font-semibold text-sm lg:font-base leading-[150%]">Tренер:<br />{team.coaches[1].name}</div>
 						</div>
 					</div>
 					<div className="md:order-1 self-end md:mr-[21px] lg:absolute lg:bottom-5 lg:left-1/2 lg:-translate-x-1/2">
