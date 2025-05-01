@@ -61,10 +61,10 @@ const FootballTeamCard: FC<Props> = ({ team, isOpened, onToggle, cardRef }) => {
 					height={361}
 					className="hidden lg:block mb-0 z-9"
 				/>
-				<div className="md:flex md:h-[213px] self-end lg:self-start">
-					<div className="flex gap-[9px] lg:gap-6 md:order-2 mb-10">
+				<div className="md:flex md:h-[213px] lg:self-start">
+					<div className="flex gap-2 sm:gap-[9px] lg:gap-6 md:order-2 mb-10">
 						<div
-							className='w-[159px] lg:w-[232px] h-[213px] lg:h-[311px] relative rounded-xs overflow-hidden'
+							className='w-[156px] sm:w-[159px] lg:w-[232px] h-[213px] lg:h-[311px] relative rounded-xs overflow-hidden'
 						>
 							<div className="absolute inset-0  bg-lightgray"></div>
 							<div className={`absolute inset-0 ${team.coaches[0].bgUrl} bg-cover bg-center bg-no-repeat`}></div>
@@ -72,7 +72,7 @@ const FootballTeamCard: FC<Props> = ({ team, isOpened, onToggle, cardRef }) => {
 							<div className="absolute w-[147px] lg:w-[206px] left-[10px] lg:left-3 bottom-[6px] lg:bottom-3 text-white font-display font-semibold text-sm lg:font-base leading-[150%]">Головний тренер:<br /> {team.coaches[0].name}</div>
 						</div>
 						<div
-							className='w-[159px] lg:w-[232px] h-[213px] lg:h-[311px] relative rounded-xs overflow-hidden'
+							className='w-[156px] sm:w-[159px lg:w-[232px] h-[213px] lg:h-[311px] relative rounded-xs overflow-hidden'
 						>
 							<div className="absolute inset-0  bg-lightgray"></div>
 							<div className={`absolute inset-0 ${team.coaches[0].bgUrl} bg-cover bg-center bg-no-repeat`}></div>
@@ -80,7 +80,7 @@ const FootballTeamCard: FC<Props> = ({ team, isOpened, onToggle, cardRef }) => {
 							<div className="absolute w-[147px] lg:w-[206px] left-[10px] lg:left-3 bottom-[6px] lg:bottom-3 text-white font-display font-semibold text-sm lg:font-base leading-[150%]">Tренер:<br />{team.coaches[1].name}</div>
 						</div>
 					</div>
-					<div className="md:order-1 self-end md:mr-[21px] lg:absolute lg:bottom-5 lg:left-1/2 lg:-translate-x-1/2">
+					<div className="md:order-1 self-end md:mr-[21px] lg:absolute lg:bottom-5 lg:left-1/2 lg:-translate-x-1/2 z-9">
 						<ResultButton team={team.name} />
 					</div>
 				</div>
