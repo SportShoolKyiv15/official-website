@@ -1,7 +1,7 @@
 import React, { FC, useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
-import { COACH_TEAM } from '@/data/constants';
+import { FOOTBALL_COACH_TEAM } from '@/data/constants';
 
 interface ModalProps {
 	idx: number;
@@ -59,10 +59,10 @@ const CoachAutobiographyModal: FC<ModalProps> = ({ idx, isModalOpen, closeModal,
 								className='hidden md:block hover:scale-110' />
 						</button>
 						<div className='flex flex-col px-2 pt-[18px] pb-[38px] md:p-[38px] lg:px-10 lg:pt10 lg:pb-[52px] text-center'>
-							<h3 className='mb-5 md:mb-[18px] text-2xl md:text-[26px] text-left md:text-center font-display font-bold md:font-semibold'>{COACH_TEAM[idx].name}</h3>
-							<p className='mb-[26px] text-left md:text-center leading-[150%]'>{COACH_TEAM[idx].discription}</p>
+							<h3 className='mb-5 md:mb-[18px] text-2xl md:text-[26px] text-left md:text-center font-display font-bold md:font-semibold'>{FOOTBALL_COACH_TEAM[idx].name}</h3>
+							<p className='mb-[26px] text-left md:text-center leading-[150%]'>{FOOTBALL_COACH_TEAM[idx].discription}</p>
 							<p className=' text-left leading-[150%]'>
-								{COACH_TEAM[idx].autobiography}
+								{FOOTBALL_COACH_TEAM[idx].autobiography}
 							</p>
 						</div>
 					</div>
