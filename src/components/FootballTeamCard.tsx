@@ -1,26 +1,69 @@
 "use client";
 
-import { FC } from "react";
+import { FC, useState } from "react";
 import Image from "next/image";
 import ResultButton from "./buttons/ResultsButton";
+import { FootballTeam } from "@/globaltypes/types";
+import CoachAutobiographyModal from './modals/CoachAutobiographyModal';
 
 type Props = {
 	isOpened: boolean,
 	onToggle: () => void,
 	cardRef?: React.RefObject<HTMLDivElement | null>;
-	team: {
-		coaches: {
-			bgUrl: string,
-			name: string,
-			discription: string,
-			autobiography: string
-		}[],
-		name: string,
-		bgUrl: string,
-	};
+	team: FootballTeam;
 }
 
 const FootballTeamCard: FC<Props> = ({ team, isOpened, onToggle, cardRef }) => {
+	const [isModalOpen1, setIsModalOpen1] = useState(false);
+	const [isModalOpen2, setIsModalOpen2] = useState(false);
+	const [IsVisible1, setIsVisible1] = useState(false);
+	const [IsVisible2, setIsVisible2] = useState(false);
+
+	const toggleModal1 = () => {
+		if (isModalOpen1) {
+			setIsVisible1(false);
+			setTimeout(() => {
+				setIsModalOpen1(false);
+			}, 300)
+		} else {
+			setIsVisible1(true);
+			setTimeout(() => {
+				setIsModalOpen1(true);
+			}, 300)
+			document.body.classList.add("modal-open");
+		}
+	};
+
+	const closeModal1 = () => {
+		setIsVisible1(false);
+		setTimeout(() => {
+			setIsModalOpen1(false);
+		}, 300)
+		document.body.classList.remove("modal-open");
+	};
+
+	const toggleModal2 = () => {
+		if (isModalOpen2) {
+			setIsVisible2(false);
+			setTimeout(() => {
+				setIsModalOpen2(false);
+			}, 300)
+		} else {
+			setIsVisible2(true);
+			setTimeout(() => {
+				setIsModalOpen2(true);
+			}, 300)
+			document.body.classList.add("modal-open");
+		}
+	};
+
+	const closeModal2 = () => {
+		setIsVisible2(false);
+		setTimeout(() => {
+			setIsModalOpen2(false);
+		}, 300)
+		document.body.classList.remove("modal-open");
+	};
 
 	return (
 		<div ref={cardRef}>
@@ -63,28 +106,32 @@ const FootballTeamCard: FC<Props> = ({ team, isOpened, onToggle, cardRef }) => {
 				/>
 				<div className="md:flex md:h-[213px] lg:self-start">
 					<div className="flex gap-2 sm:gap-[9px] lg:gap-6 md:order-2 mb-10">
-						<div
-							className='w-[156px] sm:w-[159px] lg:w-[232px] h-[213px] lg:h-[311px] relative rounded-xs overflow-hidden'
+						<button
+							onClick={toggleModal1}
+							className='w-[156px] sm:w-[159px] lg:w-[232px] h-[213px] lg:h-[311px] relative rounded-xs overflow-hidden cursor-pointer hover:scale-102'
 						>
 							<div className="absolute inset-0  bg-lightgray"></div>
 							<div className={`absolute inset-0 ${team.coaches[0].bgUrl} bg-cover bg-center bg-no-repeat`}></div>
 							<div className="absolute inset-0 hero-background-gadient"></div>
 							<div className="absolute w-[147px] lg:w-[206px] left-[10px] lg:left-3 bottom-[6px] lg:bottom-3 text-white font-display font-semibold text-sm lg:font-base leading-[150%]">Головний тренер:<br /> {team.coaches[0].name}</div>
-						</div>
-						<div
-							className='w-[156px] sm:w-[159px lg:w-[232px] h-[213px] lg:h-[311px] relative rounded-xs overflow-hidden'
+						</button>
+						<button
+							onClick={toggleModal2}
+							className='w-[156px] sm:w-[159px lg:w-[232px] h-[213px] lg:h-[311px] relative rounded-xs overflow-hidden cursor-pointer hover:scale-102'
 						>
 							<div className="absolute inset-0  bg-lightgray"></div>
-							<div className={`absolute inset-0 ${team.coaches[0].bgUrl} bg-cover bg-center bg-no-repeat`}></div>
+							<div className={`absolute inset-0 ${team.coaches[1].bgUrl} bg-cover bg-center bg-no-repeat`}></div>
 							<div className="absolute inset-0 hero-background-gadient"></div>
 							<div className="absolute w-[147px] lg:w-[206px] left-[10px] lg:left-3 bottom-[6px] lg:bottom-3 text-white font-display font-semibold text-sm lg:font-base leading-[150%]">Tренер:<br />{team.coaches[1].name}</div>
-						</div>
+						</button>
 					</div>
 					<div className="md:order-1 self-end md:mr-[21px] lg:absolute lg:bottom-5 lg:left-1/2 lg:-translate-x-1/2 z-9">
 						<ResultButton team={team.name} />
 					</div>
 				</div>
 			</div>
+			<CoachAutobiographyModal name={team.coaches[0].name} isModalOpen={isModalOpen1} closeModal={closeModal1} IsVisible={IsVisible1} />
+			<CoachAutobiographyModal name={team.coaches[1].name} isModalOpen={isModalOpen2} closeModal={closeModal2} IsVisible={IsVisible2} />
 		</div>
 	);
 };
