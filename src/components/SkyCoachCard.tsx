@@ -17,7 +17,7 @@ const SkyCoachCard: FC<Props> = ({ coach, idx }) => {
 		<div
 			className='lg:flex lg:gap-[38px]'
 		>
-			<div className={`${(idx + 1) % 2 === 0 ? 'order-2' : 'order-1'}`}>
+			<div className={`${(idx + 1) % 2 === 0 ? 'order-2' : 'order-1'} animate-fade-in`}>
 				<Image
 					src={coach.fotoUrl}
 					alt='Foto coach'
