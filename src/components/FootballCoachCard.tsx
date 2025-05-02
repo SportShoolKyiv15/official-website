@@ -5,13 +5,11 @@ import { FC, useState } from 'react';
 import CoachAutobiographyModal from './modals/CoachAutobiographyModal';
 
 type Props = {
-	idx: number;
 	bgUrl: string;
 	name: string;
-	team: string;
 }
 
-const CoachCard: FC<Props> = ({ idx, bgUrl, name, team }) => {
+const FootballCoachCard: FC<Props> = ({ bgUrl, name }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [IsVisible, setIsVisible] = useState(false);
 
@@ -37,6 +35,7 @@ const CoachCard: FC<Props> = ({ idx, bgUrl, name, team }) => {
 		}, 300)
 		document.body.classList.remove("modal-open");
 	};
+
 	return (
 		<button
 			onClick={toggleModal}
@@ -45,11 +44,10 @@ const CoachCard: FC<Props> = ({ idx, bgUrl, name, team }) => {
 			<div className="absolute inset-0  bg-lightgray"></div>
 			<div className={`absolute inset-0 ${bgUrl} bg-cover bg-center bg-no-repeat`}></div>
 			<div className="absolute inset-0 hero-background-gadient"></div>
-			<div className="absolute w-full left-1/2 -translate-x-1/2 bottom-[56px] text-white font-display font-semibold text-[26px] leading-10">{name}</div>
-			<div className="absolute w-full left-1/2 -translate-x-1/2 bottom-4 text-white font-display font-semibold text-lg leading-10">Команда: {team}</div>
-			<CoachAutobiographyModal idx={idx} isModalOpen={isModalOpen} closeModal={closeModal} IsVisible={IsVisible} />
+			<div className="absolute w-full left-1/2 -translate-x-1/2 bottom-4 text-white font-display font-semibold text-[26px] leading-10">{name}</div>
+			<CoachAutobiographyModal name={name} isModalOpen={isModalOpen} closeModal={closeModal} IsVisible={IsVisible} />
 		</button>
 	)
 }
 
-export default CoachCard;
+export default FootballCoachCard;
